@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   viewBox="0 0 12.8 12.8"
+   width="16"
+   height="16"
+   id="svg3119"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="options.svg"
+   inkscape:export-filename="C:\Programmation\javascript\switch_color\img\options.png"
+   inkscape:export-xdpi="180"
+   inkscape:export-ydpi="180">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="837"
+     id="namedview3135"
+     showgrid="false"
+     inkscape:zoom="9.44"
+     inkscape:cx="42.579617"
+     inkscape:cy="19.746863"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3119" />
+  <metadata
+     id="metadata3121">
+    <dc:date>2013-01-17 02:27Z</dc:date>
+    <!-- Produced by OmniGraffle Professional 5.4.1 -->
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3123" />
+  <g
+     id="g3125"
+     style="fill:#c2c2c2;stroke:#9c9c9c;stroke-width:45.71428679999999600;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
+     transform="matrix(0.01633333,0,0,0.01633334,1.1733333,1.1733333)">
+    <title
+       id="title3127">svg</title>
+    <g
+       id="g3129"
+       style="fill:#c2c2c2;stroke:#9c9c9c;stroke-width:45.71428679999999600;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1">
+      <title
+         id="title3131">gear</title>
+      <path
+         d="m 319.37988,440 c -66.25976,0 -120,-53.75976 -120,-120 0,-66.25976 53.74024,-120 120,-120 66.25977,0 120,53.74024 120,120 0,66.24024 -53.74023,120 -120,120 M 640,359.37988 l 0,-80 -95.6201,-39.84008 c -2.65993,-7.5 -5.46022,-14.74 -8.90016,-21.87989 L 574.06006,121.56006 517.5,65 422.26013,104.21997 C 415,100.73974 407.55981,97.77954 399.8999,95 l -40.52002,-95 -80,0 -39.53979,94.68017 c -7.96021,2.81983 -15.62012,5.78004 -23.22022,9.37989 L 121.56006,65.89966 65,122.45972 103.75976,216.67969 C 100,224.37988 96.9397,232.2998 94.06006,240.41992 L 0,280.62012 l 0,80 94.11987,39.21998 c 2.919925,8.1201 6.04004,16.05956 9.79981,23.75975 L 65.839846,518.43994 122.3999,575 216.87988,536.09985 c 7.55982,3.58032 15.31982,6.51978 23.28003,9.21998 L 280.62012,640 l 80.01953,0 39.58007,-95.1599 c 7.60011,-2.8003 15.10011,-5.78004 22.28028,-9.22 L 518.43994,574.06006 575,517.5 535.63965,422.0398 c 3.32031,-7.1997 6.08032,-14.42017 8.74025,-21.8799 z"
+         id="path3133"
+         inkscape:connector-curvature="0"
+         style="fill:#c2c2c2;stroke:#9c9c9c;stroke-width:45.71428679999999600;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1" />
+    </g>
+  </g>
+</svg>

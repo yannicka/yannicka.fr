@@ -1,0 +1,20 @@
+---
+layout: base.njk
+title: Projets
+---
+
+<h1 class="text-center text-6xl lg:text-left">
+  Projets
+</h1>
+
+<ul class="mt-12 list-dashed">
+  {%- for project in collections.project -%}
+    <li class="my-4">
+      <a href="{{ project.url }}" class="font-bold underline hover:text-gray-600">
+        {{- project.data.title -}}
+      </a>,
+
+      sorti en {{ project.data.publish_month | format_month }}
+    </li>
+  {%- endfor -%}
+</ul>

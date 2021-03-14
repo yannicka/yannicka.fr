@@ -1,0 +1,59 @@
+---
+layout: base.njk
+title: Exercices
+---
+
+<section class="home-section">
+  <h1 class="text-6xl">
+    Exercices
+  </h1>
+
+  <h2 class="text-4xl mt-8 mb-4">
+    Exercices du lundi (2014 &ndash; 2016)
+  </h2>
+
+  <p class="my-4">
+    Les « exercices du lundi » étaient de petits défis donnés par un ami à un
+    groupe de développeurs dont je fais partie. Ils étaient un bon moyen pour
+    moi de découvrir et de tester divers langages. C'est notamment grâce à ces
+    défis que j'ai découvert les langages fonctionnels.
+  </p>
+
+  <p class="my-4">
+    Les codes sources n'ont pas été développés avec la propreté ou
+    l'optimisation en tête — sans compter le fait qu'ils sont souvent écrits
+    dans des langages peu maitrisés. Ils ont donc été écrits, rendus
+    fonctionnels puis publiés sans plus de prétention.
+  </p>
+
+  <p class="my-4">
+    Mes codes sources sont disponibles via des liens ainsi que sur la page du
+    défi. Les codes sources d'autres développeurs sont disponibles seulement
+    via des liens — et il se peut malheureusement que certains ne fonctionnent
+    plus.
+  </p>
+
+  <ol class="list-decimal ml-8">
+    {%- for exercise in collections.exercice_monday -%}
+      <li>
+        <a href="{{ exercise.url | url }}" class="underline">
+          {{- exercise.data.title -}}
+        </a>
+      </li>
+    {%- endfor -%}
+  </ol>
+
+  <h2 class="text-4xl mt-8 mb-4">
+    Exercices difficiles (2016)
+  </h2>
+
+  <ol class="list-decimal ml-8">
+    {%- for exercise in collections.exercice_hard -%}
+      <li>
+        <a href="{{ exercise.url | url }}" class="underline">
+          {{- exercise.data.title -}}
+        </a>
+      </li>
+    {%- endfor -%}
+  </ol>
+</section>

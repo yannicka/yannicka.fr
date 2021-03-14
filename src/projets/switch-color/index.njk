@@ -1,0 +1,66 @@
+---
+title: Switch Color
+tags: project
+publish_month: 2014-08-31
+google_play_url: https://play.google.com/store/apps/details?id=com.pifyz.switchcolor
+source_code_url: https://gitlab.com/yannicka/switch-color
+---
+
+{% markdown %}
+
+Switch Color est mon premier jeu Android.
+
+Le développement a commencé le 10 octobre 2013. Le jeu est sorti le 31 août
+2014.
+
+## Description
+
+*Reprise depuis Google Play, écrite par un ami.*
+
+« Réfléchissez pour vous débarrasser des tuiles de couleur !
+
+Switch Color est un jeu au concept simple mais terriblement addictif.
+
+Vous devez nettoyer des stages en faisant disparaître les tuiles de couleur qui
+les habitent : appuyez sur une tuile pour la nettoyer, mais les quatre tuiles
+adjacentes se verront également retournées !
+
+- Réfléchissez et venez à bout de près de 80 stages ;
+- Nettoyez un niveau avec le minimum d'actions pour débloquer des étoiles ;
+- Relevez des défis aléatoires pour faire travailler vos méninges. »
+
+## Images
+
+{% endmarkdown %}
+
+<div class="grid grid-cols-5 gap-3">
+    {% for i in range(1, 6) %}
+        <div>
+            <img src="img/{{ i }}.png" alt="" loading="lazy" />
+        </div>
+    {% endfor %}
+</div>
+
+{% markdown %}
+
+## Accès
+
+- **[Accéder à la fiche Google Play](https://play.google.com/store/apps/details?id=com.pifyz.switchcolor)**
+- [Accéder au code source](https://gitlab.com/yannicka/switch-color)
+
+## Accès direct
+
+Initialement, Switch Color a été écrit en JavaScript et aurait dû être embarqué
+dans une vue navigateur *(webview)* dans une application Android. Mais j'ai
+finalement refait le jeu entièrement en Java, pour le défi de créer une
+application native et aussi afin d'avoir de meilleures performances.
+
+L'ancienne version JavaScript du jeu est jouable, alors je l'inclus ici à titre
+historique.
+
+{% endmarkdown %}
+
+<iframe src="{{ 'src/index.html' | url }}"
+        class="block w-full border-2 border-green-900 box-border"
+        style="max-width: 520px; height: 700px;"
+        loading="lazy"></iframe>

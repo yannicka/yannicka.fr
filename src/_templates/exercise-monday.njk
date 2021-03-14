@@ -1,0 +1,25 @@
+---
+layout: base.njk
+---
+
+<article>
+  <h1 class="text-6xl">
+    {{ title }}
+  </h1>
+
+  <ul class="flex flex-wrap py-4 text-center justify-center lg:justify-start">
+    <li class="mr-8 mb-4">
+      Par {{ author }}
+    </li>
+
+    <li class="mr-8 mb-4">
+      Publié le {{ date }}
+    </li>
+
+    <li class="mr-8 mb-4">
+      Licence {{ license }}
+    </li>
+  </ul>
+
+  {{ content | safe }}
+</article>

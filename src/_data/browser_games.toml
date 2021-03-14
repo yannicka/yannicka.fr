@@ -1,0 +1,272 @@
+# name = "nom du jeu"
+# url = "URL du jeu"
+# category = "drawing" | "music" | "quiz" | "action" | "other"
+# min_players = nombre de joueurs minimum | "unknown"
+# max_players = nombre de joueurs minimum | "unknown" | "infinite"
+# description = """description du jeu"""
+
+[[games]]
+name = "Gartic Phone"
+url = "https://garticphone.com/"
+category = "drawing"
+min_players = 2
+max_players = 30
+description = """
+Jeu de téléphone arabe : une personne écrit une phrase, une personne la dessine,
+une autre décrit le dessin, une autre dessine, et ainsi de suite.
+"""
+
+[[games]]
+name = "skribbl"
+url = "https://skribbl.io/"
+category = "drawing"
+min_players = 2
+max_players = 12
+description = """
+Jeu de dessin. Un joueur a un mot à dessiner et les autres doivent le deviner.
+"""
+
+[[games]]
+name = "Gartic.io"
+url = "https://gartic.io/"
+category = "drawing"
+min_players = 2
+max_players = 50
+description = """
+Jeu de dessin. Un joueur a un mot à dessiner et les autres doivent le deviner.
+"""
+
+[[games]]
+name = "Curve Fever"
+url = "https://curvefever.pro/"
+category = "action"
+min_players = 2
+max_players = 6
+description = """
+Un genre de Snake multijoueur où vous devez éviter la queue de vos adversaires
+et faire en sorte qu'eux s'écrasent contre la votre.
+"""
+
+[[games]]
+name = "Curvytron"
+url = "http://www.curvytron.com/"
+category = "action"
+min_players = 2
+max_players = "unknown"
+description = """
+Un genre de Snake multijoueur où vous devez éviter la queue de vos adversaires
+et faire en sorte qu'eux s'écrasent contre la votre.
+"""
+
+[[games]]
+name = "jklm.fun"
+url = "https://jklm.fun/"
+category = "quiz"
+min_players = 2
+max_players = "unknown"
+description = """
+Deux jeux. Bomb Party : écrivez rapidement un mot contenant les lettres
+indiquées. Pop Sauce : devinez d'où est tirée la phrase ou l'image.
+"""
+
+[[games]]
+name = "Lichess"
+url = "https://lichess.org/"
+category = "other"
+min_players = 2
+max_players = 2
+description = """
+Jeu d'échecs.
+"""
+
+[[games]]
+name = "Touché-Coulé"
+url = "http://fr.battleship-game.org/"
+category = "other"
+min_players = 2
+max_players = 2
+description = """
+Jeu de bataille navale.
+"""
+
+[[games]]
+name = "Trivabble"
+url = "https://trivabble.1s.fr/"
+category = "other"
+min_players = 2
+max_players = "unknown"
+description = """
+Vous avez des lettres. Vous devez poser ces lettres sur une grille. Le jeu n'a
+pas de règle en lui-même, vous devez gérer vous-mêmes les calculs et autres,
+mais il sert généralement à jouer au Scrabble.
+"""
+
+[[games]]
+name = "Mjrt"
+url = "https://mjrt.net/"
+category = "quiz"
+min_players = 3
+max_players = "unknown"
+description = """
+Clone de [Majority de Muxxu](http://majority.muxxu.com/). Une question. Trois
+réponses. Devinez quelle réponse sera sélectionnée par la majorité.
+"""
+
+[[games]]
+name = "SongTrivia - Guess the song!"
+url = "https://songtrivia2.io/"
+category = "music"
+min_players = 2
+max_players = "unknown"
+description = """
+Devinez quelle est la chanson que vous écoutez.
+"""
+
+[[games]]
+name = "What the Tune?!"
+url = "https://whatthetune.com/"
+category = "music"
+min_players = 1
+max_players = "unknown"
+description = """
+Deviner le titre et l'artiste d'une chanson.
+"""
+
+[[games]]
+name = "Haxball"
+url = "https://www.haxball.com/"
+category = "action"
+min_players = 2
+max_players = 12
+description = """
+Jeu de « foot » ultra-minimaliste de 2 à 12 joueurs.
+"""
+
+[[games]]
+name = "kugeln.io"
+url = "https://kugeln.io/"
+category = "action"
+min_players = 2
+max_players = "unknown"
+description = """
+Jeu de plateforme 2D. Tuez et survivez.
+"""
+
+[[games]]
+name = "Le petit bac"
+url = "https://petitbac.net/"
+category = "quiz"
+min_players = 2
+max_players = 45
+description = """
+Trouver des mots commençants par une lettre dans des domaines divers.
+"""
+
+# Voir ces jeux :
+# - Lucky Numbers (de 2 à 4) : https://playingcards.io/a9h2p2
+# - Punto (plutôt de 3 à 4) : https://playingcards.io/fuu9sf
+# - Fuji Flush (jusqu'à 8 mais je sais pas trop le minimum) : https://playingcards.io/5xspfs
+#
+# À noter : ne pas partager ces liens directement, mais exporter le jeu, puis
+#           l'importer dans un autre salon, et expliquer la procédure aux
+#           joueurs.
+[[games]]
+name = "Codenames"
+url = "https://codenames.game/"
+category = "other"
+min_players = 2
+max_players = "unknown"
+description = """
+@todo
+"""
+
+[[games]]
+name = "PlayingCards.io"
+url = "https://playingcards.io/"
+category = "other"
+min_players = 2
+max_players = "unknown"
+description = """
+@todo
+"""
+
+[[games]]
+name = "Set with Friends"
+url = "https://setwithfriends.com/"
+category = "other"
+min_players = 2
+max_players = "unknown"
+description = """
+@todo
+"""
+
+[[games]]
+name = "Mosaic"
+url = "https://playmosaic.online/"
+category = "other"
+min_players = 2
+max_players = 4
+description = """
+@todo
+"""
+
+[[games]]
+name = "Mattle"
+url = "https://mattle.online/"
+category = "other"
+min_players = 2
+max_players = "unknown"
+description = """
+@todo
+"""
+
+[[games]]
+name = "Air board game"
+url = "https://airboardgame.net/games/"
+category = "other"
+min_players = 2
+max_players = "unknown"
+description = """
+@todo
+"""
+
+[[games]]
+name = "Colonist"
+url = "https://colonist.io/"
+category = "other"
+min_players = 2
+max_players = 8
+description = """
+@todo
+"""
+
+[[games]]
+name = "tix.tax"
+url = "https://tix.tax/"
+category = "other"
+min_players = 2
+max_players = 2
+description = """
+@todo
+"""
+
+[[games]]
+name = "Smash Karts"
+url = "https://smashkarts.io/"
+category = "action"
+min_players = 2
+max_players = "unknown"
+description = """
+Jeu de kart en 3D. Le but est de rester en vie et de détruire ses adversaires.
+"""
+
+# Nécessite un compte :
+# [[games]]
+# name = "KGAMES"
+# url = "https://kgames.fr/"
+# category = "action"
+# min_players = 2
+# max_players = "unknown"
+# description = """
+# @todo
+# """

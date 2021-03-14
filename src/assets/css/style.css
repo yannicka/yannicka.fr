@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'prism-highlight.css';
+
+.list-dashed > li {
+  list-style-type: none;
+  position: relative;
+  margin-left: 1em;
+}
+
+.list-dashed > li::before {
+  content: '–';
+  position: absolute;
+  margin-left: -1em;
+}

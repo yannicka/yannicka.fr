@@ -1,0 +1,41 @@
+---
+layout: base.njk
+---
+
+<article class="article">
+  <h1 class="text-center text-6xl lg:text-left">
+    {{ title }}
+  </h1>
+
+  <ul class="metabox">
+    <li>
+      Sorti en {{ publish_month | format_month }}
+    </li>
+
+    <li>
+      Licence {{ license }}
+    </li>
+  </ul>
+
+  <div>
+    {% if google_play_url %}
+      <a href="{{ google_play_url }}">
+        <img src="{{ '/assets/get-it-on-google-play.png' | url }}"
+             alt="Disponible sur Google Play"
+             loading="lazy" />
+      </a>
+    {% endif %}
+
+    {% if source_code_url %}
+      <a href="{{ source_code_url }}" class="source-code-badge">
+        <img src="{{ '/assets/get-source-code.png' | url }}"
+              alt="Accéder au code source"
+              loading="lazy" />
+      </a>
+    {% endif %}
+  </div>
+
+  <div>
+    {{ content | safe }}
+  </div>
+</article>

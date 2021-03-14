@@ -1,0 +1,25 @@
+- var title = 'Options'
+
+doctype html
+html
+	include head.jade
+
+	body
+		div#logo
+			img(src="data/img/logo.png" alt="Switch Color")
+
+		span.go_back(data-href="menu.html")
+			| &lt; Retour
+
+		h1
+			| #{title}
+
+		span#game-reset
+			| Remettre le jeu &agrave; z&eacute;ro
+
+		div#game-reset-confirm
+			| Je valide la remise &agrave; z&eacute;ro !
+
+		script(src="js/common.js")
+		script(src="js/page.js")
+		script(src="js/options.js")

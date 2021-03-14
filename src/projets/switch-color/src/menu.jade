@@ -1,0 +1,25 @@
+- var title = 'Menu'
+
+doctype html
+html
+	include head.jade
+
+	body
+		div#logo
+			img(src="data/img/logo.png" alt="Switch Color")
+
+		div#menu
+			div.btn-red(data-href="select_level.html")
+				img(src="data/img/play.png" alt="")
+				span JOUER
+
+			div.btn-blue(data-href="instructions.html")
+				img(src="data/img/instructions.png" alt="")
+				span INSTRUCTIONS
+
+			div.btn-yellow(data-href="options.html")
+				img(src="data/img/options.png" alt="")
+				span OPTIONS
+
+		script(src="js/common.js")
+		script(src="js/page.js")

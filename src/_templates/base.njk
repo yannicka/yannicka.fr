@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+  <head>
+    <meta charset="utf-8" />
+
+    {%- if full_title %}
+      <title>{{ full_title }}</title>
+    {%- else -%}
+      <title>{{ title }} — Yannicka</title>
+    {%- endif -%}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="{{ '/style.css' | url }}" />
+
+    <meta property="og:site_name" content="Yannicka" />
+  
+    {%- if full_title %}
+      <meta property="og:title" content="{{ full_title }}" />
+    {%- else -%}
+      <meta property="og:title" content="{{ title }} — Yannicka" />
+    {%- endif -%}
+
+    {% if short_description %}
+      <meta property="og:description" content="{{ short_description }}" />
+    {% endif %}
+  </head>
+
+  <body>
+    <div class="relative">
+      <div class="absolute top-2 left-2">
+        <a href="#content" class="block bg-white border-2 border-black sr-only focus:not-sr-only">
+          <div class="p-3">
+            Aller au contenu principal
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="js-mobile-menu absolute top-0 left-0 right-0 bg-white border-b-2 border-black" style="display: none;">
+      <div class="grid grid-cols-3 items-center">
+        <div class="p-4 text-xl font-bold">
+          Yannicka
+        </div>
+
+        <div class="col-span-2 justify-self-end">
+          <button class="js-mobile-menu-close-button group inline-block px-5 py-4">
+            <span>⨉</span>
+            <span class="align-middle group-hover:underline">Fermer le menu</span>
+          </button>
+        </div>
+      </div>
+
+      <nav role="navigation">
+        <a href="{{ '/' | url }}" class="block p-4 hover:underline hover:bg-gray-100">
+          Accueil
+        </a>
+
+        <a href="{{ '/projets/' | url }}" class="block p-4 hover:underline hover:bg-gray-100">
+          Projets
+        </a>
+
+        <a href="{{ '/exercices/' | url }}" class="block p-4 hover:underline hover:bg-gray-100">
+          Exercices
+        </a>
+      </nav>
+    </div>
+
+    <header class="bg-white border-b border-gray-200">
+      <div class="max-w-screen-lg m-auto">
+        <div class="flex items-center">
+          <a href="{{ '/' | url }}" class="w-max p-4 text-xl font-bold hover:underline">
+            Yannicka
+          </a>
+
+          <div class="hidden sm:block">
+            <nav class="flex" role="navigation">
+              <a href="{{ '/projets/' | url }}" class="inline-block p-4 hover:underline">
+                Projets
+              </a>
+
+              <a href="{{ '/exercices/' | url }}" class="inline-block p-4 hover:underline">
+                Exercices
+              </a>
+            </nav>
+          </div>
+
+          <div class="sm:hidden ml-auto">
+            <button class="js-mobile-menu-open-button group inline-block px-5 py-4">
+              <span class="align-middle">☰</span>
+              <span class="align-middle group-hover:underline">Menu</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto p-6" id="content">
+      {{ content | safe }}
+    </main>
+
+    <footer class="max-w-5xl mx-auto px-4 py-8 text-center">
+      <p>
+        Yannicka ·
+        2013 - 2021 ·
+        <a href="{{ '/mentions-legales/' | url }}" class="underline">Mentions légales</a> ·
+        <a href="{{ '/a-propos/' | url }}" class="underline">À propos</a>
+      </p>
+    </footer>
+
+    <script src="{{ '/assets/js/script.js' | url }}" defer></script>
+  </body>
+</html>

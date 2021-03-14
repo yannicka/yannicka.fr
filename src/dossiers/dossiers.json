@@ -1,0 +1,9 @@
+{
+  "layout": "dossier.njk",
+  "tags": "dossier",
+  "toc": true,
+  "author": "Yannick A.",
+  "license": "CC BY-SA 4.0",
+  "draft": false,
+  "obsolete": false
+}

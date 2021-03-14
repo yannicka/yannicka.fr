@@ -1,0 +1,148 @@
+---
+title: Jeux multijoueurs gratuits sur navigateur
+created_at: 2020-11-21
+updated_at: 2021-03-12
+short_description: >
+  Jeux par navigateur.
+toc: false
+---
+
+{% markdown %}
+
+Parfois, il arrive qu'on souhaite jouer avec des amis ou des connaissances à
+des jeux, que ce soit en vocal ou non. Cela est possible avec tous les jeux en
+ligne. Mais ici, on va s'intéresser au genre très particulier du jeu en ligne
+facilement accessible, auquel on accède gratuitement via le navigateur.
+
+## Critères
+
+Voici les critères que j'ai mis en place pour accepter un jeu ou non :
+
+- **Être accessible via un navigateur**, comme ça tout le monde peut jouer, peu
+  importe le système d'exploitation, sans perdre de temps à devoir installer un
+  jeu ;
+- **Être gratuit**, pour être sûr que ça convienne à toutes les bourses et ne
+  pas perdre du temps à acheter le jeu ;
+- **Pas d'obligation de créer un compte**, pour ne pas perdre de temps et ne pas
+  donner ses informations personnelles ;
+- **Avoir la possibilité de créer des salons privés**, pour pouvoir jouer
+  seulement entre amis ;
+- **Jouable dès 2 joueurs**, pour pouvoir jouer avec un seul ami au besoin ;
+- **En temps réel (pas d'attente d'évènements côté serveur)**, pour éviter des
+  limitations artificielles ;
+- ***Si possible*, être en français**, pour que tout le monde puisse y jouer
+  sans avoir de connaissance de l'anglais (ou tout autre langue) ;
+- ***Si possible*, avoir des parties courtes** (ou du moins qui *peuvent* être
+  courtes), pour que n'importe qui puisse venir au milieu d'une partie ;
+- ***Si possible*, simple à prendre en main**, pour éviter de perdre du temps à
+  devoir expliquer les règles.
+
+Tous ces critères servent à un objectif commun : rendre l'accès au jeu immédiat.
+On se rend sur le site, on crée une partie privée et on partage le lien à ses
+amis, sans aucune friction.
+
+## Jeux
+
+Voici les jeux qui, *à ma connaissance, et en l'état actuel des choses*,
+respectent ces critères.
+
+Note : le tri est purement arbitraire.
+
+{% endmarkdown %}
+
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  {% for project in browser_games.games %}
+    <div class="bg-gray-100 flex-1 rounded border border-gray-300 duration-200 hover:shadow-md">
+      <a href="{{ project.url }}" class="group block p-4 bg-gray-200 rounded-t border-b border-gray-300 duration-200 hover:bg-gray-300 focus:bg-gray-300">
+        <div class="flex">
+          <div class="font-bold text-xl">
+            {{ project.name }}
+          </div>
+            
+          <div class="ml-auto" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="mt-1">
+          <span class="inlne-block bg-{% category_to_color project.category %}-300 py-0.5 px-2 rounded-full">
+            {% category_to_string project.category %}
+          </span>
+        </div>
+      </a>
+
+      <div class="p-4">
+        <div class="text-gray-700 text-sm">
+          <div class="flex items-center">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"  width="20" height="20">
+                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+              </svg>
+            </div>
+
+            <p class="ml-2">
+              {% if project.min_players == project.max_players %}
+                {{ project.min_players }} joueurs
+              {% else %}
+                {% if project.max_players === 'unknown' %}
+                  {{ project.min_players }} à ? joueurs
+                {% else %}
+                  {{ project.min_players }} à {{ project.max_players }} joueurs
+                {% endif %}
+              {% endif %}
+            </p>
+          </div>
+        </div>
+
+        <p class="pt-2">
+          {% markdown %}{{ project.description }}{% endmarkdown %}
+        </p>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<!--
+
+## Jeux à évaluer
+
+- [TheLast.io](https://www.thelast.io/)
+- [gunfight.io](https://gunfight.io/)
+- [Gulch.io](https://gulch.io/)
+- [BRUH.IO](https://bruh.io/)
+- [Vertix Online](http://vertix.io/)
+- [KillStreak.tv](https://killstreak.tv/)
+- [Globulos](http://www.globulos.com/)
+- [SpaceGuard.io](https://spaceguard.io/)
+- [WarScrap](https://warscrap.io/)
+- [Warfork](https://warfork.com/)
+- [Massive Music Quiz](https://www.massivemusicquiz.com/)
+- [TopQuizz](https://www.topquizz.com/game/)
+- [surviv.io](https://surviv.io/)
+- [PartyToons.io](https://partytoons.io/)
+- [Codenames](https://codenames.game/)
+
+
+## Ne correspondent pas mais amusants
+
+- [Among Us](https://innersloth.itch.io/among-us) *(payant, 5 €)* *(nécessite un téléchargement)*
+- [Les Loups Garous en ligne](https://www.loups-garous-en-ligne.com/) *(inscription obligatoire)* *(nécessite plus que 2 joueurs)*
+- [Superhex.io](https://superhex.io/)
+- [Extinction Minijeux](https://sites.google.com/view/extinction-minijeux) (Aaaa!, Bouboum et Forteresse) *(nécessite un téléchargement)*
+- [Transformice](https://www.transformice.com/) *(nécessite un téléchargement)*
+- [Paper.io 2](https://paperio.site/)
+- [Hilly.io](https://hilly.io/)
+- [GeoGuessr](https://www.geoguessr.com/) *(1 joueur seulement)*
+- [powerline.io](http://powerline.io/) *(pas de partie privée)*
+- [Jeux de m28.studio](https://m28.studio/)
+- [TagPro](https://tagpro.koalabeast.com/) *(4 joueurs minimum)*
+- [Onmuga](https://onmuga.com/) *(en anglais)*
+
+
+## Ressources intéressantes
+
+- [Lockdown Gaming List](https://docs.google.com/spreadsheets/d/1nwZkqIoIkkUakCvjiiLul6QFObxBM0DIP--Diq1KtQU/edit#gid=2062146979)
+
+-->

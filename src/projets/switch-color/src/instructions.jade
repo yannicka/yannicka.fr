@@ -1,0 +1,25 @@
+- var title = 'Instructions'
+
+doctype html
+html
+	include head.jade
+
+	body
+		div#logo: img(src="data/img/logo.png" alt="Switch Color")
+
+		span.go_back(data-href="menu.html") &lt; Retour
+
+		h1= title
+
+		p Appuyez sur les diff&eacute;rentes cellules de la grille afin d'&eacute;liminer toutes les cellules color&eacute;es dans chacun des niveaux.
+
+		p En cliquant sur une cellule, les quatre cellules adjacentes et la cellule elle-m&ecirc;me inversent leurs couleurs.
+
+		p Finissez le jeu en finissant tous les niveaux et en ayant sur chacun une m&eacute;daille d'or.
+
+		p Les m&eacute;dailles d'or sont donn&eacute;es lorsque vous r&eacute;ussissez &agrave; gagner le niveau avec le minimum d'essais. Les autres m&eacute;dailles d&eacute;pendent du nombre de coups n&eacute;cessaire pour avoir la m&eacute;daille d'or.
+
+		p: img.img_100pc(src="data/img/begin_end.png" alt="")
+
+		script(src="js/common.js")
+		script(src="js/page.js")

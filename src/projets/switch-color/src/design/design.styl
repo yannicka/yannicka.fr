@@ -1,0 +1,75 @@
+/* Polices
+---------- */
+@font-face
+  font-family  'Roboto'
+  font-style   normal
+  font-weight  400
+  src          local('Roboto Regular'), local('Roboto-Regular'), url('font/Roboto-Regular.ttf') format('truetype')
+ 
+@font-face
+  font-style   normal
+  font-weight  700
+  src          local('Roboto Bold'), local('Roboto-Bold'), url('font/Roboto-Bold.ttf') format('truetype')
+
+/* Page
+------- */
+html
+body
+	margin            0
+	padding           0
+	background-color  rgb(245, 240, 235)
+	font-size         19px
+	font-family       'Roboto', 'sans-serif'
+	width             100%
+	height            100%
+
+/* Logo
+------- */
+#logo
+	margin      0 auto
+	padding     0
+	text-align  center
+
+	a
+		text-decoration  none
+		border           none
+
+	img
+		width  80%
+
+.img_100pc
+	width  100%
+
+/* Retour en arrière
+-------------------- */
+.go_back
+	margin           6px
+	padding          8px
+	display          block
+	text-decoration  none
+	color            rgb(33, 33, 33)
+	font-size        26px
+	border-bottom    2px solid rgb(33, 33, 33)
+	cursor           pointer
+
+/* Paragraphes et titres
+------------------------ */
+h1
+	margin       12px 6px 6px 6px
+	padding      0
+	font-size    38px
+	font-weight  normal
+
+p
+	margin         6px 6px
+	padding        6px 0
+	border-bottom  1px solid rgb(172, 172, 172)
+
+	&:last-child
+		border  none
+
+@import 'select_level'
+@import 'options'
+@import 'menu'
+@import 'instructions'
+@import 'game'
