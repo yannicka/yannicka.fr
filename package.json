@@ -1,14 +1,13 @@
 {
   "scripts": {
-    "serve": "eleventy --serve & postcss src/assets/css/style.css  --o _tmp/style.css --watch",
-    "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production postcss styles/tailwind.css --o public/style.css && cleancss public/style.css -o public/style.css"
+    "serve": "eleventy --serve & postcss src/assets/css/style.css --o public/assets/css/style.css --watch",
+    "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production postcss public/assets/css/style.css --o public/assets/css/style.css"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.6",
     "@toycode/markdown-it-class": "^1.2.4",
     "autoprefixer": "^10.1.0",
-    "clean-css-cli": "^4.3.0",
     "markdown-it": "^12.0.4",
     "markdown-it-anchor": "^7.0.0",
     "postcss": "^8.2.1",

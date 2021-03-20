@@ -10,8 +10,6 @@ module.exports = function (config) {
   config.addPassthroughCopy('src/projets/age-of-rice/src')
   config.addPassthroughCopy('src/projets/switch-color/src')
   config.addPassthroughCopy('src/projets/switch-color/img')
-  config.addWatchTarget('./_tmp/style.css')
-  config.addPassthroughCopy({ './_tmp/style.css': './style.css' })
 
   config.addPlugin(syntaxHighlight)
 
