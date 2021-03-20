@@ -21,12 +21,12 @@ mes outils préférés en haut de liste.
 - [Visual Studio Code](https://code.visualstudio.com/)
   (bonus : [VSCodium](https://vscodium.com/),
            [Visual Studio Code - OSS](https://flathub.org/apps/details/com.visualstudio.code-oss))
+- [Kate](https://kate-editor.org/)
 - [Sublime Text](https://www.sublimetext.com/) *(propriétaire)*
 - [vim](https://www.vim.org/)
   (bonus : [SpaceVim](https://spacevim.org/),
            [fugitive.vim](https://github.com/tpope/vim-fugitive))
 - [Neovim](https://neovim.io/) (mêmes bonus que pour vim)
-- [Kate](https://kate-editor.org/)
 - [Notepad++](https://notepad-plus-plus.org/) *(Windows seulement)*
 - [Geany](https://www.geany.org/)
 - [Emacs](https://www.gnu.org/software/emacs/emacs.html)
@@ -45,7 +45,7 @@ mes outils préférés en haut de liste.
 - [Kakoune](https://kakoune.org/)
 - [Onivim 2](https://v2.onivim.io/) *(semi-propriétaire)*
 - [Gedit](https://wiki.gnome.org/Apps/Gedit)
-- [Thonny](https://thonny.org/)
+- [Thonny](https://thonny.org/) *(pour Python)*
 - [nano](https://www.nano-editor.org/)
 - [Howl](https://howl.io/)
 - [Textadept](https://foicica.com/textadept/)
@@ -53,7 +53,6 @@ mes outils préférés en haut de liste.
 - [elementary Code](https://github.com/elementary/code)
 - [Graviton](https://graviton.netlify.app/)
 - [Notepadqq](https://notepadqq.com/) *(à l'abandon)*
-- [Brackets](http://brackets.io/) *(à l'abandon)*
 - [Atom](https://atom.io/) *(à l'abandon)*
 
 ## IDE
@@ -77,25 +76,26 @@ mes outils préférés en haut de liste.
 ### Framework
 
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Tachyons](https://tachyons.io/)
 - [Bulma](https://bulma.io/)
 - [Bootstrap](https://getbootstrap.com/)
+- [Tachyons](https://tachyons.io/) *(semble à l'abandon)*
 
 ## Langage de programmation
 
 ### Langage
 
-- [TypeScript](https://www.typescriptlang.org/)
+*Ici ne sont listés que des langages que je trouve intéressants et qui sont
+moins connus.*
+
 - [Haxe](https://haxe.org/)
-- [Rust](https://www.rust-lang.org/)
 - [Nim](https://nim-lang.org/)
 - [Racket](https://racket-lang.org/)
-- [Elm](https://elm-lang.org/)
 - [Clojure](https://clojure.org/) & [ClojureScript](https://clojurescript.org/)
 - [PureScript](https://www.purescript.org/)
 - [OCaml](https://ocaml.org/)
 - [Haskell](https://www.haskell.org/)
 - [Zig](https://ziglang.org/)
+- [Elm](https://elm-lang.org/)
 
 ### Comment créer un langage de programmation
 
@@ -145,12 +145,13 @@ mes outils préférés en haut de liste.
 - [Synfig Studio](https://www.synfig.org/)
 - [OpenToonz](https://opentoonz.github.io/e/index.html)
 - [enve](https://maurycyliebner.github.io/)
+- [VGC Software](https://www.vgc.io/) *(pas encore sorti)*
 
 ### Design
 
 - [draw.io](https://www.draw.io/)
 - [Wireflow](https://wireflow.co/)
-- [Excalidraw](https://excalidraw.com/)
+- [Penpot](https://penpot.app/)
 
 ### Autres outils
 
@@ -162,6 +163,7 @@ mes outils préférés en haut de liste.
 ### Modélisation 3D
 
 - [Blender](https://www.blender.org/)
+- [FreeCAD](https://www.freecadweb.org/)
 
 ### Animation 3D
 
@@ -197,11 +199,16 @@ mes outils préférés en haut de liste.
 - [K-9 Mail](https://k9mail.app/) *(Android seulement)*
 - [FairEmail](https://email.faircode.eu/) *(Android seulement)*
 
+### Relai
+
+- [Firefox Relay](https://relay.firefox.com/)
+
 ## Discussion
 
 *Alternatives à Discord, WhatsApp et Messenger.*
 
-- [Matrix](https://matrix.org/) ([Element](https://element.io/) et [autres clients](https://matrix.org/clients/))
+- [Matrix](https://matrix.org/) ([Element](https://element.io/) et [autres
+  clients](https://matrix.org/clients/))
 - [Signal](https://whispersystems.org/)
 - [Telegram](https://telegram.org/) *(serveur privatif)*
 - [Jami](https://jami.net/)
@@ -211,6 +218,14 @@ mes outils préférés en haut de liste.
   [Movim](https://movim.eu/),
   [Snikket](https://snikket.org/)
   et [autres clients](https://xmpp.org/software/clients.html))
+- [Zulip](https://zulip.com/)
+- [Wire](https://wire.com/)
+- [Mattermost](https://mattermost.com/)
+- [Rocket.Chat](https://rocket.chat/)
+- [Mumble](https://www.mumble.info/) *(vocal seulement)*
+- [Jitsi](https://jitsi.org/) *(vidéo seulement)*
+- [hack.chat](https://github.com/hack-chat/main) (bonus : [instance
+  officielle](https://hack.chat/))
 
 ## Lieu de discussion
 
@@ -360,6 +375,7 @@ mes outils préférés en haut de liste.
 
 ### « Avancé »
 
+- [Focalboard](https://www.focalboard.com/)
 - [Notion](https://www.notion.so/) *(propriétaire)*
 - [Taskade](https://www.taskade.com/) *(propriétaire)*
 - [Milanote](https://www.milanote.com/) *(propriétaire)*
@@ -367,13 +383,18 @@ mes outils préférés en haut de liste.
 
 ### Bases de connaissances
 
-- [Trilium](https://github.com/zadam/trilium)
+- [Trilium Notes](https://github.com/zadam/trilium)
 
 ## Expressions rationnelles
 
 - [Regexper](https://regexper.com/) — Affichage graphique d'expressions
   rationnelles (regex)
 - [regex101](https://regex101.com/) — Testez vos expressions rationnelles
+
+## Tableau blanc
+
+- [OpenBoard](https://openboard.ch/)
+- [Excalidraw](https://excalidraw.com/)
 
 ## Base de données
 
@@ -427,7 +448,7 @@ mes outils préférés en haut de liste.
 ### Lecteur
 
 - [Lollypop](https://wiki.gnome.org/Apps/Lollypop)
-- [Elisa](https://kde.org/applications/multimedia/org.kde.elisa)
+- [Elisa](https://elisa.kde.org/)
 - [Quod Libet](https://github.com/quodlibet/quodlibet)
 - [Byte](https://github.com/alainm23/byte)
 
@@ -489,6 +510,7 @@ mes outils préférés en haut de liste.
 - [Isso](https://posativ.org/isso/)
 - [Squs](https://github.com/BaptisteGelez/squs)
 - [Commento](https://commento.io/)
+- [Cactus Comments](https://cactus.chat/)
 
 ### Analytique
 
@@ -505,6 +527,8 @@ mes outils préférés en haut de liste.
 - [Countly](https://count.ly/)
 - [userTrack](https://www.usertrack.net/) *(privatif)*
 - [Panelbear](https://panelbear.com/) *(privatif)*
+- [Splitbee](https://splitbee.io/) *(privatif)*
+- [Counter](https://counter.dev/)
 
 ### Wiki
 
@@ -548,6 +572,10 @@ mes outils préférés en haut de liste.
 ### Surcouche applicative aux sites
 
 - [Weboob](https://weboob.org/)
+
+## Gestion de projet
+
+- [OpenProject](https://www.openproject.org/)
 
 ## Écran
 
@@ -614,9 +642,9 @@ mes outils préférés en haut de liste.
 
 - [Phaser](https://phaser.io/)
 - [Pixi.js](https://www.pixijs.com/)
-- [melonJS](http://melonjs.org/)
+- [melonJS](https://melonjs.org/)
 - [PlayCanvas](https://playcanvas.com/) *(propriétaire)*
-- [Crafty](http://craftyjs.com/) *(semble abandonné)*
+- [Crafty](https://craftyjs.com/) *(semble abandonné)*
 
 ## Univers du jeu vidéo
 
@@ -630,7 +658,7 @@ mes outils préférés en haut de liste.
 - [Stencyl](http://www.stencyl.com/) *(propriétaire)*
 - [Construct](https://www.scirra.com/) *(propriétaire)*
 - [GameMaker](https://www.yoyogames.com/) *(propriétaire)*
-- [Superpowers](http://superpowers-html5.com/) *(semble abandonné)*
+- [Superpowers](https://superpowers-html5.com/) *(semble abandonné)*
 - [Solarus](https://www.solarus-games.org/)
 
 ### Boutique de jeux
@@ -681,13 +709,15 @@ mes outils préférés en haut de liste.
 - [Git Cola](https://git-cola.github.io/)
 - [Git Gui](https://git-scm.com/docs/git-gui)
 - [GitAhead](https://gitahead.github.io/gitahead.com/)
-- [GitHub Desktop](https://desktop.github.com/)
+- [GitHub Desktop](https://desktop.github.com/) *(Windows et macOS seulement)*
 - [Magit](https://magit.vc/)
 - [lazygit](https://github.com/jesseduffield/lazygit)
-- [tig](https://github.com/jonas/tig)
+- [tig](https://jonas.github.io/tig/)
 - [Sublime Merge](https://www.sublimemerge.com/) *(propriétaire)*
 - [fugitive.vim](https://github.com/tpope/vim-fugitive)
 - [GitKraken](https://www.gitkraken.com/) *(propriétaire)*
+- Bonus : [une liste non exhaustive des clients
+  git](https://git-scm.com/downloads/guis)
 
 ## Autohébergement
 
@@ -695,15 +725,11 @@ mes outils préférés en haut de liste.
 - [Nextcloud](https://nextcloud.com/)
 - [Cozy](https://cozy.io/)
 
-## Écran
-
-- [Redshift](http://jonls.dk/redshift/)
-- [f.lux](https://justgetflux.com/) *(propriétaire)*
-
 ## Paste / Partage de code
 
 - [ZeroBin](https://www.zerobin.net/)
-- [PrivateBin](https://privatebin.info/)
+- [PrivateBin](https://privatebin.info/) (bonus :
+  [instances](https://privatebin.info/directory/))
 - [hastebin](https://hastebin.com/)
 - [glot.io](https://glot.io/)
 - [Write.as](https://write.as/)
@@ -729,7 +755,7 @@ mes outils préférés en haut de liste.
 
 - [Laragon](https://laragon.org/)
 - [XAMPP](https://www.apachefriends.org/)
-- [WampServer](http://www.wampserver.com/)
+- [WampServer](https://www.wampserver.com/)
   (bonus : <http://forum.wampserver.com/read.php?1,137154>)
 
 ### Préprocesseur
@@ -764,6 +790,10 @@ mes outils préférés en haut de liste.
 ### Lecteur multimédia
 
 - [Kodi](https://kodi.tv/)
+
+### YouTube
+
+- [FreeTube](https://freetubeapp.io/)
 
 ## Photographie / Image
 
@@ -818,17 +848,18 @@ mes outils préférés en haut de liste.
 
 ## Gestionnaire de version
 
-*Alternatives à Git.*
+*Alternatives à GitHub.*
 
-- [Gitea](https://gitea.io/)
 - [GitLab](https://about.gitlab.com/)
+- [SourceHut](https://sourcehut.org/)
+- [Gitea](https://gitea.io/)
 - [Launchpad](https://launchpad.net/)
 - [Fossil](https://www.fossil-scm.org/)
 - [Kallithea](https://kallithea-scm.org/)
 - [Phabricator](https://www.phacility.com/)
-- [SourceHut](https://sourcehut.org/)
 - [Redmine](https://www.redmine.org/)
 - [Gogs](https://gogs.io/)
+- [Radicle](https://radicle.xyz/)
 - Bonus : [Bugzilla](https://www.bugzilla.org/)
 
 ## Gestionnaire de mots de passe
@@ -851,16 +882,17 @@ mes outils préférés en haut de liste.
 
 ## Agrégateur RSS
 
-- [Newsblur](https://newsblur.com/)
 - [QuiteRSS](https://quiterss.org/)
+- [Newsblur](https://newsblur.com/)
 - [FeedReader](https://jangernert.github.io/FeedReader/)
 - [GNOME Feeds](https://gabmus.gitlab.io/gnome-feeds/)
 - [Akregator](https://kde.org/applications/internet/org.kde.akregator)
+- [Fluent Reader](https://hyliu.me/fluent-reader/)
 
 ## Marque-pages
 
 - [Wallabag](https://wallabag.org/)
-- [Pocket](https://getpocket.com/)
+- [Pocket](https://getpocket.com/) *(privatif)*
 
 ## Univers Linux
 
@@ -871,15 +903,15 @@ mes outils préférés en haut de liste.
 - [Debian](https://www.debian.org/)
 - [elementary OS](https://elementary.io/)
 - [Ubuntu](https://www.ubuntu.com/)
-- [Solus](https://solus-project.com/)
+- [Solus](https://getsol.us/)
 - [ArchLinux](https://www.archlinux.org/)
 - [KDE neon](https://neon.kde.org/)
 - [Fedora](https://getfedora.org/)
 - [System76 / Pop!\_os](https://system76.com/)
-- [Purism / PureOS](https://puri.sm/)
+- [PureOS](https://pureos.net/)
 - [Guix System](https://guix.gnu.org/) (et son gestionnaire de paquets Guix)
 - [Liri](https://liri.io/)
-- [CentOS](https://fr.wikipedia.org/wiki/CentOS)
+- [CentOS](https://www.centos.org/)
 
 ### Moniteur
 
@@ -899,6 +931,7 @@ mes outils préférés en haut de liste.
 - [Terminator](https://launchpad.net/terminator)
 - [Terminology](https://www.enlightenment.org/about-terminology)
 - [Alacritty](https://github.com/alacritty/alacritty)
+- [Bottles](https://usebottles.com/)
 
 ### Shell
 
@@ -952,7 +985,7 @@ mes outils préférés en haut de liste.
 ## Diaporama
 
 - [Spice-up](https://github.com/Philip-Scott/Spice-up)
-- [Marp](https://yhatt.github.io/marp/)
+- [Marp](https://marp.app/)
 - [PAMPI](http://pascal.peter.free.fr/pampi.html)
 - [mdx-deck](https://github.com/jxnblk/mdx-deck)
 
@@ -968,21 +1001,17 @@ mes outils préférés en haut de liste.
 
 - [Mullvad](https://mullvad.net/)
 - [ProtonVPN](https://protonvpn.com/)
+- [Mozilla VPN](https://www.mozilla.org/en-US/products/vpn/)
 
 ## Suivi d'erreurs
 
-- [Sentry](https://sentry.io/)
+- [Sentry](https://sentry.io/) *(semi-propriétaire)*
 - [SonarQube](https://www.sonarqube.org/)
 
 ## Containeur
 
 - [Docker](https://www.docker.com/)
   (bonus : [lazydocker](https://github.com/jesseduffield/lazydocker))
-
-## Liste d'outils intéressants
-
-- [Services web en vrac, par
-   sebsauvage](https://sebsauvage.net/wiki/doku.php?id=services_web)
 
 ## Présentation des maquettes
 
@@ -1000,6 +1029,7 @@ mes outils préférés en haut de liste.
 ## Apprentissage par cartes
 
 - [Anki](https://apps.ankiweb.net/)
+- [ForgetMeNot](https://github.com/tema6120/ForgetMeNot) *(Android seulement)*
 
 ## Transition écologique
 
@@ -1011,14 +1041,16 @@ mes outils préférés en haut de liste.
 
 ## Transfert de fichiers
 
-- [Firefox Send](https://send.firefox.com/)
 - [Swiss Transfer](https://www.swisstransfer.com/)
+- [ShareDrop](https://www.sharedrop.io/)
+- [Bitwarden Send](https://bitwarden.com/products/send/) *(privatif)*
 
 ## Calculatrices
 
 - [NaSC](https://github.com/parnold-x/nasc)
 - [Qalculate!](https://qalculate.github.io/)
 - [Cantor](https://cantor.kde.org/)
+- [NoteCalc](https://bbodi.github.io/notecalc3/)
 
 ## Police
 
@@ -1049,3 +1081,8 @@ mes outils préférés en haut de liste.
 - [Purism](https://puri.sm/)
 - [System76](https://system76.com/)
 - [Laptop with Linux](https://laptopwithlinux.com/)
+
+## D'autres listes d'outils intéressants
+
+- [Services web en vrac, par
+   sebsauvage](https://sebsauvage.net/wiki/doku.php?id=services_web)
