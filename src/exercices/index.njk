@@ -35,7 +35,7 @@ title: Exercices
 
   <ol class="list-decimal ml-8">
     {%- for exercise in collections.exercice_monday -%}
-      <li>
+      <li class="my-4 md:my-1">
         <a href="{{ exercise.url | url }}" class="underline">
           {{- exercise.data.title -}}
         </a>
@@ -49,7 +49,7 @@ title: Exercices
 
   <ol class="list-decimal ml-8">
     {%- for exercise in collections.exercice_hard -%}
-      <li>
+      <li class="my-4 md:my-1">
         <a href="{{ exercise.url | url }}" class="underline">
           {{- exercise.data.title -}}
         </a>
