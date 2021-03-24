@@ -106,7 +106,8 @@ category = "reflexion"
 min_players = 2
 max_players = 8
 description = """
-Faites devinez les bons à votre partenaire de jeu en lui donnant des indices.
+Faites devinez les bons mots à votre partenaire de jeu en lui donnant des
+indices.
 """
 
 [[games]]
