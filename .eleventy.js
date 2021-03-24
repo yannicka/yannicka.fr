@@ -22,7 +22,8 @@ module.exports = function (config) {
     h6: ['text-xl mt-4 mb-2'],
     p: ['my-3'],
     a: ['underline', 'hover:text-gray-700', 'dark:hover:text-gray-300'],
-    ul: ['my-3', 'list-dashed', 'list-inside'],
+    ul: ['ml-3', 'my-3', 'list-dashed', 'list-inside'],
+    li: ['my-2'],
   }
 
   let markdownLibrary = markdownIt({
@@ -48,6 +49,12 @@ module.exports = function (config) {
       return 'blue'
     } else if (category === 'action') {
       return 'yellow'
+    } else if (category === 'reflexion') {
+      return 'orange'
+    } else if (category === 'card') {
+      return 'purple'
+    } else if (category === 'various') {
+      return 'pink'
     } else  {
       return 'gray'
     }
@@ -62,6 +69,12 @@ module.exports = function (config) {
       return 'Quiz'
     } else if (category === 'action') {
       return 'Action'
+    } else if (category === 'reflexion') {
+      return 'Réflexion'
+    } else if (category === 'card') {
+      return 'Cartes'
+    } else if (category === 'various') {
+      return 'Divers'
     } else  {
       return 'Autre'
     }

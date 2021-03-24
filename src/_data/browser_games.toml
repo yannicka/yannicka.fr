@@ -1,6 +1,6 @@
 # name = "nom du jeu"
 # url = "URL du jeu"
-# category = "drawing" | "music" | "quiz" | "action" | "other"
+# category = "drawing" | "music" | "quiz" | "action" | "reflexion" | "card" | "various" | "other"
 # min_players = nombre de joueurs minimum | "unknown"
 # max_players = nombre de joueurs minimum | "unknown" | "infinite"
 # description = """description du jeu"""
@@ -102,11 +102,11 @@ Deviner le titre et l'artiste d'une chanson.
 [[games]]
 name = "Codenames"
 url = "https://codenames.game/"
-category = "other"
+category = "reflexion"
 min_players = 2
-max_players = "unknown"
+max_players = 8
 description = """
-@todo
+Faites devinez les bons à votre partenaire de jeu en lui donnant des indices.
 """
 
 [[games]]
@@ -122,7 +122,7 @@ Trouver des mots commençants par une lettre dans des domaines divers.
 [[games]]
 name = "Lichess"
 url = "https://lichess.org/"
-category = "other"
+category = "reflexion"
 min_players = 2
 max_players = 2
 description = """
@@ -132,7 +132,7 @@ Jeu d'échecs.
 [[games]]
 name = "Touché-Coulé"
 url = "http://fr.battleship-game.org/"
-category = "other"
+category = "reflexion"
 min_players = 2
 max_players = 2
 description = """
@@ -142,7 +142,7 @@ Jeu de bataille navale.
 [[games]]
 name = "Trivabble"
 url = "https://trivabble.1s.fr/"
-category = "other"
+category = "reflexion"
 min_players = 2
 max_players = "unknown"
 description = """
@@ -183,7 +183,7 @@ Jeu de « foot » ultra-minimaliste de 2 à 12 joueurs.
 [[games]]
 name = "PlayingCards.io"
 url = "https://playingcards.io/"
-category = "other"
+category = "card"
 min_players = 2
 max_players = "unknown"
 description = """
@@ -193,7 +193,7 @@ description = """
 [[games]]
 name = "Set with Friends"
 url = "https://setwithfriends.com/"
-category = "other"
+category = "card"
 min_players = 2
 max_players = "unknown"
 description = """
@@ -203,7 +203,7 @@ description = """
 [[games]]
 name = "Mosaic"
 url = "https://playmosaic.online/"
-category = "other"
+category = "reflexion"
 min_players = 2
 max_players = 4
 description = """
@@ -213,27 +213,27 @@ description = """
 [[games]]
 name = "Mattle"
 url = "https://mattle.online/"
-category = "other"
+category = "various"
 min_players = 2
 max_players = "unknown"
 description = """
-@todo
+Jeux : Go, Azee, Sevenee, Spendee, Spicee et Blokee.
 """
 
 [[games]]
 name = "Air board game"
 url = "https://airboardgame.net/games/"
-category = "other"
+category = "various"
 min_players = 2
 max_players = "unknown"
 description = """
-@todo
+De nombreux jeux de société.
 """
 
 [[games]]
 name = "Colonist"
 url = "https://colonist.io/"
-category = "other"
+category = "reflexion"
 min_players = 2
 max_players = 8
 description = """
@@ -243,7 +243,7 @@ description = """
 [[games]]
 name = "tix.tax"
 url = "https://tix.tax/"
-category = "other"
+category = "reflexion"
 min_players = 2
 max_players = 2
 description = """
