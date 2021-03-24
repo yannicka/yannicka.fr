@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "serve": "eleventy --serve & postcss src/assets/css/style.css --o public/assets/css/style.css --watch",
+    "serve": "eleventy --serve & postcss css/style.css --o public/assets/css/style.css --watch",
     "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production postcss public/assets/css/style.css --o public/assets/css/style.css"
   },
   "devDependencies": {

@@ -163,12 +163,16 @@ moins connus.*
 ### Modélisation 3D
 
 - [Blender](https://www.blender.org/)
-- [FreeCAD](https://www.freecadweb.org/)
 
 ### Animation 3D
 
 - [Blender](https://www.blender.org/) (bonus : ferme de serveur partagée
   [Sheet it Render Farm](https://www.sheepit-renderfarm.com/))
+
+### CAD
+
+- [FreeCAD](https://www.freecadweb.org/)
+- [KiCad EDA](https://www.kicad.org/)
 
 ## Client FTP
 
@@ -511,6 +515,13 @@ moins connus.*
 - [Squs](https://github.com/BaptisteGelez/squs)
 - [Commento](https://commento.io/)
 - [Cactus Comments](https://cactus.chat/)
+
+### Discussion sur site
+
+- [Papercups](https://papercups.io/)
+- [Chatwoot](https://www.chatwoot.com/)
+- [Chaskiq](https://chaskiq.io/)
+- [Tiledesk](https://tiledesk.com/)
 
 ### Analytique
 

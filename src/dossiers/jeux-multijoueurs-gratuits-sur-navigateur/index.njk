@@ -52,8 +52,8 @@ Note : le tri est purement arbitraire.
 
 <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
   {% for project in browser_games.games %}
-    <div class="bg-gray-100 flex-1 rounded border border-gray-300 duration-200 hover:shadow-md">
-      <a href="{{ project.url }}" class="group block p-4 bg-gray-200 rounded-t border-b border-gray-300 duration-200 hover:bg-gray-300 focus:bg-gray-300">
+    <div class="bg-gray-100 dark:bg-gray-700 flex-1 rounded border border-gray-300 dark:border-gray-500 duration-200 hover:shadow-md">
+      <a href="{{ project.url }}" class="group block p-4 bg-gray-200 dark:bg-gray-600 rounded-t border-b border-gray-300 dark:border-gray-500 duration-200 hover:bg-gray-300 dark:hover:bg-gray-800 focus:bg-gray-300 dark:focus:bg-gray-800 ">
         <div class="flex">
           <div class="font-bold text-xl">
             {{ project.name }}
@@ -67,14 +67,14 @@ Note : le tri est purement arbitraire.
         </div>
 
         <div class="mt-1">
-          <span class="inlne-block bg-{% category_to_color project.category %}-300 py-0.5 px-2 rounded-full">
+          <span class="inlne-block text-black bg-{% category_to_color project.category %}-300 py-0.5 px-2 rounded-full">
             {% category_to_string project.category %}
           </span>
         </div>
       </a>
 
       <div class="p-4">
-        <div class="text-gray-700 text-sm">
+        <div class="text-gray-700 dark:text-gray-300 text-sm">
           <div class="flex items-center">
             <div>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"  width="20" height="20">
@@ -88,6 +88,8 @@ Note : le tri est purement arbitraire.
               {% else %}
                 {% if project.max_players === 'unknown' %}
                   {{ project.min_players }} à ? joueurs
+                {% elif project.max_players === 'infinite' %}
+                  À partir de {{ project.min_players }} joueurs
                 {% else %}
                   {{ project.min_players }} à {{ project.max_players }} joueurs
                 {% endif %}

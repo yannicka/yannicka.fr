@@ -20,9 +20,9 @@ module.exports = function (config) {
     h4: ['text-3xl mt-4 mb-2'],
     h5: ['text-2xl mt-4 mb-2'],
     h6: ['text-xl mt-4 mb-2'],
-    p: ['py-3'],
-    a: ['underline', 'hover:text-gray-700'],
-    ul: ['py-3', 'list-dashed', 'list-inside'],
+    p: ['my-3'],
+    a: ['underline', 'hover:text-gray-700', 'dark:hover:text-gray-300'],
+    ul: ['my-3', 'list-dashed', 'list-inside'],
   }
 
   let markdownLibrary = markdownIt({

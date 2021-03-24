@@ -7,11 +7,11 @@
 .list-dashed > li {
   list-style-type: none;
   position: relative;
-  margin-left: 1em;
+  margin-left: 1.2em;
 }
 
 .list-dashed > li::before {
   content: '–';
   position: absolute;
-  margin-left: -1em;
+  margin-left: -1.2em;
 }
