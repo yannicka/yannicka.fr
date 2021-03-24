@@ -260,13 +260,12 @@ description = """
 Jeu de kart en 3D. Le but est de rester en vie et de détruire ses adversaires.
 """
 
-# Nécessite un compte :
-# [[games]]
-# name = "KGAMES"
-# url = "https://kgames.fr/"
-# category = "action"
-# min_players = 2
-# max_players = "unknown"
-# description = """
-# @todo
-# """
+[[games]]
+name = "Kculture"
+url = "https://kculture.kgames.fr/"
+category = "quiz"
+min_players = 2
+max_players = 16
+description = """
+@todo
+"""
