@@ -70,6 +70,56 @@ indiquées. Pop Sauce : devinez d'où est tirée la phrase ou l'image.
 """
 
 [[games]]
+name = "Kculture"
+url = "https://kculture.kgames.fr/"
+category = "quiz"
+min_players = 2
+max_players = 16
+description = """
+@todo
+"""
+
+[[games]]
+name = "SongTrivia - Guess the song!"
+url = "https://songtrivia2.io/"
+category = "music"
+min_players = 2
+max_players = "unknown"
+description = """
+Devinez quelle est la chanson que vous écoutez.
+"""
+
+[[games]]
+name = "What the Tune?!"
+url = "https://whatthetune.com/"
+category = "music"
+min_players = 1
+max_players = "unknown"
+description = """
+Deviner le titre et l'artiste d'une chanson.
+"""
+
+[[games]]
+name = "Codenames"
+url = "https://codenames.game/"
+category = "other"
+min_players = 2
+max_players = "unknown"
+description = """
+@todo
+"""
+
+[[games]]
+name = "Le petit bac"
+url = "https://petitbac.net/"
+category = "quiz"
+min_players = 2
+max_players = 45
+description = """
+Trouver des mots commençants par une lettre dans des domaines divers.
+"""
+
+[[games]]
 name = "Lichess"
 url = "https://lichess.org/"
 category = "other"
@@ -113,26 +163,6 @@ réponses. Devinez quelle réponse sera sélectionnée par la majorité.
 """
 
 [[games]]
-name = "SongTrivia - Guess the song!"
-url = "https://songtrivia2.io/"
-category = "music"
-min_players = 2
-max_players = "unknown"
-description = """
-Devinez quelle est la chanson que vous écoutez.
-"""
-
-[[games]]
-name = "What the Tune?!"
-url = "https://whatthetune.com/"
-category = "music"
-min_players = 1
-max_players = "unknown"
-description = """
-Deviner le titre et l'artiste d'une chanson.
-"""
-
-[[games]]
 name = "Haxball"
 url = "https://www.haxball.com/"
 category = "action"
@@ -140,26 +170,6 @@ min_players = 2
 max_players = 12
 description = """
 Jeu de « foot » ultra-minimaliste de 2 à 12 joueurs.
-"""
-
-[[games]]
-name = "kugeln.io"
-url = "https://kugeln.io/"
-category = "action"
-min_players = 2
-max_players = "unknown"
-description = """
-Jeu de plateforme 2D. Tuez et survivez.
-"""
-
-[[games]]
-name = "Le petit bac"
-url = "https://petitbac.net/"
-category = "quiz"
-min_players = 2
-max_players = 45
-description = """
-Trouver des mots commençants par une lettre dans des domaines divers.
 """
 
 # Voir ces jeux :
@@ -170,16 +180,6 @@ Trouver des mots commençants par une lettre dans des domaines divers.
 # À noter : ne pas partager ces liens directement, mais exporter le jeu, puis
 #           l'importer dans un autre salon, et expliquer la procédure aux
 #           joueurs.
-[[games]]
-name = "Codenames"
-url = "https://codenames.game/"
-category = "other"
-min_players = 2
-max_players = "unknown"
-description = """
-@todo
-"""
-
 [[games]]
 name = "PlayingCards.io"
 url = "https://playingcards.io/"
@@ -251,6 +251,16 @@ description = """
 """
 
 [[games]]
+name = "kugeln.io"
+url = "https://kugeln.io/"
+category = "action"
+min_players = 2
+max_players = "unknown"
+description = """
+Jeu de plateforme 2D. Tuez et survivez.
+"""
+
+[[games]]
 name = "Smash Karts"
 url = "https://smashkarts.io/"
 category = "action"
@@ -258,14 +268,4 @@ min_players = 2
 max_players = "unknown"
 description = """
 Jeu de kart en 3D. Le but est de rester en vie et de détruire ses adversaires.
-"""
-
-[[games]]
-name = "Kculture"
-url = "https://kculture.kgames.fr/"
-category = "quiz"
-min_players = 2
-max_players = 16
-description = """
-@todo
 """
