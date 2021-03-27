@@ -46,6 +46,7 @@ module.exports = function (config) {
     p: ['my-3'],
     a: ['underline', 'hover:text-gray-700', 'dark:hover:text-gray-300'],
     ul: ['ml-3', 'my-3', 'list-dashed', 'list-inside'],
+    ol: ['ml-8', 'my-3', 'list-decimal'],
     li: ['my-2'],
   }
 
