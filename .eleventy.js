@@ -94,7 +94,13 @@ module.exports = function (config) {
     }
   })
 
-
+  config.addFilter('format_date', date => {
+    return new Intl.DateTimeFormat('fr-FR', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    }).format(date)
+  })
 
   config.addFilter('format_month', date => {
     return new Intl.DateTimeFormat('fr-FR', {

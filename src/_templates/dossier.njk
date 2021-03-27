@@ -13,12 +13,12 @@ layout: base.njk
     </li>
 
     {% if updated_at %}
-      <li {% if created_at %}title="Publié initialement le {{ created_at }}"{% endif %} class="pr-8">
-        Mis à jour le <time datetime="{{ updated_at }}">{{ updated_at }}</time>
+      <li {% if created_at %}title="Publié initialement le {{ created_at|format_date }}"{% endif %} class="pr-8">
+        Mis à jour le <time datetime="{{ updated_at }}">{{ updated_at|format_date }}</time>
       </li>
     {% elif created_at %}
       <li class="pr-8">
-        Publié le <time datetime="{{ created_at }}">{{ created_at }}</time>
+        Publié le <time datetime="{{ created_at }}">{{ created_at|format_date }}</time>
       </li>
     {% endif %}
 
