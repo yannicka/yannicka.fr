@@ -12,11 +12,15 @@ module.exports = {
         orange: colors.orange,
       },
     },
+    fontFamily: {
+      'source-serif-pro': ['Source Serif Pro', 'serif'],
+    },
   },
   variants: {
     extend: {
       backgroundColor: ['group-focus'],
-    }
+      borderWidth: ['dark'],
+    },
   },
   plugins: [],
 }

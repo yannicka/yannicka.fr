@@ -2,7 +2,12 @@
 layout: base.njk
 ---
 
-<p class="text-red-500">
-  Salut
-</p>
-
+<ul class="list-dashed">
+  {%- for dossier in collections.dossier -%}
+    <li class="my-4 md:my-1">
+      <a href="{{ dossier.url | url }}" class="text-black dark:text-white underline hover:text-gray-800 dark:hover:text-gray-300">
+        {{- dossier.data.title -}}
+      </a>
+    </li>
+  {%- endfor -%}
+</ul>

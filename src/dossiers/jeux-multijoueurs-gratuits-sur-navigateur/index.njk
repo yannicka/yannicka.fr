@@ -1,7 +1,7 @@
 ---
 title: Jeux multijoueurs gratuits sur navigateur
 created_at: 2020-11-21
-updated_at: 2021-03-12
+updated_at: 2021-03-27
 short_description: >
   Jeux par navigateur.
 toc: false
@@ -9,37 +9,45 @@ toc: false
 
 {% markdown %}
 
-Parfois, il arrive qu'on souhaite jouer avec des amis ou des connaissances à
-des jeux, que ce soit en vocal ou non. Cela est possible avec tous les jeux en
-ligne. Mais ici, on va s'intéresser au genre très particulier du jeu en ligne
-facilement accessible, auquel on accède gratuitement via le navigateur.
+<details>
+  <summary class="cursor-pointer bg-gray-200 dark:bg-gray-700 p-3 rounded transition hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring">
+    Voir l'introduction et les critères d'admissibilité d'un jeu
+  </summary>
 
-## Critères
+  Parfois, il arrive qu'on souhaite jouer avec des amis ou des connaissances à
+  des jeux, que ce soit en vocal ou non. Cela est possible avec tous les jeux en
+  ligne. Mais ici, on va s'intéresser au genre très particulier du jeu en ligne
+  facilement accessible, auquel on accède gratuitement via le navigateur.
+  
+  ## Critères
+  
+  Voici les critères que j'ai mis en place pour accepter un jeu ou non : le jeu
+  doit être accessible via un navigateur, être gratuit et être jouable sans
+  création de compte.
 
-Voici les critères que j'ai mis en place pour accepter un jeu ou non :
+  - **Être accessible via un navigateur**, comme ça tout le monde peut jouer,
+    peu importe le système d'exploitation, sans perdre de temps à devoir
+    installer un jeu ;
+  - **Être gratuit**, pour être sûr que ça convienne à toutes les bourses et ne
+    pas perdre du temps à acheter le jeu ;
+  - **Pas d'obligation de créer un compte**, pour ne pas perdre de temps et ne
+    pas donner ses informations personnelles ;
+  - **Avoir la possibilité de créer des salons privés**, pour pouvoir jouer
+    seulement entre amis ;
+  - **Jouable dès 2 joueurs**, pour pouvoir jouer avec un seul ami au besoin ;
+  - **En temps réel (pas d'attente d'évènements côté serveur)**, pour éviter des
+    limitations artificielles ;
+  - ***Si possible*, être en français**, pour que tout le monde puisse y jouer
+    sans avoir de connaissance de l'anglais (ou tout autre langue) ;
+  - ***Si possible*, avoir des parties courtes** (ou du moins qui *peuvent* être
+    courtes), pour que n'importe qui puisse venir au milieu d'une partie ;
+  - ***Si possible*, simple à prendre en main**, pour éviter de perdre du temps
+    à devoir expliquer les règles.
 
-- **Être accessible via un navigateur**, comme ça tout le monde peut jouer, peu
-  importe le système d'exploitation, sans perdre de temps à devoir installer un
-  jeu ;
-- **Être gratuit**, pour être sûr que ça convienne à toutes les bourses et ne
-  pas perdre du temps à acheter le jeu ;
-- **Pas d'obligation de créer un compte**, pour ne pas perdre de temps et ne pas
-  donner ses informations personnelles ;
-- **Avoir la possibilité de créer des salons privés**, pour pouvoir jouer
-  seulement entre amis ;
-- **Jouable dès 2 joueurs**, pour pouvoir jouer avec un seul ami au besoin ;
-- **En temps réel (pas d'attente d'évènements côté serveur)**, pour éviter des
-  limitations artificielles ;
-- ***Si possible*, être en français**, pour que tout le monde puisse y jouer
-  sans avoir de connaissance de l'anglais (ou tout autre langue) ;
-- ***Si possible*, avoir des parties courtes** (ou du moins qui *peuvent* être
-  courtes), pour que n'importe qui puisse venir au milieu d'une partie ;
-- ***Si possible*, simple à prendre en main**, pour éviter de perdre du temps à
-  devoir expliquer les règles.
-
-Tous ces critères servent à un objectif commun : rendre l'accès au jeu immédiat.
-On se rend sur le site, on crée une partie privée et on partage le lien à ses
-amis, sans aucune friction.
+  Tous ces critères servent à un objectif commun : rendre l'accès au jeu
+  immédiat. On se rend sur le site, on crée une partie privée et on partage le
+  lien à ses amis, sans aucune friction.
+</details>
 
 ## Jeux
 
@@ -52,22 +60,14 @@ Note : le tri est purement arbitraire.
 
 <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
   {% for project in browser_games.games %}
-    <div class="bg-gray-100 dark:bg-gray-700 flex-1 rounded border border-gray-300 dark:border-gray-500 duration-200 hover:shadow-md">
-      <a href="{{ project.url }}" class="group block p-4 bg-gray-200 dark:bg-gray-600 rounded-t border-b border-gray-300 dark:border-gray-500 duration-200 hover:bg-gray-300 dark:hover:bg-gray-800 focus:bg-gray-300 dark:focus:bg-gray-800">
-        <div class="flex">
-          <div class="font-bold text-xl">
-            {{ project.name }}
-          </div>
-            
-          <div class="ml-auto" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-          </div>
+    <div class="bg-gray-100 dark:bg-gray-600 flex-1 rounded dark:border-0 duration-200 shadow-lg">
+      <a href="{{ project.url }}" class="group block p-4 pt-2 bg-gray-200 dark:bg-gray-700 rounded-t border-gray-300 dark:border-gray-500 duration-200 hover:bg-gray-300 dark:hover:bg-gray-900 focus:outline-none focus:ring">
+        <div class="font-bold text-xl">
+          {{ project.name }}
         </div>
 
         <div class="mt-1">
-          <span class="inlne-block text-black bg-{% category_to_color project.category %}-300 py-0.5 px-2 rounded-full">
+          <span class="inlne-block text-sm text-black bg-{% category_to_color project.category %}-300 py-0.5 px-2 rounded-full">
             {% category_to_string project.category %}
           </span>
         </div>
@@ -77,23 +77,14 @@ Note : le tri est purement arbitraire.
         <div class="text-gray-700 dark:text-gray-300 text-sm">
           <div class="flex items-center">
             <div>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"  width="20" height="20">
+              {# Heroicon name: users small #}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"  width="20" height="20" aria-hidden="true">
                 <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
               </svg>
             </div>
 
             <p class="ml-2">
-              {% if project.min_players == project.max_players %}
-                {{ project.min_players }} joueurs
-              {% else %}
-                {% if project.max_players === 'unknown' %}
-                  {{ project.min_players }} à ? joueurs
-                {% elif project.max_players === 'infinite' %}
-                  À partir de {{ project.min_players }} joueurs
-                {% else %}
-                  {{ project.min_players }} à {{ project.max_players }} joueurs
-                {% endif %}
-              {% endif %}
+              {% minmax_players_to_string project.min_players, project.max_players %}
             </p>
           </div>
         </div>

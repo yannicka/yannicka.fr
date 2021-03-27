@@ -80,6 +80,22 @@ module.exports = function (config) {
     }
   })
 
+  config.addShortcode('minmax_players_to_string', function(minPlayers, maxPlayers) {
+    if (minPlayers === maxPlayers) {
+      return `${minPlayers} joueurs`
+    } else {
+      if (maxPlayers === 'unknown') {
+        return `${minPlayers} à ? joueurs`
+      } else if (maxPlayers === 'infinite') {
+        return `À partir de ${minPlayers} joueurs`
+      } else {
+        return `${minPlayers} à ${maxPlayers} joueurs`
+      }
+    }
+  })
+
+
+
   config.addFilter('format_month', date => {
     return new Intl.DateTimeFormat('fr-FR', {
       year: 'numeric',

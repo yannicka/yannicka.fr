@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-FR" class="dark">
+<html lang="fr-FR">
   <head>
     <meta charset="utf-8" />
 
@@ -26,10 +26,10 @@
     {% endif %}
   </head>
 
-  <body class="bg-white dark:bg-gray-800 text-black dark:text-gray-100">
+  <body class="bg-white dark:bg-gray-800 text-black dark:text-gray-100 font-source-serif-pro">
     <div class="relative">
       <div class="absolute top-2 left-2">
-        <a href="#content" class="block bg-white border-2 border-black sr-only focus:not-sr-only">
+        <a href="#content" class="block bg-white text-black border-2 border-black sr-only focus:not-sr-only focus:outline-none focus:ring">
           <div class="p-3">
             Aller au contenu principal
           </div>
@@ -39,12 +39,12 @@
 
     <div class="js-mobile-menu bg-white dark:bg-gray-900 border-b-2 border-black dark:border-gray-700 z-50" style="display: none;">
       <div class="grid grid-cols-3 items-center">
-        <a href="{{ '/' | url }}" class="w-max p-4 text-xl font-bold hover:underline">
+        <a href="{{ '/' | url }}" class="w-max p-4 text-xl font-bold hover:underline focus:outline-none focus:ring" title="Page d'accueil">
           Yannicka
         </a>
 
         <div class="col-span-2 justify-self-end">
-          <button class="js-mobile-menu-close-button group inline-block px-5 py-4">
+          <button class="js-mobile-menu-close-button group inline-block px-5 py-4 focus:outline-none focus:ring">
             <span>⨉</span>
             <span class="align-middle group-hover:underline">Fermer le menu</span>
           </button>
@@ -52,41 +52,37 @@
       </div>
 
       <nav role="navigation">
-        <a href="{{ '/' | url }}" class="block p-4 hover:underline hover:bg-gray-100 dark:hover:bg-gray-800">
-          Accueil
-        </a>
-
-        <a href="{{ '/projets/' | url }}" class="block p-4 hover:underline hover:bg-gray-100 dark:hover:bg-gray-800">
+        <a href="{{ '/projets/' | url }}" class="block p-4 hover:underline hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring">
           Projets
         </a>
 
-        <a href="{{ '/exercices/' | url }}" class="block p-4 hover:underline hover:bg-gray-100 dark:hover:bg-gray-800">
+        <a href="{{ '/exercices/' | url }}" class="block p-4 hover:underline hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring">
           Exercices
         </a>
       </nav>
     </div>
 
     <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
-      <div class="max-w-screen-lg m-auto">
+      <div class="max-w-4xl m-auto">
         <div class="flex items-center">
-          <a href="{{ '/' | url }}" class="w-max p-4 text-xl font-bold hover:underline">
+          <a href="{{ '/' | url }}" class="w-max p-4 text-xl font-bold hover:underline focus:outline-none focus:ring" title="Page d'accueil">
             Yannicka
           </a>
 
           <div class="hidden sm:block">
             <nav class="flex" role="navigation">
-              <a href="{{ '/projets/' | url }}" class="inline-block p-4 hover:underline">
+              <a href="{{ '/projets/' | url }}" class="inline-block p-4 hover:underline focus:outline-none focus:ring">
                 Projets
               </a>
 
-              <a href="{{ '/exercices/' | url }}" class="inline-block p-4 hover:underline">
+              <a href="{{ '/exercices/' | url }}" class="inline-block p-4 hover:underline focus:outline-none focus:ring">
                 Exercices
               </a>
             </nav>
           </div>
 
           <div class="sm:hidden ml-auto">
-            <button class="js-mobile-menu-open-button group inline-block px-5 py-4">
+            <button class="js-mobile-menu-open-button group inline-block px-5 py-4 focus:outline-none focus:ring">
               <span class="align-middle">☰</span>
               <span class="align-middle group-hover:underline">Menu</span>
             </button>
@@ -95,11 +91,11 @@
       </div>
     </header>
 
-    <main class="max-w-5xl mx-auto p-6" id="content">
+    <main class="max-w-4xl mx-auto p-4" id="content">
       {{ content | safe }}
     </main>
 
-    <footer class="max-w-5xl mx-auto px-4 py-8 text-center">
+    <footer class="max-w-4xl mx-auto px-4 py-8 text-center">
       <p>
         Yannicka ·
         2013 - 2021 ·

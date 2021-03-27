@@ -52,7 +52,7 @@ name = "Curvytron"
 url = "http://www.curvytron.com/"
 category = "action"
 min_players = 2
-max_players = "unknown"
+max_players = 10
 description = """
 Un genre de Snake multijoueur où vous devez éviter la queue de vos adversaires
 et faire en sorte qu'eux s'écrasent contre la votre.
