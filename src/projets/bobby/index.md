@@ -59,3 +59,9 @@ c'était un projet simple, je me suis lancé.
 
 Cette idée de partir sur un projet simple par rapport à un projet complexe a
 portée ses fruits : le jeu a pu être terminé et être publié.
+
+Aussi, même si ça n'a pas toujours été simple, créer les niveaux a été une étape
+très intéressante, car il a fallut créer des niveaux simples pour présenter les
+concepts un à un, de façon naturelle et intuitive. Aussi, il m'a fallut créer
+des niveaux avec une difficulté progressive, en vérifiant à chaque fois qu'il
+n'existe pas de façon simple de les terminer.
