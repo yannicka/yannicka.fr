@@ -10,9 +10,32 @@ module.exports = function (config) {
   config.addPassthroughCopy('src/projets/age-of-rice/src')
   config.addPassthroughCopy('src/projets/switch-color/src')
   config.addPassthroughCopy('src/projets/switch-color/img')
+  config.addPassthroughCopy('src/**/*.{png,jpg,jpeg,gif,svg}')
 
+  /* Plugins */
   config.addPlugin(syntaxHighlight)
 
+  /* Collections */
+  config.addCollection('dossier', function(collection) {
+    let dossiers = collection.getFilteredByTag('dossier')
+
+    dossiers.sort((a, b) => {
+      const aTitle = a.data.title.toLowerCase()
+      const bTitle = b.data.title.toLowerCase()
+  
+      if (aTitle < bTitle)
+        return -1
+
+      if (aTitle > bTitle)
+        return 1
+
+      return 0
+    })
+
+    return dossiers
+  })
+
+  /* Markdown */
   const mapping = {
     h1: ['text-6xl mt-4 mb-2'],
     h2: ['text-5xl mt-4 mb-2'],
@@ -40,6 +63,7 @@ module.exports = function (config) {
     return markdownLibrary.render(content)
   })
 
+  /* Shortcodes */
   config.addShortcode('category_to_color', function(category) {
     if (category === 'drawing') {
       return 'red'
@@ -94,6 +118,7 @@ module.exports = function (config) {
     }
   })
 
+  /* Filtres */
   config.addFilter('format_date', date => {
     return new Intl.DateTimeFormat('fr-FR', {
       year: 'numeric',
@@ -109,6 +134,7 @@ module.exports = function (config) {
     }).format(date)
   })
 
+  /* Retour */
   return {
     dir: {
       input: 'src',

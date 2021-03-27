@@ -2,11 +2,34 @@
 layout: base.njk
 ---
 
-<ul class="list-dashed">
+<ul>
   {%- for dossier in collections.dossier -%}
-    <li class="my-4 md:my-1">
-      <a href="{{ dossier.url | url }}" class="text-black dark:text-white underline hover:text-gray-800 dark:hover:text-gray-300">
-        {{- dossier.data.title -}}
+    <li>
+      <a class="block p-3 my-4 bg-gray-200 dark:bg-gray-700 rounded transition hover:bg-gray-300 dark:hover:bg-gray-600 sm:flex" href="{{ dossier.url | url }}">
+        <div class="sm:w-48">
+          <img src="{{ '/dossiers/' + dossier.fileSlug + '/illustration.png' | url }}"
+               alt=""
+               loading="lazy"
+               class="w-full" />
+        </div>
+
+        <div class="flex-1 mt-2 sm:mt-0 sm:ml-4">
+          <h3 class="underline text-lg font-bold">
+            {{- dossier.data.title -}}
+          </h3>
+
+          <p class="text-sm">
+            {% if dossier.data.updated_at %}
+              mis à jour le {{ dossier.data.updated_at | format_date }}
+            {% elif dossier.data.created_at %}
+              mis à jour le {{ dossier.data.created_at | format_date }}
+            {% endif %}
+          </p>
+
+          <p>
+            {{- dossier.data.short_description -}}
+          </p>
+        </div>
       </a>
     </li>
   {%- endfor -%}
