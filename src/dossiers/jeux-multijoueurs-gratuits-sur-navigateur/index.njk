@@ -64,14 +64,25 @@ article.
   {% for project in browser_games.games %}
     <div class="bg-gray-100 dark:bg-gray-600 flex-1 rounded dark:border-0 duration-200 shadow-lg">
       <a href="{{ project.url }}" class="group block p-4 pt-2 bg-gray-200 dark:bg-gray-700 rounded-t border-gray-300 dark:border-gray-500 duration-200 hover:bg-gray-300 dark:hover:bg-gray-900 focus:outline-none focus:ring">
-        <div class="font-bold text-xl">
-          {{ project.name }}
-        </div>
+        <div class="flex">
+          <div>
+            <div class="font-bold text-xl">
+              {{ project.name }}
+            </div>
 
-        <div class="mt-1">
-          <span class="inlne-block text-sm text-black bg-{% category_to_color project.category %}-300 py-0.5 px-2 rounded-full">
-            {% category_to_string project.category %}
-          </span>
+            <div class="mt-1">
+              <span class="inlne-block text-sm text-black bg-{% category_to_color project.category %}-300 py-0.5 px-2 rounded-full">
+                {% category_to_string project.category %}
+              </span>
+            </div>
+          </div>
+            
+          <div class="ml-auto mt-2" aria-hidden="true">
+            {# Heroicon name: medium link #}
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24"> 
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+            </svg>
+          </div>
         </div>
       </a>
 
@@ -79,7 +90,7 @@ article.
         <div class="text-gray-700 dark:text-gray-300 text-sm">
           <div class="flex items-center">
             <div>
-              {# Heroicon name: users small #}
+              {# Heroicon name: small users #}
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"  width="20" height="20" aria-hidden="true">
                 <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
               </svg>
