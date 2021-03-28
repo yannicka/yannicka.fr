@@ -528,18 +528,22 @@ moins connus.*
 *Alternatives à Google Analytics.*
 
 - [Matomo](https://fr.matomo.org/)
-- [Fathom](https://usefathom.com/)
 - [GoatCounter](https://www.goatcounter.com/)
 - [Plausible](https://plausible.io/)
 - [Shynet](https://github.com/milesmcc/shynet)
 - [Simple Analytics](https://simpleanalytics.com/) *(privatif)*
-- [Unami](https://umami.is/)
+- [unami](https://umami.is/)
 - [Open Web Analytics](http://www.openwebanalytics.com/)
 - [Countly](https://count.ly/)
 - [userTrack](https://www.usertrack.net/) *(privatif)*
 - [Panelbear](https://panelbear.com/) *(privatif)*
 - [Splitbee](https://splitbee.io/) *(privatif)*
 - [Counter](https://counter.dev/)
+- [Kindmetrics](https://kindmetrics.io/)
+- [Ackee](https://ackee.electerious.com/)
+- [Offen](https://www.offen.dev/)
+- [Cabin.](https://withcabin.com/) *(privatif)*
+- [Fathom](https://usefathom.com/) *(privatif)*
 
 ### Wiki
 
