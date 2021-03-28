@@ -35,6 +35,16 @@ module.exports = function (config) {
     return dossiers
   })
 
+  config.addCollection('project', function(collection) {
+    let projects = collection.getFilteredByTag('project')
+
+    projects.sort((a, b) => {
+      return new Date(b.data.publish_month) - new Date(a.data.publish_month)
+    })
+
+    return projects
+  })
+
   /* Markdown */
   const mapping = {
     h1: ['text-6xl mt-4 mb-2'],
