@@ -18,8 +18,8 @@ Ce projet m'a notamment permis, entre autres, d'apprendre ou de découvrir :
 - **[Django](https://www.djangoproject.com/)**, un framework web en Python que
   je trouve extraordinnaire ;
 
-- La mise en place d'un certificat TLS depuis la ligne de commande, avec
-  Let's Encrypt ;
+- La mise en place d'un certificat TLS depuis la ligne de commande, avec Let's
+  Encrypt ;
 
 - La création d'un site de commerce en ligne modeste depuis zéro ;
 

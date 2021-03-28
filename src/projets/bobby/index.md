@@ -46,8 +46,8 @@ plusieurs facteurs :
 
 4. Le développement d'un moteur de jeu par moi-même (pour le défi !) ;
 
-5. Mon absence de connaissances dans ce domaine ; je suis développeur web et
-   non développeur de jeu vidéo.
+5. Mon absence de connaissances dans ce domaine ; je suis développeur web et non
+   développeur de jeu vidéo.
 
 ## Histoire
 
