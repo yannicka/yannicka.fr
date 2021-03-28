@@ -47,12 +47,12 @@ module.exports = function (config) {
 
   /* Markdown */
   const mapping = {
-    h1: ['text-6xl mt-4 mb-2'],
-    h2: ['text-5xl mt-4 mb-2'],
-    h3: ['text-4xl mt-4 mb-2'],
-    h4: ['text-3xl mt-4 mb-2'],
-    h5: ['text-2xl mt-4 mb-2'],
-    h6: ['text-xl mt-4 mb-2'],
+    h1: ['text-5xl sm:text-6xl mt-4 mb-2'],
+    h2: ['text-4xl sm:text-5xl mt-4 mb-2'],
+    h3: ['text-3xl sm:text-4xl mt-4 mb-2'],
+    h4: ['text-2xl sm:text-3xl mt-4 mb-2'],
+    h5: ['text-xl sm:text-2xl mt-4 mb-2'],
+    h6: ['text-lg sm:text-xl mt-4 mb-2'],
     p: ['my-3'],
     a: ['underline', 'hover:text-gray-700', 'dark:hover:text-gray-300'],
     ul: ['ml-3', 'my-3', 'list-dashed', 'list-inside'],
