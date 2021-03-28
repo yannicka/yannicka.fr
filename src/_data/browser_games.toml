@@ -270,3 +270,50 @@ max_players = "unknown"
 description = """
 Jeu de kart en 3D. Le but est de rester en vie et de détruire ses adversaires.
 """
+
+[[games]]
+name = "DésoPadéso"
+url = "https://desopadeso.fr/"
+category = "quiz"
+min_players = 3
+max_players = "infinite"
+description = """
+Clone de Limite Limite.
+"""
+
+# # Jeux à évaluer
+# 
+# - [TheLast.io](https://www.thelast.io/)
+# - [gunfight.io](https://gunfight.io/)
+# - [Gulch.io](https://gulch.io/)
+# - [BRUH.IO](https://bruh.io/)
+# - [Vertix Online](http://vertix.io/)
+# - [KillStreak.tv](https://killstreak.tv/)
+# - [SpaceGuard.io](https://spaceguard.io/)
+# - [WarScrap](https://warscrap.io/)
+# - [Warfork](https://warfork.com/)
+# - [Massive Music Quiz](https://www.massivemusicquiz.com/)
+# - [TopQuizz](https://www.topquizz.com/game/)
+# - [surviv.io](https://surviv.io/)
+# - [PartyToons.io](https://partytoons.io/)
+#
+#
+# # Ne correspondent pas mais amusants
+# 
+# - [Among Us](https://innersloth.itch.io/among-us) *(payant, 5 €)* *(nécessite un téléchargement)*
+# - [Les Loups Garous en ligne](https://www.loups-garous-en-ligne.com/) *(inscription obligatoire)* *(nécessite plus que 2 joueurs)*
+# - [Superhex.io](https://superhex.io/)
+# - [Extinction Minijeux](https://sites.google.com/view/extinction-minijeux) (Aaaa!, Bouboum et Forteresse) *(nécessite un téléchargement)*
+# - [Transformice](https://www.transformice.com/) *(nécessite un téléchargement)*
+# - [Paper.io 2](https://paperio.site/)
+# - [Hilly.io](https://hilly.io/)
+# - [GeoGuessr](https://www.geoguessr.com/) *(1 joueur seulement)*
+# - [powerline.io](http://powerline.io/) *(pas de partie privée)*
+# - [Jeux de m28.studio](https://m28.studio/)
+# - [TagPro](https://tagpro.koalabeast.com/) *(4 joueurs minimum)*
+# - [Onmuga](https://onmuga.com/) *(en anglais)*
+#
+#
+# # Ressources intéressantes
+#
+# - [Lockdown Gaming List](https://docs.google.com/spreadsheets/d/1nwZkqIoIkkUakCvjiiLul6QFObxBM0DIP--Diq1KtQU/edit#gid=2062146979)
