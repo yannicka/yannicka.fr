@@ -153,6 +153,16 @@ mais il sert généralement à jouer au Scrabble.
 """
 
 [[games]]
+name = "DésoPadéso"
+url = "https://desopadeso.fr/"
+category = "quiz"
+min_players = 3
+max_players = "infinite"
+description = """
+Clone de Limite Limite.
+"""
+
+[[games]]
 name = "Mjrt"
 url = "https://mjrt.net/"
 category = "quiz"
@@ -269,16 +279,6 @@ min_players = 2
 max_players = "unknown"
 description = """
 Jeu de kart en 3D. Le but est de rester en vie et de détruire ses adversaires.
-"""
-
-[[games]]
-name = "DésoPadéso"
-url = "https://desopadeso.fr/"
-category = "quiz"
-min_players = 3
-max_players = "infinite"
-description = """
-Clone de Limite Limite.
 """
 
 # # Jeux à évaluer
