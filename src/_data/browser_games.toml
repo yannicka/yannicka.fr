@@ -1,5 +1,6 @@
 # name = "nom du jeu"
 # url = "URL du jeu"
+# meets_all_the_criteria = true | false
 # category = "drawing" | "music" | "quiz" | "action" | "reflexion" | "card" | "various" | "other"
 # min_players = nombre de joueurs minimum | "unknown"
 # max_players = nombre de joueurs minimum | "unknown" | "infinite"
@@ -8,6 +9,7 @@
 [[games]]
 name = "Gartic Phone"
 url = "https://garticphone.com/"
+meets_all_the_criteria = true
 category = "drawing"
 min_players = 2
 max_players = 30
@@ -19,6 +21,7 @@ une autre décrit le dessin, une autre dessine, et ainsi de suite.
 [[games]]
 name = "skribbl"
 url = "https://skribbl.io/"
+meets_all_the_criteria = true
 category = "drawing"
 min_players = 2
 max_players = 12
@@ -29,6 +32,7 @@ Jeu de dessin. Un joueur a un mot à dessiner et les autres doivent le deviner.
 [[games]]
 name = "Gartic.io"
 url = "https://gartic.io/"
+meets_all_the_criteria = true
 category = "drawing"
 min_players = 2
 max_players = 50
@@ -39,6 +43,7 @@ Jeu de dessin. Un joueur a un mot à dessiner et les autres doivent le deviner.
 [[games]]
 name = "Curve Fever"
 url = "https://curvefever.pro/"
+meets_all_the_criteria = true
 category = "action"
 min_players = 2
 max_players = 6
@@ -50,6 +55,7 @@ et faire en sorte qu'eux s'écrasent contre la votre.
 [[games]]
 name = "Curvytron"
 url = "http://www.curvytron.com/"
+meets_all_the_criteria = true
 category = "action"
 min_players = 2
 max_players = 10
@@ -61,6 +67,7 @@ et faire en sorte qu'eux s'écrasent contre la votre.
 [[games]]
 name = "jklm.fun"
 url = "https://jklm.fun/"
+meets_all_the_criteria = true
 category = "quiz"
 min_players = 2
 max_players = "unknown"
@@ -72,6 +79,7 @@ indiquées. Pop Sauce : devinez d'où est tirée la phrase ou l'image.
 [[games]]
 name = "Kculture"
 url = "https://kculture.kgames.fr/"
+meets_all_the_criteria = true
 category = "quiz"
 min_players = 2
 max_players = 16
@@ -82,6 +90,7 @@ description = """
 [[games]]
 name = "SongTrivia - Guess the song!"
 url = "https://songtrivia2.io/"
+meets_all_the_criteria = true
 category = "music"
 min_players = 2
 max_players = "unknown"
@@ -92,6 +101,7 @@ Devinez quelle est la chanson que vous écoutez.
 [[games]]
 name = "What the Tune?!"
 url = "https://whatthetune.com/"
+meets_all_the_criteria = true
 category = "music"
 min_players = 1
 max_players = "unknown"
@@ -102,6 +112,7 @@ Deviner le titre et l'artiste d'une chanson.
 [[games]]
 name = "Codenames"
 url = "https://codenames.game/"
+meets_all_the_criteria = true
 category = "reflexion"
 min_players = 2
 max_players = 8
@@ -113,6 +124,7 @@ indices.
 [[games]]
 name = "Le petit bac"
 url = "https://petitbac.net/"
+meets_all_the_criteria = true
 category = "quiz"
 min_players = 2
 max_players = 45
@@ -123,8 +135,9 @@ Trouver des mots commençants par une lettre dans des domaines divers.
 [[games]]
 name = "Lichess"
 url = "https://lichess.org/"
+meets_all_the_criteria = true
 category = "reflexion"
-min_players = 2
+min_players = 1
 max_players = 2
 description = """
 Jeu d'échecs.
@@ -133,6 +146,7 @@ Jeu d'échecs.
 [[games]]
 name = "Touché-Coulé"
 url = "http://fr.battleship-game.org/"
+meets_all_the_criteria = true
 category = "reflexion"
 min_players = 2
 max_players = 2
@@ -143,6 +157,7 @@ Jeu de bataille navale.
 [[games]]
 name = "Trivabble"
 url = "https://trivabble.1s.fr/"
+meets_all_the_criteria = true
 category = "reflexion"
 min_players = 2
 max_players = "unknown"
@@ -153,29 +168,9 @@ mais il sert généralement à jouer au Scrabble.
 """
 
 [[games]]
-name = "DésoPadéso"
-url = "https://desopadeso.fr/"
-category = "quiz"
-min_players = 3
-max_players = "infinite"
-description = """
-Clone de Limite Limite.
-"""
-
-[[games]]
-name = "Mjrt"
-url = "https://mjrt.net/"
-category = "quiz"
-min_players = 3
-max_players = "unknown"
-description = """
-Clone de [Majority de Muxxu](http://majority.muxxu.com/). Une question. Trois
-réponses. Devinez quelle réponse sera sélectionnée par la majorité.
-"""
-
-[[games]]
 name = "Haxball"
 url = "https://www.haxball.com/"
+meets_all_the_criteria = true
 category = "action"
 min_players = 2
 max_players = 12
@@ -194,6 +189,7 @@ Jeu de « foot » ultra-minimaliste de 2 à 12 joueurs.
 [[games]]
 name = "PlayingCards.io"
 url = "https://playingcards.io/"
+meets_all_the_criteria = true
 category = "card"
 min_players = 2
 max_players = "unknown"
@@ -204,6 +200,7 @@ description = """
 [[games]]
 name = "Set with Friends"
 url = "https://setwithfriends.com/"
+meets_all_the_criteria = true
 category = "card"
 min_players = 2
 max_players = "unknown"
@@ -214,6 +211,7 @@ description = """
 [[games]]
 name = "Mosaic"
 url = "https://playmosaic.online/"
+meets_all_the_criteria = true
 category = "reflexion"
 min_players = 2
 max_players = 4
@@ -224,6 +222,7 @@ description = """
 [[games]]
 name = "Mattle"
 url = "https://mattle.online/"
+meets_all_the_criteria = true
 category = "various"
 min_players = 2
 max_players = "unknown"
@@ -234,6 +233,7 @@ Jeux : Go, Azee, Sevenee, Spendee, Spicee et Blokee.
 [[games]]
 name = "Air board game"
 url = "https://airboardgame.net/games/"
+meets_all_the_criteria = true
 category = "various"
 min_players = 2
 max_players = "unknown"
@@ -244,6 +244,7 @@ De nombreux jeux de société.
 [[games]]
 name = "Colonist"
 url = "https://colonist.io/"
+meets_all_the_criteria = true
 category = "reflexion"
 min_players = 2
 max_players = 8
@@ -254,6 +255,7 @@ description = """
 [[games]]
 name = "tix.tax"
 url = "https://tix.tax/"
+meets_all_the_criteria = true
 category = "reflexion"
 min_players = 2
 max_players = 2
@@ -264,6 +266,7 @@ description = """
 [[games]]
 name = "kugeln.io"
 url = "https://kugeln.io/"
+meets_all_the_criteria = true
 category = "action"
 min_players = 2
 max_players = "unknown"
@@ -274,6 +277,7 @@ Jeu de plateforme 2D. Tuez et survivez.
 [[games]]
 name = "Smash Karts"
 url = "https://smashkarts.io/"
+meets_all_the_criteria = true
 category = "action"
 min_players = 2
 max_players = "unknown"
@@ -281,6 +285,34 @@ description = """
 Jeu de kart en 3D. Le but est de rester en vie et de détruire ses adversaires.
 """
 
+[[games]]
+name = "DésoPadéso"
+url = "https://desopadeso.fr/"
+meets_all_the_criteria = false
+category = "quiz"
+min_players = 3
+max_players = "infinite"
+description = """
+Clone de Limite Limite.
+"""
+
+[[games]]
+name = "Geotastic"
+url = "https://geotastic.de/"
+meets_all_the_criteria = false
+category = "quiz"
+min_players = 1
+max_players = 12
+description = """
+Clone de GeoGuessr : vous êtes placé aléatoirement quelque part sur Terre.
+Devinez où.
+"""
+
+# # Futur ?
+#
+# - [Sparks.land](https://sparks.land/)
+#
+#
 # # Jeux à évaluer
 # 
 # - [TheLast.io](https://www.thelast.io/)
