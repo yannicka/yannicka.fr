@@ -1,7 +1,7 @@
 ---
 title: Outils intéressants
 created_at: 2015-10-02
-updated_at: 2020-06-04
+updated_at: 2021-04-19
 short_description: >
   Grande liste d'outils (site web, logiciels, etc.) intéressants pour pleins de
   domaines différents.
@@ -420,6 +420,12 @@ moins connus.*
 - [DBeaver](https://dbeaver.io/)
 - [Beekeeper Studio](https://www.beekeeperstudio.io/)
 
+### NoSQL
+
+Alternatives à Firebase.
+
+- [Superbase](https://supabase.io/)
+
 ## Univers Android
 
 ### Outil
@@ -587,6 +593,15 @@ moins connus.*
 ### Surcouche applicative aux sites
 
 - [Weboob](https://weboob.org/)
+
+### SaaS, PaaS
+
+Alternatives à Heroku, Netlify...
+
+- [coolify](https://coollabs.io/coolify)
+- [Dokku](https://dokku.com/)
+- [CapRover](https://caprover.com/)
+- [Porter](https://github.com/porter-dev/porter)
 
 ## Gestion de projet
 
@@ -1066,6 +1081,7 @@ moins connus.*
 - [Qalculate!](https://qalculate.github.io/)
 - [Cantor](https://cantor.kde.org/)
 - [NoteCalc](https://bbodi.github.io/notecalc3/)
+- [Math Notes](https://imaginamundo.github.io/math-notes/)
 
 ## Police
 
