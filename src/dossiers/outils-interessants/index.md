@@ -209,7 +209,7 @@ moins connus.*
 
 ## Discussion
 
-*Alternatives à Discord, WhatsApp et Messenger.*
+*Alternatives à Discord, WhatsApp, Messenger, Skype, etc.*
 
 - [Matrix](https://matrix.org/) ([Element](https://element.io/) et [autres
   clients](https://matrix.org/clients/))
@@ -329,6 +329,8 @@ moins connus.*
 - [Wallapatta](https://wallapatta.github.io/) *(abandonné)*
 
 ### Éditeur en ligne
+
+Alternatives à Google Drive, etc.
 
 - [CryptPad](https://cryptpad.fr/)
 - [Etherpad](https://etherpad.org/) (instances :
@@ -521,6 +523,10 @@ Alternatives à Firebase.
 - [Squs](https://github.com/BaptisteGelez/squs)
 - [Commento](https://commento.io/)
 - [Cactus Comments](https://cactus.chat/)
+- [Cusdis](https://cusdis.com/)
+- [Komento](https://komento.host/)
+- [Remarkbox](https://www.remarkbox.com/)
+- [Juvia](https://phusion.github.io/juvia/)
 
 ### Discussion sur site
 
