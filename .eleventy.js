@@ -117,10 +117,16 @@ module.exports = function (config) {
 
   config.addShortcode('minmax_players_to_string', function(minPlayers, maxPlayers) {
     if (minPlayers === maxPlayers) {
-      return `${minPlayers} joueurs`
+      if (minPlayers === 'unknown') {
+        return `Nombre de joueurs inconnu`
+      } else {
+        return `${minPlayers} joueurs`
+      }
     } else {
       if (maxPlayers === 'unknown') {
         return `${minPlayers} à ? joueurs`
+      } else if (minPlayers === 'unknown') {
+        return `? à ${maxPlayers} joueurs`
       } else if (maxPlayers === 'infinite') {
         return `À partir de ${minPlayers} joueurs`
       } else {
