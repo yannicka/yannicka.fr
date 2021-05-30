@@ -15,25 +15,23 @@ layout: base.njk
     <li>
       Licence {{ license }}
     </li>
-  </ul>
 
-  <div>
     {% if google_play_url %}
-      <a href="{{ google_play_url }}">
-        <img src="{{ '/assets/get-it-on-google-play.png' | url }}"
-             alt="Disponible sur Google Play"
-             loading="lazy" />
-      </a>
+      <li>
+        <a href="{{ google_play_url }}">
+          Disponible sur Google Play
+        </a>
+      </li>
     {% endif %}
 
     {% if source_code_url %}
-      <a href="{{ source_code_url }}" class="source-code-badge">
-        <img src="{{ '/assets/get-source-code.png' | url }}"
-              alt="Accéder au code source"
-              loading="lazy" />
-      </a>
+      <li>
+        <a href="{{ source_code_url }}">
+          Accéder au code source
+        </a>
+      </li>
     {% endif %}
-  </div>
+  </ul>
 
   <div>
     {{ content | safe }}
