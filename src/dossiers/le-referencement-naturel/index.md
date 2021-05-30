@@ -1,7 +1,7 @@
 ---
 title: Le référencement naturel
 created_at: 2016-07-28
-updated_at: 2020-06-05
+updated_at: 2021-04-21
 short_description: >
   Quelques bonnes pratiques sur le référencement naturel.
 ---
@@ -27,7 +27,7 @@ difficile d'aborder tous les points. Cependant, j'essaye de présenter au mieux
 l'ensemble du domaine.
 
 Ici ne sont présentées que des généralités et des bonnes pratiques, et non des
-règles absolues, d'autant plus qu'ells peuvent évoluer. Il faut traiter chaque
+règles absolues, d'autant plus qu'elles peuvent évoluer. Il faut traiter chaque
 site et chaque page au cas par cas.
 
 Il est à noter que, contrairement à une idée répandue, le référencement naturel
