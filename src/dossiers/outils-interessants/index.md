@@ -421,6 +421,7 @@ Alternatives à Google Drive, etc.
 - [HeidiSQL](https://www.heidisql.com/)
 - [DBeaver](https://dbeaver.io/)
 - [Beekeeper Studio](https://www.beekeeperstudio.io/)
+- [DbGate](https://dbgate.org/)
 
 ### NoSQL
 
