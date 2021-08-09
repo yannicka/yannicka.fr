@@ -302,10 +302,8 @@ moins connus.*
 
 ### Éditeur Markdown
 
-- [Notes-up](https://github.com/Philip-Scott/Notes-up)
 - [Mark Text](https://marktext.app/)
 - [ghostwriter](https://wereturtle.github.io/ghostwriter/)
-- [QOwnNotes](https://www.qownnotes.org/)
 - [ReText](https://github.com/retext-project/retext)
 - [Abricotine](https://abricotine.brrd.fr/)
 - [Quilter](https://github.com/lainsce/quilter)
@@ -313,20 +311,15 @@ moins connus.*
 - [Typora](https://www.typora.io/) *(propriétaire)*
 - [Simplenote](https://simplenote.com/)
 - [Standard Notes](https://standardnotes.org/)
-- [Joplin](https://joplin.cozic.net/)
-- [Moeditor](https://moeditor.js.org/)
-- [MindForger](https://www.mindforger.com/)
-- [Qilin](https://github.com/qilin-editor/qilin-app)
 - [Zettlr](https://www.zettlr.com/)
-- [Notable](https://notable.md/) *(propriétaire)*
-- [Boost Note](https://boostnote.io/)
-- [Yosoro](https://yosoro.coolecho.net/)
-- [Apostrophe](https://somas.pages.gitlab.gnome.org/apostrophe/)
+- [Apostrophe](https://gitlab.gnome.org/World/apostrophe)
+- [Caret](https://caret.io/) *(propriétaire)*
+- [Nota](https://nota.md/) *(propriétaire)*
+- [Yosoro](https://github.com/IceEnd/Yosoro) *(semble abandonné, en date du 9 août 2021)*
+- [Qilin](https://github.com/qilin-editor/qilin-app) *(semble abandonné, en date du 9 août 2021)*
+- [Moeditor](https://moeditor.js.org/) *(semble abandonné, en date du 9 août 2021)*
 - [(Un)colored](https://n457.github.io/Uncolored/)  *(semble abandonné, en date du 7 juillet 2020)*
 - [Geek's Diary](https://github.com/seokju-na/geeks-diary) *(semble abandonné, en date du 16 mai 2020)*
-- [GitBook](https://www.gitbook.com/) *(propriétaire)*
-- [Caret](https://caret.io/) *(propriétaire)*
-- [Wallapatta](https://wallapatta.github.io/) *(abandonné)*
 
 ### Éditeur en ligne
 
@@ -352,6 +345,19 @@ Alternatives à Google Drive, etc.
 - [GNOME LaTeX](https://wiki.gnome.org/Apps/GNOME-LaTeX)
 - [Setzer](https://www.cvfosammmm.org/setzer/)
 
+### Prises de notes
+
+*Alternatives à OneNote.*
+
+- [Joplin](https://joplinapp.org/)
+- [Notes-up](https://github.com/Philip-Scott/Notes-up)
+- [QOwnNotes](https://www.qownnotes.org/)
+- [Notable](https://notable.md/) *(propriétaire)*
+- [Boost Note](https://boostnote.io/)
+- [VNote](https://github.com/tamlok/vnote)
+- [MindForger](https://www.mindforger.com/)
+- [GitBook](https://www.gitbook.com/) *(propriétaire)*
+
 ### Autres éditeurs
 
 - [FocusWriter](https://gottcode.org/focuswriter/)
@@ -360,14 +366,13 @@ Alternatives à Google Drive, etc.
 - [Lifeogaph](http://lifeograph.sourceforge.net/wiki/Main_Page)
 - [TagSpaces](https://www.tagspaces.org/)
 - [Zim](https://zim-wiki.org/)
-- [VNote](https://github.com/tamlok/vnote)
   <!-- Est-ce un concurrent à OneNote ? -->
   <!-- vu sur https://news.ycombinator.com/item?id=18148824 -->
-- [Vibrato](https://soon.vibrato.app/lisp)
 - [μPad](https://getmicropad.com)
 - [Xournal++](https://github.com/xournalpp/xournalpp)
 - [Sciter Notes](https://notes.sciter.com/) *(propriétaire)*
 - [Cryptee](https://crypt.ee/) *(propriétaire)*
+- [Vibrato](https://soon.vibrato.app/lisp) *(semble abandonné, en date du 9 août 2021)*
 
 ## Gestionnaire de tâches
 
@@ -1119,6 +1124,11 @@ Alternatives à Heroku, Netlify...
 - [Purism](https://puri.sm/)
 - [System76](https://system76.com/)
 - [Laptop with Linux](https://laptopwithlinux.com/)
+
+## Cartographie
+
+- [OsmAnd](https://osmand.net/)
+- [Magic Earth](https://www.magicearth.com/)
 
 ## D'autres listes d'outils intéressants
 
