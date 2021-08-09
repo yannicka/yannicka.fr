@@ -187,11 +187,26 @@ moins connus.*
 
 - [Protonmail](https://protonmail.com/)
 - [Tutanota](https://tutanota.com/)
+- [Fastmail](https://www.fastmail.com/) (trois euros par mois)
 - [mailbox.org](https://mailbox.org/) (un euro par mois)
 - [Posteo](https://posteo.de/) (un euro par mois)
 - [Mailden](https://www.mailden.net/) (trois euros par mois)
 - [Cock.li](https://cock.li/)
-- [Fastmail](https://www.fastmail.com/) (trois euros par mois)
+- [disroot.org](https://disroot.org/services/email)
+- [StartMail](https://www.startmail.com/)
+- [Mailo](https://www.mailo.com/)
+- [Lilo Mail](https://mail.lilo.org/)
+- [MsgSafe](https://www.msgsafe.io/)
+
+<!--
+
+À étudier :
+
+- https://www.autistici.org/
+- https://riseup.net/
+- Offre de Gandi avec SOGo ou Roundcube
+
+-->
 
 ### Client
 
@@ -271,12 +286,26 @@ moins connus.*
 - [Vivaldi](https://vivaldi.com/) *(propriétaire)*
 - [Opera](https://www.opera.com/) *(propriétaire)*
 - [qutebrowser](https://qutebrowser.org/)
-- [Waterfox](https://www.waterfoxproject.org/)
+- [Waterfox](https://www.waterfox.net/)
 - [Pale Moon](https://www.palemoon.org/)
 - [Safari](https://www.apple.com/fr/safari/) *(utilisateurs d'iOS ou macOS
   seulement)*
 - [Chromium](https://download-chromium.appspot.com/) (bonus :
   [ungoogled-chromium](https://github.com/Eloston/ungoogled-chromium))
+
+## Extension pour navigateur
+
+- [uBlock Origin](https://ublockorigin.com/)
+- [Privacy Badger](https://privacybadger.org/)
+- [Privacy Possum](https://github.com/cowlicks/privacypossum)
+- [Skip Redirect](https://github.com/sblask/webextension-skip-redirect)
+- [Decentraleyes](https://decentraleyes.org/)
+- [au-revoir-utm](https://github.com/Rik/au-revoir-utm)
+- [Smart Referer](https://gitlab.com/smart-referrer/smart-referer)
+- [Redirect AMP to HTML](https://github.com/da2x/amp2html/)
+- [Exodify](https://github.com/FacettsOpen/exodify)
+- [NoScript](https://noscript.net/)
+- [AdNauseam](https://adnauseam.io/).
 
 ## Moteur de recherche
 
@@ -288,7 +317,8 @@ moins connus.*
   (bonus : [Qwant Maps](https://www.qwant.com/maps/))
 - [Ecosia](https://www.ecosia.org/) *(propriétaire)*
 - [Lilo](https://search.lilo.org/) *(propriétaire)*
-- [StartPage](https://www.ixquick.com/) *(propriétaire)*
+- [StartPage](https://www.startpage.com/) *(propriétaire)*
+- [Brave Search](https://search.brave.com/) *(propriétaire)*
 
 ## Suite bureautique
 
@@ -452,7 +482,7 @@ moins connus.*
   <!-- vu sur https://linuxfr.org/users/alexterieur/journaux/kde-connect-et-gnome -->
 - [scrcpy](https://github.com/Genymobile/scrcpy)
   <!-- vu sur https://linuxfr.org/users/rom1v/journaux/scrcpy-une-appli-pour-afficher-et-controler-des-devices-android -->
-- [microG](https://microg.org/)
+- [microG](https://microg.org/) (et [microG pour Lineage](https://lineage.microg.org/))
 - [Open GApps](https://opengapps.org/)
 
 ### Lanceur
@@ -463,6 +493,23 @@ moins connus.*
 
 - [LineageOS](https://lineageos.org/)
 - [CalyxOS](https://calyxos.org/)
+- [Replicant](https://www.replicant.us/)
+- [Sailfish OS](https://sailfishos.org/)
+- [OmniROM](https://omnirom.org/)
+- [/e/OS](https://e.foundation/)
+- [Copperhead](https://copperhead.co/android/)
+
+### Alternatives
+
+- [postmarketOS](https://postmarketos.org/)
+- [Librem 5](https://puri.sm/shop/librem-5/)
+- [PinePhone](https://www.pine64.org/pinephone/)
+- [PineTime](https://www.pine64.org/pinetime/)
+
+## Stores
+
+- [F-Droid](https://f-droid.org/)
+- [Aurora Store](https://f-droid.org/fr/packages/com.aurora.store/)
 
 ## Audio
 
@@ -958,14 +1005,18 @@ moins connus.*
 - [elementary OS](https://elementary.io/)
 - [Ubuntu](https://www.ubuntu.com/)
 - [Solus](https://getsol.us/)
-- [ArchLinux](https://www.archlinux.org/)
+- [Arch Linux](https://www.archlinux.org/)
 - [KDE neon](https://neon.kde.org/)
 - [Fedora](https://getfedora.org/)
-- [System76 / Pop!\_os](https://system76.com/)
-- [PureOS](https://pureos.net/)
+- [Pop!_OS](https://system76.com/)
 - [Guix System](https://guix.gnu.org/) (et son gestionnaire de paquets Guix)
-- [Liri](https://liri.io/)
 - [CentOS](https://www.centos.org/)
+- [Linux Mint](https://linuxmint.com/)
+- [Gentoo](https://www.gentoo.org/)
+- [openSUSE](https://www.opensuse.org/)
+- [Manjaro](https://manjaro.org/)
+- [PureOS](https://pureos.net/)
+- [Liri](https://liri.io/)
 
 ### Moniteur
 
@@ -1139,8 +1190,28 @@ moins connus.*
 
 ## Cartographie
 
+*Alternatives à Google Maps.*
+
 - [OsmAnd](https://osmand.net/)
 - [Magic Earth](https://www.magicearth.com/)
+- [OpenStreetMap](https://www.openstreetmap.org/)
+- [Qwant Maps](https://www.qwant.com/maps/)
+- [Mapy.cz](https://mapy.cz/)
+- [Mappy](https://mappy.com/)
+- [Mapillary](https://www.mapillary.com/app/) *(alternative à Street View)*
+- [Maps.me](https://maps.me/)
+- [Transportr](https://transportr.app/)
+- [Organic Maps](https://organicmaps.app/)
+
+## Traduction
+
+*Alternatives à Google Traduction.*
+
+- [DeepL](https://www.deepl.com/translator) *(propriétaire)*
+- [Wiktionnaire](https://fr.wiktionary.org/)
+- [Linguee](https://www.linguee.com/) *(propriétaire)*
+- [Yandex Traduction](https://translate.yandex.com/) *(propriétaire)*
+- [Bing Traduction](https://www.bing.com/translator/) *(propriétaire)*
 
 ## D'autres listes d'outils intéressants
 
