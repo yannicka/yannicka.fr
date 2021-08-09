@@ -89,12 +89,12 @@ moins connus.*
 
 - [Haxe](https://haxe.org/)
 - [Nim](https://nim-lang.org/)
+- [Zig](https://ziglang.org/)
 - [Racket](https://racket-lang.org/)
 - [Clojure](https://clojure.org/) & [ClojureScript](https://clojurescript.org/)
 - [PureScript](https://www.purescript.org/)
 - [OCaml](https://ocaml.org/)
 - [Haskell](https://www.haskell.org/)
-- [Zig](https://ziglang.org/)
 - [Elm](https://elm-lang.org/)
 
 ### Comment créer un langage de programmation
@@ -149,9 +149,9 @@ moins connus.*
 
 ### Design
 
-- [draw.io](https://www.draw.io/)
-- [Wireflow](https://wireflow.co/)
 - [Penpot](https://penpot.app/)
+- [diagrams.net](https://app.diagrams.net/)
+- [Wireflow](https://wireflow.co/)
 
 ### Autres outils
 
@@ -233,7 +233,7 @@ moins connus.*
 
 ## Lieu de discussion
 
-*Alternatives à Reddit, même si Reddit est aussi dans la liste.*
+*Alternatives à Reddit.*
 
 - [DesignerNews](https://www.designernews.co/)
 - [DEV](https://dev.to/)
@@ -241,6 +241,7 @@ moins connus.*
 - [Hacker News](https://news.ycombinator.com/)
 - [Lobsters](https://lobste.rs/)
 - [Tildes](https://tildes.net/)
+- [Lemmy](https://lemmy.ml/)
 - [Reddit](https://www.reddit.com/)
 
 ## Réseau social
@@ -323,7 +324,7 @@ moins connus.*
 
 ### Éditeur en ligne
 
-Alternatives à Google Drive, etc.
+*Alternatives à Google Drive, etc.*
 
 - [CryptPad](https://cryptpad.fr/)
 - [Etherpad](https://etherpad.org/) (instances :
@@ -365,9 +366,6 @@ Alternatives à Google Drive, etc.
 - [cherrytree](https://www.giuspen.com/cherrytree/)
 - [Lifeogaph](http://lifeograph.sourceforge.net/wiki/Main_Page)
 - [TagSpaces](https://www.tagspaces.org/)
-- [Zim](https://zim-wiki.org/)
-  <!-- Est-ce un concurrent à OneNote ? -->
-  <!-- vu sur https://news.ycombinator.com/item?id=18148824 -->
 - [μPad](https://getmicropad.com)
 - [Xournal++](https://github.com/xournalpp/xournalpp)
 - [Sciter Notes](https://notes.sciter.com/) *(propriétaire)*
@@ -378,6 +376,7 @@ Alternatives à Google Drive, etc.
 
 ### « Basique »
 
+- [Zim](https://zim-wiki.org/)
 - [Planner](https://planner-todo.web.app/)
 - [Lessy](https://lessy.io/)
 - [Fluid Outliner](https://fluid-notion.github.io/fluid-outliner/)
@@ -386,11 +385,16 @@ Alternatives à Google Drive, etc.
 
 ### « Avancé »
 
+*Alternatives à Notion.*
+
 - [Focalboard](https://www.focalboard.com/)
-- [Notion](https://www.notion.so/) *(propriétaire)*
 - [Taskade](https://www.taskade.com/) *(propriétaire)*
 - [Milanote](https://www.milanote.com/) *(propriétaire)*
 - [Quip](https://quip.com/) *(propriétaire)*
+- [Anytype](https://anytype.io/)
+- [Outline](https://www.getoutline.com/)
+- [Notea](https://cinwell.com/notea/)
+- [Notion](https://www.notion.so/) *(propriétaire)*
 
 ### Bases de connaissances
 
@@ -404,33 +408,36 @@ Alternatives à Google Drive, etc.
 
 ## Tableau blanc
 
-- [OpenBoard](https://openboard.ch/)
 - [Excalidraw](https://excalidraw.com/)
+- [OpenBoard](https://openboard.ch/)
 
 ## Base de données
 
 ### Mi-tableau-mi-base de données
 
+*Alternatives à Airtable.*
+
+- [Baserow](https://baserow.io/)
 - [Airtable](https://airtable.com/) *(propriétaire)*
 
 ### Modélisation
 
-- [MySQL Workbench](https://www.mysql.fr/products/workbench/)
+- [MySQL Workbench](https://www.mysql.com/fr/products/workbench/)
 - [pgModeler](https://pgmodeler.io/)
 
 ### Gestionnaire de BDD
 
 - [phpMyAdmin](https://www.phpmyadmin.net/)
 - [Adminer](https://www.adminer.org/)
-- [Sequeler](https://github.com/Alecaddd/sequeler)
-- [HeidiSQL](https://www.heidisql.com/)
-- [DBeaver](https://dbeaver.io/)
 - [Beekeeper Studio](https://www.beekeeperstudio.io/)
 - [DbGate](https://dbgate.org/)
+- [DBeaver](https://dbeaver.io/)
+- [HeidiSQL](https://www.heidisql.com/)
+- [Sequeler](https://github.com/Alecaddd/sequeler)
 
 ### NoSQL
 
-Alternatives à Firebase.
+*Alternatives à Firebase.*
 
 - [Superbase](https://supabase.io/)
 
@@ -451,6 +458,11 @@ Alternatives à Firebase.
 ### Lanceur
 
 - [Lawnchair](https://lawnchair.app/)
+
+### Système d'exploitation / Distributions
+
+- [LineageOS](https://lineageos.org/)
+- [CalyxOS](https://calyxos.org/)
 
 ## Audio
 
@@ -608,7 +620,7 @@ Alternatives à Firebase.
 
 ### SaaS, PaaS
 
-Alternatives à Heroku, Netlify...
+*Alternatives à Heroku, Netlify...*
 
 - [coolify](https://coollabs.io/coolify)
 - [Dokku](https://dokku.com/)
