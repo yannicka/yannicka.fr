@@ -137,7 +137,7 @@ moins connus.*
 - [Aseprite](https://www.aseprite.org/) *(propriétaire mais sources ouvertes)*
 - [PikoPixel](http://twilightedge.com/mac/pikopixel/)
 - [GrafX2](http://grafx2.chez.com/)
-- [LibreSprite](https://github.com/LibreSprite/LibreSprite)
+- [LibreSprite](https://libresprite.github.io/)
 
 ### Animation 2D
 
@@ -146,12 +146,18 @@ moins connus.*
 - [OpenToonz](https://opentoonz.github.io/e/index.html)
 - [enve](https://maurycyliebner.github.io/)
 - [VGC Software](https://www.vgc.io/) *(pas encore sorti)*
+- [Wick Editor](https://www.wickeditor.com/)
+- [Expressive Animator](https://www.expressivesuite.com/products/expressive-animator.html)
 
 ### Design
 
 - [Penpot](https://penpot.app/)
 - [diagrams.net](https://app.diagrams.net/)
 - [Wireflow](https://wireflow.co/)
+
+### Voxel
+
+- [Goxel](https://goxel.xyz/)
 
 ### Autres outils
 
