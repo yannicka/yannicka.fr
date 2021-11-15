@@ -48,12 +48,11 @@ mes outils préférés en haut de liste.
 - [Thonny](https://thonny.org/) *(pour Python)*
 - [nano](https://www.nano-editor.org/)
 - [Howl](https://howl.io/)
-- [Textadept](https://foicica.com/textadept/)
-- [CudaText](http://uvviewsoft.com/cudatext/)
+- [Textadept](https://orbitalquark.github.io/textadept/)
+- [CudaText](https://cudatext.github.io/)
 - [elementary Code](https://github.com/elementary/code)
 - [Graviton](https://graviton.netlify.app/)
 - [Notepadqq](https://notepadqq.com/) *(à l'abandon)*
-- [Atom](https://atom.io/) *(à l'abandon)*
 
 ## IDE
 
@@ -124,11 +123,13 @@ moins connus.*
 
 ### Dessin vectoriel
 
-*Spécialisés dans le vectoriel.*
+*Spécialisés dans le vectoriel. Alternatives à Adobe Illustrator, Figma, Sketch,
+Adobe XD, etc.*
 
 - [Inkscape](https://inkscape.org/)
 - [Gravit](https://gravit.io/) *(propriétaire)*
 - [Akira](https://github.com/akiraux/Akira) *(en cours de développement)*
+- [Penpot](https://penpot.app/)
 
 ### Pixel art
 
@@ -149,11 +150,9 @@ moins connus.*
 - [Wick Editor](https://www.wickeditor.com/)
 - [Expressive Animator](https://www.expressivesuite.com/products/expressive-animator.html)
 
-### Design
+### Diagrammes
 
-- [Penpot](https://penpot.app/)
 - [diagrams.net](https://app.diagrams.net/)
-- [Wireflow](https://wireflow.co/)
 
 ### Voxel
 
@@ -162,7 +161,6 @@ moins connus.*
 ### Autres outils
 
 - [G'MIC](https://gmic.eu/)
-- [Storyboarder](https://wonderunit.com/storyboarder/)
 
 ## 3D
 
@@ -179,6 +177,7 @@ moins connus.*
 
 - [FreeCAD](https://www.freecadweb.org/)
 - [KiCad EDA](https://www.kicad.org/)
+- [SolveSpace](https://solvespace.com/)
 
 ## Client FTP
 
@@ -232,25 +231,45 @@ moins connus.*
 
 *Alternatives à Discord, WhatsApp, Messenger, Skype, etc.*
 
-- [Matrix](https://matrix.org/) ([Element](https://element.io/) et [autres
-  clients](https://matrix.org/clients/))
-- [Signal](https://whispersystems.org/)
+### Centré sur la vie privée
+
+*Alternatives à WhatsApp.*
+
+- [Signal](https://signal.org/)
 - [Telegram](https://telegram.org/) *(serveur privatif)*
-- [Jami](https://jami.net/)
 - [Session](https://getsession.org/)
+- [Threema](https://threema.ch/)
+- [Briar](https://briarproject.org/)
+- [hack.chat](https://github.com/hack-chat/main) (bonus : [instance
+  officielle](https://hack.chat/))
+
+### Centré sur les équipes
+
+- [Mattermost](https://mattermost.com/)
+- [Rocket.Chat](https://rocket.chat/)
+- [Zulip](https://zulip.com/)
+
+### Centré sur la vidéo
+
+*Alternatives à Zoom, Microsoft Teams, etc.*
+
+- [Jitsi](https://jitsi.org/)
+
+### Centré sur la voix
+
+- [Mumble](https://www.mumble.info/) *(vocal seulement)*
+
+### Autres
+
+- [Matrix](https://matrix.org/) ([Element](https://app.element.io/) et [autres
+  clients](https://matrix.org/clients/))
+- [Jami](https://jami.net/)
 - [XMPP](https://xmpp.org/) ([Dino](https://dino.im/),
   [Conversations](https://conversations.im/),
   [Movim](https://movim.eu/),
   [Snikket](https://snikket.org/)
   et [autres clients](https://xmpp.org/software/clients.html))
-- [Zulip](https://zulip.com/)
 - [Wire](https://wire.com/)
-- [Mattermost](https://mattermost.com/)
-- [Rocket.Chat](https://rocket.chat/)
-- [Mumble](https://www.mumble.info/) *(vocal seulement)*
-- [Jitsi](https://jitsi.org/) *(vidéo seulement)*
-- [hack.chat](https://github.com/hack-chat/main) (bonus : [instance
-  officielle](https://hack.chat/))
 
 ## Lieu de discussion
 
@@ -263,16 +282,12 @@ moins connus.*
 - [Lobsters](https://lobste.rs/)
 - [Tildes](https://tildes.net/)
 - [Lemmy](https://lemmy.ml/)
-- [Reddit](https://www.reddit.com/)
 
 ## Réseau social
 
 *Alternatives à Twitter, Facebook, YouTube, Instagram, etc.*
 
-- [Mastodon](https://joinmastodon.org/) (instances :
-  [Mamot](https://mamot.fr/)
-  ou [Framapiaf](https://framapiaf.org/)
-  , parmi d'autres)
+- [Mastodon](https://joinmastodon.org/)
 - [Movim](https://movim.eu/)
 - [diaspora\*](https://diasporafoundation.org/)
   (instance : [diaspora-fr\*](https://diaspora-fr.org/))
@@ -284,7 +299,7 @@ moins connus.*
 
 *Alternatives à Google Chrome et Microsoft Edge.*
 
-- [Mozilla Firefox](https://www.mozilla.org/)
+- [Mozilla Firefox](https://www.mozilla.org/firefox/new/)
 - [GNOME Web](https://wiki.gnome.org/Apps/Web/)
 - [Tor Browser](https://www.torproject.org/)
 - [Falkon](https://www.falkon.org/)
@@ -673,7 +688,7 @@ moins connus.*
 
 ### SaaS, PaaS
 
-*Alternatives à Heroku, Netlify...*
+*Alternatives à Heroku, Netlify, etc.*
 
 - [coolify](https://coollabs.io/coolify)
 - [Dokku](https://dokku.com/)
@@ -1023,6 +1038,7 @@ moins connus.*
 - [Manjaro](https://manjaro.org/)
 - [PureOS](https://pureos.net/)
 - [Liri](https://liri.io/)
+- [GNOME OS](https://os.gnome.org/)
 
 ### Moniteur
 
