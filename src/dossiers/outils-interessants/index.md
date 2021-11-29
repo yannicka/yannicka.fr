@@ -436,7 +436,7 @@ Adobe XD, etc.*
 
 ### « Avancé »
 
-*Alternatives à Notion.*
+*Alternatives à [Notion](https://www.notion.so/).*
 
 - [Focalboard](https://www.focalboard.com/)
 - [Taskade](https://www.taskade.com/) *(propriétaire)*
@@ -445,7 +445,7 @@ Adobe XD, etc.*
 - [Anytype](https://anytype.io/)
 - [Outline](https://www.getoutline.com/)
 - [Notea](https://cinwell.com/notea/)
-- [Notion](https://www.notion.so/) *(propriétaire)*
+- [AppFlowy.IO](https://www.appflowy.io/)
 
 ### Bases de connaissances
 
@@ -461,6 +461,7 @@ Adobe XD, etc.*
 
 - [Excalidraw](https://excalidraw.com/)
 - [OpenBoard](https://openboard.ch/)
+- [tldraw](https://www.tldraw.com/)
 
 ## Base de données
 
@@ -491,6 +492,11 @@ Adobe XD, etc.*
 *Alternatives à Firebase.*
 
 - [Superbase](https://supabase.io/)
+
+### Autres
+
+- [PlanetScale](https://planetscale.com/)
+- [Budibase](https://budibase.com/)
 
 ## Univers Android
 
