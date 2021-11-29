@@ -446,6 +446,8 @@ Adobe XD, etc.*
 - [Outline](https://www.getoutline.com/)
 - [Notea](https://cinwell.com/notea/)
 - [AppFlowy.IO](https://www.appflowy.io/)
+- [Bangle.io](https://bangle.io/)
+- [WorkFlowwy](https://workflowy.com/) *(propriétaire)*
 
 ### Bases de connaissances
 
