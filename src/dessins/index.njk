@@ -1,0 +1,42 @@
+---
+layout: base.njk
+title: Exercices
+---
+
+<section class="home-section">
+  <h1 class="text-6xl">
+    Dessins
+  </h1>
+
+  <h2 class="text-4xl mt-8 mb-4">
+    Gartic Phone
+  </h2>
+
+  <div class="grid gap-4 grid-cols-1 md:grid-cols-2">
+    {% for drawing in drawings.gartic_phone %}
+      <div>
+        <img src="{{ drawing | url }}"
+            alt=""
+            loading="lazy"
+            width="770"
+            height="525" />
+      </div>
+    {% endfor %}
+  </div>
+
+  <h2 class="text-4xl mt-8 mb-4">
+    Drawception
+  </h2>
+
+  <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+    {% for drawing in drawings.drawception %}
+      <div>
+        <img src="{{ drawing | url }}"
+            alt=""
+            loading="lazy"
+            width="300"
+            height="250" />
+      </div>
+    {% endfor %}
+  </div>
+</section>
