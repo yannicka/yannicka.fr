@@ -20,8 +20,6 @@ publish:
 deploy:
   image: alpine:latest
   stage: deploy
-  tags:
-    - deployment
   script:
     - chmod og= $SSH_PRIVATE_KEY
     - apk update && apk add openssh-client
