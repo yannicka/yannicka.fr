@@ -254,6 +254,7 @@ Adobe XD, etc.*
 *Alternatives à Zoom, Microsoft Teams, etc.*
 
 - [Jitsi](https://jitsi.org/)
+- [MiroTalk SFU](https://sfu.mirotalk.org/)
 
 ### Centré sur la voix
 
@@ -499,6 +500,7 @@ Adobe XD, etc.*
 
 - [PlanetScale](https://planetscale.com/)
 - [Budibase](https://budibase.com/)
+- [FerretDB](https://www.ferretdb.io/)
 
 ## Univers Android
 
@@ -684,6 +686,7 @@ Adobe XD, etc.*
 - [Lektor](https://www.getlektor.com/)
 - [Zola](https://www.getzola.org/)
 - [Hugo](https://gohugo.io/)
+- [Astro](https://astro.build/)
 - *[Liste des générateurs de sites statiques](https://www.staticgen.com/)*
 
 ### *JAM stack website*
@@ -790,6 +793,7 @@ Adobe XD, etc.*
 - [GameMaker](https://www.yoyogames.com/) *(propriétaire)*
 - [Superpowers](https://superpowers-html5.com/) *(semble abandonné)*
 - [Solarus](https://www.solarus-games.org/)
+- [microStudio](https://microstudio.dev/)
 
 ### Boutique de jeux
 
