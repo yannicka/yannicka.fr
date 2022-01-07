@@ -111,7 +111,9 @@ article.
 
 {% endmarkdown %}
 
-{{ show_games(browser_games.games) }}
+<div class="not-prose">
+  {{ show_games(browser_games.games) }}
+</div>
 
 {% markdown %}
 
@@ -122,4 +124,6 @@ qui restent intéressants à explorer et dans le même concept.
 
 {% endmarkdown %}
 
-{{ show_games(browser_games.other_games) }}
+<div class="not-prose">
+  {{ show_games(browser_games.other_games) }}
+</div>

@@ -21,5 +21,7 @@ layout: base.njk
     </li>
   </ul>
 
-  {{ content | safe }}
+  <div class="prose max-w-none dark:prose-invert">
+    {{ content | safe }}
+  </div>
 </article>

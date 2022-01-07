@@ -1,7 +1,6 @@
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
-const markdownItClass = require('@toycode/markdown-it-class')
 const toml = require('toml')
 
 module.exports = function (config) {
@@ -45,28 +44,13 @@ module.exports = function (config) {
     return projects
   })
 
-  /* Markdown */
-  const mapping = {
-    h1: ['text-5xl sm:text-6xl mt-4 mb-2'],
-    h2: ['text-4xl sm:text-5xl mt-4 mb-2'],
-    h3: ['text-3xl sm:text-4xl mt-4 mb-2'],
-    h4: ['text-2xl sm:text-3xl mt-4 mb-2'],
-    h5: ['text-xl sm:text-2xl mt-4 mb-2'],
-    h6: ['text-lg sm:text-xl mt-4 mb-2'],
-    p: ['my-3'],
-    a: ['underline', 'hover:text-gray-700', 'dark:hover:text-gray-300'],
-    ul: ['ml-3', 'my-3', 'list-dashed', 'list-inside'],
-    ol: ['ml-8', 'my-3', 'list-decimal'],
-    li: ['my-2'],
-  }
-
   let markdownLibrary = markdownIt({
     html: true,
     linkify: true,
   }).use(markdownItAnchor, {
     permalink: true,
     renderPermalink: () => '',
-  }).use(markdownItClass, mapping)
+  })
 
   config.setLibrary('md', markdownLibrary)
 
