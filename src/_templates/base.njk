@@ -30,10 +30,10 @@
     {% endif %}
   </head>
 
-  <body class="bg-white dark:bg-gray-800 text-black dark:text-gray-100 font-source-serif-pro">
+  <body class="bg-gray-100 text-black font-source-serif-pro dark:bg-gray-800 dark:text-gray-100">
     <div class="relative">
       <div class="absolute top-2 left-2">
-        <a href="#content" class="block bg-white text-black border-2 border-black sr-only focus:not-sr-only focus:outline-none focus:ring">
+        <a href="#content" class="block bg-white text-black border-2 border-black sr-only focus-visible:not-sr-only focus-visible:outline-none focus-visible:ring">
           <div class="p-3">
             Aller au contenu principal
           </div>
@@ -43,12 +43,12 @@
 
     <div class="js-mobile-menu bg-white dark:bg-gray-900 border-b-2 border-black dark:border-gray-700 z-50" style="display: none;">
       <div class="grid grid-cols-3 items-center">
-        <a href="{{ '/' | url }}" class="w-max p-4 text-xl font-bold hover:underline focus:outline-none focus:ring" title="Page d'accueil">
+        <a href="{{ '/' | url }}" class="w-max p-4 text-xl font-bold hover:underline focus-visible:outline-none focus-visible:ring" title="Page d'accueil">
           Yannicka
         </a>
 
         <div class="col-span-2 justify-self-end">
-          <button class="js-mobile-menu-close-button group inline-block px-5 py-4 focus:outline-none focus:ring">
+          <button class="js-mobile-menu-close-button group inline-block px-5 py-4 focus-visible:outline-none focus-visible:ring">
             <span>⨉</span>
             <span class="align-middle group-hover:underline">Fermer le menu</span>
           </button>
@@ -56,45 +56,33 @@
       </div>
 
       <nav role="navigation">
-        <a href="{{ '/projets/' | url }}" class="block p-4 hover:underline hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring">
-          Projets
-        </a>
-
-        <a href="{{ '/exercices/' | url }}" class="block p-4 hover:underline hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring">
-          Exercices
-        </a>
-
-        <a href="{{ '/dessins/' | url }}" class="block p-4 hover:underline hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring">
-          Dessins
-        </a>
+        {% for item in menu %}
+          <a href="{{ item.path | url }}" class="block p-4 hover:underline hover:bg-gray-100 dark:hover:bg-gray-800 focus-visible:outline-none focus-visible:ring">
+            {{ item.name }}
+          </a>
+        {% endfor %}
       </nav>
     </div>
 
     <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
       <div class="max-w-4xl m-auto">
         <div class="flex items-center">
-          <a href="{{ '/' | url }}" class="w-max p-4 text-xl font-bold hover:underline focus:outline-none focus:ring" title="Page d'accueil">
+          <a href="{{ '/' | url }}" class="w-max p-4 text-xl font-bold hover:underline focus-visible:outline-none focus-visible:ring" title="Page d'accueil">
             Yannicka
           </a>
 
           <div class="hidden sm:block">
             <nav class="flex" role="navigation">
-              <a href="{{ '/projets/' | url }}" class="inline-block p-4 hover:underline focus:outline-none focus:ring">
-                Projets
-              </a>
-
-              <a href="{{ '/exercices/' | url }}" class="inline-block p-4 hover:underline focus:outline-none focus:ring">
-                Exercices
-              </a>
-
-              <a href="{{ '/dessins/' | url }}" class="inline-block p-4 hover:underline focus:outline-none focus:ring">
-                Dessins
-              </a>
+              {% for item in menu %}
+                <a href="{{ item.path | url }}" class="inline-block p-4 {% if item.path in page.url %}underline{% endif %} hover:underline focus-visible:outline-none focus-visible:ring">
+                  {{ item.name }}
+                </a>
+              {% endfor %}
             </nav>
           </div>
 
           <div class="sm:hidden ml-auto">
-            <button class="js-mobile-menu-open-button group inline-block px-5 py-4 focus:outline-none focus:ring">
+            <button class="js-mobile-menu-open-button group inline-block px-5 py-4 focus-visible:outline-none focus-visible:ring">
               <span class="align-middle">☰</span>
               <span class="align-middle group-hover:underline">Menu</span>
             </button>
@@ -111,8 +99,8 @@
       <p>
         Yannicka ·
         2013 - 2021 ·
-        <a href="{{ '/mentions-legales/' | url }}" class="underline focus:outline-none focus:ring">Mentions légales</a> ·
-        <a href="{{ '/a-propos/' | url }}" class="underline focus:outline-none focus:ring">À propos</a>
+        <a href="{{ '/mentions-legales/' | url }}" class="underline focus-visible:outline-none focus-visible:ring">Mentions légales</a> ·
+        <a href="{{ '/a-propos/' | url }}" class="underline focus-visible:outline-none focus-visible:ring">À propos</a>
       </p>
     </footer>
   </body>
