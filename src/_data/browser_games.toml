@@ -201,16 +201,6 @@ description = """
 """
 
 [[games]]
-name = "Mosaic"
-url = "https://playmosaic.online/"
-category = "reflexion"
-min_players = 2
-max_players = 4
-description = """
-@todo
-"""
-
-[[games]]
 name = "Mattle"
 url = "https://mattle.online/"
 category = "various"
