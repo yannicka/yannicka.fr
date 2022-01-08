@@ -1,3 +1,6 @@
+/* Coloration syntaxique */
+@import 'prism-highlight.css';
+
 /* Polices */
 @font-face{
   font-family: 'Source Serif Pro';
@@ -87,9 +90,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Coloration syntaxique */
-@import 'prism-highlight.css';
 
 /* Surcharge de la taille de police de base */
 :root {
