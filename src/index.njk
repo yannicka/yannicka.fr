@@ -6,7 +6,7 @@ full_title: Yannicka — Accueil
 <ul>
   {%- for dossier in collections.dossier -%}
     <li>
-      <a class="block p-3 my-4 bg-gray-200 dark:bg-gray-700 rounded transition hover:bg-gray-300 dark:hover:bg-gray-600 sm:flex focus:outline-none focus:ring" href="{{ dossier.url | url }}">
+      <a class="block p-3 my-5 bg-gray-200 dark:bg-gray-700 rounded transition hover:bg-gray-300 dark:hover:bg-gray-600 sm:flex focus-visible:ring" href="{{ dossier.url | url }}">
         <div class="sm:w-48">
           <img src="{{ '/dossiers/' + dossier.fileSlug + '/illustration.png' | url }}"
                alt=""
@@ -19,7 +19,7 @@ full_title: Yannicka — Accueil
             {{- dossier.data.title -}}
           </h3>
 
-          <p class="text-sm">
+          <p class="text-xs text-gray-700 dark:text-gray-300">
             {% if dossier.data.updated_at %}
               mis à jour le {{ dossier.data.updated_at | format_date }}
             {% elif dossier.data.created_at %}
@@ -27,7 +27,7 @@ full_title: Yannicka — Accueil
             {% endif %}
           </p>
 
-          <p>
+          <p class="mt-1">
             {{- dossier.data.short_description -}}
           </p>
         </div>
