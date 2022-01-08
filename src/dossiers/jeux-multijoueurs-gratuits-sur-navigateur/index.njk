@@ -1,7 +1,7 @@
 ---
 title: Jeux multijoueurs gratuits sur navigateur
 created_at: 2020-11-21
-updated_at: 2021-04-19
+updated_at: 2022-01-08
 short_description: >
   Jeux par navigateur.
 toc: false
@@ -10,16 +10,16 @@ toc: false
 {% macro show_games(games) %}
   <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
     {% for game in games %}
-      <div class="bg-gray-100 dark:bg-gray-600 flex-1 rounded dark:border-0 duration-200 shadow-lg">
-        <a href="{{ game.url }}" class="group block p-4 pt-2 bg-gray-200 dark:bg-gray-700 rounded-t border-gray-300 dark:border-gray-500 duration-200 hover:bg-gray-300 dark:hover:bg-gray-900 focus:outline-none focus:ring">
-          <div class="flex">
+      <article class="bg-gray-100 dark:bg-gray-600 rounded shadow-lg">
+        <a href="{{ game.url }}" class="block p-4 pt-2 bg-gray-200 dark:bg-gray-700 rounded-t transition hover:bg-gray-300 dark:hover:bg-gray-900 focus-visible:outline-none focus-visible:ring">
+          <header class="flex">
             <div>
-              <div class="font-bold text-xl">
+              <h3 class="font-bold text-xl">
                 {{ game.name }}
-              </div>
+              </h3>
 
               <div class="mt-1">
-                <span class="inlne-block text-sm text-black bg-{% category_to_color game.category %}-300 py-0.5 px-2 rounded-full">
+                <span class="text-sm text-black bg-{% category_to_color game.category %}-300 py-0.5 px-2 rounded-full">
                   {% category_to_string game.category %}
                 </span>
               </div>
@@ -31,7 +31,7 @@ toc: false
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
               </svg>
             </div>
-          </div>
+          </header>
         </a>
 
         <div class="p-4">
@@ -54,7 +54,7 @@ toc: false
             {% markdown %}{{ game.description }}{% endmarkdown %}
           </p>
         </div>
-      </div>
+      </article>
     {% endfor %}
   </div>
 {% endmacro %}
@@ -62,7 +62,7 @@ toc: false
 {% markdown %}
 
 <details>
-  <summary class="cursor-pointer bg-gray-200 dark:bg-gray-700 p-3 rounded transition hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring">
+  <summary class="cursor-pointer bg-gray-200 dark:bg-gray-700 p-3 rounded transition hover:bg-gray-300 dark:hover:bg-gray-600 focus-visible:outline-none focus-visible:ring">
     Voir l'introduction et les critères d'admissibilité d'un jeu
   </summary>
 
