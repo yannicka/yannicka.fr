@@ -30,6 +30,5 @@ deploy:
   environment:
     name: production
     url: http://yannicka.fr/
-  rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-      when: manual
+  only:
+    - master
