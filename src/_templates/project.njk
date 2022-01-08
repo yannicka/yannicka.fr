@@ -2,38 +2,42 @@
 layout: base.njk
 ---
 
-<article class="article">
-  <h1 class="text-center text-6xl lg:text-left">
-    {{ title }}
-  </h1>
+<article>
+  <header>
+    <h1 class="text-center text-6xl lg:text-left">
+      {{ title }}
+    </h1>
+  </header>
 
-  <ul class="metabox">
-    <li>
-      Sorti en {{ publish_month | format_month }}
-    </li>
-
-    <li>
-      Licence {{ license }}
-    </li>
-
-    {% if google_play_url %}
+  <section>
+    <ul class="flex flex-wrap gap-4 py-4 text-center text-sm justify-center lg:justify-start">
       <li>
-        <a href="{{ google_play_url }}">
-          Disponible sur Google Play
-        </a>
+        Sorti en {{ publish_month | format_month }}
       </li>
-    {% endif %}
 
-    {% if source_code_url %}
       <li>
-        <a href="{{ source_code_url }}">
-          Accéder au code source
-        </a>
+        Licence {{ license }}
       </li>
-    {% endif %}
-  </ul>
 
-  <div class="prose max-w-none dark:prose-invert">
+      {% if google_play_url %}
+        <li>
+          <a href="{{ google_play_url }}" class="underline">
+            Voir sur Google Play
+          </a>
+        </li>
+      {% endif %}
+
+      {% if source_code_url %}
+        <li>
+          <a href="{{ source_code_url }}" class="underline">
+            Accéder au code source
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </section>
+
+  <section class="prose max-w-none dark:prose-invert">
     {{ content | safe }}
-  </div>
+  </section>
 </article>

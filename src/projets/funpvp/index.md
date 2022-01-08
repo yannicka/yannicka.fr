@@ -2,6 +2,7 @@
 title: FunPvP
 tags: project
 publish_month: 2017-03-01
+source_code_url: https://gitlab.com/yannicka/mc-website-python-skeleton
 ---
 
 FunPvP était un serveur Minecraft créé et maintenu par mon frère.
@@ -15,8 +16,8 @@ pouvait vendre des avantages en jeu ; et c'est ce que j'ai fait.
 
 Ce projet m'a notamment permis, entre autres, d'apprendre ou de découvrir :
 
-- **[Django](https://www.djangoproject.com/)**, un framework web en Python que
-  je trouve extraordinnaire ;
+- [Django](https://www.djangoproject.com/), un framework web en Python que je
+  trouve extraordinnaire ;
 
 - La mise en place d'un certificat TLS depuis la ligne de commande, avec Let's
   Encrypt ;
@@ -29,8 +30,6 @@ Aujourd'hui le serveur a fermé et le site par la même occasion.
 
 Vous pouvez toujours trouver une [archive du site sur Internet
 Archive](https://web.archive.org/web/20180224101930/https://funpvp.net/).
-
-Code source du projet : <https://gitlab.com/yannicka/mc-website-python-skeleton>.
 
 ## Développement
 

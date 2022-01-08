@@ -12,17 +12,14 @@ Bobby est un petit jeu 2D de réflexion.
 
 ## Accès
 
-- **[Accéder au jeu](https://bobby.yannicka.fr/)**
-- [Accéder à la fiche Google Play](https://play.google.com/store/apps/details?id=fr.yannicka.bobby)
-- [Accéder au code source](https://gitlab.com/yannicka/bobby)
+- [Accéder au jeu](https://bobby.yannicka.fr/)
 
 ## Accès direct
 
 Le jeu directement jouable depuis ici.
 
 <iframe src="https://bobby.yannicka.fr/"
-        class="block w-full border-2 border-green-900 box-border"
-        style="max-width: 600px; height: 647px;"
+        class="block w-full border-2 border-green-900 box-border max-w-[600px] h-[647px]"
         loading="lazy"></iframe>
 
 ## Développement
