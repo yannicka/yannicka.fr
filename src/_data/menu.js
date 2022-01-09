@@ -9,10 +9,5 @@ module.exports = () => {
       name: 'Exercices',
       path: '/exercices/',
     },
-
-    {
-      name: 'Dessins',
-      path: '/dessins/',
-    },
   ]
 }
