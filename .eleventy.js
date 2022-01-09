@@ -5,7 +5,6 @@ const toml = require('toml')
 
 module.exports = function (config) {
   config.addDataExtension('toml', contents => toml.parse(contents))
-  config.addPassthroughCopy('src/assets')
   config.addPassthroughCopy('src/projets/age-of-rice/src')
   config.addPassthroughCopy('src/projets/switch-color/src')
   config.addPassthroughCopy('src/projets/switch-color/img')
