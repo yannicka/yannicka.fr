@@ -3,35 +3,28 @@ layout: base.njk
 full_title: Yannicka — Accueil
 ---
 
-<ul>
+<div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
   {%- for dossier in collections.dossier -%}
-    <li>
-      <a class="block p-3 my-5 bg-gray-200 dark:bg-gray-700 rounded transition hover:bg-gray-300 dark:hover:bg-gray-600 sm:flex focus-visible:ring" href="{{ dossier.url | url }}">
-        <div class="sm:w-48">
-          <img src="{{ '/dossiers/' + dossier.fileSlug + '/illustration.png' | url }}"
-               alt=""
-               loading="lazy"
-               class="w-full rounded" />
-        </div>
+    <a class="flex group bg-white dark:bg-gray-700 rounded transition transform hover:bg-gray-200 dark:hover:bg-gray-600 shadow-md shadow-gray-300 dark:shadow-gray-800 focus-visible:ring" href="{{ dossier.url | url }}">
+      <div class="hidden rounded-l bg-cover bg-no-repeat bg-center relative group-hover:rounded group-hover:rotate-6 transition group-hover:shadow-md group-hover:shadow-gray-300 dark:group-hover:shadow-gray-800 sm:w-36 sm:block" style="background-image: url('{{ '/dossiers/' + dossier.fileSlug + '/illustration.png' | url }}');"></div>
 
-        <div class="flex-1 mt-2 sm:mt-0 sm:ml-3">
-          <h3 class="underline text-lg font-bold">
-            {{- dossier.data.title -}}
-          </h3>
+      <div class="flex-1 p-3">
+        <h3 class="text-lg font-bold leading-6">
+          {{- dossier.data.title -}}
+        </h3>
 
-          <p class="text-xs text-gray-700 dark:text-gray-300">
-            {% if dossier.data.updated_at %}
-              mis à jour le {{ dossier.data.updated_at | format_date }}
-            {% elif dossier.data.created_at %}
-              mis à jour le {{ dossier.data.created_at | format_date }}
-            {% endif %}
-          </p>
+        <p class="text-xs text-gray-700 dark:text-gray-300">
+          {% if dossier.data.updated_at %}
+            mis à jour le {{ dossier.data.updated_at | format_date }}
+          {% elif dossier.data.created_at %}
+            mis à jour le {{ dossier.data.created_at | format_date }}
+          {% endif %}
+        </p>
 
-          <p class="mt-1">
-            {{- dossier.data.short_description -}}
-          </p>
-        </div>
-      </a>
-    </li>
+        <p class="mt-1">
+          {{- dossier.data.short_description -}}
+        </p>
+      </div>
+    </a>
   {%- endfor -%}
-</ul>
+</div>
