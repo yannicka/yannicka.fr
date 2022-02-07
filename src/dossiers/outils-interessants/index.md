@@ -1,9 +1,9 @@
 ---
 title: Outils intéressants
 created_at: 2015-10-02
-updated_at: 2021-04-19
+updated_at: 2022-02-07
 short_description: >
-  Grande liste d'outils (site web, logiciels, etc.) intéressants pour pleins de
+  Grande liste d'outils (sites web, logiciels, etc.) intéressants pour pleins de
   domaines différents.
 ---
 
@@ -22,8 +22,8 @@ mes outils préférés en haut de liste.
   (bonus : [VSCodium](https://vscodium.com/),
            [Visual Studio Code - OSS](https://flathub.org/apps/details/com.visualstudio.code-oss))
 - [Kate](https://kate-editor.org/)
-- [Sublime Text](https://www.sublimetext.com/) *(propriétaire)*
 - [vim](https://www.vim.org/)
+- [Sublime Text](https://www.sublimetext.com/) *(propriétaire)*
   (bonus : [SpaceVim](https://spacevim.org/),
            [fugitive.vim](https://github.com/tpope/vim-fugitive))
 - [Neovim](https://neovim.io/) (mêmes bonus que pour vim)
@@ -44,14 +44,15 @@ mes outils préférés en haut de liste.
 - [Micro](https://micro-editor.github.io/)
 - [Kakoune](https://kakoune.org/)
 - [Onivim 2](https://v2.onivim.io/) *(semi-propriétaire)*
+- [GNOME Text Editor](https://gitlab.gnome.org/GNOME/gnome-text-editor)
 - [Gedit](https://wiki.gnome.org/Apps/Gedit)
 - [Thonny](https://thonny.org/) *(pour Python)*
 - [nano](https://www.nano-editor.org/)
-- [Howl](https://howl.io/)
 - [Textadept](https://orbitalquark.github.io/textadept/)
 - [CudaText](https://cudatext.github.io/)
 - [elementary Code](https://github.com/elementary/code)
 - [Graviton](https://graviton.netlify.app/)
+- [Howl](https://howl.io/)
 - [Notepadqq](https://notepadqq.com/) *(à l'abandon)*
 
 ## IDE
@@ -103,7 +104,6 @@ moins connus.*
 ## Outils de développeurs
 
 - [Sourcegraph](https://about.sourcegraph.com/)
-- [Sourcetrail](https://www.sourcetrail.com/)
 
 ## Dessin & graphisme
 
@@ -334,13 +334,15 @@ Adobe XD, etc.*
 *Alternatives à Google et Bing.*
 
 - [DuckDuckGo](https://duckduckgo.com/) *(propriétaire)*
-  (bonus : [DuckDuckGo Maps](https://duckduckgo.com/?q=france&iaxm=maps))
+- [Brave Search](https://search.brave.com/) *(propriétaire)*
+- [Mojeek](https://www.mojeek.com/) *(propriétaire)*
 - [Qwant](https://www.qwant.com/) *(propriétaire)*
   (bonus : [Qwant Maps](https://www.qwant.com/maps/))
+- [StartPage](https://www.startpage.com/) *(propriétaire)*
+  (bonus : [DuckDuckGo Maps](https://duckduckgo.com/?q=france&iaxm=maps))
+- [You.com](https://you.com/) *(propriétaire)*
 - [Ecosia](https://www.ecosia.org/) *(propriétaire)*
 - [Lilo](https://search.lilo.org/) *(propriétaire)*
-- [StartPage](https://www.startpage.com/) *(propriétaire)*
-- [Brave Search](https://search.brave.com/) *(propriétaire)*
 
 ## Suite bureautique
 
@@ -366,6 +368,7 @@ Adobe XD, etc.*
 - [Standard Notes](https://standardnotes.org/)
 - [Zettlr](https://www.zettlr.com/)
 - [Apostrophe](https://gitlab.gnome.org/World/apostrophe)
+- [PanWriter](https://github.com/mb21/panwriter)
 - [Caret](https://caret.io/) *(propriétaire)*
 - [Nota](https://nota.md/) *(propriétaire)*
 - [Yosoro](https://github.com/IceEnd/Yosoro) *(semble abandonné, en date du 9 août 2021)*
@@ -459,6 +462,7 @@ Adobe XD, etc.*
 - [Regexper](https://regexper.com/) — Affichage graphique d'expressions
   rationnelles (regex)
 - [regex101](https://regex101.com/) — Testez vos expressions rationnelles
+- [RegExr](https://regexr.com/)
 
 ## Tableau blanc
 
@@ -501,6 +505,8 @@ Adobe XD, etc.*
 - [PlanetScale](https://planetscale.com/)
 - [Budibase](https://budibase.com/)
 - [FerretDB](https://www.ferretdb.io/)
+- [Motor Admin](https://www.getmotoradmin.com/)
+- [EdgeDB](https://www.edgedb.com/)
 
 ## Univers Android
 
@@ -610,6 +616,7 @@ Adobe XD, etc.*
 - [Ikoula](https://www.ikoula.com/)
 - [PlanetHoster](https://www.planethoster.com/)
 - [Scaleway](https://www.scaleway.com/)
+- [Deta](https://www.deta.sh/)
 
 ### Système de commentaires
 
@@ -623,6 +630,7 @@ Adobe XD, etc.*
 - [Komento](https://komento.host/)
 - [Remarkbox](https://www.remarkbox.com/)
 - [Juvia](https://phusion.github.io/juvia/)
+- [FastComments](https://fastcomments.com/) *(privatif)*
 
 ### Discussion sur site
 
@@ -652,6 +660,12 @@ Adobe XD, etc.*
 - [Offen](https://www.offen.dev/)
 - [Cabin.](https://withcabin.com/) *(privatif)*
 - [Fathom](https://usefathom.com/) *(privatif)*
+- [Fugu](https://fugu.lol/)
+- [PostHog](https://posthog.com/)
+
+### Drapeaux
+
+- [Flagsmith](https://flagsmith.com/)
 
 ### Wiki
 
@@ -1095,6 +1109,11 @@ Adobe XD, etc.*
 - [Haiku](https://www.haiku-os.org/)
 - [ReactOS](https://www.reactos.org/)
 
+### Gestionnaire de commandes
+
+- [Just](https://just.systems/)
+- [Task](https://taskfile.dev/)
+
 ## Gestionnaire de bibliographie
 
 - [Zotero](https://www.zotero.org/)
@@ -1246,6 +1265,10 @@ Adobe XD, etc.*
 - [Linguee](https://www.linguee.com/) *(propriétaire)*
 - [Yandex Traduction](https://translate.yandex.com/) *(propriétaire)*
 - [Bing Traduction](https://www.bing.com/translator/) *(propriétaire)*
+
+## Correcteur orthographique
+
+- [LanguageTools](https://languagetool.org/fr)
 
 ## D'autres listes d'outils intéressants
 
