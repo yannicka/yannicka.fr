@@ -255,6 +255,7 @@ Adobe XD, etc.*
 
 - [Jitsi](https://jitsi.org/)
 - [MiroTalk SFU](https://sfu.mirotalk.org/)
+- [Element Call](https://call.element.io/)
 
 ### Centré sur la voix
 
@@ -507,6 +508,9 @@ Adobe XD, etc.*
 - [FerretDB](https://www.ferretdb.io/)
 - [Motor Admin](https://www.getmotoradmin.com/)
 - [EdgeDB](https://www.edgedb.com/)
+- [ToolJet](https://tooljet.com/)
+- [Immudb](https://codenotary.com/technologies/immudb/)
+- [Appsmith](https://www.appsmith.com/)
 
 ## Univers Android
 
@@ -581,7 +585,6 @@ Adobe XD, etc.*
 - [Webflow](https://webflow.com/) *(propriétaire)*
 - [Grapedrop](https://grapedrop.com/) *(propriétaire)*
 - [GrapeJS](https://grapesjs.com/) *(ce sur quoi ce base Grapedrop)*
-- [Alva](https://meetalva.io/) *(semble à l'abandon en date du 4 juin 2020)*
 
 ### Police
 
@@ -685,6 +688,7 @@ Adobe XD, etc.*
 - [sonarwhal](https://sonarwhal.com/)
 - [Dareboost](https://www.dareboost.com/)
 - [web.dev](https://web.dev/)
+- [Yellow Lab Tools](https://yellowlab.tools/)
 
 ### Serveur
 
@@ -1269,6 +1273,11 @@ Adobe XD, etc.*
 ## Correcteur orthographique
 
 - [LanguageTools](https://languagetool.org/fr)
+
+## API
+
+- [Insomnia](https://insomnia.rest/)
+- [Hoppscotch](https://hoppscotch.io/)
 
 ## D'autres listes d'outils intéressants
 
