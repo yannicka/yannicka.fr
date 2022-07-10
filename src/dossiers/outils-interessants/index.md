@@ -1,7 +1,7 @@
 ---
 title: Outils intéressants
 created_at: 2015-10-02
-updated_at: 2022-02-07
+updated_at: 2022-07-10
 short_description: >
   Grande liste d'outils (sites web, logiciels, etc.) intéressants pour pleins de
   domaines différents.
@@ -23,10 +23,10 @@ mes outils préférés en haut de liste.
            [Visual Studio Code - OSS](https://flathub.org/apps/details/com.visualstudio.code-oss))
 - [Kate](https://kate-editor.org/)
 - [vim](https://www.vim.org/)
-- [Sublime Text](https://www.sublimetext.com/) *(propriétaire)*
   (bonus : [SpaceVim](https://spacevim.org/),
            [fugitive.vim](https://github.com/tpope/vim-fugitive))
 - [Neovim](https://neovim.io/) (mêmes bonus que pour vim)
+- [Sublime Text](https://www.sublimetext.com/) *(propriétaire)*
 - [Notepad++](https://notepad-plus-plus.org/) *(Windows seulement)*
 - [Geany](https://www.geany.org/)
 - [Emacs](https://www.gnu.org/software/emacs/emacs.html)
@@ -43,9 +43,8 @@ mes outils préférés en haut de liste.
     - [Magit Forge](https://github.com/magit/forge/)
 - [Micro](https://micro-editor.github.io/)
 - [Kakoune](https://kakoune.org/)
-- [Onivim 2](https://v2.onivim.io/) *(semi-propriétaire)*
+- [Helix](https://helix-editor.com/)
 - [GNOME Text Editor](https://gitlab.gnome.org/GNOME/gnome-text-editor)
-- [Gedit](https://wiki.gnome.org/Apps/Gedit)
 - [Thonny](https://thonny.org/) *(pour Python)*
 - [nano](https://www.nano-editor.org/)
 - [Textadept](https://orbitalquark.github.io/textadept/)
@@ -78,7 +77,6 @@ mes outils préférés en haut de liste.
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Bulma](https://bulma.io/)
 - [Bootstrap](https://getbootstrap.com/)
-- [Tachyons](https://tachyons.io/) *(semble à l'abandon)*
 
 ## Langage de programmation
 
@@ -127,9 +125,9 @@ moins connus.*
 Adobe XD, etc.*
 
 - [Inkscape](https://inkscape.org/)
+- [Penpot](https://penpot.app/)
 - [Gravit](https://gravit.io/) *(propriétaire)*
 - [Akira](https://github.com/akiraux/Akira) *(en cours de développement)*
-- [Penpot](https://penpot.app/)
 
 ### Pixel art
 
@@ -358,31 +356,26 @@ Adobe XD, etc.*
 
 ### Éditeur Markdown
 
-- [Mark Text](https://marktext.app/)
 - [ghostwriter](https://wereturtle.github.io/ghostwriter/)
 - [ReText](https://github.com/retext-project/retext)
 - [Abricotine](https://abricotine.brrd.fr/)
-- [Quilter](https://github.com/lainsce/quilter)
 - [ThiefMD](https://thiefmd.com/)
+- [Mark Text](https://github.com/marktext/marktext)
 - [Typora](https://www.typora.io/) *(propriétaire)*
 - [Simplenote](https://simplenote.com/)
 - [Standard Notes](https://standardnotes.org/)
 - [Zettlr](https://www.zettlr.com/)
 - [Apostrophe](https://gitlab.gnome.org/World/apostrophe)
 - [PanWriter](https://github.com/mb21/panwriter)
-- [Caret](https://caret.io/) *(propriétaire)*
 - [Nota](https://nota.md/) *(propriétaire)*
-- [Yosoro](https://github.com/IceEnd/Yosoro) *(semble abandonné, en date du 9 août 2021)*
-- [Qilin](https://github.com/qilin-editor/qilin-app) *(semble abandonné, en date du 9 août 2021)*
-- [Moeditor](https://moeditor.js.org/) *(semble abandonné, en date du 9 août 2021)*
-- [(Un)colored](https://n457.github.io/Uncolored/)  *(semble abandonné, en date du 7 juillet 2020)*
-- [Geek's Diary](https://github.com/seokju-na/geeks-diary) *(semble abandonné, en date du 16 mai 2020)*
 
 ### Éditeur en ligne
 
 *Alternatives à Google Drive, etc.*
 
-- [CryptPad](https://cryptpad.fr/)
+- [CryptPad](https://cryptpad.org/) (instances :
+    [CryptPad.fr](https://cryptpad.fr/),
+    [liste des instances connues](https://cryptpad.org/instances/))
 - [Etherpad](https://etherpad.org/) (instances :
     [Framapad](https://framapad.org/),
     [April Pad](https://pad.april.org/),
@@ -399,7 +392,7 @@ Adobe XD, etc.*
 - [LyX](https://www.lyx.org/)
 - [Texmaker](https://www.xm1math.net/texmaker/index.html)
 - [TeXstudio](https://texstudio.org/)
-- [GNOME LaTeX](https://wiki.gnome.org/Apps/GNOME-LaTeX)
+- [GNOME LaTeX](https://gitlab.gnome.org/swilmet/gnome-latex)
 - [Setzer](https://www.cvfosammmm.org/setzer/)
 
 ### Prises de notes
@@ -426,7 +419,6 @@ Adobe XD, etc.*
 - [Xournal++](https://github.com/xournalpp/xournalpp)
 - [Sciter Notes](https://notes.sciter.com/) *(propriétaire)*
 - [Cryptee](https://crypt.ee/) *(propriétaire)*
-- [Vibrato](https://soon.vibrato.app/lisp) *(semble abandonné, en date du 9 août 2021)*
 
 ## Gestionnaire de tâches
 
@@ -727,15 +719,16 @@ Adobe XD, etc.*
 ## Gestion de projet
 
 - [OpenProject](https://www.openproject.org/)
+- [Markwhen](https://markwhen.com/)
 
 ## Écran
 
 ### Enregistreur d'écran
 
+- [Peek](https://peek.uploadedlobster.com/)
 - [RecordMyDesktop](http://recordmydesktop.sourceforge.net/)
 - [Kazam](https://doc.ubuntu-fr.org/kazam)
 - [SimpleScreenRecorder](https://www.maartenbaert.be/simplescreenrecorder/)
-- [Peek](https://peek.uploadedlobster.com/)
 - [Open Broadcaster Software](https://obsproject.com/) (OBS Studio)
 
 ### Capture d'écran en direct
@@ -784,7 +777,6 @@ Adobe XD, etc.*
 - [OpenFL](https://www.openfl.org/)
 - [Kha](https://kha.tech/)
 - [HaxeFlixel](https://haxeflixel.com/)
-- [HaxePunk](https://haxepunk.com/)
 - [Heaps](https://heaps.io/)
 
 <!-- - [luxe engine](https://luxeengine.com/) -->
@@ -795,7 +787,6 @@ Adobe XD, etc.*
 - [Pixi.js](https://www.pixijs.com/)
 - [melonJS](https://melonjs.org/)
 - [PlayCanvas](https://playcanvas.com/) *(propriétaire)*
-- [Crafty](https://craftyjs.com/) *(semble abandonné)*
 
 ## Univers du jeu vidéo
 
@@ -806,10 +797,9 @@ Adobe XD, etc.*
 - [Godot](https://godotengine.org/)
 - [Armory](https://armory3d.org/)
 - [Defold](https://www.defold.com/) *(propriétaire mais sources accessibles)*
-- [Stencyl](http://www.stencyl.com/) *(propriétaire)*
+- [Stencyl](http://www.stencyl.com/) *(propriétaire, semble abandonné)*
 - [Construct](https://www.scirra.com/) *(propriétaire)*
 - [GameMaker](https://www.yoyogames.com/) *(propriétaire)*
-- [Superpowers](https://superpowers-html5.com/) *(semble abandonné)*
 - [Solarus](https://www.solarus-games.org/)
 - [microStudio](https://microstudio.dev/)
 
@@ -818,7 +808,7 @@ Adobe XD, etc.*
 - [Itch](https://itch.io/)
 - [Lutris](https://lutris.net/)
 - [Playnite](https://playnite.link/)
-- [./play.it](https://riot.js.org/)
+- [./play.it](https://forge.dotslashplay.it/play.it/scripts)
 
 ### Émulateur
 
@@ -860,7 +850,7 @@ Adobe XD, etc.*
 
 - [Git Cola](https://git-cola.github.io/)
 - [Git Gui](https://git-scm.com/docs/git-gui)
-- [GitAhead](https://gitahead.github.io/gitahead.com/)
+- [Gittyup](https://murmele.github.io/Gittyup/)
 - [GitHub Desktop](https://desktop.github.com/) *(Windows et macOS seulement)*
 - [Magit](https://magit.vc/)
 - [lazygit](https://github.com/jesseduffield/lazygit)
@@ -900,7 +890,6 @@ Adobe XD, etc.*
 
 - [Symfony](https://symfony.com/)
 - [Laravel](https://laravel.com/)
-- [Lumen](https://lumen.laravel.com/)
 - [Slim Framework](https://www.slimframework.com/)
 
 ### Serveur Apache/PHP (et plus)
@@ -909,10 +898,6 @@ Adobe XD, etc.*
 - [XAMPP](https://www.apachefriends.org/)
 - [WampServer](https://www.wampserver.com/)
   (bonus : <http://forum.wampserver.com/read.php?1,137154>)
-
-### Préprocesseur
-
-- [Pre](https://preprocess.io/)
 
 ## Vidéo
 
@@ -1008,7 +993,6 @@ Adobe XD, etc.*
 - [Launchpad](https://launchpad.net/)
 - [Fossil](https://www.fossil-scm.org/)
 - [Kallithea](https://kallithea-scm.org/)
-- [Phabricator](https://www.phacility.com/)
 - [Redmine](https://www.redmine.org/)
 - [Gogs](https://gogs.io/)
 - [Radicle](https://radicle.xyz/)
@@ -1018,19 +1002,16 @@ Adobe XD, etc.*
 
 *Alternatives à LastPass, 1Password, DashLane, etc.*
 
-- [KeePass](https://keepass.info/)
 - [KeePassXC](https://keepassxc.org/)
-- [KeeWeb](https://keeweb.info/)
 - [Bitwarden](https://bitwarden.com/)
+- [KeePass](https://keepass.info/)
+- [KeeWeb](https://keeweb.info/)
 - [Buttercup](https://buttercup.pw/)
-- [Password Safe](https://gitlab.gnome.org/World/PasswordSafe)
+- [Secrets](https://gitlab.gnome.org/World/secrets)
 - [Passbolt](https://www.passbolt.com/)
 - [pass](https://www.passwordstore.org/)
-- [Master Password](https://masterpassword.app/)
-- [Encryptr](https://spideroak.com/encryptr/)
+- [Spectre](https://spectre.app/)
 - [Passman](https://www.passman.cc/)
-- [Firefox Lockwise](https://www.mozilla.org/fr/firefox/lockwise/)
-- [LessPass](https://lesspass.com/)
 
 ## Agrégateur RSS
 
