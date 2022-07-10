@@ -7,13 +7,13 @@ layout: base.njk
     {{ title }}
   </h1>
 
-  <ul class="flex flex-wrap py-4 text-center justify-center lg:justify-start">
+  <ul class="flex flex-wrap justify-center py-4 text-center lg:justify-start">
     <li class="mr-8 mb-4">
       Par {{ author }}
     </li>
 
     <li class="mr-8 mb-4">
-      Publié le {{ date }}
+      Publié le {{ date | format_date }}
     </li>
 
     <li class="mr-8 mb-4">
@@ -21,7 +21,7 @@ layout: base.njk
     </li>
   </ul>
 
-  <div class="prose max-w-none dark:prose-invert">
+  <div class="max-w-none prose dark:prose-invert">
     {{ content | safe }}
   </div>
 </article>
