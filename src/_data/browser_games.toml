@@ -75,9 +75,6 @@ url = "https://kculture.kgames.fr/"
 category = "quiz"
 min_players = 2
 max_players = 16
-description = """
-@todo
-"""
 
 [[games]]
 name = "SongTrivia - Guess the song!"
@@ -168,9 +165,6 @@ url = "https://onmuga.com/"
 category = "various"
 min_players = 1
 max_players = "unknown"
-description = """
-@todo
-"""
 
 # Voir ces jeux :
 # - Lucky Numbers (de 2 à 4) : https://playingcards.io/a9h2p2
@@ -186,9 +180,6 @@ url = "https://playingcards.io/"
 category = "card"
 min_players = 2
 max_players = "unknown"
-description = """
-@todo
-"""
 
 [[games]]
 name = "Set with Friends"
@@ -196,9 +187,6 @@ url = "https://setwithfriends.com/"
 category = "card"
 min_players = 2
 max_players = "unknown"
-description = """
-@todo
-"""
 
 [[games]]
 name = "Mattle"
@@ -226,9 +214,6 @@ url = "https://colonist.io/"
 category = "reflexion"
 min_players = 2
 max_players = 8
-description = """
-@todo
-"""
 
 [[games]]
 name = "tix.tax"
@@ -236,9 +221,6 @@ url = "https://tix.tax/"
 category = "reflexion"
 min_players = 2
 max_players = 2
-description = """
-@todo
-"""
 
 [[games]]
 name = "kugeln.io"
@@ -287,9 +269,6 @@ url = "https://www.loups-garous-en-ligne.com/"
 category = "other"
 min_players = 6
 max_players = 50
-description = """
-@todo
-"""
 
 # # Futur ?
 #
