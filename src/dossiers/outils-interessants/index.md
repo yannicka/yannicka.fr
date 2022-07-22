@@ -1,7 +1,7 @@
 ---
 title: Outils intéressants
 created_at: 2015-10-02
-updated_at: 2022-07-10
+updated_at: 2022-07-22
 short_description: >
   Grande liste d'outils (sites web, logiciels, etc.) intéressants pour pleins de
   domaines différents.
@@ -75,7 +75,6 @@ mes outils préférés en haut de liste.
 ### Framework
 
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Bulma](https://bulma.io/)
 - [Bootstrap](https://getbootstrap.com/)
 
 ## Langage de programmation
@@ -90,10 +89,10 @@ moins connus.*
 - [Zig](https://ziglang.org/)
 - [Racket](https://racket-lang.org/)
 - [Clojure](https://clojure.org/) & [ClojureScript](https://clojurescript.org/)
-- [PureScript](https://www.purescript.org/)
 - [OCaml](https://ocaml.org/)
 - [Haskell](https://www.haskell.org/)
 - [Elm](https://elm-lang.org/)
+- [ReScript](https://rescript-lang.org/)
 
 ### Comment créer un langage de programmation
 
@@ -145,8 +144,8 @@ Adobe XD, etc.*
 - [OpenToonz](https://opentoonz.github.io/e/index.html)
 - [enve](https://maurycyliebner.github.io/)
 - [VGC Software](https://www.vgc.io/) *(pas encore sorti)*
-- [Wick Editor](https://www.wickeditor.com/)
-- [Expressive Animator](https://www.expressivesuite.com/products/expressive-animator.html)
+- [Wick Editor](https://www.wickeditor.com/) *(semble à l'abandon)*
+- [Expressive Suite](https://www.expressivesuite.com/) *(propriétaire)*
 
 ### Diagrammes
 
@@ -215,6 +214,7 @@ Adobe XD, etc.*
 
 *Alternatives à Microsoft Outlook.*
 
+- [Thunderbird](https://www.thunderbird.net/)
 - [Claws Mail](https://www.claws-mail.org/)
 - [Mailpile](https://www.mailpile.is/)
 - [Thunderbird](https://www.thunderbird.net/)
@@ -452,10 +452,10 @@ Adobe XD, etc.*
 
 ## Expressions rationnelles
 
-- [Regexper](https://regexper.com/) — Affichage graphique d'expressions
-  rationnelles (regex)
 - [regex101](https://regex101.com/) — Testez vos expressions rationnelles
 - [RegExr](https://regexr.com/)
+- [Regexper](https://regexper.com/) — Affichage graphique d'expressions
+  rationnelles (regex)
 
 ## Tableau blanc
 
@@ -491,7 +491,7 @@ Adobe XD, etc.*
 
 *Alternatives à Firebase.*
 
-- [Superbase](https://supabase.io/)
+- [Supabase](https://supabase.io/)
 
 ### Autres
 
@@ -617,22 +617,24 @@ Adobe XD, etc.*
 
 *Alternatives à Disqus.*
 
-- [Isso](https://posativ.org/isso/)
-- [Squs](https://github.com/BaptisteGelez/squs)
+- [Isso](https://isso-comments.de/)
 - [Commento](https://commento.io/)
 - [Cactus Comments](https://cactus.chat/)
 - [Cusdis](https://cusdis.com/)
-- [Komento](https://komento.host/)
+- [Komento](https://komento.fr/) *(privatif)*
 - [Remarkbox](https://www.remarkbox.com/)
 - [Juvia](https://phusion.github.io/juvia/)
 - [FastComments](https://fastcomments.com/) *(privatif)*
 
 ### Discussion sur site
 
-- [Papercups](https://papercups.io/)
+*Alternatives à Zendesk Live Chat.*
+
 - [Chatwoot](https://www.chatwoot.com/)
 - [Chaskiq](https://chaskiq.io/)
 - [Tiledesk](https://tiledesk.com/)
+- [Chatterbox](https://element.io/solutions/chatterbox-embedded-live-chat-for-customer-service)
+- [Papercups](https://papercups.io/)
 
 ### Analytique
 
@@ -677,7 +679,6 @@ Adobe XD, etc.*
 ### Scanner son site
 
 - [Wapiti](https://wapiti.sourceforge.io/)
-- [sonarwhal](https://sonarwhal.com/)
 - [Dareboost](https://www.dareboost.com/)
 - [web.dev](https://web.dev/)
 - [Yellow Lab Tools](https://yellowlab.tools/)
@@ -711,7 +712,7 @@ Adobe XD, etc.*
 
 *Alternatives à Heroku, Netlify, etc.*
 
-- [coolify](https://coollabs.io/coolify)
+- [coolify](https://coolify.io/)
 - [Dokku](https://dokku.com/)
 - [CapRover](https://caprover.com/)
 - [Porter](https://github.com/porter-dev/porter)
@@ -809,6 +810,7 @@ Adobe XD, etc.*
 - [Lutris](https://lutris.net/)
 - [Playnite](https://playnite.link/)
 - [./play.it](https://forge.dotslashplay.it/play.it/scripts)
+- [Heroic Games Launcher](https://heroicgameslauncher.com/)
 
 ### Émulateur
 
@@ -832,18 +834,15 @@ Adobe XD, etc.*
 - [Gamebuino](https://gamebuino.com/)
 - [Arduboy](https://arduboy.com/)
 - [Playdate](https://play.date/)
-- [ByteBarista](https://bytebarista.com/)
 - [Analogue Pocket](https://www.analogue.co/pocket)
 - [Vidéo en rapport avec le sujet](https://video.passageenseine.fr/videos/watch/5c9f828a-1e94-4444-8271-32451ccbdfed)
 
 ### Consoles alternatives d'émulation
 
-- [GameShell](https://www.clockworkpi.com/)
+- [GameShell](https://www.clockworkpi.com/gameshell)
 - [RetrStone 1 & RetroStone 2 & Raspiboy](https://www.8bcraft.com/)
-- [ODROID-GO](https://www.hardkernel.com/shop/odroid-go/)
-- [ODROID-GO Advance](https://www.hardkernel.com/shop/odroid-go-advance/)
-- [RG350](http://www.anbernic.com/HANDHELD-GAME-CONSOLE/RG350/3.5-inch-screen-Handheld-game-console.html)
-- [BittBoy & PocketGo](https://www.bittboy.com/)
+- [Rockship](https://www.hardkernel.com/product-category/odroid-board/rockchip/)
+- [Anbernic](https://anbernic.com/)
 - [Chaines YouTube sur le sujet](https://www.youtube.com/channel/UCxDswE-DMJ18XFbL81bJPqw)
 
 ## Client git
@@ -1116,7 +1115,7 @@ Adobe XD, etc.*
 
 ## Terminal Windows
 
-- [cmder](https://cmder.net/)
+- [cmder](https://cmder.app/)
 - [Windows Terminal](https://github.com/microsoft/terminal)
 
 ## Jetable
@@ -1236,7 +1235,7 @@ Adobe XD, etc.*
 - [Qwant Maps](https://www.qwant.com/maps/)
 - [Mapy.cz](https://mapy.cz/)
 - [Mappy](https://mappy.com/)
-- [Mapillary](https://www.mapillary.com/app/) *(alternative à Street View)*
+- [Mapillary](https://www.mapillary.com/) *(alternative à Street View)*
 - [Maps.me](https://maps.me/)
 - [Transportr](https://transportr.app/)
 - [Organic Maps](https://organicmaps.app/)
