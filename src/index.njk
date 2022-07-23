@@ -3,6 +3,30 @@ layout: base.njk
 full_title: Yannicka — Accueil
 ---
 
+<h1 class="text-center">
+  <span class="font-extrabold break-words text-4xl">
+    <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-600">
+      — Hey, bienvenue !  —
+    </span> 🐧
+  </span>
+</h1>
+
+<div class="prose max-w-50 dark:prose-invert mt-6 mx-auto">
+  <p>
+    Bienvenue sur mon site personnel. Ici vous trouverez quelques projets que j'ai développé durant ma vie, et que je souhaite partager.
+  </p>
+
+  <p>
+    Je suis principalement développeur PHP professionnellement, et plutôt développeur TypeScript/JavaScript pour mes projets personnels.
+  </p>
+</div>
+
+<div class="prose dark:prose-invert">
+  <h2 class="my-4">
+    Articles
+  </h2>
+</div>
+
 <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
   {%- for dossier in collections.dossier -%}
     <a class="flex group bg-white dark:bg-gray-700 rounded transition transform hover:bg-gray-200 dark:hover:bg-gray-600 shadow-md shadow-gray-300 dark:shadow-gray-800 focus-visible:ring" href="{{ dossier.url | url }}">
