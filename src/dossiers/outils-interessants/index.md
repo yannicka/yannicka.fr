@@ -1,7 +1,7 @@
 ---
 title: Outils intéressants
 created_at: 2015-10-02
-updated_at: 2022-07-22
+updated_at: 2022-09-14
 short_description: >
   Grande liste d'outils (sites web, logiciels, etc.) intéressants pour pleins de
   domaines différents.
@@ -24,7 +24,7 @@ mes outils préférés en haut de liste.
 - [Kate](https://kate-editor.org/)
 - [vim](https://www.vim.org/)
   (bonus : [SpaceVim](https://spacevim.org/),
-           [fugitive.vim](https://github.com/tpope/vim-fugitive))
+           [fugitive.vim](https://github.com/tpope/vim-fugitive), et bien d'autres)
 - [Neovim](https://neovim.io/) (mêmes bonus que pour vim)
 - [Sublime Text](https://www.sublimetext.com/) *(propriétaire)*
 - [Notepad++](https://notepad-plus-plus.org/) *(Windows seulement)*
@@ -42,8 +42,8 @@ mes outils préférés en haut de liste.
     - [Magit](https://magit.vc/)
     - [Magit Forge](https://github.com/magit/forge/)
 - [Micro](https://micro-editor.github.io/)
-- [Kakoune](https://kakoune.org/)
 - [Helix](https://helix-editor.com/)
+- [Kakoune](https://kakoune.org/)
 - [GNOME Text Editor](https://gitlab.gnome.org/GNOME/gnome-text-editor)
 - [Thonny](https://thonny.org/) *(pour Python)*
 - [nano](https://www.nano-editor.org/)
@@ -125,6 +125,7 @@ Adobe XD, etc.*
 
 - [Inkscape](https://inkscape.org/)
 - [Penpot](https://penpot.app/)
+- [Quant-UX](https://quant-ux.com/)
 - [Gravit](https://gravit.io/) *(propriétaire)*
 - [Akira](https://github.com/akiraux/Akira) *(en cours de développement)*
 
@@ -136,6 +137,7 @@ Adobe XD, etc.*
 - [PikoPixel](http://twilightedge.com/mac/pikopixel/)
 - [GrafX2](http://grafx2.chez.com/)
 - [LibreSprite](https://libresprite.github.io/)
+- [Pixelorama](https://orama-interactive.itch.io/pixelorama)
 
 ### Animation 2D
 
@@ -158,6 +160,7 @@ Adobe XD, etc.*
 ### Autres outils
 
 - [G'MIC](https://gmic.eu/)
+- [LayerHub - Design Editor](https://github.com/layerhub-io/react-design-editor) (clone de Canva)
 
 ## 3D
 
@@ -168,7 +171,7 @@ Adobe XD, etc.*
 ### Animation 3D
 
 - [Blender](https://www.blender.org/) (bonus : ferme de serveur partagée
-  [Sheet it Render Farm](https://www.sheepit-renderfarm.com/))
+  [Sheet it Render Farm](https://www.sheepit-renderfarm.com/), [Rentaflop](https://rentaflop.com/))
 
 ### CAD
 
@@ -240,6 +243,7 @@ Adobe XD, etc.*
 - [Briar](https://briarproject.org/)
 - [hack.chat](https://github.com/hack-chat/main) (bonus : [instance
   officielle](https://hack.chat/))
+- [Chitchatter](https://chitchatter.im/)
 
 ### Centré sur les équipes
 
@@ -318,15 +322,13 @@ Adobe XD, etc.*
 
 - [uBlock Origin](https://ublockorigin.com/)
 - [Privacy Badger](https://privacybadger.org/)
-- [Privacy Possum](https://github.com/cowlicks/privacypossum)
 - [Skip Redirect](https://github.com/sblask/webextension-skip-redirect)
 - [Decentraleyes](https://decentraleyes.org/)
 - [au-revoir-utm](https://github.com/Rik/au-revoir-utm)
 - [Smart Referer](https://gitlab.com/smart-referrer/smart-referer)
 - [Redirect AMP to HTML](https://github.com/da2x/amp2html/)
-- [Exodify](https://github.com/FacettsOpen/exodify)
 - [NoScript](https://noscript.net/)
-- [AdNauseam](https://adnauseam.io/).
+- [AdNauseam](https://adnauseam.io/)
 
 ## Moteur de recherche
 
@@ -342,6 +344,7 @@ Adobe XD, etc.*
 - [You.com](https://you.com/) *(propriétaire)*
 - [Ecosia](https://www.ecosia.org/) *(propriétaire)*
 - [Lilo](https://search.lilo.org/) *(propriétaire)*
+- [MWMBL](https://mwmbl.org/)
 
 ## Suite bureautique
 
@@ -407,6 +410,7 @@ Adobe XD, etc.*
 - [VNote](https://github.com/tamlok/vnote)
 - [MindForger](https://www.mindforger.com/)
 - [GitBook](https://www.gitbook.com/) *(propriétaire)*
+- [Notesnook](https://notesnook.com/) *(propriétaire)*
 
 ### Autres éditeurs
 
@@ -440,6 +444,8 @@ Adobe XD, etc.*
 - [Milanote](https://www.milanote.com/) *(propriétaire)*
 - [Quip](https://quip.com/) *(propriétaire)*
 - [Anytype](https://anytype.io/)
+- [AFFiNE](https://affine.pro/)
+- [Slite](https://slite.com/)
 - [Outline](https://www.getoutline.com/)
 - [Notea](https://cinwell.com/notea/)
 - [AppFlowy.IO](https://www.appflowy.io/)
@@ -470,7 +476,8 @@ Adobe XD, etc.*
 *Alternatives à Airtable.*
 
 - [Baserow](https://baserow.io/)
-- [Airtable](https://airtable.com/) *(propriétaire)*
+- [NocoDB](https://www.nocodb.com/)
+- [Memento Database](https://mementodatabase.com/) *(propriétaire)*
 
 ### Modélisation
 
@@ -503,6 +510,10 @@ Adobe XD, etc.*
 - [ToolJet](https://tooljet.com/)
 - [Immudb](https://codenotary.com/technologies/immudb/)
 - [Appsmith](https://www.appsmith.com/)
+
+## Formulaires
+
+- [snoopForms](https://snoopforms.com/)
 
 ## Univers Android
 
@@ -577,6 +588,7 @@ Adobe XD, etc.*
 - [Webflow](https://webflow.com/) *(propriétaire)*
 - [Grapedrop](https://grapedrop.com/) *(propriétaire)*
 - [GrapeJS](https://grapesjs.com/) *(ce sur quoi ce base Grapedrop)*
+- [Webstudio](https://webstudio.is/)
 
 ### Police
 
@@ -706,7 +718,7 @@ Adobe XD, etc.*
 
 ### Surcouche applicative aux sites
 
-- [Weboob](https://weboob.org/)
+- [Woob](https://woob.tech/)
 
 ### SaaS, PaaS
 
@@ -740,6 +752,7 @@ Adobe XD, etc.*
 
 - [DWService](https://www.dwservice.net/)
 - [Apache Guacamole](https://guacamole.apache.org/)
+- [RustDeck](https://rustdesk.com/)
 
 ### Partage de terminal
 
@@ -770,6 +783,10 @@ Adobe XD, etc.*
 - [Grunt](https://gruntjs.com/)
 - [Laravel Mix](https://laravel-mix.com/)
 - [Webpack Encore](https://github.com/symfony/webpack-encore)
+
+### Autres
+
+- [Fresh](https://fresh.deno.dev/)
 
 ## Bibliothèque de jeu
 
@@ -882,6 +899,7 @@ Adobe XD, etc.*
 - [repl.it](https://repl.it/) *(propriétaire)*
 - [txti](https://txti.es/) *(propriétaire)*
 - [Telegraph](https://telegra.ph/) *(propriétaire)*
+- [PLAYCODE](https://playcode.io/) *(propriétaire)*
 
 ## Univers PHP
 
@@ -995,6 +1013,7 @@ Adobe XD, etc.*
 - [Redmine](https://www.redmine.org/)
 - [Gogs](https://gogs.io/)
 - [Radicle](https://radicle.xyz/)
+- [OneDev](https://code.onedev.io/projects/160)
 - Bonus : [Bugzilla](https://www.bugzilla.org/)
 
 ## Gestionnaire de mots de passe
@@ -1180,6 +1199,7 @@ Adobe XD, etc.*
 ## Développement collaboratif
 
 - [Glitch](https://glitch.com/) *(propriétaire)*
+- [Chunck](https://chunk.run/) *(propriétaire)*
 
 ## Transfert de fichiers
 
@@ -1252,7 +1272,7 @@ Adobe XD, etc.*
 
 ## Correcteur orthographique
 
-- [LanguageTools](https://languagetool.org/fr)
+- [LanguageTool](https://languagetool.org/)
 
 ## API
 
