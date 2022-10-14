@@ -61,10 +61,14 @@
             {{ item.name }}
           </a>
         {% endfor %}
+
+        <div class="block px-4 py-2">
+          <input type="text" name="search" class="input-search px-2 py-1 bg-white/70 border border-gray-300/70 w-full dark:bg-gray-700/70 dark:border-gray-500/70" placeholder="Rechercher..." />
+        </div>
       </nav>
     </div>
 
-    <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
+    <header class="sticky top-0 bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg border-b border-gray-200 dark:border-gray-700">
       <div class="max-w-4xl m-auto">
         <div class="flex items-center">
           <a href="{{ '/' | url }}" class="w-max p-4 text-xl font-bold hover:underline focus-visible:outline-none focus-visible:ring" title="Page d'accueil">
@@ -81,6 +85,10 @@
             </nav>
           </div>
 
+          <div class="hidden ml-auto mr-3 sm:block">
+            <input type="text" name="search" class="input-search px-2 py-1 bg-white/70 border border-gray-300/70 dark:bg-gray-700/70 dark:border-gray-500/70" placeholder="Rechercher..." size="16" />
+          </div>
+
           <div class="sm:hidden ml-auto">
             <button class="js-mobile-menu-open-button group inline-block px-5 py-4 focus-visible:outline-none focus-visible:ring">
               <span class="align-middle">☰</span>
@@ -90,6 +98,10 @@
         </div>
       </div>
     </header>
+
+    <div class="max-w-4xl mx-auto p-4" id="content">
+      <div id="js-search-results"></div>
+    </div>
 
     <main class="max-w-4xl mx-auto p-4" id="content">
       {{ content | safe }}

@@ -1,4 +1,5 @@
 import '../css/style.css'
+import './search.js'
 
 const mobileMenu = document.querySelector('.js-mobile-menu')
 const mobileMenuOpenButton = document.querySelector('.js-mobile-menu-open-button')

@@ -22,7 +22,7 @@ module.exports = function (config) {
     dossiers.sort((a, b) => {
       const aTitle = a.data.title.toLowerCase()
       const bTitle = b.data.title.toLowerCase()
-  
+
       if (aTitle < bTitle)
         return -1
 
