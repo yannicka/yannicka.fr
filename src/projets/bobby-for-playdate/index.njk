@@ -1,0 +1,51 @@
+---
+title: Bobby for Playdate
+tags: project
+publish_month: 2022-08-19
+source_code_url: https://gitlab.com/yannicka/bobby-playdate
+---
+
+{% markdown %}
+
+## Description du jeu
+
+Bobby for Playdate est une adaptation de mon jeu
+<a href="{{ '/projets/bobby' | url }}/">Bobby</a> pour la console
+<a href="https://play.date/">Playdate</a>.
+
+## Accès
+
+- [Accéder à la fiche du jeu sur itch.io](https://yannicka.itch.io/bobby-playdate)
+
+## Images
+
+{% endmarkdown %}
+
+<div class="grid grid-cols-1 md:grid-cols-2 w-fit gap-3">
+    {% for i in range(1, 7) %}
+        {% set ext = '.png' %}
+
+        {% if i == 2 %}
+            {% set ext = '.gif' %}
+        {% endif %}
+
+        <div>
+            <img src="{{ 'images/img' ~ i ~ ext | url }}" alt="" class="m-0" />
+        </div>
+    {% endfor %}
+</div>
+
+{% markdown %}
+
+## Développement
+
+J'ai recodé l'entièreté du jeu en Lua, avec le SDK de la Playdate. Le code de
+base (en TypeScript) étant assez simple, le portage n'a pas été très complexe à
+effectuer. J'ai néanmoins dû retravailler les graphismes (et quelques niveaux),
+de sorte à ce qu'ils s'affichent correctement sur un écran noir et blanc assez
+petit.
+
+Le jeu n'est pas entièrement fini d'être développé, mais la base est là et le
+jeu est jouable. J'espère un jour prendre le temps de le terminer.
+
+{% endmarkdown %}
