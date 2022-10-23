@@ -1,19 +1,19 @@
 ---
 title: Le référencement naturel
 created_at: 2016-07-28
-updated_at: 2021-04-21
+updated_at: 2022-10-23
 short_description: >
   Quelques bonnes pratiques sur le référencement naturel.
 ---
 
 ## Qu'est-ce que le référencement naturel ?
 
-À l'origine, le référencement naturel, c'est la capacité qu'a un site à se
-faire référencer par d'autres, de façon « naturelle », c'est-à-dire par des
+À l'origine, le référencement naturel, c'est la capacité qu'a un site à se faire
+référencer par d'autres sites, de façon « naturelle », c'est-à-dire par des
 robots indexateurs, par des humains qui partagent des liens vers le site, etc.
 Aujourd'hui, le sens a quelque peu évolué et consiste notamment à faire
-ressortir pour le mieux un site sur les moteurs de recherche (on parle aussi de
-positionnement).
+ressortir pour le mieux un site sur les moteurs de recherche (on parle aussi
+d'indexation et de positionnement).
 
 Le terme « naturel » peut induire en erreur, car l'existence du seul site ne
 suffit pas à ce qu'il se retrouve bien positionné. En effet, pour cela, il faut
@@ -24,20 +24,20 @@ publicité/annonce son site sur les moteurs de recherche ou sites partenaires.
 
 Le référencement naturel est un domaine très vaste, et, par conséquent, il est
 difficile d'aborder tous les points. Cependant, j'essaye de présenter au mieux
-l'ensemble du domaine.
+l'ensemble du domaine dans les grandes lignes.
 
 Ici ne sont présentées que des généralités et des bonnes pratiques, et non des
 règles absolues, d'autant plus qu'elles peuvent évoluer. Il faut traiter chaque
 site et chaque page au cas par cas.
 
 Il est à noter que, contrairement à une idée répandue, le référencement naturel
-évolue assez lentement. En fait, ce qui peut donner cette impression
-d'évolution rapide, c'est que les moteurs de recherche sont de plus en plus
-stricts à cause des abus qu'il y a eu (et qu'il y a encore) : page satellite,
-abus de mots-clés, site lent à charger, contenu dupliqué, balisage incorrect,
-etc. En somme, il s'agit de revenir à ce qui aurait toujours dû être là : un
-site rapide, bien balisé, du contenu écrit pour l'utilisateur et non pour le
-moteur de recherche, limiter les liens morts, etc.
+évolue assez lentement. En fait, ce qui peut donner cette impression d'évolution
+rapide, c'est que les moteurs de recherche sont de plus en plus stricts à cause
+des abus qu'il y a eu (et qu'il y a encore) : page satellite, abus de mots-clés,
+site lent à charger, contenu dupliqué, balisage incorrect, etc. En somme, il
+s'agit de revenir à ce qui aurait toujours dû être fait : un site rapide, bien
+balisé, du contenu écrit pour l'utilisateur et non pour le moteur de recherche,
+limiter les liens morts, etc.
 
 Le référencement naturel est improprement nommé « Search Engine Optimization »
 (SEO) en anglais, laissant penser qu'il faut optimiser son site pour les
@@ -53,7 +53,9 @@ Google étant le moteur de recherche le plus répandu, c'est sur sa façon
 d'analyser les pages que nous allons nous concentrer. Cependant, les
 recommandations présentées ici sont bonnes à la fois pour les visiteurs, pour
 Google et pour les autres moteurs de recherche
-([DuckDuckGo](https://duckduckgo.com/), [Qwant](https://www.qwant.com/), etc.).
+([DuckDuckGo](https://duckduckgo.com/), [Brave
+Search](https://search.brave.com/), [Qwant](https://www.qwant.com/), etc., que
+je recommande par ailleurs).
 
 Petite note : on parle de *référencement* ou *d'indexation* pour indiquer
 qu'une page est connue par le moteur de recherche, et de *positionnement* pour
@@ -77,7 +79,7 @@ Les mots-clés peuvent être séparés en trois catégories :
 - **Les mots-clés lexicaux**, qui sont des mots et expressions qui peuvent
   s'associer au thème.
 
-Pour *chaque page* du site, il faut réfléchir à tout cela.
+Pour *chaque page* du site, il faut réfléchir à ces mots-clés.
 
 Par exemple, pour une agence web, sur une page qui présente ses activités :
 
@@ -90,8 +92,8 @@ Par exemple, pour une agence web, sur une page qui présente ses activités :
 Il est inutile de réfléchir aux déclinaisons d'un même mot (sans accent, au
 pluriel, au masculin/féminin, etc.), les moteurs de recherche n'en font pas une
 grande différence. Aussi, si vous souhaitez ensuite utiliser un mot-clé dans
-une de vos pages, les articles — et d'autres mots, appelés *stopwords* — sont
-eux aussi ignorés, ainsi vous pouvez écrire en français « création de sites
+une de vos pages, les articles — et d'autres mots, appelés *stopwords* — sont,
+eux aussi, ignorés, ainsi vous pouvez écrire en français « création de sites
 web », le mot-clé ici reste bien « création site web » pour les moteurs de
 recherche.
 
@@ -104,21 +106,19 @@ initialement ressortent.
 de la longue traine. cf. <https://optimiz.me/guide-complet-du-referencement/>.
 -->
 
-Source :
-
-- [Comment choisir ses mots-clés pour le référencement ? –
-   Optimiz.me](https://optimiz.me/choix-des-mots-cles-pour-le-referencement/).
+Source : [Comment choisir ses mots-clés pour le référencement ? –
+Optimiz.me](https://optimiz.me/choix-des-mots-cles-pour-le-referencement/).
 
 ## Titre de la page
 
-La balise titre (`<title>`) est très importante, autant pour les moteurs de
-recherche que pour les internautes car c'est elle qui indique le contenu qui se
-trouve dans la page. Pour les internautes, ce titre est affiché sur le moteur
-de recherche comme étant le nom du résultat et aussi comme le nom de l'onglet
-dans le navigateur. Pour les moteurs de recherche, cela permet de mieux
-répondre aux requêtes des internautes. En cela, le titre doit être concis et
-descriptif et est donc un élément important à travailler pour avoir un bon
-positionnement.
+La balise titre (`<title>`) est très importante, aussi bien pour les internautes
+que pour les moteurs de recherche, car c'est elle qui indique le contenu qui se
+trouve dans la page. Pour les internautes, ce titre est affiché sur le moteur de
+recherche comme étant le nom du résultat et aussi comme le nom de l'onglet dans
+le navigateur. Pour les moteurs de recherche, cela permet de mieux répondre aux
+requêtes des internautes. En cela, le titre doit être concis et descriptif et
+est donc un élément important à travailler pour avoir un bon référencement et un
+bon positionnement.
 
 La longueur maximale recommandée pour le titre est de 60 à 70 caractères. Cela
 varie d'un titre à l'autre (cela dépend en effet de la taille des caractères
@@ -132,8 +132,8 @@ tronqués.
 
 La règle générale pour former le titre d'une page est la suivante :
 
-- **Page d'accueil :** « Nom site – Brève description » ;
-- **Pages internes :** « Nom page – Nom site ».
+- **Page d'accueil :** « Nom du site – Brève description du site ou de l'activité » ;
+- **Pages internes :** « Nom de la page – Nom du site ».
 
 Bien sûr, cela peut varier, mais c'est la tendance générale. Elle permet de
 ressortir en gras (sur les moteurs de recherche) les mots-clés tapés par
@@ -149,19 +149,17 @@ l'internaute.
   </figcaption>
 </figure>
 
-Comme séparateur, vous être libre d'utiliser ce qui vous convient : ‹ | ›,
+Comme séparateur, vous êtes libre d'utiliser ce qui vous convient : ‹ | ›,
 ‹ - ›, ‹ — ›, etc.
 
 Une autre règle est qu'aucune page ne doit (ou ne devrait) avoir le même titre
-qu'une autre, car le titre indique le contenu de la page. Si plusieurs pages
-ont le même titre, cela signifie sûrement qu'elles devraient être rassemblées
-en une seule page ou que les pages sont mal nommées. Cette règle permet de ne
-pas perdre l'utilisateur dans la structuration du site et améliore le
-positionnement des pages.
+qu'une autre, car le titre indique le contenu de la page. Si plusieurs pages ont
+le même titre, cela signifie sûrement qu'elles devraient être rassemblées en une
+seule page ou que les pages sont mal nommées. Cette règle permet de ne pas
+perdre l'utilisateur dans la structure du site et améliore le positionnement des
+pages.
 
-Source :
-
-- [Title Tag – Moz](https://moz.com/learn/seo/title-tag).
+Source : [Title Tag – Moz](https://moz.com/learn/seo/title-tag).
 
 <!-- @todo Apporter d'autres sources -->
 
@@ -202,105 +200,112 @@ Sources :
 
 ## Contenu de la page
 
-Le contenu de la page est l'un des facteurs les plus important. C'est ici que
+Le contenu de la page est l'un des facteurs les plus importants. C'est ici que
 se présente le contenu le plus intéressant pour l'utilisateur et donc pour les
 moteurs de recherche. Regardons les points importants pour un bon contenu.
 
-**Un contenu intéressant et pertinent**
-: Écrire une page, ce n'est pas (que) pour le référencement, c'est avant tout
-  pour le lecteur : celle-ci doit être intéressante (apprendre des choses) et
-  pertinente (en rapport avec le site et avec la recherche effectuée par
-  l'internaute).
+### Un contenu intéressant et pertinent
 
-  Lors de la rédaction, il faut essayer de penser au sujet en oubliant un
-  instant les mots-clés. Ensuite, à la relecture, en plus de corriger les
-  fautes d'orthographe, d'inattention et autres, il faut essayer de voir s'il
-  n'est pas possible de placer, le plus naturellement possible, des mots-clés
-  qui ne vous serez pas venus à l'esprit à la première écriture. Par la suite,
-  il ne faut pas hésiter à se relire plusieurs fois, jusqu'à que vous jugiez
-  que le contenu écrit soit du contenu que vous jugez intéressant pour
-  l'utilisateur, qu'il soit intéressant et qu'il soit pertinent.
+Écrire une page, ce n'est pas (que) pour le référencement, c'est avant tout pour
+le lecteur : celle-ci doit être intéressante (apprendre des choses) et
+pertinente (en rapport avec le site et avec la recherche effectuée par
+l'internaute s'il vient d'un moteur de recherche).
 
-  Sur ce point, trois mauvaises (sûrement bien plus) pratiques existent :
+Lors de la rédaction, il faut avant tout rédiger en essayant de penser au sujet
+et en oubliant un instant les mots-clés. Ensuite, à la relecture, en plus de
+corriger les fautes d'orthographe, d'inattention et autres, il faut essayer de
+voir s'il n'est pas possible de placer, le plus naturellement possible, des
+mots-clés qui ne vous serez pas venus à l'esprit à la première écriture. Par la
+suite, il ne faut pas hésiter à se relire plusieurs fois, jusqu'à que vous
+jugiez que le contenu écrit soit du contenu que vous jugez intéressant pour
+l'utilisateur, qu'il soit intéressant et qu'il soit pertinent.
 
-  - La rédaction de courts articles de blog ne servant qu'à alimenter le site,
-    afin d'augmenter son référencement et son positionnement sur les moteurs de
-    recherche, sans réel intérêt d'apprendre quelque chose au lecteur. Cela
-    pollue les résultats du moteur de recherche, ce qui peut être agaçant pour
-    un internaute ;
-  - L'ajout d'une description aux catégories ou aux produits d'un site de
-    commerce en ligne, seulement dans le seul but d'y placer des mots-clés ;
-  - Les contenus publicitaires/sponsorisés sans valeur ajoutée (sans parler du
-    manque de neutralité de point de vue).
+Sur ce point, diverses mauvaises pratiques existent, et qu'il est préférable
+d'éviter :
 
-**Une répétition faible**
-: En essayant de placer des mots-clés, il se peut qu'il y ait de trop
-  nombreuses répétitions, cela n'est bon ni pour l'utilisateur (le texte
-  devient lourd à lire), ni pour les moteurs de recherche, qui peuvent y voir
-  là une tentative d'optimisation d'un mot-clé et vous pénaliser. N'hésitez
-  donc pas à utiliser des synonymes, des mots proches, etc. Cependant, si une
-  répétition est inévitable, il vaut parfois mieux laisser en l'état.
+- La rédaction de courts articles de blog ne servant qu'à alimenter le site,
+  afin d'augmenter son référencement et son positionnement sur les moteurs de
+  recherche, sans réel intérêt d'apprendre quelque chose au lecteur. Cela pollue
+  les résultats du moteur de recherche, ce qui peut être agaçant pour un
+  internaute ;
+- L'ajout d'une description aux catégories ou aux produits d'un site de commerce
+  en ligne, dans le seul but d'y placer des mots-clés ;
+- Les contenus publicitaires/sponsorisés sans valeur ajoutée (sans parler du
+  manque de neutralité de point de vue).
+- Et probablement bien d'autres.
 
-**Un contenu assez long**
-: Plus la page a du contenu, plus elle a de mots-clés, mieux elle ressort sur
-  les moteurs de recherche. La taille recommandée pour le contenu est d'au
-  moins 200 mots. En deçà, le contenu risque d'être mal référencé. Cependant,
-  si vous n'arrivez pas à atteindre ce nombre de mots pour une page, il est
-  inutile d'écrire du contenu si celui-ci n'apporte rien à l'internaute.
+### Une répétition faible
 
-  N'hésitez à habiller un peu la page avec quelques images, cela permet d'aérer
-  le contenu et améliore le confort de l'utilisateur dans sa lecture. De plus,
-  si l'image illustre vos propos, cela améliore sa compréhension.
+En essayant de placer des mots-clés, il se peut qu'il y ait de trop nombreuses
+répétitions, cela n'est bon ni pour l'utilisateur (le texte devient lourd à
+lire), ni pour les moteurs de recherche, qui peuvent y voir là une tentative
+d'optimisation d'un mot-clé et vous pénaliser. N'hésitez donc pas à utiliser des
+synonymes, des mots proches, etc. Cependant, si une répétition est inévitable,
+il vaut parfois mieux laisser en l'état.
 
-  Attention cependant, si une page contient trop de sujets différents, et donc
-  trop de mots-clés différents, cela peut nuire au référencement (le moteur de
-  recherche ayant du mal à déterminer le sujet / les mots-clés principaux).
-  Pour l'internaute, cela peut aussi être source de confusion. Dans ce cas, il
-  est préférable, si possible, de découper la page en plusieurs pages.
+### Un contenu assez long
 
-**Éviter le contenu dupliqué**
-: Aucun contenu ne doit être accessible par deux URL différentes ; voici des
-  exemples d'URL différentes :
+Plus la page a du contenu, plus elle a de mots-clés, mieux elle ressort sur les
+moteurs de recherche. La taille recommandée pour le contenu est d'au moins 200
+mots. En deçà, le contenu risque d'être mal référencé. Cependant, si vous
+n'arrivez pas à atteindre ce nombre de mots pour une page, il est inutile
+d'écrire du contenu si celui-ci n'apporte rien à l'internaute.
 
-  - HTTP/HTTPS : `http://...` et `https://...` ;
-  - www/rien : `www.site.fr` et `site.fr` ;
-  - Chemin : `site.fr/ma-page` et `site.fr/mon-contenu` ;
-  - Extension : `site.fr` et `site.com` ;
-  - Sites différents : `monsite.fr` et `austresite.fr`.
+N'hésitez à habiller un peu la page avec quelques images, cela permet d'aérer le
+contenu et améliore le confort de l'utilisateur dans sa lecture. De plus, si
+l'image illustre vos propos, cela améliore sa compréhension.
 
-  Dans le cas d'une redirection, le contenu n'est pas considéré comme dupliqué
-  puisque une page A qui redirige vers une page B, seule la page B affiche le
-  contenu (le « contenu » de la page A étant la redirection vers B). Ainsi, une
-  page HTTP qui redirige vers une page HTTPS ne crée pas de duplication de
-  contenu.
+Attention cependant, si une page contient trop de sujets différents, et donc
+trop de mots-clés différents, cela peut nuire au référencement (le moteur de
+recherche ayant du mal à déterminer le sujet / les mots-clés principaux). Pour
+l'internaute, cela peut aussi être source de confusion. Dans ce cas, il est
+préférable, si possible, de découper la page en plusieurs pages.
 
-  Dans le cas d'une reprise de contenu depuis un autre site (en ayant les
-  droits), il faut bien penser indiquer la source (avec le lien vers celle-ci).
+### Éviter le contenu dupliqué
 
-  Par la même occasion, il faut éviter que deux pages ne soient trop
-  similaires, cela peut aussi être considéré comme un contenu dupliqué par les
-  moteurs de recherche.
+Aucun contenu ne doit être accessible par deux URL différentes ; voici des
+exemples d'URL différentes :
 
-**Soigner la mise en forme**
-: Une bonne mise en forme est agréable à la fois à l'utilisateur et au moteur
-  de recherche.
+- HTTP/HTTPS : `http://...` et `https://...` ;
+- www/rien : `www.site.fr` et `site.fr` ;
+- Chemin : `site.fr/ma-page` et `site.fr/mon-contenu` ;
+- Extension : `site.fr` et `site.com` ;
+- Sites différents : `monsite.fr` et `austresite.fr`.
 
-  Par exemple, il faut éviter de placer tous les mots-clés que l'on juge
-  importants en gras car cela a deux effets de bords négatifs :
+Dans le cas d'une redirection, le contenu n'est pas considéré comme dupliqué
+puisqu'une page A qui redirige vers une page B, seule la page B affiche le
+contenu (le « contenu » de la page A étant la redirection vers B). Ainsi, une
+page HTTP qui redirige vers une page HTTPS ne crée pas de duplication de
+contenu.
 
-  - Cela « pollue » le rendu du texte, ce qui rend la lecture plus difficile ;
-  - Avec trop de mots en gras, le moteur de recherche peut ne plus déterminer
-    correctement les termes réellement importants, et donc baisser le
-    positionnement sur certains mots-clés pourtant importants.
+Dans le cas d'une reprise de contenu depuis un autre site (en ayant les droits),
+il faut bien penser indiquer la source (avec le lien vers celle-ci).
 
-  Cela vaut aussi pour l'italique.
+Par la même occasion, il faut éviter que deux pages ne soient trop similaires,
+cela peut aussi être considéré comme un contenu dupliqué par les moteurs de
+recherche.
 
-Source : [Contenu en double – Aide Search
-Console](https://support.google.com/webmasters/answer/66359).
+Source : [Contenu en double – Google
+Developers](https://developers.google.com/search/docs/advanced/guidelines/duplicate-content).
+
+### Soigner la mise en forme
+
+Une bonne mise en forme est agréable à la fois à l'utilisateur et au moteur de
+recherche.
+
+Par exemple, il faut éviter de placer tous les mots-clés que l'on juge
+importants en gras car cela a deux effets de bords négatifs :
+
+- Cela « pollue » le rendu du texte, ce qui rend la lecture plus difficile ;
+- Avec trop de mots en gras, le moteur de recherche peut ne plus déterminer
+  correctement les termes réellement importants, et donc baisser le
+  positionnement sur certains mots-clés pourtant importants.
+
+Cela vaut aussi pour l'italique.
 
 <!-- @todo Apporter d'autres sources -->
 
-## Architecturation des titres
+## Architecture des titres
 
 La page doit contenir des titres `<hn>` où `n` est le niveau de 1 à 6.
 
@@ -310,8 +315,8 @@ que le document est bien structuré. Par exemple pour une page qui liste des
 articles avec le titre et le résumé, on peut imaginer un `<h1>` par titre.
 Néanmoins, la plupart du temps, un seul titre `<h1>` suffit.
 
-Ensuite si possible, il faut essayer de ne pas faire de coupures et faire en
-sorte qu'on ne passe pas d'un titre `n` (ex. 2) à un titre `n+2` (ex 4).
+Ensuite si possible, il faut essayer de ne pas faire de saut dans les niveaux
+des titres, de ne pas passer d'un titre `n` (ex. 2) à un titre `n+2` (ex. 4).
 
 Une façon de voir si la page est bien architecturée est de ne conserver que les
 titres et leur niveau, et de voir si cela forme un plan de page cohérent (telle
@@ -323,7 +328,7 @@ On considère que :
   `<title>`) ;
 - Les titres `<h2>` représentent les sections de la page ;
 - Les titres `<h3>` représentent les sous-sections de la page ;
-- Les titres `<h4>`, `<h5>` et `<h6>` ne servent qu'à la mise en forme.
+- Les titres `<h4>`, `<h5>` et `<h6>` servent à la mise en forme.
 
 En cela, pour le référencement naturel, ce sont les titres `<h1>`, `<h2>` et
 `<h3>` qui importent.
@@ -342,7 +347,7 @@ respecter :
   l'attribut `alt`, avec une valeur vide, car sinon c'est l'URL de l'image qui
   est considérée comme étant le texte alternatif ;
 - **L'image doit être fournie dans la taille affichée.** Dans le cas de
-  l'affichage d'une image de 100 × 100 pixels, il faut fournit une image de
+  l'affichage d'une image de 100 × 100 pixels, il faut fournir une image de
   cette taille, pas une image d'une taille plus grande, redimensionnée par HTML
   ou CSS, cela évite le chargement de données inutiles (et il ne faut pas
   fournir une image plus petite non plus, l'affichage serait pixelisé) ;
@@ -414,8 +419,8 @@ Si vous avez besoin de ce fichier pour que votre site soit correctement indexé
 ou positionné, c'est que votre site est mal construit et qu'il est préférable
 de le retravailler.
 
-Source : [À propos des sitemaps – Aide Search
-Console](https://support.google.com/webmasters/answer/156184).
+Source : [À propos des sitemaps – Google
+Developers](https://developers.google.com/search/docs/advanced/sitemaps/overview).
 
 ## Un balisage correct
 
@@ -447,7 +452,7 @@ lien vers un site peu recommandé, vers une page 404, etc. *ne devrait pas*
 affecter le positionnement de votre site.
 
 L'une des choses les plus importantes dans le référencement naturel, avec le
-contenu, c'est les liens vers votre page/votre site. Plus il y aura de liens
+contenu, ce sont les liens vers votre page/votre site. Plus il y aura de liens
 vers votre site, plus il sera visité et proposé par les moteurs de recherche.
 Aussi, ces liens externes seront cliqués par les internautes.
 
@@ -616,7 +621,7 @@ certaines de vos fautes, qu'elles soient orthographiques, syntaxiques ou
 carrément un paragraphe erroné à cause d'une mauvaise source.
 
 Le second avantage, c'est qu'il rajoute du contenu votre page, donc un meilleur
-référencement, les commentaires ayant généralement un rapport avec le sujet. À
+référencement, les commentaires ayant habituellement un rapport avec le sujet. À
 noter que cela n'est vrai que dans le cas où le système de commentaires est
 intégré au site (c'est-à-dire que ce n'est pas une *iframe* ; Disqus (ou
 similaire) à proscrire pour cet usage).
@@ -683,10 +688,16 @@ Pour améliorer la vitesse de chargement du site il faut donc :
 - Mettre en cache des fichiers sur le serveur ;
 - Etc.
 
+Pour améliorer la vitesse du site, on agit donc principalement sur deux
+facteurs : la réduction du poids du site (compression, minification...), et la
+mise en cache des ressources.
+
+De la même façon, il faut aussi optimiser la vitesse du site côté serveur. Là
+aussi avec divers caches, des optimisation de calculs, la diminution de la
+complexité du code, etc.
+
 Quelques outils sont indiqués à la fin de cet article et permettent de mettre
 en exergue certains défauts de votre site.
-
-Dossier lié : [Optimiser son site internet]({{ '/dossiers/optimiser-son-site-internet/' | url }}).
 
 <!-- @todo À sourcer -->
 
@@ -723,9 +734,7 @@ alternative, supprimer le lien ou amener vers une archive encore en ligne.
   </figcaption>
 </figure>
 
-Source :
-
-- [Cool URIs don't change](https://www.w3.org/Provider/Style/URI).
+Source : [Cool URIs don't change – W3C](https://www.w3.org/Provider/Style/URI).
 
 ## Fournir rapidement les informations pertinentes
 
@@ -775,9 +784,6 @@ accessibilité](https://github.com/UKHomeOffice/posters/tree/master/accessibilit
 
 Cela a pour effet d'élargir l'audience du site et d'améliorer le référencement
 naturel.
-
-Dossier lié : [Bonnes pratiques pour l'accessibilité d'un site
-internet]({{ '/dossiers/bonnes-pratiques-accessibilite/' | url }}).
 
 <!-- @todo À sourcer -->
 
@@ -853,10 +859,10 @@ qui ont plus confiance en les sites HTTPS.
 
 Posséder un site sécurisé permet donc d'être mieux positionné sur les moteurs
 de recherche, à la fois naturellement (site privilégié) et à la fois par les
-visites accrues due à la confiance plus forte des internautes.
+visites accrues dues à la confiance plus forte des internautes.
 
 De plus, les prochaines mises à jour des navigateurs tendent à afficher les
-sites HTTP comme non sécurisés, ce qui fera perdre bon nombres d'utilisateurs
+sites HTTP comme non sécurisés, ce qui fera perdre bon nombre d'utilisateurs
 aux sites qui n'utilisent pas HTTPS. Et les navigateurs affichent déjà les
 formulaires avec des mots de passe comme non sécurisés sur les sites sans
 HTTPS.
@@ -904,7 +910,7 @@ positionnement, alors qu'on pourrait penser que oui :
 
 - L'affichage des notes n'influe pas directement le positionnement. Là où cela
   peut l'influer, c'est seulement indirectement, avec potentiellement un plus
-  fort trafic si la note affichée est bonne et que de nombreuses personnent
+  fort trafic si la note affichée est bonne et que de nombreuses personnes
   cliquent sur le lien. <!-- @todo À sourcer -->
 
 ## Résumé
@@ -928,9 +934,10 @@ l'accessibilité et bien plus.
 
 ### Sites
 
-- [PageSpeed
-  Insights](https://developers.google.com/speed/pagespeed/insights/), testez la
-  vitesse de votre site sur ordinateur et mobile ;
+- [PageSpeed Insights](https://pagespeed.web.dev/), testez la vitesse de votre
+  site sur ordinateur et mobile ;
+- [web.dev Measure (Lighthouse)](https://web.dev/measure/), idem que PageSpeed
+  Insights.
 - [Dareboost](https://www.dareboost.com/), testez, analysez et optimisez votre
   site web sur le référencement, la sécurité, la qualité et plus encore ;
 - [CryptCheck](https://cryptcheck.fr/), testez le niveau des certificats de
@@ -946,16 +953,16 @@ l'accessibilité et bien plus.
 
 ## Sources
 
-Pour chaque point avec des sources, les sources ont été indiquées. Souvent, il
-n'est indiqué que quelques sources, car certaines informations proviennent de
-mon expérience propre, de ce que j'ai pu voir avec le temps. Aussi, il ne faut
-jamais se baser sur une source unique, il faut toujours les croiser et les
-confronter.
+Ces informations proviennent de mon expérience personnelle et professionnelle
+(en tant que développeur web) à travers le temps, et souvent je n'ai pas
+enregistré les sources. Pour certains points, j'ai néanmoins pu indiquer quelque
+sources. Aussi, il ne faut jamais se baser sur une source unique, il faut
+toujours les croiser et les confronter.
 
 Voici quelques ressources plus génériques :
 
 - [How Loading Time Affects Your Bottom
-  Line](https://blog.kissmetrics.com/loading-time/) ;
+  Line](https://neilpatel.com/blog/loading-time/) ;
 - [Pourquoi la performance web doit être une priorité ? 10 données
   marquantes](https://www.webmarketing-com.com/2014/07/09/28900-performance-web-etre-priorite-10-donnees-marquantes) ;
 - [Qu'est-ce que le référencement
