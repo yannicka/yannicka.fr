@@ -25,6 +25,6 @@
     "webpack-cli": "^4.10.0"
   },
   "dependencies": {
-    "@nearform/lyra": "^0.0.1-beta-18"
+    "@lyrasearch/lyra": "^0.2.6"
   }
 }
