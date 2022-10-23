@@ -1,4 +1,4 @@
-import { create, insert, search } from '@nearform/lyra'
+import { create, insert, search } from '@lyrasearch/lyra'
 
 const db = create({
     schema: {
