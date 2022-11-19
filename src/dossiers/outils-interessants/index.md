@@ -25,7 +25,9 @@ mes outils préférés en haut de liste.
 - [vim](https://www.vim.org/)
   (bonus : [SpaceVim](https://spacevim.org/),
            [fugitive.vim](https://github.com/tpope/vim-fugitive), et bien d'autres)
-- [Neovim](https://neovim.io/) (mêmes bonus que pour vim)
+- [Neovim](https://neovim.io/) (mêmes bonus que pour vim,
+           [LunarVim](https://www.lunarvim.org/),
+           [NvChad](https://nvchad.com/))
 - [Sublime Text](https://www.sublimetext.com/) *(propriétaire)*
 - [Notepad++](https://notepad-plus-plus.org/) *(Windows seulement)*
 - [Geany](https://www.geany.org/)
@@ -52,6 +54,8 @@ mes outils préférés en haut de liste.
 - [elementary Code](https://github.com/elementary/code)
 - [Graviton](https://graviton.netlify.app/)
 - [Howl](https://howl.io/)
+- [Zed](https://zed.dev/) *(à venir)*
+- [Lapce](https://lapce.dev/)
 - [Notepadqq](https://notepadqq.com/) *(à l'abandon)*
 
 ## IDE
@@ -167,6 +171,7 @@ Adobe XD, etc.*
 ### Modélisation 3D
 
 - [Blender](https://www.blender.org/)
+- [Blockbench](https://www.blockbench.net/)
 
 ### Animation 3D
 
