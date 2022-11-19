@@ -1,0 +1,155 @@
+# name = "nom de l'expérimentation"
+# folder = "dossier vers l'expérimentation"
+# short_description = """description de l'expérimentation"""
+
+[[experiments]]
+name = "32"
+folder = "32"
+short_description = """
+Un Minecraft 2D.
+"""
+
+[[experiments]]
+name = "4096"
+folder = "4096"
+short_description = """
+Un clone de 2048.
+"""
+
+[[experiments]]
+name = "Befunge"
+folder = "befunge"
+
+[[experiments]]
+name = "BootMonkey"
+folder = "bootmonkey"
+
+[[experiments]]
+name = "Calculatrice"
+folder = "calculatrice"
+
+[[experiments]]
+name = "Cardman"
+folder = "cardman"
+
+[[experiments]]
+name = "Casse-tête"
+folder = "cassetete"
+
+[[experiments]]
+name = "Design BMC"
+folder = "design-bmc"
+
+[[experiments]]
+name = "Design de blog"
+folder = "designblog"
+
+[[experiments]]
+name = "Drawfun"
+folder = "drawfun"
+short_description = """
+Un jeu de dessin.
+"""
+
+[[experiments]]
+name = "Exercice du lundi n°5"
+folder = "exolundi5"
+
+[[experiments]]
+name = "Funclass"
+folder = "funclass"
+
+[[experiments]]
+name = "Game of Life"
+folder = "gameoflife"
+short_description = """
+Le jeu de la vie.
+"""
+
+[[experiments]]
+name = "GD15"
+folder = "gd15"
+
+[[experiments]]
+name = "Gravity Game"
+folder = "gravitygame"
+
+[[experiments]]
+name = "Gravity Game Original"
+folder = "gravitygame_original"
+
+[[experiments]]
+name = "Jeu de course"
+folder = "jeu_de_course"
+
+[[experiments]]
+name = "LD28"
+folder = "ld28"
+
+[[experiments]]
+name = "LD29"
+folder = "ld29"
+
+[[experiments]]
+name = "Life is Attack"
+folder = "life_is_attack"
+
+[[experiments]]
+name = "Live News"
+folder = "livenews"
+short_description = """
+Une sorte de Twitter.
+"""
+
+[[experiments]]
+name = "MVSD"
+folder = "mvsd"
+
+[[experiments]]
+name = "My jQuery"
+folder = "my_jquery"
+short_description = """
+Un début de clone de jQuery.
+"""
+
+[[experiments]]
+name = "Pif Bird"
+folder = "pif_bird"
+short_description = """
+Un clone de Flappy Bird.
+"""
+
+[[experiments]]
+name = "Pokélike"
+folder = "pokelike"
+
+[[experiments]]
+name = "Pong"
+folder = "pong"
+short_description = """
+Un jeu de pong.
+"""
+
+[[experiments]]
+name = "Prototype"
+folder = "prototype"
+
+[[experiments]]
+name = "Shoot Them Up"
+folder = "shoot_them_up"
+
+[[experiments]]
+name = "Smiley Survivor"
+folder = "smiley-survivor"
+
+[[experiments]]
+name = "Utils"
+folder = "utils"
+
+[[experiments]]
+name = "Zombie côté"
+folder = "zombiecote"
+
+[[experiments]]
+name = "Zonbie Game"
+folder = "zombiegame"

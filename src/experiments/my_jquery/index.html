@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Tests</title>
+
+		<style>
+			#title_tabs {
+				margin: 0; padding: 0;
+				list-style: none;
+			}
+
+			#title_tabs li {
+				margin: 0; padding: 6px 10px;
+				display: inline-block;
+				background-color: rgb(255, 200, 200);
+			}
+
+			#title_tabs li:hover {
+				cursor: pointer;
+			}
+
+			#title_tabs li.selected {
+				background-color: rgb(200, 200, 255);
+			}
+
+			#tabs {
+				margin: 0; padding: 6px 10px;
+				background-color: rgb(200, 200, 255);
+			}
+		</style>
+	</head>
+
+	<body>
+		<ul id="title_tabs">
+			<li data-tab="#tab-1">Tab 1</li>
+			<li data-tab="#tab-2">Tab 2</li>
+			<li data-tab="#tab-3">Tab 3</li>
+		</ul>
+
+		<div id="tabs">
+			<div id="tab-1">A</div>
+			<div id="tab-2">B</div>
+			<div id="tab-3">C</div>
+		</div>
+
+		<script src="my_jquery.js"></script>
+
+		<script>
+			$('#tabs div').hide();
+			$('#title_tabs li:first-child').add_class('selected');
+			$('#tabs div:first-child').show();
+
+			$('#title_tabs li').on('click', function() {
+				$('#tabs div').hide();
+
+				$('#title_tabs li').remove_class('selected');
+
+				$($(this).add_class('selected').data('tab')).show();
+			});
+		</script>
+	</body>
+</html>

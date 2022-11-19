@@ -1,0 +1,10 @@
+-main Funclass
+-neko funclass.n
+
+# -cp src
+# -swf out.swf
+# -swf-header 640:480:30:FFFFFF
+# --flash-strict
+# -swf-version 10.1
+# -main Funclass
+# -debug

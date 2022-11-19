@@ -1,0 +1,398 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Funclass</title><link rel="stylesheet" type="text/css" href="design.css"></head><body><h1>Spécifications de Funclass - Brouillon obsolète</h1><p class="red">CE QUI EST D&Eacute;CRIT CI-DESSOUS EST SUSCEPTIBLE DE CHANGER. LE NOM DU LANGAGE AUSSI.</p><p>Tout n'est sûrement pas exhaustif. Ne pas hésiter à poser des questions. Cependant les grandes lignes du langages ne changeront pas.</p><ul><li><a href="#introduction">           1. Introduction</a></li><li><a href="#types">                  2. Types</a></li><li><a href="#fonctions">              3. Fonctions</a></li><li><a href="#conditions">             4. Conditions</a></li><li><a href="#boucles">                5. Boucles</a></li><li><a href="#classes">                6. Classes</a></li><li><a href="#listes-et-dictionnaires">7. Listes et dictionnaires</a></li><li><a href="#reflexions">             8. Réflexions</a></li><li><a href="#idees">                  9. Idées</a></li><li><a href="#exemples">               10. Exemples</a></li></ul><h2 id="introduction">Introduction</h2><p>Une variable qui n'a pas été initialisée, si elle est utilisée, renverra <code>null</code>. Elle n'est pas différenciable des variables initialisée ayant la valeur <code>null</code>.</p><p>Les points virgules servent uniquement à placer plusieurs expressions sur un même ligne, sinon les saut des lignes ont la même valeur.</p><p>Les variables ont une portée locale dans le bloc où elles sont définies. Si elle sont définies à la racine du programme, elle seront donc globales.</p><p>Les structures de contrôles sont des expressions. C'est-à-dire qu'elles retournent la dernière valeur de leur bloc et qu'il est possible de la récupérer dans une variable.</p><p>Les variables sont typées statique. Le typage est donc pas fixe et ne peut pas changer durant l'exécution except&eacute; avec le type <code>Var</code> qui permet de typer une variable dynamiquement.</p><p>Tout est objet. C'est à dire que ce code est correct :</p><pre>Num a = 5
+Str b = 5.to_str()</pre><h2 id="types">Types</h2><pre>Bool
+Num
+Char
+Str
+List&lt;T&gt;
+Dict&lt;V&gt;
+Var
+
+# Partie pas claire, à rectifier
+Func&lt;(T n)*&gt;:T
+Obj
+</pre><p><code>null</code> est la valeur d'une variable non initialisée ou sans valeur.</p><ul><li>Le type Bool prend pour valeur yes (true) et no (false).</li><li>Num correspond au type numérique.</li><li>Char correspond à un caractère.</li><li>Str correspond au chaînes de caractères.</li><li>List&lt;T&gt; correspond à une liste (un ensemble) de valeurs du type T.</li><li>Dict&lt;T&gt; correspond à un ensemble de clés (de type Str) auxquels sont associées une valeur de type T.</li><li>Var correspond au type dynamique, utile quand on ne sait pas quel type on veut recevoir dans une fonction.</li><li>(todo) Func&lt;(T n)*&gt;:T</li><li>(todo) Obj</li></ul><h3>&Eacute;valuations booléennes</h3><ul><li>Evalués à <code>false</code>  : <code>false, 0, 0.0, "", "0", [], {}, null</code></li><li>Evalués à <code>true</code> : le reste</li></ul><h2 id="fonctions">Fonctions</h2><h3>Créer une fonction</h3><p>Les fonctions retournent par défaut la dernière expression. Le mot-clé return peut être utilisé seul pour ne rien retourner (la valeur <code>null</code> sera renvoyée si le programme essaye de la récupérer) ou être utilisé avec une expression pour expliciter de manière précise la valeur retournée.</p><pre>Num add(Num a, Num b) { a + b }
+</pre><p>Les fonctions peuvent être surchargées. L'exemple précédent peut ainsi être surchargé ainsi afin de concaténer deux chaînes de caractères :</p><pre>Str add(Str a, Str b) { a + b }
+</pre><p>La fonction appelée dépend ainsi des types des paramètres qui y sont passés.</p><p>Les fonctions retournent la dernière expression except&eacute; si un <code>return</code> est rencontr&eacute;.</p><p>Les arguments de fonctions peuvent avoir des valeurs par défaut.</p><pre>Void ma_fonction(Num a, Num b = 5) {
+ # ...
+}
+</pre><h3>Appels de fonctions</h3><p>L'appel d'une fonction demande obligatoirement des parenthèses, même si elle ne possède aucun paramètre.</p><pre>Num mon_num = add(2, 5) # 7
+Str mon_str = add("Hello", " World!") # "Hello World!"
+</pre><h3>Fonctions variadiques</h3><p>Les fonctions peuvent être à nombre de paramètres variables.</p><pre>Num somme(Num nb, Num args...) {
+ # args sera un tableau (de nombres ici) contenant les valeurs passées lors de l'appel
+ # ...
+}
+</pre><p>Les fonctions à nombre de paramètres variables peuvent s'appeler de différentes manières.</p><pre>Num nb
+
+nb = somme(2) # args vaudra [] (un tableau vide)
+nb = somme(2, 3, 4, 5) # args vaudra [ 3, 4, 5 ]
+
+# il est aussi possible de faire passer plusieurs valeurs via une liste
+# le ...[] sert à préciser qu'on fait passer plusieurs valeurs et non une liste
+nb = sommes(2, ...[ 3, 4, 5 ]) # args vaudra [ 3, 4, 5 ]
+</pre><h3>Fonctions anonymes</h3><p>Il est possible de créer des fonctions anonymes. Elles servent généralement à faire des callbacks ou des fonctions qui changent durant l'exécution du programme.</p><pre># Fonction anonyme dans une variable
+# La fonction dans une variable peut être changée durant l'exécution mais pas surchargée
+Func ma_func = (Num a, Num b) { a + b }
+
+# Fonction anonyme dans une fonction
+une_fonction_avec_callback((Num a, Num b) {
+ # ...
+})
+
+# Fonction anonyme auto-appelée
+(Num a, Num b) {
+ # ...
+}(3, 6)
+</pre><!--h3 Surcharge des opérateurs
+pre.
+ :+(T1 a, T2 b) { }
+ --><h3>Retourner plusieurs valeurs</h3><p>Il est possible de retourner plusieurs valeur à la fin d'une fonction. En fait il s'agit de retourner une liste et de la récupérer via la syntaxe spécifique [ var1, var2, etc. ] = fonction().</p><pre>une_fonction(Num a) {
+ [ a + 1, a + 2, a + 3]
+}
+
+[ a, b, c ] = une_fonction(0) # a = 1 ; b = 2 ; c = 3
+d = une_fonction(0) # d = [ 1, 2, 3 ]
+[ e, f, g ] = d # comme a, b et c
+[ b, a, c ] = [ a, b, c ] # b = 1 ; a = 2 ; c = 3</pre><h2 id="conditions">Conditions</h2><h3>Condition if</h3><p>La condition <code>if</code> se compose ainsi : <code>if ... { } else if ... { } else { }</code>.</p><pre>if ma_func(3, 2) == 5 {
+ Func ma_func = (Num a, Num b) { a - b }
+} else if ma_func(55, 100) == 100 {
+ # ...
+} else {
+ # ...
+}
+</pre><p>Le <code>if</code> fonctionne comme une expression et peut être assignée à une variable, c'est la dernière expression qui est retournée à la variable. Si aucune des conditions ne correspond, la variable prend la valeur du else s'il y en a un ou garde sa valeur s'il n'y en a pas.</p><pre>Num a = if ma_func(3, 2) == 5 {
+ 5
+} else if ma_func(55, 100) == 100 {
+ 0
+} else {
+ 1
+}
+</pre><p>Le <code>if</code> profite de l'écriture raccourcie suivante :</p><pre>Str a = if condition ? "ok" : "nop"
+</pre><h3>Opérateurs</h3><pre>&lt;, &lt;=, &gt;, &gt;=, ==, &lt;&gt;, and, or, not, in
+</pre><p>Exemple de l'opérateur <code>in</code> qui retourne le nombre d'occurences :</p><pre>List&lt;Str&gt; names = [ "Aymeric", "Guillaume", "Yannick" ]
+Bool has_yannick = "Yannick" in names # 1
+
+Bool o_in_helloworld = "o" in "Hello World!" # 2
+
+Dict&lt;Num&gt; scores = { "Aymerick" = 200, "Guillaume" = 180, "Yannick" = 20 }
+Bool has_guillaume = "Guillaume" in scores # 1
+</pre><h3>Switch</h3><p>Le <code>switch</code> permet de tester plusieurs valeurs d'une variable ou expression.</p><pre>switch ma_var {
+ when "a" {
+  # ...
+ }
+ 
+ when "c", "d" {
+  # ...
+ }
+ 
+ else {
+  # ...
+ }
+}
+</pre><p>Le <code>switch</code> permet de tester des plages de valeurs.</p><pre>switch ma_var {
+ when 0 ... 5 {
+  # ...
+ }
+ 
+ when 6 ... 10, 50 ... 120 {
+  # ...
+ }
+}
+</pre><p>Le <code>switch</code> fonctionne comme une expression et peut être assignée à une variable. Si aucune des valeurs n'est possédée par l'expression passée, la variable gardera sa valeur :</p><pre>card = "as"
+
+card_value = switch card { # 14
+ when "valet" { 11 }
+ when "dame"  { 12 }
+ when "roi"   { 13 }
+ when "as"    { 14 }
+ else         { card }
+}</pre><h2 id="boucles">Boucles</h2><h3>Boucle simple</h3><p>La boucle simple est une boucle où aucune fin n'est décrite. Pour la stopper, il faut effectuer un break.</p><pre>loop {
+ # ...
+}
+</pre><p>Il est cependant possible de définir le nombre d'itérations.</p><pre>loop 5 {
+ # ...
+}
+</pre><p>Il est aussi possible de définir un pas.</p><pre>loop 8 by 2 {
+ # 
+}
+</pre><h3>Boucle while</h3><p>La boucle <code>while</code> itère dans la condition est respectée.</p><pre>Num i = 5
+while i-- {
+ # i = 4
+ # i = 3
+ # ...
+}
+</pre><h3>Boucle do-while</h3><p>La boucle <code>do-while</code> fonctionne de la même manière que la boucle <code>while</code> sauf qu'il y a une itération au minumum et que l'expression est évaluée à la fin de l'itération.</p><pre>Num i = 5
+do {
+ # i = 5
+ # i = 4
+ # ...
+} while i--
+</pre><h3>Boucle itérative</h3><p>La boucle itérative demande une valeur initiale, une valeur finale et un pas facultatif.</p><pre>for i from 0 to 5 by 1 {
+ # i = 0
+ # i = 1
+ # ...
+}
+</pre><h3>Boucle sur une liste</h3><p>Parcours tous les éléments de la liste.</p><pre>List&lt;Num&gt; ma_list = [ 2, 3, 5, 7, 11, 13 ]
+for k, v in ma_list {
+ # k = 0, v = 2
+ # k = 1, v = 3
+ # ...
+}
+</pre><h3>Boucle sur un dictionnaire</h3><p>Parcours tous les éléments du dictionnaire.</p><pre>Dict&lt;Str&gt; mon_dict = { "a" = "b", "b" = "c", "c" = "d" }
+for k, v in mon_dict {
+ # k = "a", v = "b"
+ # k = "b", v = "c"
+ # ...
+}
+</pre><h3>Boucle sur une chaîne</h3><p>Parcours chaque caractères d'une chaîne.</p><pre>Str mon_str = "Hello"
+for k, v in mon_str {
+ # k = 0, v = "H"
+ # k = 1, v = "e"
+ # ...
+}</pre><h2 id="classes">Classes</h2><p>La création de classe fonctionne simplement. Comme la plupart des langages mais de manière simplifiée, sans visibilité ni futilités.</p><p>Le <code>this.</code> devient <code>@</code> et est obligatoire pour accéder à un attribut de la classe.</p><pre>class Point {
+ public new(Num x, Num y) {
+  @x = x
+  @y = y
+ }
+ 
+ public Void add(Num x, Num y) {
+  @x += x
+  @y += y
+ }
+ 
+ public Void add(Point2D p) {
+  @add(p.x, p.y)
+ }
+}
+
+class Point3D &lt; Point {
+ public new(Num x, Num y, Num z) {
+  @super(x, y)
+  @z = z
+ }
+ 
+ public Void add(Num x, Num y, Num z) {
+  @add(p.x, p.y)
+  @z += z
+ }
+ 
+ public Void add(Point3D p) {
+  @add(p.x, p.y, p.z)
+ }
+}
+</pre><h3>"Prototyper" une classe existante</h3><p>Il est possible d'ajouter des méthodes à une classe native (Str, Int, etc.) ou à une classe que vous avez créé ou que vous utilisez.</p><p><code>@</code> dans une classe native représente la valeur de l'objet (vous n'avez pas accès aux valeurs internes). <code>@</code> dans une classe que vous avez créé ou que vous utilisez représente l'objet et avez donc accès aux attributs.</p><pre># Prototyper une classe native
+Num::negative_abs() {
+ -@abs() # "@" représente ici la valeur du nombre
+}
+
+# Prototyper votre propre classe
+# Les sous-classes hérite des méthodes que vous créez ici
+Point::sub(Point p) {
+ @x -= p.x
+ @y -= p.y
+}
+</pre><h3>Fonctions et attributs de classe</h3><pre>class Math {
+ public const PI = 3.14159265359
+ 
+ public static get_pi() { @PI }
+}
+
+Num PI
+
+pi = Math.PI
+pi = Math.get_pi()</pre><h2 id="listes-et-dictionnaires">Listes et dictionnaires</h2><h3>Listes</h3><p>Il y a deux méthodes pour accéder à une valeur dans une liste :</p><ul><li><code>ma_list[0]</code> ou <code>i = 0 ; ma_list[i]</code></li><li><code>ma_list.get(0)</code> ou <code>ma_list.get(i)</code></li></ul><p>L'accès à la valeur permet bien sûr de la redéfinir avec un "="</p><h3>Dictionnaires</h3><p>Il y a trois méthodes pour accéder à une valeur dans un dictionnaire :</p><ul><li><code>mon_dict.val</code></li><li><code>mon_dict["val"]</code> ou <code>val = "val" ; mon_dict[val]</code></li><li><code>mon_dict.get("val")</code> ou <code>mon_dict.get(val)</code></li></ul><p>L'accès à la valeur permet bien sûr de la redéfinir avec un "="</p><h2 id="reflexions">Réflexions</h2><ul><!-- li 1. Peut-être serait-il nécessaire d'écrire explicitement le type qu'une fonction retourne ?--><!-- je pense que non en fait--><!-- li 1. Typer les variables explicitement (comme les fonctions du point 1) ?--><!-- Typage dynamique préféré--><li>1. Rendre l'écriture du <code>@</code> facultative ?</li><li>2. Ajouter le mot-clé as pour faire du transtypage ? <code>(ma_peugeot as Voiture).une_methode()</code></li><li>3. Prévoir du inline pour faire des constantes ou méthodes inlines ? Via des metadata ?</li><li>4. Des retour multiples ? <code>ma_fonction() { 2, 3, 4 } ; a, b, c = ma_fonction()</code></li><li>5. Appel de fonctions avec des arguments nommés ? <code>ma_fonction(Num a, Num b, Num c) { } ; ma_fonction(c: 5, b: 6, a: 7)</code></li><li>6. Réflechir au fonctionnement du code multi-fichiers</li><li>7. Réfléchir à un meilleur fonctionnement pour les attributs et méthodes de classe</li><!-- li 8. Autoriser le <code>this.</code>--><!-- Inutile et redondant--><li>8. Typage fixe ou dynamique ?</li><li>9. Réfléchir au fonctionnement des références.</li><li>10. Des types <code>Int</code> et <code>Float</code> pour remplacer <code>Num</code> et <code>Chr</code> pour compléter <code>Str</code></li><li>11. Fonctionnement des variables variables ?</li></ul><h2 id="idees">Idées</h2><h3>Listes de compréhension</h3><pre>List&lt;Num&gt; a = [ i for i from 0 to 4 ]
+# a = [ 0, 1, 2, 3, 4 ]
+
+List&lt;Num&gt; b = [ i for i from 0 to 4 when i % 2 == 0 ]
+# b = [ 0, 2, 4 ]
+
+Dict&lt;Num&gt; ages  = { "Robert" = 34, "Léa" = 26, "Jean" = 55 }
+List&lt;Str&gt; names = [ name for (name in ages) ]
+# names = [ "Robert", "Léa", "Jean" ]</pre><h2 id="exemples">Exemples</h2><h3>Cas fictif du jeu "Plus ou moins"</h3><pre>pack fc.examples.plus_ou_moins
+
+use stdio as io
+use math
+
+Num nb  = math.rand(1, 100)
+Num cpt = 0
+
+Num val_test
+
+do {
+ val_test = io.ask("Saisissez un nombre entre 1 et 100 : ").toNum()
+ cpt++
+ 
+ if val_test &gt; nb {
+  io.writeln("C'est moins")
+ } else if val_test &lt; nb {
+  io.writeln("C'est plus")
+ }
+} while val_test &lt;&gt; nb
+
+io.writeln("Bravo, tu as gagné en ${cpt} coups !")
+</pre><h3>Exemple qui présente un peu tout</h3><pre>Num me = 38
+
+Dict&lt;Num&gt; friends = {
+ "Robert"  = 32,
+ "Paul"    = 54,
+ "Jean"    = 29,
+ "Jacques" = 42
+}
+
+List&lt;Num&gt; ages = [ age for name, age in friends ]
+# [ 32, 54, 29, 42 ]
+
+ages.sort((Num a, Num b) { a - b })
+# [ 29, 32, 42, 54 ]
+</pre><pre># Syntaxe de Bootmonkey (BM)
+# Par Pif, booti386, Gorgio et SuperMonkey
+# Dernière mise à jour : 30/07/2014
+
+enum Volume {
+  LOW    = 20
+  MEDIUM = 50
+  HIGH   = 100
+}
+
+interface Animal {
+  Void
+}
+
+class Point2D {
+  Num x, y
+  
+  new(Num x, Num y) {
+    @x = x
+    @y = y
+  }
+  
+  Void add(Num x, Num y) {
+    @x += x
+    @y += y
+  }
+  
+  Void add(Point2D p) {
+    @add(p.x, p.y)
+  }
+}
+
+class Point3D &lt; Point2D {
+  Num z
+  
+  new(Num x, Num y, Num z) {
+    @(x, y)
+    @z = z
+  }
+  
+  Void add(Num x, Num y, Num z) {
+    @x += x
+    @y += y
+    @z += z
+  }
+  
+  Void add(Point3D p) {
+    @add(p.x, p.y, p.z)
+  }
+}
+
+if condition { } else if condition { } else { }
+
+# S'inspirer de :
+# - http://haxe.org/manual/lf-pattern-matching.html
+# - http://fr.wikibooks.org/wiki/OCaml/Structures#Filtrage_par_motifs
+switch value { when &lt; 0 { } when &lt; 5 { } when &gt;= 5 { } }
+when ::= &lt; 0 (inférieur) | &lt;&gt; 20 (différent) | 0 or 5 (ou) | 0 to 5 (entre (bornes includes))
+
+# Boucles
+loop { }
+loop 8 { }
+loop 8 by 2 { }
+
+while condition { }
+do { } while condition
+
+for i = 0 to 8 { }
+for i = 0 to 8 by 2 { }
+for _ = 0 to 8 by 2 { }
+
+for      in a_list { }
+for _    in a_list { }
+for _, _ in a_list { }
+for v    in a_list { }
+for _, v in a_list { }
+for k, _ in a_list { }
+for k, v in a_list { }
+
+for      in a_dict { }
+for _    in a_dict { }
+for _, _ in a_dict { }
+for v    in a_dict { }
+for _, v in a_dict { }
+for k, _ in a_dict { }
+for k, v in a_dict { }
+
+for      in a_str { }
+for _    in a_str { }
+for _, _ in a_str { }
+for v    in a_str { }
+for _, v in a_str { }
+for k, _ in a_str { }
+for k, v in a_str { }
+
+_ est un mot-clé spécial qui permet de ne pas capturer une valeur ou de ne pas en envoyer
+
+# Déclarer un type
+"type" nom_type = type
+
+exemple :
+
+type Player = {
+  Str name,
+  { Num x, Num y } position
+}
+
+# Déclarer une variable
+[const] type nom_variable [ = valeur ]
+
+# Déclarer une fonction
+type nom_fonction(arguments) { }
+
+# Déclarer une classe
+[final] class NomClasse [ &lt; NomClasseParente ] { }
+
+# Déclarer un attribut
+[public|protected|private] [static|const] type nom_attribut [ = valeur ]
+
+# Déclarer une méthode
+[public|protected|private] [static] [final] type nom_methode(arguments) { }
+
+# Suite de fibonacci
+Num fibo(Num n) {
+  if n &lt;= 1 {
+    n
+  } else {
+    fibo(n - 1) + fibo(n - 2)
+  }
+}
+
+# Types
+Bool
+Num
+Chr
+Str
+List&lt;T&gt;
+Dict&lt;V&gt;
+Func&lt;(T n)*&gt;:T
+Obj
+Var
+(Null)
+
+Bool vaut true ou false
+Num est un nombre (int ou float confondus)
+Chr est un caractère : 'a', 'z'
+Str est une chaîne de caractère : "Hello World!", """Pour les textes comportant de nombreux guillemets"""
+List&lt;T&gt; est une liste de valeur : [ "Aymeric", "Guillaume", "Aurélie" ]
+Dict&lt;V&gt; est un dictionnaire clé-valeur : { "Aymeric": 18, "Guillaume": 15, "Aurélie": 21 }
+Func&lt;(T n)*&gt;:T est une fonction : 
+Obj est un objet :
+Var est un type dynamique non défini :
+Null est la valeur renvoyée quand la variable n'existe pas ou vaut Null</pre><script src="js/color_highlighter.js"></script></body></html>

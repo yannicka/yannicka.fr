@@ -1,0 +1,45 @@
+---
+layout: base.njk
+title: Expérimentations
+experiments: [32,4096]
+---
+
+<h1 class="text-center text-6xl lg:text-left">
+  Expérimentations
+</h1>
+
+<p class="mt-6">
+  Par définition, les expérimentations sont des projets non finalisés, ou qui
+  n'avaient même pas pour projet à devenir... des projets. Ce sont souvent de
+  simples expériences, pour m'entrainer au développement.
+</p>
+
+<p class="mt-6">
+  Tous mes développements n'y sont pas, peu importe la raison : développement
+  perdu, développement pas du tout assez avancé, difficile à partager
+  simplement, trop personnel, etc. C'est pour cette raison qu'il manque de
+  petites et grosses expérimentations.
+</p>
+
+<p class="mt-6">
+  Même si chaque expérimentation a son histoire propre, je ne m'étale sur
+  aucune, préférant me concentrer sur les vrais projets.
+</p>
+
+<div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 columns-3">
+  {%- for experiment in experiments.experiments -%}
+    <a href="{{ experiment.folder | url }}" class="flex bg-white dark:bg-gray-700 rounded transition transform hover:bg-gray-200 dark:hover:bg-gray-600 shadow-md shadow-gray-300 dark:shadow-gray-800 focus-visible:ring">
+      <div class="flex-1 p-3">
+        <h2 class="text-lg font-bold leading-6">
+          {{- experiment.name -}}
+        </h2>
+
+        {% if experiment.short_description %}
+          <p class="mt-1">
+            {{- experiment.short_description -}}
+          </p>
+        {% endif %}
+      </div>
+    </a>
+  {%- endfor -%}
+</div>

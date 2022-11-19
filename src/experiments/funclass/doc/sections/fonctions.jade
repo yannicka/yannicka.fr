@@ -1,0 +1,92 @@
+h2#fonctions Fonctions
+
+h3 Créer une fonction
+
+p Les fonctions retournent par défaut la dernière expression. Le mot-clé return peut être utilisé seul pour ne rien retourner (la valeur <code>null</code> sera renvoyée si le programme essaye de la récupérer) ou être utilisé avec une expression pour expliciter de manière précise la valeur retournée.
+
+pre.
+	Num add(Num a, Num b) { a + b }
+
+p Les fonctions peuvent être surchargées. L'exemple précédent peut ainsi être surchargé ainsi afin de concaténer deux chaînes de caractères :
+
+pre.
+	Str add(Str a, Str b) { a + b }
+
+p La fonction appelée dépend ainsi des types des paramètres qui y sont passés.
+
+p Les fonctions retournent la dernière expression except&eacute; si un <code>return</code> est rencontr&eacute;.
+
+p Les arguments de fonctions peuvent avoir des valeurs par défaut.
+
+pre.
+	Void ma_fonction(Num a, Num b = 5) {
+		# ...
+	}
+
+h3 Appels de fonctions
+
+p L'appel d'une fonction demande obligatoirement des parenthèses, même si elle ne possède aucun paramètre.
+
+pre.
+	Num mon_num = add(2, 5) # 7
+	Str mon_str = add("Hello", " World!") # "Hello World!"
+
+h3 Fonctions variadiques
+
+p Les fonctions peuvent être à nombre de paramètres variables.
+
+pre.
+	Num somme(Num nb, Num args...) {
+		# args sera un tableau (de nombres ici) contenant les valeurs passées lors de l'appel
+		# ...
+	}
+
+p Les fonctions à nombre de paramètres variables peuvent s'appeler de différentes manières.
+
+pre.
+	Num nb
+
+	nb = somme(2) # args vaudra [] (un tableau vide)
+	nb = somme(2, 3, 4, 5) # args vaudra [ 3, 4, 5 ]
+
+	# il est aussi possible de faire passer plusieurs valeurs via une liste
+	# le ...[] sert à préciser qu'on fait passer plusieurs valeurs et non une liste
+	nb = sommes(2, ...[ 3, 4, 5 ]) # args vaudra [ 3, 4, 5 ]
+
+h3 Fonctions anonymes
+
+p Il est possible de créer des fonctions anonymes. Elles servent généralement à faire des callbacks ou des fonctions qui changent durant l'exécution du programme.
+
+pre.
+	# Fonction anonyme dans une variable
+	# La fonction dans une variable peut être changée durant l'exécution mais pas surchargée
+	Func ma_func = (Num a, Num b) { a + b }
+
+	# Fonction anonyme dans une fonction
+	une_fonction_avec_callback((Num a, Num b) {
+		# ...
+	})
+
+	# Fonction anonyme auto-appelée
+	(Num a, Num b) {
+		# ...
+	}(3, 6)
+
+//
+	h3 Surcharge des opérateurs
+	pre.
+		:+(T1 a, T2 b) { }
+
+h3 Retourner plusieurs valeurs
+
+p Il est possible de retourner plusieurs valeur à la fin d'une fonction. En fait il s'agit de retourner une liste et de la récupérer via la syntaxe spécifique [ var1, var2, etc. ] = fonction().
+
+pre.
+	une_fonction(Num a) {
+		[ a + 1, a + 2, a + 3]
+	}
+
+	[ a, b, c ] = une_fonction(0) # a = 1 ; b = 2 ; c = 3
+	d = une_fonction(0) # d = [ 1, 2, 3 ]
+	[ e, f, g ] = d # comme a, b et c
+	[ b, a, c ] = [ a, b, c ] # b = 1 ; a = 2 ; c = 3

@@ -1,0 +1,14 @@
+h2#idees Idées
+
+h3 Listes de compréhension
+
+pre.
+	List&lt;Num&gt; a = [ i for i from 0 to 4 ]
+	# a = [ 0, 1, 2, 3, 4 ]
+
+	List&lt;Num&gt; b = [ i for i from 0 to 4 when i % 2 == 0 ]
+	# b = [ 0, 2, 4 ]
+
+	Dict&lt;Num&gt; ages  = { "Robert" = 34, "Léa" = 26, "Jean" = 55 }
+	List&lt;Str&gt; names = [ name for (name in ages) ]
+	# names = [ "Robert", "Léa", "Jean" ]

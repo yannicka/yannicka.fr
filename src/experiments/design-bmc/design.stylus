@@ -1,0 +1,242 @@
+@font-face
+	font-family 'Lato'
+	font-style normal
+	font-weight 400
+	src local('Lato Regular'), local('Lato-Regular'), url('fonts/Lato-Regular.woff') format('woff')
+
+flex-display()
+	display -webkit-flex
+	display flex
+
+flex-size(size = 1)
+	-webkit-flex size
+	flex size
+
+flex-direction(dir)
+	-webkit-flex-direction dir
+	flex-direction dir
+
+html
+body
+	margin 0
+	padding 0
+	width 100%
+	height 100%
+	font-family 'Lato', sans-serif
+	font-size 17px
+
+body
+	background-color rgb(255, 255, 255)
+
+#global
+	flex-display()
+	width 100%
+	height 100%
+
+nav
+	width 250px
+	background-color rgb(231, 231, 231)
+
+.logo
+	flex-display()
+	align-items center
+
+.logo-icon
+	flex-size(1)
+	margin 8px
+	text-align center
+	
+.logo-infos
+	margin 0
+	text-align right
+	width 61px
+
+	img
+		width 60px
+		height 60px
+		border 1px solid rgb(164, 164, 164)
+		border-right none
+
+.choose_category
+	margin 0 8px 38px 8px
+	position relative
+
+	ul
+		margin 0
+		padding 0
+		list-style none
+		position absolute
+		left 0
+		right 0
+		top 0
+		bottom 0
+
+	li
+		position relative
+
+		&:not(:first-child)
+			display none
+
+			&:hover
+				background-color rgb(0, 154, 255)
+				color rgb(255, 255, 255)
+
+		&:first-child a:after
+			content ""
+			width 0
+			height 0
+			border-right 8px solid transparent
+			border-left 8px solid transparent
+			border-top 8px solid rgb(114, 114, 114)
+			position absolute
+			right 8px
+			top 11px
+
+	a
+		padding 4px 8px
+		background-color rgb(255, 255, 255)
+		text-decoration none
+		color rgb(114, 114, 114)
+		display block
+
+.list-topics
+	margin 0
+	padding 0
+	list-style none
+
+	li
+		flex-display()
+		align-items center
+		cursor pointer
+		// justify-content center
+
+		&:nth-child(odd)
+			background-color rgb(243, 243, 243)
+
+		&.active
+			background-color rgb(0, 154, 255)
+
+			.topic-title
+				color rgb(255, 255, 255)
+
+			.topic-indicator
+				span
+					background-color rgb(255, 255, 0)
+
+	a
+		margin 0
+
+.topic-title
+	flex-size(1)
+	padding 6px
+	color rgb(114, 114, 114)
+
+.topic-indicator
+	width 5px
+	height 5px
+	margin 8px
+	text-align center
+
+	span
+		display block
+		background-color rgb(0, 154, 255)
+		border-radius 50%
+		width 5px
+		height 5px
+
+.topic-answers
+	margin 0
+	width 44px
+
+	span
+		padding 2px
+		display inline-block
+		background-color rgb(255, 255, 255)
+		width 36px
+		color rgb(0, 154, 255)
+		text-align center
+		font-size 14px
+
+section
+	flex-size(1)
+	padding 16px 24px
+	box-shadow 0 0 2px 0 rgb(164, 164, 164)
+
+.topic-titre
+	font-size 26px
+	color rgb(114, 114, 114)
+
+.topic-subtitle
+	color rgb(159, 159, 159)
+	font-size 14px
+
+	a
+		color rgb(0, 154, 255)
+		text-decoration none
+
+.topic-pagination
+	margin 0
+
+	ul
+		margin 32px 0 0 0
+		padding 0
+		list-style none
+
+	li
+		margin 0
+		display inline-block
+
+		&.active
+			a
+				background-color rgb(0, 154, 255)
+				color rgb(255, 255, 255)
+				border 1px solid rgb(0, 154, 255)
+
+	a
+		margin 0
+		padding 6px 12px
+		display block
+		background-color rgb(243, 243, 243)
+		border 1px solid rgb(231, 231, 231)
+		text-decoration none
+		color rgb(114, 114, 114)
+
+.messages-list
+	margin-top 32px
+
+.message
+	flex-display()
+	margin 32px 0
+
+.message-profile
+	margin 0
+	width 110px
+	text-align center
+
+.message-avatar
+
+	img
+		width 80px
+		height 80px
+		border 1px solid rgb(164, 164, 164)
+
+.message-username
+	a
+		color rgb(0, 154, 255)
+		text-decoration none
+		font-size 14px
+
+		&:hover
+			text-decoration underline
+
+.message-content
+	flex-size(1)
+
+.message-message
+	margin 0
+
+.message-date
+	margin-top 8px
+	color rgb(114, 114, 114)
+	font-size 12px
+	text-align right

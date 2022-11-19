@@ -1,0 +1,217 @@
+
+
+
+
+// http://codepen.io/mclean_tom_/pen/hisEz
+
+
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('Raleway-Bold.woff') format('woff');
+  font-style: normal;
+}
+
+
+
+
+
+
+
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 100;
+	src: local('Raleway Thin'), local('Raleway-Thin'), url(Raleway-Thin.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 200;
+	src: local('Raleway ExtraLight'), local('Raleway-ExtraLight'), url(Raleway-AAA.woff) format('woff');
+}
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Raleway Light'), local('Raleway-Light'), url(Raleway-AAA.woff) format('woff');
+}
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Raleway'), url(Raleway-AAA.woff) format('woff');
+}
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 500;
+	src: local('Raleway Medium'), local('Raleway-Medium'), url(Raleway-AAA.woff) format('woff');
+}
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 600;
+	src: local('Raleway SemiBold'), local('Raleway-SemiBold'), url(Raleway-AAA.woff) format('woff');
+}
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Raleway Bold'), local('Raleway-Bold'), url(Raleway-AAA.woff) format('woff');
+}
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 800;
+	src: local('Raleway ExtraBold'), local('Raleway-ExtraBold'), url(Raleway-AAA.woff) format('woff');
+}
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 900;
+	src: local('Raleway Heavy'), local('Raleway-Heavy'), url(Raleway-AAA.woff) format('woff');
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+@import url(http://fonts.googleapis.com/css?family=Exo+2:400,400italic,900);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,700,500italic,900,700italic,900italic);
+*/
+html, body {
+	margin: 0; padding: 0;
+	height: 100%;
+}
+
+body {
+	background-color: rgb(244, 255, 244);
+	font-family: Raleway;
+}
+
+.global {
+	margin: 0 auto; padding: 0;
+	width: 600px;
+	height: 100%;
+}
+
+.struct {
+	margin: 0; padding: 0;
+	height: 100%;
+	width: 0;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+form {
+	margin: 0; padding: 0;
+	display: inline-block;
+	white-space: normal;
+	vertical-align: middle;
+}
+
+.logo {
+	margin: 0 0 10px 0; padding: 0;
+	font-size: 70px;
+	color: rgb(255, 255, 255);
+	text-shadow: 0 1px 0 rgb(52, 86, 64),
+				 0 2px 0 rgb(62, 96, 74),
+				 0 3px 0 rgb(72, 106, 84),
+				 0 4px 0 rgb(82, 116, 94),
+				 0 0 1px rgb(52, 126, 64),
+				 1px 0 0 rgb(52, 86, 64),
+				 0 1px 0 rgb(52, 86, 64),
+				 -1px 0 0 rgb(52, 86, 64),
+				 0 -1px 0 rgb(52, 86, 64);
+	font-family: "Exo 2", sans-serif;
+}
+
+input[type="search"] {
+	margin: 0; padding: 6px;
+	border: 2px solid rgb(120, 186, 144);
+	background-color: rgb(255, 255, 255);
+	color: rgb(52, 86, 64);
+	font-size: 35px;
+	font-weight: bold;
+	width: 600px;
+	display: inline-block;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+::-moz-placeholder {
+	color: rgb(52, 86, 64);
+	opacity: .5;
+}
+
+::placeholder {
+	color: rgb(52, 86, 64);
+	opacity: .5;
+}
+
+#lbl_result {
+	ul {
+		margin: 0; padding: 0;
+		list-style-type: none;
+		font-weight: 100;
+
+		&.dates, &.tags {
+			margin: 6px; padding: 0;
+
+			li {
+				margin: 0 8px 0 0; padding: 0;
+				background-color: rgb(255, 255, 255);
+				display: inline-block;
+				border: none;
+
+				a {
+					text-decoration: none;
+					color: rgb(4, 134, 186);
+				}
+			}
+		}
+
+		&.dates {
+			li {
+			}
+		}
+
+		&.tags {
+			margin-bottom: 6px;
+
+			li {
+			}
+		}
+	}
+
+	li {
+		margin: 8px 0; padding: 0;
+		border-radius: 5px;
+		border: 1px solid rgb(198, 198, 198);
+		border-bottom: 2px solid rgb(198, 198, 198);
+		background-color: rgb(255, 255, 255);
+	}
+
+	hr {
+		margin: 0; padding: 0;
+		width: 100%;
+		height: 1px;
+		background-color: rgb(198, 198, 198);
+		border: none;
+	}
+
+	p {
+		margin: 6px; padding: 0;
+	}
+}

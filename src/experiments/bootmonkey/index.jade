@@ -1,0 +1,54 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Bootmonkey
+		link(rel="stylesheet" type="text/css" href="design.css")
+
+	body
+		#global
+			h1 Spécifications de Bootmonkey - Brouillon
+
+			p.red CE QUI EST D&Eacute;CRIT CI-DESSOUS EST SUSCEPTIBLE DE CHANGER.
+
+			- var d     = new Date()
+			- var day   = ('0' + d.getDate()).slice(-2)
+			- var month = ('0' + (d.getMonth() + 1)).slice(-2)
+			- var year  = d.getFullYear()
+
+			p.yellow Dernière mise à jour du document : #{day}/#{month}/#{year}
+
+			p Tout n'est sûrement pas exhaustif. Ne pas hésiter à poser des questions. Cependant les grandes lignes du langage ne changeront pas.
+
+			- var pages                     = {}
+			- pages.introduction            = 'Introduction'
+			- pages.types                   = 'Types'
+			- pages.fonctions               = 'Fonctions'
+			- pages.conditions              = 'Conditions'
+			- pages.boucles                 = 'Boucles'
+			- pages.classes                 = 'Classes'
+			- pages.listes_et_dictionnaires = 'Listes et dictionnaires'
+			- pages.reflexions              = 'Réflexions'
+			- pages.idees                   = 'Idées'
+			- pages.exemples                = 'Exemples'
+			- pages.notes                   = 'Notes'
+
+			ul
+				- var i = 1
+				- for name, id in pages
+					li: a(href='##{id}') #{i}. #{name}
+					- i++
+
+			include sections/introduction
+			include sections/types
+			include sections/fonctions
+			include sections/conditions
+			include sections/boucles
+			include sections/classes
+			include sections/listes-et-dictionnaires
+			include sections/reflexions
+			include sections/idees
+			include sections/exemples
+			include sections/notes
+
+			script(src="js/color_highlighter.js")

@@ -1,0 +1,38 @@
+#myColorPicker {
+	background-color: #000;
+	border: 1px solid #000;
+	margin: -1px;
+	width: 390px;
+}
+
+#myColorPicker ul {
+	width: 360px;
+	margin-right: 30px;
+}
+
+#myColorPicker * {
+	margin: 0;
+	padding: 0;
+}
+
+#myColorPicker a {
+	cursor: pointer;
+	display: block;
+	width: 10px;
+	height: 10px;
+}
+
+#myColorPicker li {
+	float: left;
+	list-style: none;
+}
+
+#myColorPicker a.close {
+	background: transparent url('../images/icones/fermer.png') center center;
+	position: absolute;
+	text-indent: -5000px;
+	top: -10px;
+	right: -10px;
+	width: 20px;
+	height: 20px;
+}

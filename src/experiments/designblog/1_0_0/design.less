@@ -1,0 +1,306 @@
+/* Polices */
+    @import url('http://fonts.googleapis.com/css?family=Alef:400,700');
+
+/* Images */
+    @background: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAIAAAAmKNuZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAEZJREFUSEvtzLEJADAMA0Hvv1wgI6TwDqmS/pHAAwiuUaGv3W9inTuRnICbk5yAm5OcgJtT2A7qTnICbk5yAm5OcgJuWr8P1sAafHOaH9wAAAAASUVORK5CYII=';
+    @facebook:   'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAE9JREFUKFPNi8ERABAMBNOXVvy0oRhNqO/I44wJwdPN7GeTFQCScsUL+nt8tlPnBrupfwpmfw2slxALFApv/BsB8cb7EhDO+h+D7tzIAkAaRceOjoAtHEIAAAAASUVORK5CYII=';
+    @googleplus: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAGdJREFUKFONkoEJwDAIBF2iA3SKztDpul63+WLAcLU2KDyo+YsQY5LsPg915N5hzlEYZ+4TdO3bSzSUAA9d0atiCXBi5Eugqi1uYHiPAOvxSoSyOWvugBANWa09UK09UA58vsYfIMkeQJWEdp8yAogAAAAASUVORK5CYII=';
+    @twitter:    'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFJJREFUKFNj+P//P4PGqof/icEgtUQrhmGcGpABjA+i4RpgAJ0PAzBxFBsIARQNhABMHdE2YNUAwtgAsjxBJyErBmGcTkIWR8YYTiKESUwa/xkAHyfB8hiOObgAAAAASUVORK5CYII=';
+    @smile:      'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAF1JREFUKFNj+P//P0kYQ2BmLsN/ZIwuj8IBK7hVj4LRNcEZcMW7gDQyRtMEJpAVCwoKwhXD2UiaKNeAFVNsAzZN2BSjaABhuCYkjKwYhOEMGAYpQMbo8igcwvg/AwBNm4lYPFzA4AAAAABJRU5ErkJggg==';
+
+/* Fonctions */
+    // Valeurs : aucune
+    .box() {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -o-box;
+        display: -ms-box;
+        display: box;
+    }
+
+    // Valeurs : horizontal, vertical, inline-axis, block-axis, inherit
+    .box-orient (@orient: horizontal) {
+        -webkit-box-orient: @arguments;
+           -moz-box-orient: @arguments;
+             -o-box-orient: @arguments;
+            -ms-box-orient: @arguments;
+                box-orient: @arguments;
+    }
+
+    // Valeurs : normal, reverse, inherit
+    .box-direction (@direction: normal) {
+        -webkit-box-direction: @arguments;
+           -moz-box-direction: @arguments;
+             -o-box-direction: @arguments;
+            -ms-box-direction: @arguments;
+                box-direction: @arguments;
+    }
+
+    // Valeurs : start, center, end, justify
+    .box-pack (@pack: start) {
+        -webkit-box-pack: @arguments;
+           -moz-box-pack: @arguments;
+             -o-box-pack: @arguments;
+            -ms-box-pack: @arguments;
+                box-pack: @arguments;
+    }
+
+    // Valeurs : start, center, end, baseline, stretch
+    .box-align (@align: start) {
+        -webkit-box-align: @arguments;
+           -moz-box-align: @arguments;
+            -ms-box-align: @arguments;
+             -o-box-align: @arguments;
+                box-align: @arguments;
+    }
+
+    // Valeurs : single, multiple
+    .box-lines (@lines: single) {
+        -webkit-box-lines: @arguments;
+           -moz-box-lines: @arguments;
+             -o-box-lines: @arguments;
+            -ms-box-lines: @arguments;
+                box-lines: @arguments;
+    }
+
+    // Valeurs : integer
+    .box-flex (@flex: 0) {
+        -webkit-box-flex: @arguments;
+           -moz-box-flex: @arguments;
+             -o-box-flex: @arguments;
+            -ms-box-flex: @arguments;
+                box-flex: @arguments;
+    }
+
+    // Valeurs : integer
+    .box-ordinal-group (@group: 0) {
+        -webkit-box-ordinal-group: @arguments;
+           -moz-box-ordinal-group: @arguments;
+             -o-box-ordinal-group: @arguments;
+            -ms-box-ordinal-group: @arguments;
+                box-ordinal-group: @arguments;
+    }
+
+/* Corps de la page */
+    html, body {
+        margin: 0; padding: 0;
+        width: 100%;
+        height: 100%;
+    }   
+
+    body {
+        .box();
+        .box-orient(horizontal);
+        .box-pack(center);
+        font-size: 14px;
+        font-family: 'Alef', 'Arial', sans-serif;
+        background: url(@background) repeat fixed;
+    }
+
+/* Liens */
+    a {
+        color: rgb(12, 99, 36);
+        text-decoration: none;
+
+        &:hover {
+            color: rgb(42, 66, 48);
+            text-decoration: underline;
+        }
+    }
+
+/* Classes */
+    .justify {
+        text-align: justify;
+    }
+
+/* Icones */
+    [class^="icon-"] {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        vertical-align: middle;
+    }
+
+    .icon-fb {
+        background: url(@facebook);
+    }
+
+    .icon-tw {
+        background: url(@twitter);
+    }
+
+    .icon-gp {
+        background: url(@googleplus);
+    }
+
+    .likes {
+        margin: 0; padding: 0 4px;
+        display: inline-block;
+        padding-left: 18px;
+        background: url(@smile) center left no-repeat;
+        background-color: rgb(220, 220, 220);
+        background-position: 4px center;
+    }
+
+    .likesactive {
+        background-color: rgb(255, 200, 0);
+    }
+
+#page {
+    margin: 0; padding: 0;
+    height: 100%;
+    max-width: 1000px;
+    .box();
+    .box-orient(vertical);
+    .box-flex(1);
+
+    header {
+        margin: 0; padding: 5px;
+        background-color: rgb(255, 255, 255);
+
+        h1 {
+            margin: 0; padding: 0;
+            font-size: 34px;
+            font-weight: 900;
+
+            a {
+                color: rgb(44, 44, 44);
+            }
+        }
+
+        p {
+            margin: 0; padding: 0;
+            color: rgb(88, 88, 88);
+        }
+    }
+
+    #main {
+        .box();
+        .box-orient(horizontal);
+        .box-flex(1);
+
+        #about, #menu {
+            .box();
+            .box-orient(vertical);
+            margin: 0; padding: 5px 0;
+            width: 200px;
+            vertical-align: middle;
+
+            .menu {
+                margin: 0 0 5px 0; padding: 0;
+                background-color: rgb(255, 255, 255);
+
+                .title {
+                    margin: 0; padding: 2px;
+                    background-color: rgb(238, 238, 238);
+                    font-size: 20px;
+                    font-weight: 900;
+                    color: rgb(44, 44, 44);
+
+                    &.red {
+                        background-color: rgb(200, 60, 20);
+                        color: rgb(255, 255, 255);
+                    }
+
+                    &.green {
+                        background-color: rgb(100, 220, 100);
+                    }
+    
+                    &.blue {
+                        background-color: rgb(120, 220, 255);
+                    }
+
+                    &.purple {
+                        background-color: rgb(110, 0, 110);
+                        color: rgb(255, 255, 255);
+                    }
+                }
+
+                p {
+                    margin: 5px;
+                }
+
+                ul {
+                    margin: 5px 0 5px 5px; padding: 0;
+                    list-style-type: none;
+                    list-style-position: inside;
+
+                    li {
+                        &:before {
+                            margin: 0 4px 0 0;
+                            content: "\00BB";
+                        }
+                    }
+                }
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+
+        #content {
+            margin: 0; padding: 5px;
+            .box-flex(1);
+
+            article {
+                margin: 5px 0; padding: 5px;
+                background-color: rgb(255, 255, 255);
+
+                &:last-child, &:first-child {
+                    margin: 0;
+                }
+
+                h2 {
+                    margin: 0; padding: 0;
+                    font-size: 24px;
+                }
+
+                p {
+                    margin: 10px 0; padding: 0;
+                }
+
+                .infos {
+                    text-align: right;
+                    font-size: 12px;
+                    color: rgb(88, 88, 88);
+                }
+            }
+
+            #navpage {
+                a {
+                    margin: 0; padding: 4px 8px;
+                    display: inline-block;
+                    background-color: rgb(255, 255, 255);
+
+                    &:last-child {
+                        float: right;
+                    }
+                }
+            }
+        }
+
+        #box3 {
+        }
+    }
+
+    footer {
+        display: block;
+        margin: 0; padding: 5px;
+        color: rgb(88, 88, 88);
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #page {
+        #main {
+            .box-orient(vertical);
+
+            #content {
+                padding: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+h2#listes_et_dictionnaires Listes et dictionnaires
+
+h3 Listes
+
+p Il y a deux méthodes pour accéder à une valeur dans une liste :
+
+pre.
+	List&lt;Num&gt; ma_list = [ 0, 1, 2, 3, 4, 5 ]
+
+	# Récupérer la valeur de l'indice 0
+	# ma_list.0 # syntaxe à réfléchir
+	ma_list[0]
+	ma_list.get(0)
+
+h3 Dictionnaires
+
+p Il y a trois méthodes pour accéder à une valeur dans un dictionnaire :
+
+pre.
+	Dict&lt;Num&gt; ma_list = { "foo" = "bar", "bar" = "foo" }
+
+	# Récupérer la valeur de la clé "foo"
+	mon_dict.foo
+	mon_dict["foo"]
+	mon_dict.get("foo")

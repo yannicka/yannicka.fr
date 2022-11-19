@@ -1,0 +1,176 @@
+@font-face
+	font-family: "Raleway"
+	font-style: normal
+	font-weight: 100
+	src: local("Raleway Thin"), local("Raleway-Thin"), url("fonts/Raleway-Thin.woff") format("woff")
+
+@font-face
+	font-family: "Raleway"
+	font-style: normal
+	font-weight: 200
+	src: local("Raleway ExtraLight"), local("Raleway-ExtraLight"), url("fonts/Raleway-ExtraLight.woff") format("woff")
+
+@font-face
+	font-family: "Raleway"
+	font-style: normal
+	font-weight: 300
+	src: local("Raleway Light"), local("Raleway-Light"), url("fonts/Raleway-Light.woff") format("woff")
+
+@font-face
+	font-family: "Raleway"
+	font-style: normal
+	font-weight: 400
+	src: local("Raleway"), url("fonts/Raleway-Regular.woff") format("woff")
+
+@font-face
+	font-family: "Raleway"
+	font-style: normal
+	font-weight: 500
+	src: local("Raleway Medium"), local("Raleway-Medium"), url("fonts/Raleway-Medium.woff") format("woff")
+
+@font-face
+	font-family: "Raleway"
+	font-style: normal
+	font-weight: 600
+	src: local("Raleway SemiBold"), local("Raleway-SemiBold"), url("fonts/Raleway-SemiBold.woff") format("woff")
+
+@font-face
+	font-family: "Raleway"
+	font-style: normal
+	font-weight: 700
+	src: local("Raleway Bold"), local("Raleway-Bold"), url("fonts/Raleway-Bold.woff") format("woff")
+
+@font-face
+	font-family: "Raleway"
+	font-style: normal
+	font-weight: 800
+	src: local("Raleway ExtraBold"), local("Raleway-ExtraBold"), url("fonts/Raleway-ExtraBold.woff") format("woff")
+
+@font-face
+	font-family: "Raleway"
+	font-style: normal
+	font-weight: 900
+	src: local("Raleway Heavy"), local("Raleway-Heavy"), url("fonts/Raleway-Heavy.woff") format("woff")
+
+html, body
+	margin: 0
+	padding: 0
+	height: 100%
+	font-family: "Arial", sans-serif
+	font-weight: 400
+
+html
+	font-size: 62.5%
+
+body
+	background-color: rgb(244, 255, 244)
+	font-size: 1.4rem
+
+a
+	color: rgb(0, 100, 180)
+	text-decoration: none
+
+	&:hover
+		text-decoration: underline
+
+p
+	margin: 0
+	padding: 0
+
+.global
+	margin: 0 auto
+	padding: 0
+	width: 600px
+	height: 100%
+
+.struct
+	margin: 0
+	padding: 0
+	height: 100%
+	width: 0
+	vertical-align: middle
+	display: inline-block
+
+form
+	margin: 0
+	padding: 0
+	display: inline-block
+	white-space: normal
+	vertical-align: middle
+
+.logo
+	margin: 0 0 10px 0
+	padding: 0
+	font-size: 70px
+	color: rgb(255, 255, 255)
+	text-shadow: 0 1px 0 rgb(0, 100, 180), 0 2px 0 rgb(0, 100, 180), 0 3px 0 rgb(0, 100, 180), 0 4px 0 rgb(0, 100, 180), 0 0 1px rgb(0, 100, 180), 1px 0 0 rgb(0, 100, 180), 0 1px 0 rgb(0, 100, 180), -1px 0 0 rgb(0, 100, 180), 0 -1px 0 rgb(0, 100, 180)
+	font-family: "Exo 2", sans-serif
+
+input[type="search"]
+	margin: 0
+	padding: 6px
+	border: 2px solid rgb(80, 160, 255)
+	background-color: rgb(255, 255, 255)
+	color: rgb(52, 86, 64)
+	font-size: 35px
+	font-weight: normal
+	width: 600px
+	display: inline-block
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	font-family: inherit
+
+::-moz-placeholder
+	color: rgb(52, 86, 64)
+	opacity: .5
+
+::placeholder
+	color: rgb(52, 86, 64)
+	opacity: .5
+
+#lbl_result
+	ul
+		margin: 16px 0 0 0
+		padding: 0
+		list-style-type: none
+		border-radius: 5px
+		border: 1px solid rgb(198, 198, 198)
+		border-bottom: 3px solid rgb(198, 198, 198)
+		background-color: rgb(255, 255, 255)
+
+	li
+		margin: 0
+		padding: 12px
+		border-bottom: 1px solid rgb(198, 198, 198)
+
+		&:last-child
+			border: none
+
+	.infos
+		margin: 6px 0 0 0
+		padding: 0
+
+	p
+		margin: 0
+		padding: 0
+
+	.infos
+		text-align: right
+		font-size: 1.2rem
+
+	.good, .bad
+		margin: 0
+		padding: 2px 6px
+		display: inline-block
+		border-radius: 4px
+
+	.good
+		color: rgb(255, 255, 255)
+		background-color: rgb(24, 192, 56)
+
+	.bad
+		color: rgb(255, 255, 255)
+		background-color: rgb(255, 21, 26)
+
+	.date
+		color: rgb(100, 100, 100)

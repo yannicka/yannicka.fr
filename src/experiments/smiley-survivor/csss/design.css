@@ -1,0 +1,66 @@
+body {
+	background-color: rgb(163, 29, 42);
+}
+
+#divmodifsmiley {
+	width: 150px;
+	margin: auto;
+	padding: 5px 0 5px 0;
+}
+
+#float {
+	background-color: rgba(255, 255, 255, .8);
+	box-shadow: 0 0 5px rgb(0, 0, 0);
+	border-radius: 5px;
+}
+
+#actions {
+	text-align: center;
+	margin: 5px;
+}
+
+#divsmiley {
+	text-align: center;
+}
+
+#previsualisation {
+	background-color: rgba(255, 255, 255, .8);
+	width: 120px;
+	box-shadow: inset 0 0 5px rgb(0, 0, 0);
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	text-align: center;
+	margin: auto;
+	padding: 5px;
+}
+
+canvas {
+	cursor: default;
+	background-color: rgb(255, 255, 255);
+}
+
+#creations {
+	background-color: rgba(255, 255, 255, .8);
+	width: 600px;
+	box-shadow: 0 0 5px rgb(0, 0, 0);
+	border-radius: 5px;
+	text-align: center;
+	margin: auto;
+	margin-top: 10px;
+	padding: 5px;
+}
+
+#actions img {
+	margin: 0;
+	margin-left: 2px;
+	margin-right: 2px;
+	padding: 0;
+}
+
+.utilise {
+	color: #FF0000;
+}
+
+.pasutilise {
+	color: #0000FF;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Exo du lundi n°5</title>
+
+		<style>
+			#game {
+				margin: 0 auto; padding: 0;
+				display: block;
+				border: 1px solid rgb(255, 255, 255);
+				box-shadow: 0 0 0 1px rgb(0, 0, 0);
+			}
+
+			#panel_infos,
+			#panel_stats {
+				margin: 0 auto;
+				width: 400px;
+			}
+
+			label {
+				margin-top: 10px;
+				display: block;
+			}
+
+			input {
+				display: block;
+				border: 1px solid rgb(180, 180, 180);
+				padding: 4px;
+			}
+
+			input:focus {
+				border: 1px solid rgb(0, 160, 255);
+			}
+
+			input[type="range"] {
+				border: none;
+				padding: 0;
+			}
+
+			input[type="range"]:focus {
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="game">Change browser bro'</canvas>
+
+		<div id="panel_infos">
+			<label>Nombre de zombies</label>
+				<input id="in_nb_zombies" type="number" min="0" max="400" value="2" />
+
+			<label>Nombre de victimes</label>
+				<input id="in_nb_victims" type="number" min="0" max="400" value="150" />
+
+			<label>Nombre de chasseurs</label>
+				<input id="in_nb_hunters" type="number" min="0" max="400" value="30" />
+
+			<label>Nombre de tours</label>
+				<input id="in_nb_turns" type="text" min="1" value="1000"  />
+
+			<label id="lbl_speed">Vitesse de jeu : 100</label>
+				<input id="in_speed" type="range" min="50" max="1200" step="50" value="100" />
+
+			<button id="btn_play">Jouer</button>
+			<button id="btn_random">Aléatoire !!!</button>
+		</div>
+
+		<div id="panel_stats"></div>
+
+		<script src="game.js"></script>
+	</body>
+</html>

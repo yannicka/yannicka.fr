@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Funclass</title>
+
+		<style>
+			html, body {
+				margin: 0;
+				padding: 0;
+			}
+
+			pre {
+				background-color: rgb(230, 230, 230);
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>Funclass</h1>
+
+		<h2>Introduction</h2>
+		<p>Todo</p>
+
+		<h2>Types</h2>
+		<pre>
+Bool
+Num
+Str
+List<T>
+Dict<K, V>
+Func<(T n)*>:T
+Obj
+Var
+		</pre>
+
+		<h2>Fonctions</h2>
+		<h3>Créer une fonction</h3>
+		<pre>
+add(Num a, Num b) { a + b }
+add(Str a, Str b) { a + b }
+sub(Num a, Num b) { a - b }
+sub(Str a, Num b) { a - b }
+		</pre>
+
+		<h3>Appels de fonctions</h3>
+		<pre>
+mon_num = add(2, 5) # 7
+mon_str = add("Hello", " World!") # "Hello World!"
+		</pre>
+
+		<h3>Fonctions anonymes</h3>
+		<pre>
+ma_func = (Num a, Num b) { a + b }
+appel_func((Num a, Num b) {
+
+})
+		</pre>
+
+		<h3>Surcharge des opérateurs</h3>
+		<pre>
+:+(T1 a, T2 b) { }
+		</pre>
+
+		<h2>Conditions</h2>
+		<h3>Condition if</h3>
+		<pre>
+if ma_func(3, 2) == 5 {
+	ma_func = (Num a, Num b) { a - b }
+} else if ma_func(55, 100) == 100 {
+	# ...
+} else {
+	# ...
+}
+		</pre>
+
+		<h3>Opérateurs</h3>
+		<pre>
+<, <=, >, >=, ==, <>, and, or, not
+		</pre>
+
+		<h3>Switch</h3>
+
+		<p>Le switch permet de tester plusieurs valeurs d'une variable ou expression.</p>
+
+		<pre>
+switch ma_var {
+	when "a" {
+		# ...
+	}
+
+	when "c", "d" {
+		# ...
+	}
+
+	else {
+		# ...
+	}
+}
+		</pre>
+
+		<p>Le switch fonctionne comme une expression et peut être assigné à une variable. Dans ce cas là, tous les cas possibles doivent être testés :</p>
+
+		<pre>
+a = switch ma_var {
+	when "a" {
+		0;
+	}
+
+	when "c", "d" {
+		1;
+	}
+
+	else {
+		2;
+	}
+}
+		</pre>
+
+		<h2>Boucles</h2>
+		<h3>Boucle simple</h3>
+		<pre>
+loop {
+	# ...
+}
+		</pre>
+
+		<pre>
+mon_num = 5
+loop mon_num {
+	# ...
+}
+		</pre>
+
+		<h3>Boucle while</h3>
+		<pre>
+i = 5
+while i-- {
+	# i = 4
+	# i = 3
+	# ...
+}
+		</pre>
+
+		<pre>
+i = 5
+do {
+	# i = 5
+	# i = 4
+	# ...
+} while i--
+		</pre>
+
+		<h3>Boucle itérative</h3>
+		<pre>
+for i from 0 to 5 by 1 {
+	# i = 0
+	# i = 1
+	# ...
+}
+		</pre>
+
+		<h3>Boucle sur une liste</h3>
+		<pre>
+ma_list = [ 2, 3, 5, 7, 11, 13 ]
+for k, v in ma_list {
+	# k = 0, v = 2
+	# k = 1, v = 3
+	# ...
+}
+		</pre>
+
+		<h3>Boucle sur un dictionnaire</h3>
+		<pre>
+mon_dict = { "a" = "b", "b" = "c", "c" = "d" }
+for k, v in mon_dict {
+	# k = "a", v = "b"
+	# k = "b", v = "c"
+	# ...
+}
+		</pre>
+
+		<h3>Boucle sur une chaîne</h3>
+		<pre>
+mon_str = "Hello"
+for k, v in mon_str {
+	# k = 0, v = "H"
+	# k = 1, v = "e"
+	# ...
+}
+		</pre>
+
+		<h2>Evalutions booléennes</h2>
+		<pre>
+Evaluer à no  : no, 0, 0.0, "", "0", [],  {}, nil
+Evaluer à yes : le reste
+		</pre>
+
+		<h2>Classes</h2>
+		<pre>
+class Point {
+	new(Num x, Num y) {
+		@x = x
+		@y = y
+	}
+
+	add(Point2D p) {
+		@x += p.x
+		@y += p.y
+	}
+
+	add(Num x, Num y) {
+		@x += x
+		@y += y
+	}
+}
+
+class Point3D {
+	new(Num x, Num y, Num z) {
+		super(x, y)
+		@z = z
+	}
+
+	add(Point3D p) {
+		@x += p.x
+		@y += p.y
+		@z += p.z
+	}
+
+	add(Num x, Num y, Num z) {
+		@x += x
+		@y += y
+		@z += z
+	}
+}
+		</pre>
+	</body>
+</head>

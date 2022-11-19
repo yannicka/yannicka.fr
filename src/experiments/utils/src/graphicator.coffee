@@ -1,0 +1,5 @@
+(->
+	graphicator = ->
+
+	window.graphicator = graphicator
+)

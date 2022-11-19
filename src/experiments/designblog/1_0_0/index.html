@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Super blog" />
+
+		<title>Blog</title>
+
+		<style type="text/css">
+			@import url('http://fonts.googleapis.com/css?family=Alef:400,700');
+			html,body{margin:0;padding:0;width:100%;height:100%;}
+			body{display:-webkit-box;display:-moz-box;display:-o-box;display:-ms-box;display:box;-webkit-box-orient:horizontal;-moz-box-orient:horizontal;-o-box-orient:horizontal;-ms-box-orient:horizontal;box-orient:horizontal;-webkit-box-pack:center;-moz-box-pack:center;-o-box-pack:center;-ms-box-pack:center;box-pack:center;font-size:14px;font-family:'Alef','Arial',sans-serif;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAIAAAAmKNuZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAEZJREFUSEvtzLEJADAMA0Hvv1wgI6TwDqmS/pHAAwiuUaGv3W9inTuRnICbk5yAm5OcgJtT2A7qTnICbk5yAm5OcgJuWr8P1sAafHOaH9wAAAAASUVORK5CYII=') repeat fixed;}
+			a{color:#0c6324;text-decoration:none;}a:hover{color:#2a4230;text-decoration:underline;}
+			.justify{text-align:justify;}
+			[class^="icon-"]{display:inline-block;width:12px;height:12px;vertical-align:middle;}
+			.icon-fb{background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAE9JREFUKFPNi8ERABAMBNOXVvy0oRhNqO/I44wJwdPN7GeTFQCScsUL+nt8tlPnBrupfwpmfw2slxALFApv/BsB8cb7EhDO+h+D7tzIAkAaRceOjoAtHEIAAAAASUVORK5CYII=');}
+			.icon-tw{background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFJJREFUKFNj+P//P4PGqof/icEgtUQrhmGcGpABjA+i4RpgAJ0PAzBxFBsIARQNhABMHdE2YNUAwtgAsjxBJyErBmGcTkIWR8YYTiKESUwa/xkAHyfB8hiOObgAAAAASUVORK5CYII=');}
+			.icon-gp{background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAGdJREFUKFONkoEJwDAIBF2iA3SKztDpul63+WLAcLU2KDyo+YsQY5LsPg915N5hzlEYZ+4TdO3bSzSUAA9d0atiCXBi5Eugqi1uYHiPAOvxSoSyOWvugBANWa09UK09UA58vsYfIMkeQJWEdp8yAogAAAAASUVORK5CYII=');}
+			.likes{margin:0;padding:0 4px;display:inline-block;padding-left:18px;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAF1JREFUKFNj+P//P0kYQ2BmLsN/ZIwuj8IBK7hVj4LRNcEZcMW7gDQyRtMEJpAVCwoKwhXD2UiaKNeAFVNsAzZN2BSjaABhuCYkjKwYhOEMGAYpQMbo8igcwvg/AwBNm4lYPFzA4AAAAABJRU5ErkJggg==') center left no-repeat;background-color:#dcdcdc;background-position:4px center;}
+			.likesactive{background-color:#ffc800;}
+			#page{margin:0;padding:0;height:100%;max-width:1000px;display:-webkit-box;display:-moz-box;display:-o-box;display:-ms-box;display:box;-webkit-box-orient:vertical;-moz-box-orient:vertical;-o-box-orient:vertical;-ms-box-orient:vertical;box-orient:vertical;-webkit-box-flex:1;-moz-box-flex:1;-o-box-flex:1;-ms-box-flex:1;box-flex:1;}#page header{margin:0;padding:5px;background-color:#ffffff;}#page header h1{margin:0;padding:0;font-size:34px;font-weight:900;}#page header h1 a{color:#2c2c2c;}
+			#page header p{margin:0;padding:0;color:#585858;}
+			#page #main{display:-webkit-box;display:-moz-box;display:-o-box;display:-ms-box;display:box;-webkit-box-orient:horizontal;-moz-box-orient:horizontal;-o-box-orient:horizontal;-ms-box-orient:horizontal;box-orient:horizontal;-webkit-box-flex:1;-moz-box-flex:1;-o-box-flex:1;-ms-box-flex:1;box-flex:1;}#page #main #about,#page #main #menu{display:-webkit-box;display:-moz-box;display:-o-box;display:-ms-box;display:box;-webkit-box-orient:vertical;-moz-box-orient:vertical;-o-box-orient:vertical;-ms-box-orient:vertical;box-orient:vertical;margin:0;padding:5px 0;width:200px;vertical-align:middle;}#page #main #about .menu,#page #main #menu .menu{margin:0 0 5px 0;padding:0;background-color:#ffffff;}#page #main #about .menu .title,#page #main #menu .menu .title{margin:0;padding:2px;background-color:#eeeeee;font-size:20px;font-weight:900;color:#2c2c2c;}#page #main #about .menu .title.red,#page #main #menu .menu .title.red{background-color:#c83c14;color:#ffffff;}
+			#page #main #about .menu .title.green,#page #main #menu .menu .title.green{background-color:#64dc64;}
+			#page #main #about .menu .title.blue,#page #main #menu .menu .title.blue{background-color:#78dcff;}
+			#page #main #about .menu .title.purple,#page #main #menu .menu .title.purple{background-color:#6e006e;color:#ffffff;}
+			#page #main #about .menu p,#page #main #menu .menu p{margin:5px;}
+			#page #main #about .menu ul,#page #main #menu .menu ul{margin:5px 0 5px 5px;padding:0;list-style-type:none;list-style-position:inside;}#page #main #about .menu ul li:before,#page #main #menu .menu ul li:before{margin:0 4px 0 0;content:"\00BB";}
+			#page #main #about .menu:last-child,#page #main #menu .menu:last-child{margin:0;}
+			#page #main #content{margin:0;padding:5px;-webkit-box-flex:1;-moz-box-flex:1;-o-box-flex:1;-ms-box-flex:1;box-flex:1;}#page #main #content article{margin:5px 0;padding:5px;background-color:#ffffff;}#page #main #content article:last-child,#page #main #content article:first-child{margin:0;}
+			#page #main #content article h2{margin:0;padding:0;font-size:24px;}
+			#page #main #content article p{margin:10px 0;padding:0;}
+			#page #main #content article .infos{text-align:right;font-size:12px;color:#585858;}
+			#page #main #content #navpage a{margin:0;padding:4px 8px;display:inline-block;background-color:#ffffff;}#page #main #content #navpage a:last-child{float:right;}
+			#page footer{display:block;margin:0;padding:5px;color:#585858;font-size:12px;text-align:center;}
+			@media screen and (max-width:800px){#page #main{-webkit-box-orient:vertical;-moz-box-orient:vertical;-o-box-orient:vertical;-ms-box-orient:vertical;box-orient:vertical;}#page #main #content{padding:0;}}
+		</style>
+	</head>
+
+	<body>
+		<div id="page">
+			<header>
+				<h1><a href="index.html">Blog</a></h1>
+				<p>O&ugrave; tu apprends pleins de trucs de ouf, comme comment devenir un h&eacute;ros !</p>
+			</header>
+
+			<div id="main">
+				<aside id="about">
+					<div class="menu">
+						<div class="title purple">&Agrave; propos</div>
+
+						<p>Je m'appelle Yannick et je d&eacute;veloppe des sites webs depuis 2007. Je suis un grand passionn&eacute; de l'informatique et ai donc des connaissances dans plusieurs langages de programmation, notamment le PHP et le Javascript. Mais j'ai aussi quelques connaissances en ActionScript 3, en Haxe et en Pascal.</p>
+					</div>
+				</aside>
+
+				<section id="content">
+					<article>
+						<h2><a href="#">Comment qu'on fait &ccedil;a ?</a></h2>
+
+						<p class="justify"><strong>Edit</strong> : Quelqu'un dans les commentaires me demande pourquoi mes articles datent de 1813 : enfaite c'est juste parce que je trouve &ccedil;a cool !</p>
+
+						<p class="justify">Bien pour faire &ccedil;a, il suffit de... mais y a pas de vrai question ! Tu te fous de moi ?! D&eacute;gage de mon blog ! Ah, c'est moi qui ai donner ce titre ? Mince... Donc je devrais m'insulter ? Non, je ne penses pas parce que en fait... ben... au revoir !</p>
+
+						<div class="infos">
+							<a href="#" class="likes">3</a> &ndash; <a href="#">5 commentaires</a> &ndash; <span class="date">Le 18 mai 1813</span>
+						</div>
+					</article>
+
+					<article>
+						<h2><a href="#">Je veux &ecirc;tre un h&eacute;ros !</a></h2>
+
+						<p class="justify">Bonjour chers lecteurs, aujourd'hui nous allons apprendre comment devenir un h&eacute;ros.</p>
+
+						<p class="justify">Enfaite c'est tr&egrave;s simple, il y a seulement 342 r&egrave;gles &agrave; suivre :</p>
+
+						<ul>
+							<li><strong>&Ecirc;tre propre</strong> : lavez-vous r&eacute;guli&egrave;rement. Prenez une douche et non un bain, &ccedil;a &eacute;conomise de l'eau,</li>
+							<li><strong>Se laver les dents</strong> r&eacute;guli&egrave;rement, sinon vous allez tuer des gens avec votre haleine de <a href="http://fr.wikipedia.org/wiki/Chacal">chacal</a>,</li>
+							<li><strong>Devenir comp&eacute;tent</strong> dans plein de domaines : pompier, policier, plombier, etc. Sinon vous &ecirc;tes un gros nul,</li>
+							<li><strong>&Ecirc;tre ouvert d'esprit</strong> : Sachez appr&eacute;cier toutes les cultures que rencontrer... Vous ne croyez pas au P&egrave;re No&euml;l ? Les enfants y croient pourtant, alors vous aussi !,</li>
+							<li><strong>TOUJOURS porter des chaussettes</strong>, parce que les chaussettes c'est important,</li>
+							<li><strong>&Ecirc;tre malin</strong> : un homme maintien deux bateaux en otage avec des bombes, que faites-vous ?,</li>
+							<li><strong>Savoir appr&eacute;cier la vie</strong> car sinon vous allez vite devenir d&eacute;moraliser,</li>
+							<li>(suite supprim&eacute;e car c'est juste un design, pas un vrai blog)</li>
+						</ul>
+
+						<p class="justify">D&eacute;sormais vous pourrez &ecirc;tre un h&eacute;ros ! :)</p>
+
+						<div class="infos">
+							<a href="#" class="likes likesactive">7856</a> &ndash; <a href="#">2585 commentaires</a> &ndash; <span class="date">Le 17 mai 1813</span>
+						</div>
+					</article>
+
+					<article>
+						<h2><a href="#">Coco popo</a></h2>
+
+						<p class="justify">Bonjour les amis :)</p>
+
+						<p class="justify">Je voulais juste expliquer un truc aux personnes qui apprennent des langages de programmation : une fois que vous avez compris les principes de base de la programmation, pour en apprendre un autre il ne suffit plus que d'apprendre la syntaxe et on peut tr&egrave;s rapidement conna&icirc;tre plusieurs langages.</p>
+
+						<p>Le mieux, pour apprendre &agrave; utiliser un langage, une fois qu'on conna&icirc;t la syntaxe, est de regarder des codes source de programmes programm&eacute;s dans le langage que vous voulez apprendez &agrave; utiliser en se posant des questions simples, comme par exemple "Comment a t-il fait pour que quand on clic l&agrave;, il se passe &ccedil;a ?".</p>
+
+						<p>Bien s&ucirc;r tout cela n'est bas&eacute; que sur ma propre exp&eacute;rience et n'est donc pas forc&eacute;ment la meilleure fa&ccedil;on de faire.</p>
+
+						<div class="infos">
+							<a href="#" class="likes">0</a> &ndash; <a href="#">587874 commentaires</a> &ndash; <span class="date">Le 16 mai 1813</span>
+						</div>
+					</article>
+
+					<div id="navpage">
+						<a href="#">&lt; Page pr&eacute;c&eacute;dente</a>
+						<a href="#">Page suivante &gt;</a>
+					</div>
+				</section>
+
+				<aside id="menu">
+					<div class="menu">
+						<div class="title red">Cat&eacute;gories</div>
+
+						<nav>
+							<ul>
+								<li><a href="#">G&eacute;n&eacute;ral</a></li>
+								<li><a href="#">Jeux</a></li>
+								<li><a href="#">Design</a></li>
+							</ul>
+						</nav>
+					</div>
+
+					<div class="menu">
+						<div class="title green">Derniers articles</div>
+
+						<nav>
+							<ul>
+								<li><a href="#">Comment qu'on fait &ccedil;a ?</a></li>
+								<li><a href="#">Je veux &ecirc;tre un h&eacute;ros !</a></li>
+								<li><a href="#">Coco popo</a></li>
+							</ul>
+						</nav>
+					</div>
+
+					<div class="menu">
+						<div class="title blue">Suivez-moi</div>
+
+						<nav>
+							<ul>
+								<li><a href="#"><span class="icon-fb"></span> Facebook</a></li>
+								<li><a href="#"><span class="icon-tw"></span> Twitter</a></li>
+								<li><a href="#"><span class="icon-gp"></span> Google+</a></li>
+							</ul>
+						</nav>
+					</div>
+				</aside>
+			</div>
+
+			<footer>
+				(c) Pif - 2013
+			</footer>
+		</div>
+	</body>
+</html>

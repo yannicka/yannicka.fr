@@ -1,0 +1,38 @@
+h2#notes Notes
+
+h3 Packages
+
+ul
+	li <code>use</code> pour importer un package
+	li Un package importe avec lui toutes ses variables, ses constantes, ses énumérations, ses interfaces et ses classes
+
+p Voici les portés des variables, fonctions, classes, interfaces et énumérations dans les packages :
+
+ul
+	li variables/fonctions = <code>private</code> par défaut
+	li classes, interfaces, enumérations = <code>public</code> par défaut
+	li <code>private</code> = limité au fichier
+	li <code>protected</code> = limité au package
+	li <code>public</code> = ouvert
+
+h3 Références
+
+ul
+	li Par défaut, les valeurs sont passées par référence dans les fonctions et méthodes. Il faut utiliser le mot-clé <code>noref</code> pour copier la valeur
+	li Ailleurs, il faut spécifier que l'on passe la valeur par référence avec le mot-clé <code>ref</code>
+
+h3 Entrée du programme
+
+p L'entrée du programme s'effectue dans une fonction nommée <code>main</code> que vous pouvez placer où vous voulez :
+
+pre.
+	Num main(List&lt;Str&gt; args) {
+		# votre code
+
+		return 0
+	}
+
+h3 Metadata
+
+pre.
+	@nom_meta(cle=value)

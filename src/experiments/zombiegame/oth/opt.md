@@ -1,0 +1,15 @@
+http://jsperf.com/create-multiple-variable
+http://jsperf.com/funcvar-or-function/2
+http://jsperf.com/var-or-object/2
+http://jsperf.com/addeventlister-in-function-or-funcvar/2
+http://jsperf.com/change-value-of-var-or-object
+http://jsperf.com/foreach-or-for-2
+http://jsperf.com/date-now-or-date-gettime
+http://jsperf.com/better-method-to-create-multiple-var-with-same-value
+http://jsperf.com/call-object-attribute-or-var
+http://jsperf.com/object-func-or-func
+http://jsperf.com/one-or-two-functions
+http://jsperf.com/create-initialize-and-modify-or-all-in-the-same-time
+http://jsperf.com/call-method-or-function
+http://jsperf.com/create-multiple-variable
+http://jsperf.com/var-var-var-or-var

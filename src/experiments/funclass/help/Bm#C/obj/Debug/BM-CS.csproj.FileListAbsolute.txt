@@ -1,0 +1,6 @@
+c:\users\yannick\documents\visual studio 2012\Projects\BM-CS\BM-CS\bin\Debug\BM-CS.exe.config
+c:\users\yannick\documents\visual studio 2012\Projects\BM-CS\BM-CS\bin\Debug\BM-CS.exe
+c:\users\yannick\documents\visual studio 2012\Projects\BM-CS\BM-CS\bin\Debug\BM-CS.pdb
+c:\users\yannick\documents\visual studio 2012\Projects\BM-CS\BM-CS\obj\Debug\BM-CS.csprojResolveAssemblyReference.cache
+c:\users\yannick\documents\visual studio 2012\Projects\BM-CS\BM-CS\obj\Debug\BM-CS.exe
+c:\users\yannick\documents\visual studio 2012\Projects\BM-CS\BM-CS\obj\Debug\BM-CS.pdb
