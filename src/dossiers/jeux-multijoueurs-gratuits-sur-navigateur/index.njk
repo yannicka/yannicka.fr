@@ -10,8 +10,8 @@ toc: false
 {% macro show_games(games) %}
   <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
     {% for game in games %}
-      <article class="bg-gray-100 dark:bg-gray-600 rounded shadow-lg">
-        <a href="{{ game.url }}" class="block p-4 pt-2 bg-gray-200 dark:bg-gray-700 rounded-t transition hover:bg-gray-300 dark:hover:bg-gray-900 focus-visible:outline-none focus-visible:ring">
+      <article class="bg-stone-100 dark:bg-gray-600 rounded shadow-lg">
+        <a href="{{ game.url }}" class="block p-4 pt-2 bg-stone-200 dark:bg-gray-700 rounded-t transition hover:bg-stone-300 dark:hover:bg-gray-900 focus-visible:outline-none focus-visible:ring">
           <header class="flex">
             <div>
               <h3 class="underline font-bold text-xl">
@@ -35,7 +35,7 @@ toc: false
         </a>
 
         <div class="p-4">
-          <div class="text-gray-700 dark:text-gray-300 text-sm">
+          <div class="text-stone-700 dark:text-gray-300 text-sm">
             <div class="flex items-center">
               <div>
                 {# Heroicon name: small users #}
@@ -54,7 +54,7 @@ toc: false
             {% if game.description %}
               {% markdown %}{{ game.description }}{% endmarkdown %}
             {% else %}
-              <span class="text-gray-700 dark:text-gray-300 text-sm italic">
+              <span class="text-stone-700 dark:text-gray-300 text-sm italic">
                 Pas de description.
               </span>
             {% endif %}
@@ -68,7 +68,7 @@ toc: false
 {% markdown %}
 
 <details class="group bg-white dark:bg-gray-900 rounded">
-  <summary class="cursor-pointer bg-gray-200 dark:bg-gray-700 p-3 rounded group-open:rounded-none group-open:rounded-t transition hover:bg-gray-300 dark:hover:bg-gray-600 focus-visible:outline-none focus-visible:ring">
+  <summary class="cursor-pointer bg-stone-200 dark:bg-gray-700 p-3 rounded group-open:rounded-none group-open:rounded-t transition hover:bg-stone-300 dark:hover:bg-gray-600 focus-visible:outline-none focus-visible:ring">
     Voir l'introduction et les critères d'admissibilité d'un jeu
   </summary>
 

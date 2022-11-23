@@ -3,10 +3,10 @@ module.exports = {
     'public/**/*.html'
   ],
   theme: {
-    fontFamily: {
-      'source-serif-pro': ['Source Serif Pro', 'serif'],
-    },
     extend: {
+      fontFamily: {
+        'source-serif-pro': ['Source Serif Pro', 'serif'],
+      },
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
