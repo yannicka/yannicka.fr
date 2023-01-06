@@ -1,5 +1,5 @@
 ---
-title: "Ma base de connaissances : Logseq"
+title: "Logseq : ma base de connaissances"
 created_at: 2023-01-06
 ---
 
@@ -17,7 +17,7 @@ tombé sur [Logseq](https://logseq.com/).
 
 Le principe de Logseq est de pouvoir gérer une liste de fichiers, connectés les
 uns aux autres via des liens. Il n'y a pas d'arborescence de fichiers avec des
-dossiers comme on retrouve sur pas mal d'outils. Ici, tout les fichier sont à
+dossiers comme on retrouve sur pas mal d'outils. Ici, tous les fichier sont à
 plat, et les liens forment ce qui est appelé un graphe. Le graphe permet de voir
 les connexions entres les différentes pages.
 
@@ -40,9 +40,10 @@ informations et de mes mettre en forme selon des conditions.
 Il y aurait évidemment plus à dire sur cet outil, néanmoins je vous invite à
 l'essayer pour vous faire votre propre idée.
 
-Personnellement j'utilise cet outil pour noter des tâches à faire dans un futur
-plus ou moins proche, pour noter les remboursements que je dois aux gens et
-noter des idées de cadeaux.
+De mon côté je l'utilise pour noter des tâches à faire dans un futur plus ou
+moins proche, pour noter les remboursements que je dois aux gens et noter des
+idées de cadeaux. Bien sûr à l'avenir il est probable que je lui trouve d'autres
+usages, car actuellement ça ne fait que quelques semaines que je l'utilise.
 
 Afin de synchroniser les données entre mon ordinateur et mon téléphone,
 j'utilise [Syncthing](https://syncthing.net/). Cela me permet d'avoir une
@@ -58,4 +59,5 @@ entre mon ordinateur et mon téléphone.
 
 Note : le principe de Logseq ne lui est pas propre. Néanmoins il est le premier
 outil entièrement libre que j'ai trouvé, et qui correspondait à mes différents
-besoins.
+besoins. Il n'est pas impossible qu'à l'avenir je change d'outil, selon
+l'évolution de Logseq et des outils du même genre.
