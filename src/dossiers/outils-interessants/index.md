@@ -25,9 +25,10 @@ mes outils préférés en haut de liste.
 - [vim](https://www.vim.org/)
   (bonus : [SpaceVim](https://spacevim.org/),
            [fugitive.vim](https://github.com/tpope/vim-fugitive), et bien d'autres)
-- [Neovim](https://neovim.io/) (mêmes bonus que pour vim,
+- [Neovim](https://neovim.io/) (mêmes bonus que pour vim +
            [LunarVim](https://www.lunarvim.org/),
            [NvChad](https://nvchad.com/))
+- [Helix](http://helix-editor.com/)
 - [Sublime Text](https://www.sublimetext.com/) *(propriétaire)*
 - [Notepad++](https://notepad-plus-plus.org/) *(Windows seulement)*
 - [Geany](https://www.geany.org/)
@@ -44,7 +45,6 @@ mes outils préférés en haut de liste.
     - [Magit](https://magit.vc/)
     - [Magit Forge](https://github.com/magit/forge/)
 - [Micro](https://micro-editor.github.io/)
-- [Helix](https://helix-editor.com/)
 - [Kakoune](https://kakoune.org/)
 - [GNOME Text Editor](https://gitlab.gnome.org/GNOME/gnome-text-editor)
 - [Thonny](https://thonny.org/) *(pour Python)*
@@ -56,7 +56,9 @@ mes outils préférés en haut de liste.
 - [Howl](https://howl.io/)
 - [Zed](https://zed.dev/) *(à venir)*
 - [Lapce](https://lapce.dev/)
+- [Lite XL](https://lite-xl.com/)
 - [Notepadqq](https://notepadqq.com/) *(à l'abandon)*
+- [JetBrains Fleet](https://www.jetbrains.com/fleet/) *(propriétaire)*
 
 ## IDE
 
@@ -117,7 +119,7 @@ moins connus.*
 - [Krita](https://krita.org/)
 - [GIMP](https://www.gimp.org/)
 - [MyPaint](http://mypaint.org/)
-- [Paint.NET](https://www.getpaint.net/) *(propriétaire)*
+- [Paint.NET](https://www.getpaint.net/) *(propriétaire)* *(pour Windows seulement)*
 - [Drawing (GNOME)](https://maoschanz.github.io/drawing/)
 - [Drawpile](https://drawpile.net/)
 - [Pinta](https://www.pinta-project.com/)
@@ -132,6 +134,7 @@ Adobe XD, etc.*
 - [Quant-UX](https://quant-ux.com/)
 - [Gravit](https://gravit.io/) *(propriétaire)*
 - [Akira](https://github.com/akiraux/Akira) *(en cours de développement)*
+- [Krita](https://krita.org/)
 
 ### Pixel art
 
@@ -195,7 +198,7 @@ Adobe XD, etc.*
 
 *Alternatives à Gmail, Outlook, La Poste, etc.*
 
-- [Protonmail](https://protonmail.com/)
+- [Proton Mail](https://protonmail.com/)
 - [Tutanota](https://tutanota.com/)
 - [Fastmail](https://www.fastmail.com/) (trois euros par mois)
 - [mailbox.org](https://mailbox.org/) (un euro par mois)
@@ -225,13 +228,13 @@ Adobe XD, etc.*
 - [Thunderbird](https://www.thunderbird.net/)
 - [Claws Mail](https://www.claws-mail.org/)
 - [Mailpile](https://www.mailpile.is/)
-- [Thunderbird](https://www.thunderbird.net/)
 - [K-9 Mail](https://k9mail.app/) *(Android seulement)*
 - [FairEmail](https://email.faircode.eu/) *(Android seulement)*
 
 ### Relai
 
 - [Firefox Relay](https://relay.firefox.com/)
+- [SimpleLogin](https://simplelogin.io/)
 
 ## Discussion
 
@@ -246,6 +249,9 @@ Adobe XD, etc.*
 - [Session](https://getsession.org/)
 - [Threema](https://threema.ch/)
 - [Briar](https://briarproject.org/)
+
+### Anonymes
+
 - [hack.chat](https://github.com/hack-chat/main) (bonus : [instance
   officielle](https://hack.chat/))
 - [Chitchatter](https://chitchatter.im/)
@@ -258,9 +264,9 @@ Adobe XD, etc.*
 
 ### Centré sur la vidéo
 
-*Alternatives à Zoom, Microsoft Teams, etc.*
+*Alternatives à Zoom, Microsoft Teams, Google Meet, etc.*
 
-- [Jitsi](https://jitsi.org/)
+- [Jitsi Meet](https://jitsi.org/jitsi-meet/)
 - [MiroTalk SFU](https://sfu.mirotalk.org/)
 - [Element Call](https://call.element.io/)
 
@@ -448,6 +454,7 @@ Adobe XD, etc.*
 - [Taskade](https://www.taskade.com/) *(propriétaire)*
 - [Milanote](https://www.milanote.com/) *(propriétaire)*
 - [Quip](https://quip.com/) *(propriétaire)*
+- [Logseq](https://logseq.com/)
 - [Anytype](https://anytype.io/)
 - [AFFiNE](https://affine.pro/)
 - [Slite](https://slite.com/)
@@ -456,6 +463,10 @@ Adobe XD, etc.*
 - [AppFlowy.IO](https://www.appflowy.io/)
 - [Bangle.io](https://bangle.io/)
 - [WorkFlowwy](https://workflowy.com/) *(propriétaire)*
+- [SiYuan](https://github.com/siyuan-note/siyuan)
+- [Silver Bullet](https://silverbullet.md/)
+- [Athens](https://www.athensresearch.org/)
+- [Tana](https://tana.inc/) *(propriétaire)*
 
 ### Bases de connaissances
 
@@ -482,6 +493,7 @@ Adobe XD, etc.*
 
 - [Baserow](https://baserow.io/)
 - [NocoDB](https://www.nocodb.com/)
+- [APITable](https://apitable.com/)
 - [Memento Database](https://mementodatabase.com/) *(propriétaire)*
 
 ### Modélisation
@@ -515,6 +527,8 @@ Adobe XD, etc.*
 - [ToolJet](https://tooljet.com/)
 - [Immudb](https://codenotary.com/technologies/immudb/)
 - [Appsmith](https://www.appsmith.com/)
+- [ILLA Cloud](https://www.illacloud.com/)
+- [PocketBase](https://pocketbase.io/)
 
 ## Formulaires
 
@@ -733,6 +747,7 @@ Adobe XD, etc.*
 - [Dokku](https://dokku.com/)
 - [CapRover](https://caprover.com/)
 - [Porter](https://github.com/porter-dev/porter)
+- [piku](https://github.com/piku/piku)
 
 ## Gestion de projet
 
