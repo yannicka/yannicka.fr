@@ -1,0 +1,49 @@
+---
+layout: base.njk
+---
+
+<article>
+  <h1 class="text-4xl text-green-900 font-bold sm:text-6xl">
+    {{ title }}
+  </h1>
+
+  <ul class="flex flex-wrap py-4 gap-1 flex-col sm:flex-row">
+    <li class="pr-8">
+      Par {{ author }}
+    </li>
+
+    {% if updated_at %}
+      <li {% if created_at %}title="Publié initialement le {{ created_at|format_date }}"{% endif %} class="pr-8">
+        Mis à jour le <time datetime="{{ updated_at }}">{{ updated_at|format_date }}</time>
+      </li>
+    {% elif created_at %}
+      <li class="pr-8">
+        Publié le <time datetime="{{ created_at }}">{{ created_at|format_date }}</time>
+      </li>
+    {% endif %}
+
+    <li>
+      Licence {{ license }}
+    </li>
+  </ul>
+
+  {% if obsolete %}
+    <p class="bg-blue-100 rounded">
+      <strong>
+        Ce dossier n'est plus mis à jour et peut être obsolète.
+      </strong>
+    </p>
+  {% endif %}
+
+  {% if draft %}
+    <p class="px-4 py-3 bg-blue-100 dark:bg-blue-900 rounded">
+      <strong>
+        Ce dossier est en brouillon et est donc incomplet.
+      </strong>
+    </p>
+  {% endif %}
+
+  <div class="prose max-w-none dark:prose-invert">
+    {{ content | safe }}
+  <div>
+</article>

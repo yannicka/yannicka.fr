@@ -5,7 +5,7 @@ full_title: Yannicka — Accueil
 
 <h1 class="text-center">
   <span class="font-extrabold break-words text-4xl">
-    <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-600">
+    <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-emerald-800">
       — Hey, bienvenue !  —
     </span> 🐧
   </span>
@@ -48,6 +48,24 @@ full_title: Yannicka — Accueil
         <p class="mt-1">
           {{- dossier.data.short_description -}}
         </p>
+      </div>
+    </a>
+  {%- endfor -%}
+</div>
+
+<div class="prose dark:prose-invert">
+  <h2 class="mb-4 mt-8">
+    Blog
+  </h2>
+</div>
+
+<div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+  {%- for article in collections.articles -%}
+    <a class="flex group bg-white dark:bg-gray-700 rounded transition transform hover:bg-gray-200 dark:hover:bg-gray-600 shadow-md shadow-gray-300 dark:shadow-gray-800 focus-visible:ring" href="{{ article.url | url }}">
+      <div class="flex-1 p-3">
+        <h3 class="text-lg font-bold leading-6">
+          {{- article.data.title -}}
+        </h3>
       </div>
     </a>
   {%- endfor -%}
