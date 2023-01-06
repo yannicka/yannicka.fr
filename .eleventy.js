@@ -37,6 +37,16 @@ module.exports = function (config) {
     return dossiers
   })
 
+  config.addCollection('articles', function(collection) {
+    let articles = collection.getFilteredByTag('article')
+
+    articles.sort((a, b) => {
+      return new Date(b.data.created_at) - new Date(a.data.created_at)
+    })
+
+    return articles
+  })
+
   config.addCollection('project', function(collection) {
     let projects = collection.getFilteredByTag('project')
 
