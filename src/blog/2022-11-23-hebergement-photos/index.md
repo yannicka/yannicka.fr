@@ -1,5 +1,5 @@
 ---
-title: "Infomaniak kDrive : Hébergement de mes photos"
+title: "Infomaniak kDrive : hébergement de mes photos"
 created_at: 2022-11-23
 ---
 
