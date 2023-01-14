@@ -5,7 +5,7 @@ full_title: Yannicka — Accueil
 
 <h1 class="text-center">
   <span class="font-extrabold break-words text-4xl">
-    <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-emerald-800">
+    <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-emerald-800 dark:from-green-300 dark:to-green-200">
       — Hey, bienvenue !  —
     </span> 🐧
   </span>
@@ -29,7 +29,7 @@ full_title: Yannicka — Accueil
 
 <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
   {%- for dossier in collections.dossier -%}
-    <a class="flex group bg-white dark:bg-gray-700 rounded transition transform hover:bg-gray-200 dark:hover:bg-gray-600 shadow-md shadow-gray-300 dark:shadow-gray-800 focus-visible:ring" href="{{ dossier.url | url }}">
+    <a class="flex group border-t-stone-100 border border-r-stone-200 border-b-stone-200 border-l-stone-100 dark:bg-gray-700 rounded transition transform hover:bg-gray-200 dark:hover:bg-gray-600 dark:shadow-gray-800 focus-visible:ring" href="{{ dossier.url | url }}">
       <div class="hidden rounded-l bg-cover bg-no-repeat bg-center relative group-hover:rounded group-hover:rotate-6 transition group-hover:shadow-md group-hover:shadow-gray-300 dark:group-hover:shadow-gray-800 sm:w-36 sm:block" style="background-image: url('{{ '/dossiers/' + dossier.fileSlug + '/illustration.png' | url }}');"></div>
 
       <div class="flex-1 p-3">
@@ -48,24 +48,6 @@ full_title: Yannicka — Accueil
         <p class="mt-1">
           {{- dossier.data.short_description -}}
         </p>
-      </div>
-    </a>
-  {%- endfor -%}
-</div>
-
-<div class="prose dark:prose-invert">
-  <h2 class="mb-4 mt-8">
-    Blog
-  </h2>
-</div>
-
-<div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
-  {%- for article in collections.articles -%}
-    <a class="flex group bg-white dark:bg-gray-700 rounded transition transform hover:bg-gray-200 dark:hover:bg-gray-600 shadow-md shadow-gray-300 dark:shadow-gray-800 focus-visible:ring" href="{{ article.url | url }}">
-      <div class="flex-1 p-3">
-        <h3 class="text-lg font-bold leading-6">
-          {{- article.data.title -}}
-        </h3>
       </div>
     </a>
   {%- endfor -%}
