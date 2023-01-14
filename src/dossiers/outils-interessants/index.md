@@ -1,7 +1,7 @@
 ---
 title: Outils intéressants
 created_at: 2015-10-02
-updated_at: 2022-09-14
+updated_at: 2023-01-14
 short_description: >
   Grande liste d'outils (sites web, logiciels, etc.) intéressants pour pleins de
   domaines différents.
@@ -57,6 +57,7 @@ mes outils préférés en haut de liste.
 - [Zed](https://zed.dev/) *(à venir)*
 - [Lapce](https://lapce.dev/)
 - [Lite XL](https://lite-xl.com/)
+- [ecode](https://github.com/SpartanJ/ecode)
 - [Notepadqq](https://notepadqq.com/) *(à l'abandon)*
 - [JetBrains Fleet](https://www.jetbrains.com/fleet/) *(propriétaire)*
 
@@ -568,6 +569,7 @@ Adobe XD, etc.*
 - [Librem 5](https://puri.sm/shop/librem-5/)
 - [PinePhone](https://www.pine64.org/pinephone/)
 - [PineTime](https://www.pine64.org/pinetime/)
+- [Mobian](https://mobian-project.org/)
 
 ## Stores
 
@@ -1022,10 +1024,12 @@ Adobe XD, etc.*
 
 ## Gestionnaire de version
 
-*Alternatives à GitHub.*
+*Alternatives à GitHub **ou** git.*
 
 - [GitLab](https://about.gitlab.com/)
 - [SourceHut](https://sourcehut.org/)
+- [Forgejo](https://forgejo.org/)
+- [Codeberg](https://codeberg.org/)
 - [Gitea](https://gitea.io/)
 - [Launchpad](https://launchpad.net/)
 - [Fossil](https://www.fossil-scm.org/)
