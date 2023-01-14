@@ -39,7 +39,7 @@ if (searchResults) {
             })
 
             searchResults.innerHTML = `
-                <div class="p-4 bg-white rounded dark:bg-gray-900">
+                <div class="p-4 bg-gradient-to-br from-transparent to-black/5 border-t border-t-stone-200 rounded dark:bg-gray-900">
                     <p class="font-bold">
                         ${searchResult.hits.length} résultats pour « ${term} » :
                     </p>
