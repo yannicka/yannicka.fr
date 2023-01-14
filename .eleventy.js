@@ -141,6 +141,15 @@ module.exports = function (config) {
     }).format(date)
   })
 
+  /* Filtres */
+  config.addFilter('format_date_yyyy_mm_dd', date => {
+    return new Intl.DateTimeFormat('fr-FR', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+    }).format(date)
+  })
+
   config.addFilter('format_month', date => {
     return new Intl.DateTimeFormat('fr-FR', {
       year: 'numeric',

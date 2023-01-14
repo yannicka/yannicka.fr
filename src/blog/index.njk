@@ -1,0 +1,26 @@
+---
+layout: base.njk
+title: Blog
+---
+
+<div class="prose dark:prose-invert">
+  <h2 class="mb-4 mt-8">
+    Blog
+  </h2>
+</div>
+
+<ul class="list-dashed">
+  {%- for article in collections.articles -%}
+    <li class="my-4">
+      <a href="{{ article.url | url }}">
+        <div class="text-xs">
+          {{- article.data.created_at | format_date_yyyy_mm_dd }}
+        </div>
+
+        <div class="underline">
+          {{ article.data.title -}}
+        </div>
+      </a>
+    </li>
+  {%- endfor -%}
+</ul>
