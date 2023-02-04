@@ -969,3 +969,4 @@ Voici quelques ressources plus génériques :
   (SEO) ?](https://www.axenet.fr/infographie-seo/) ;
 - [Optimisation pour les moteurs de recherche –
   Wikipédia](https://fr.wikipedia.org/wiki/Optimisation_pour_les_moteurs_de_recherche).
+- [FullStackOptimization](https://www.fullstackoptimization.com/)
