@@ -18,17 +18,12 @@ mes outils préférés en haut de liste.
 
 ## Éditeur de texte
 
+### Interface graphique
+
 - [Visual Studio Code](https://code.visualstudio.com/)
   (bonus : [VSCodium](https://vscodium.com/),
            [Visual Studio Code - OSS](https://flathub.org/apps/details/com.visualstudio.code-oss))
 - [Kate](https://kate-editor.org/)
-- [vim](https://www.vim.org/)
-  (bonus : [SpaceVim](https://spacevim.org/),
-           [fugitive.vim](https://github.com/tpope/vim-fugitive), et bien d'autres)
-- [Neovim](https://neovim.io/) (mêmes bonus que pour vim +
-           [LunarVim](https://www.lunarvim.org/),
-           [NvChad](https://nvchad.com/))
-- [Helix](http://helix-editor.com/)
 - [Sublime Text](https://www.sublimetext.com/) *(propriétaire)*
 - [Notepad++](https://notepad-plus-plus.org/) *(Windows seulement)*
 - [Geany](https://www.geany.org/)
@@ -44,11 +39,8 @@ mes outils préférés en haut de liste.
     - [Org mode](https://orgmode.org/)
     - [Magit](https://magit.vc/)
     - [Magit Forge](https://github.com/magit/forge/)
-- [Micro](https://micro-editor.github.io/)
-- [Kakoune](https://kakoune.org/)
 - [GNOME Text Editor](https://gitlab.gnome.org/GNOME/gnome-text-editor)
 - [Thonny](https://thonny.org/) *(pour Python)*
-- [nano](https://www.nano-editor.org/)
 - [Textadept](https://orbitalquark.github.io/textadept/)
 - [CudaText](https://cudatext.github.io/)
 - [elementary Code](https://github.com/elementary/code)
@@ -60,6 +52,20 @@ mes outils préférés en haut de liste.
 - [ecode](https://github.com/SpartanJ/ecode)
 - [Notepadqq](https://notepadqq.com/) *(à l'abandon)*
 - [JetBrains Fleet](https://www.jetbrains.com/fleet/) *(propriétaire)*
+
+### Terminal
+
+- [vim](https://www.vim.org/)
+  (bonus : [SpaceVim](https://spacevim.org/),
+           [fugitive.vim](https://github.com/tpope/vim-fugitive), et bien d'autres)
+- [Neovim](https://neovim.io/) (mêmes bonus que pour vim +
+           [LunarVim](https://www.lunarvim.org/),
+           [NvChad](https://nvchad.com/))
+- [Helix](http://helix-editor.com/)
+- [Micro](https://micro-editor.github.io/)
+- [Kakoune](https://kakoune.org/)
+- [nano](https://www.nano-editor.org/)
+- [Emacs](https://www.gnu.org/software/emacs/emacs.html)
 
 ## IDE
 
@@ -98,8 +104,10 @@ moins connus.*
 - [Clojure](https://clojure.org/) & [ClojureScript](https://clojurescript.org/)
 - [OCaml](https://ocaml.org/)
 - [Haskell](https://www.haskell.org/)
-- [Elm](https://elm-lang.org/)
+- [Elm](https://elm-lang.org/) (bonus : [Elm Land](https://elm.land/))
 - [ReScript](https://rescript-lang.org/)
+- [Gleam](https://gleam.run/)
+- [Gren](https://gren-lang.org/)
 
 ### Comment créer un langage de programmation
 
@@ -115,7 +123,7 @@ moins connus.*
 
 ### Dessin matriciel
 
-*Spécialisés dans le matriciel.*
+*Spécialisés dans le matriciel. Alternatives à Adobe PhotoShop, etc.*
 
 - [Krita](https://krita.org/)
 - [GIMP](https://www.gimp.org/)
@@ -398,6 +406,8 @@ Adobe XD, etc.*
     [liste de instances connues](https://github.com/ether/etherpad-lite/wiki/Sites-that-run-Etherpad-Lite))
 - [CodiMD](https://github.com/hackmdio/codimd)
   (instance : [démo](https://demo.codimd.org/))
+- [HedgeDoc](https://hedgedoc.org/)
+  (instance : [démo](https://demo.hedgedoc.org/))
 - [BookStack](https://www.bookstackapp.com/)
 - [HackMD](https://hackmd.io/) *(propriétaire)*
 - [Dropbox Paper](https://www.dropbox.com/paper) *(propriétaire)*
@@ -645,6 +655,7 @@ Adobe XD, etc.*
 - [PlanetHoster](https://www.planethoster.com/)
 - [Scaleway](https://www.scaleway.com/)
 - [Deta](https://www.deta.sh/)
+- [Fly](https://fly.io/)
 
 ### Système de commentaires
 
@@ -895,6 +906,7 @@ Adobe XD, etc.*
 - [tig](https://jonas.github.io/tig/)
 - [Sublime Merge](https://www.sublimemerge.com/) *(propriétaire)*
 - [fugitive.vim](https://github.com/tpope/vim-fugitive)
+- [GitFiend](https://gitfiend.com/)
 - [GitKraken](https://www.gitkraken.com/) *(propriétaire)*
 - Bonus : [une liste non exhaustive des clients
   git](https://git-scm.com/downloads/guis)
@@ -1092,6 +1104,8 @@ Adobe XD, etc.*
 - [PureOS](https://pureos.net/)
 - [Liri](https://liri.io/)
 - [GNOME OS](https://os.gnome.org/)
+- [Vanilla](https://vanillaos.org/)
+- [blendOS](https://blendos.co/)
 
 ### Moniteur
 
@@ -1273,6 +1287,7 @@ Adobe XD, etc.*
 
 *Alternatives à Google Maps.*
 
+- [Organic Maps](https://organicmaps.app/)
 - [OsmAnd](https://osmand.net/)
 - [Magic Earth](https://www.magicearth.com/)
 - [OpenStreetMap](https://www.openstreetmap.org/)
@@ -1282,7 +1297,6 @@ Adobe XD, etc.*
 - [Mapillary](https://www.mapillary.com/) *(alternative à Street View)*
 - [Maps.me](https://maps.me/)
 - [Transportr](https://transportr.app/)
-- [Organic Maps](https://organicmaps.app/)
 
 ## Traduction
 
