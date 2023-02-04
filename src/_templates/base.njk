@@ -41,15 +41,15 @@
       </div>
     </div>
 
-    <div class="js-mobile-menu bg-white dark:bg-gray-900 border-b-2 border-black dark:border-gray-700 z-50" style="display: none;">
-      <div class="grid grid-cols-3 items-center">
-        <a href="{{ '/' | url }}" class="w-max p-4 text-xl font-bold hover:underline focus-visible:outline-none focus-visible:ring" title="Page d'accueil">
+    <div class="js-mobile-menu fixed z-50 left-0 right-0 bg-white dark:bg-gray-900 border-b-2 border-black dark:border-gray-700" style="display: none;">
+      <div class="flex items-center px-2">
+        <a href="{{ '/' | url }}" class="w-max px-2 py-0.5 text-xl font-bold hover:underline focus-visible:outline-none focus-visible:ring" title="Page d'accueil">
           Yannicka
         </a>
 
-        <div class="col-span-2 justify-self-end">
+        <div class="col-span-2 ml-auto">
           <button class="js-mobile-menu-close-button group inline-block px-5 py-4 focus-visible:outline-none focus-visible:ring">
-            <span>⨉</span>
+            <span class="inline-block translate-y-0.5 mr-1">⨉</span>
             <span class="align-middle group-hover:underline">Fermer le menu</span>
           </button>
         </div>
@@ -69,7 +69,7 @@
     </div>
 
     <header class="js-header sticky top-0 bg-stone-50/70 dark:bg-gray-800/80 backdrop-blur-lg">
-      <div class="max-w-4xl m-auto border-b border-stone-200 dark:border-gray-700 rounded">
+      <div class="max-w-4xl m-auto border-b border-stone-200 dark:border-gray-700 lg:rounded">
         <div class="flex items-center px-2">
           <a href="{{ '/' | url }}" class="relative inline-flex overflow-hidden items-center group w-max px-2 py-0.5 mr-2 text-xl font-bold hover:underline focus-visible:outline-none focus-visible:ring" title="Page d'accueil">
             <span class="absolute left-0 w-6 h-12 duration-700 -translate-x-10 rotate-[20deg] group-hover:translate-x-36 bg-black"></span>

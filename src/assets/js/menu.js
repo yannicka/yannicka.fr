@@ -6,11 +6,9 @@ const mobileMenuCloseButton = document.querySelector('.js-mobile-menu-close-butt
 if (mobileMenu && mobileMenuOpenButton && mobileMenuCloseButton) {
     mobileMenuOpenButton.addEventListener('click', () => {
         mobileMenu.style.display = 'block'
-        header.style.display = 'none'
     })
 
     mobileMenuCloseButton.addEventListener('click', () => {
         mobileMenu.style.display = 'none'
-        header.style.display = 'block'
     })
 }
