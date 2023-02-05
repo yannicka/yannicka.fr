@@ -3,13 +3,11 @@ layout: base.njk
 title: Blog
 ---
 
-<div class="prose dark:prose-invert">
-  <h2 class="mb-4 mt-8">
-    Blog
-  </h2>
-</div>
+<h1 class="text-6xl">
+  Blog
+</h1>
 
-<div class="grid grid-cols-1 gap-6 mt-4">
+<div class="grid grid-cols-1 gap-6 mt-6">
   {%- for article in collections.articles -%}
     {%- set card = {
       type: 'article',
