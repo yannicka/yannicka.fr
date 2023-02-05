@@ -7,6 +7,7 @@
   font-weight: 200;
   font-style: normal;
   src: url('../fonts/source-serif-pro/SourceSerifPro-ExtraLight.otf.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face{
@@ -14,6 +15,7 @@
   font-weight: 200;
   font-style: italic;
   src: url('../fonts/source-serif-pro/SourceSerifPro-ExtraLightIt.otf.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face{
@@ -21,6 +23,7 @@
   font-weight: 300;
   font-style: normal;
   src: url('../fonts/source-serif-pro/SourceSerifPro-Light.otf.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face{
@@ -28,6 +31,7 @@
   font-weight: 300;
   font-style: italic;
   src: url('../fonts/source-serif-pro/SourceSerifPro-LightIt.otf.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face{
@@ -35,6 +39,7 @@
   font-weight: 400;
   font-style: normal;
   src: url('../fonts/source-serif-pro/SourceSerifPro-Regular.otf.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face{
@@ -42,6 +47,7 @@
   font-weight: 400;
   font-style: italic;
   src: url('../fonts/source-serif-pro/SourceSerifPro-It.otf.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face{
@@ -49,6 +55,7 @@
   font-weight: 600;
   font-style: normal;
   src: url('../fonts/source-serif-pro/SourceSerifPro-Semibold.otf.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face{
@@ -56,6 +63,7 @@
   font-weight: 600;
   font-style: italic;
   src: url('../fonts/source-serif-pro/SourceSerifPro-SemiboldIt.otf.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face{
@@ -63,6 +71,7 @@
   font-weight: 700;
   font-style: normal;
   src: url('../fonts/source-serif-pro/SourceSerifPro-Bold.otf.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face{
@@ -70,6 +79,7 @@
   font-weight: 700;
   font-style: italic;
   src: url('../fonts/source-serif-pro/SourceSerifPro-BoldIt.otf.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face{
@@ -77,6 +87,7 @@
   font-weight: 900;
   font-style: normal;
   src: url('../fonts/source-serif-pro/SourceSerifPro-Black.otf.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face{
@@ -84,6 +95,7 @@
   font-weight: 900;
   font-style: italic;
   src: url('../fonts/source-serif-pro/SourceSerifPro-BlackIt.otf.woff2') format('woff2');
+  font-display: swap;
 }
 
 /* Tailwind */
