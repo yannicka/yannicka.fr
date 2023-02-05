@@ -27,7 +27,7 @@ full_title: Yannicka — Accueil
 
 <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 mt-4">
   {%- for dossier in collections.dossier -%}
-    <a class="block p-3 border border-t-stone-200 border-l-stone-200 border-b-stone-300 border-r-stone-300 dark:border-t-gray-700 dark:border-l-gray-700 dark:border-b-gray-900 dark:border-r-gray-900 rounded transition hover:bg-stone-200 dark:hover:bg-gray-700" href="{{ dossier.url | url }}">
+    <a class="block p-3 border border-t-stone-200 border-l-stone-200 border-b-stone-300 border-r-stone-300 dark:border-t-gray-700 dark:border-l-gray-700 dark:border-b-gray-600 dark:border-r-gray-600 rounded transition hover:bg-stone-200 dark:hover:bg-gray-700" href="{{ dossier.url | url }}">
       <h3 class="text-lg font-bold leading-6">
         {{- dossier.data.title -}}
       </h3>
