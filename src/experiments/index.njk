@@ -26,20 +26,18 @@ experiments: [32,4096]
   aucune, préférant me concentrer sur les vrais projets.
 </p>
 
-<div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 columns-3">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
   {%- for experiment in experiments.experiments -%}
-    <a href="{{ experiment.folder | url }}" class="flex bg-white dark:bg-gray-700 rounded transition transform hover:bg-gray-200 dark:hover:bg-gray-600 shadow-md shadow-gray-300 dark:shadow-gray-800 focus-visible:ring">
-      <div class="flex-1 p-3">
-        <h2 class="text-lg font-bold leading-6">
-          {{- experiment.name -}}
-        </h2>
+    <a href="{{ experiment.folder | url }}" class="block p-3 border border-t-stone-200 border-l-stone-200 border-b-stone-300 border-r-stone-300 dark:border-t-gray-700 dark:border-l-gray-700 dark:border-b-gray-600 dark:border-r-gray-600 rounded transition hover:bg-stone-200 dark:hover:bg-gray-700">
+      <h3 class="text-lg font-bold leading-6">
+        {{- experiment.name -}}
+      </h3>
 
-        {% if experiment.short_description %}
-          <p class="mt-1">
-            {{- experiment.short_description -}}
-          </p>
+      {% if experiment.short_description %}
+        <p class="mt-1">
+          {{- experiment.short_description -}}
+        </p>
         {% endif %}
-      </div>
     </a>
   {%- endfor -%}
 </div>
