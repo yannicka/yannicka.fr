@@ -1,5 +1,6 @@
 ---
 title: Age of Rice
+short_description: Mini-jeu web de type RTS.
 tags: project
 publish_month: 2013-07-01
 ---

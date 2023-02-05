@@ -1,5 +1,6 @@
 ---
 title: FunPvP
+short_description: Boutique Minecraft.
 tags: project
 publish_month: 2017-03-01
 source_code_url: https://gitlab.com/yannicka/mc-website-python-skeleton

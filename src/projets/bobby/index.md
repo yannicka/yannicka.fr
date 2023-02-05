@@ -1,5 +1,6 @@
 ---
 title: Bobby
+short_description: Petit jeu web 2D de réflexion.
 tags: project
 publish_month: 2019-12-18
 google_play_url: https://play.google.com/store/apps/details?id=fr.yannicka.bobby
