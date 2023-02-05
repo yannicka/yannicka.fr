@@ -9,18 +9,16 @@ title: Blog
   </h2>
 </div>
 
-<ul class="list-dashed">
+<div class="grid grid-cols-1 gap-6 mt-4">
   {%- for article in collections.articles -%}
-    <li class="my-4">
-      <a href="{{ article.url | url }}">
-        <div class="text-xs">
-          {{- article.data.created_at | format_date_yyyy_mm_dd }}
-        </div>
+    {%- set card = {
+      type: 'article',
+      url: article.url | url,
+      title: article.data.title,
+      created_at: article.data.created_at,
+      short_description: article.data.short_description
+    } -%}
 
-        <div class="underline">
-          {{ article.data.title -}}
-        </div>
-      </a>
-    </li>
+    {%- include '../_templates/_partials/card.njk' -%}
   {%- endfor -%}
-</ul>
+</div>

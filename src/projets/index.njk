@@ -9,19 +9,15 @@ title: Projets
 
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
   {%- for project in collections.project -%}
-    <a href="{{ project.url | url }}" class="block p-3 border border-t-stone-200 border-l-stone-200 border-b-stone-300 border-r-stone-300 dark:border-t-gray-700 dark:border-l-gray-700 dark:border-b-gray-600 dark:border-r-gray-600 rounded transition hover:bg-stone-200 dark:hover:bg-gray-700">
-      <h3 class="text-lg font-bold leading-6">
-        {{- project.data.title -}}
-      </h3>
+    {%- set card = {
+      type: 'project',
+      url: project.url | url,
+      title: project.data.title,
+      publish_month: project.data.publish_month,
+      short_description: project.data.short_description
+    } -%}
 
-      <p class="text-xs text-gray-700 dark:text-gray-300">
-        Publié en {{ project.data.publish_month | format_month }}
-      </p>
-
-      <p class="mt-1">
-        {{- project.data.short_description -}}
-      </p>
-    </a>
+    {%- include '../_templates/_partials/card.njk' -%}
   {%- endfor -%}
 </div>
 

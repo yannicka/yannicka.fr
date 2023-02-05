@@ -27,22 +27,15 @@ full_title: Yannicka — Accueil
 
 <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 mt-4">
   {%- for dossier in collections.dossier -%}
-    <a class="block p-3 border border-t-stone-200 border-l-stone-200 border-b-stone-300 border-r-stone-300 dark:border-t-gray-700 dark:border-l-gray-700 dark:border-b-gray-600 dark:border-r-gray-600 rounded transition hover:bg-stone-200 dark:hover:bg-gray-700" href="{{ dossier.url | url }}">
-      <h3 class="text-lg font-bold leading-6">
-        {{- dossier.data.title -}}
-      </h3>
+    {%- set card = {
+      type: 'dossier',
+      url: dossier.url | url,
+      title: dossier.data.title,
+      created_at: dossier.data.created_at,
+      updated_at: dossier.data.updated_at,
+      short_description: dossier.data.short_description
+    } -%}
 
-      <p class="text-xs text-gray-700 dark:text-gray-300">
-        {% if dossier.data.updated_at %}
-          mis à jour le {{ dossier.data.updated_at | format_date }}
-        {% elif dossier.data.created_at %}
-          mis à jour le {{ dossier.data.created_at | format_date }}
-        {% endif %}
-      </p>
-
-      <p class="mt-1">
-        {{- dossier.data.short_description -}}
-      </p>
-    </a>
+    {%- include './_templates/_partials/card.njk' -%}
   {%- endfor -%}
 </div>
