@@ -1,27 +1,31 @@
-<a href="{{- card.url -}}" class="block p-3 border border-t-stone-200 border-l-stone-200 border-b-stone-300 border-r-stone-300 dark:border-t-gray-700 dark:border-l-gray-700 dark:border-b-gray-600 dark:border-r-gray-600 rounded transition hover:bg-stone-200 dark:hover:bg-gray-700">
-  <h3 class="text-lg font-bold leading-6">
-    {{- card.title -}}
-  </h3>
+<article>
+  <a href="{{- card.url -}}" class="block p-3 border border-t-stone-200 border-l-stone-200 border-b-stone-300 border-r-stone-300 dark:border-t-gray-700 dark:border-l-gray-700 dark:border-b-gray-600 dark:border-r-gray-600 rounded transition hover:bg-stone-200 dark:hover:bg-gray-700">
+    <header>
+      <h3 class="text-lg font-bold leading-6">
+        {{- card.title -}}
+      </h3>
 
-  {%- if card.type in ['dossier', 'article', 'project'] -%}
-    <p class="text-xs text-gray-700 dark:text-gray-300">
-      {%- if card.type === 'dossier' -%}
-        {%- if card.updated_at -%}
-          mis à jour le {{ card.updated_at | format_date -}}
-        {%- elif card.created_at -%}
-          mis à jour le {{ card.created_at | format_date -}}
-        {%- endif -%}
-      {%- elif card.type === 'article' -%}
-        {{- card.created_at | format_date -}}
-      {%- elif card.type === 'project' -%}
-        Publié en {{ card.publish_month | format_month -}}
+      {%- if card.type in ['dossier', 'article', 'project'] -%}
+        <p class="text-xs text-gray-700 dark:text-gray-300">
+          {%- if card.type === 'dossier' -%}
+            {%- if card.updated_at -%}
+              mis à jour le <time datetime="{{ card.updated_at | format_date_iso -}}">{{ card.updated_at | format_date -}}</time>
+            {%- elif card.created_at -%}
+              mis à jour le <time datetime="{{ card.created_at | format_date_iso -}}">{{ card.created_at | format_date -}}</time>
+            {%- endif -%}
+          {%- elif card.type === 'article' -%}
+            <time datetime="{{ card.created_at | format_date_iso -}}">{{- card.created_at | format_date -}}</time>
+          {%- elif card.type === 'project' -%}
+            Publié en {{ card.publish_month | format_month -}}
+          {%- endif -%}
+        </p>
       {%- endif -%}
-    </p>
-  {%- endif -%}
+    </header>
 
-  {%- if card.short_description -%}
-    <p class="mt-1">
-      {{- card.short_description -}}
-    </p>
-  {%- endif -%}
-</a>
+    {%- if card.short_description -%}
+      <p class="mt-1">
+        {{- card.short_description -}}
+      </p>
+    {%- endif -%}
+  </a>
+</article>
