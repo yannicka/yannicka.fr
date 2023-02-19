@@ -11,17 +11,21 @@ class LunrIndex {
     const result = []
 
     for (const b of c) {
-        let title = b.data.title
+      let content = b.content
+      content = content.replace(/<[^>]*>?/gm, '') // Supprime les balises HTML
+      content = content.replace(/\s{2,}|\r|\n/gm, ' ') // Nettoie les espaces
 
-        if (title) {
-          title = title.toString()
+      let title = b.data.title
 
-          result.push({
-            title: title,
-            url: b.url,
-            content: b.templateContent,
-          })
-        }
+      if (title) {
+        title = title.toString()
+
+        result.push({
+          title: title,
+          url: b.url,
+          content: content,
+        })
+      }
     }
 
     return JSON.stringify(result)
