@@ -7,7 +7,7 @@ title: Projets
   Projets
 </h1>
 
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
+<article class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
   {%- for project in collections.project -%}
     {%- set card = {
       type: 'project',
@@ -19,7 +19,7 @@ title: Projets
 
     {%- include '../_templates/_partials/card.njk' -%}
   {%- endfor -%}
-</div>
+</article>
 
 <h2 class="text-3xl mt-8 mb-4">
   Expérimentations

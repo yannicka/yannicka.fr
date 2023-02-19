@@ -158,6 +158,17 @@ module.exports = function (config) {
     }).format(date)
   })
 
+  config.addFilter('date', date => {
+    return new Intl.DateTimeFormat('fr-FR', {
+      year: 'numeric',
+      month: 'long',
+    }).format(date)
+  })
+
+  config.addShortcode('date', (date, format) => {
+    return date.format(format)
+  })
+
   /* Retour */
   return {
     dir: {

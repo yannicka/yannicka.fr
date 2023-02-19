@@ -11,7 +11,7 @@ full_title: Yannicka — Accueil
   <span aria-hidden="true">🐧</span>
 </h1>
 
-<div class="max-w-lg mt-6 mx-auto">
+<section class="max-w-lg mt-6 mx-auto">
   <p>
     Bienvenue sur mon site personnel. Ici vous trouverez les articles que j'ai rédigé et des projets que j'ai développé durant ma vie.
   </p>
@@ -19,23 +19,27 @@ full_title: Yannicka — Accueil
   <p class="mt-4">
     Je suis principalement développeur PHP <span aria-hidden="true">🐘</span> professionnellement, et plutôt développeur TypeScript/JavaScript pour mes projets personnels. Mon site est donc très orienté vers le web.
   </p>
-</div>
+</section>
 
-<h2 class="mt-6 text-3xl font-bold">
-  Articles
-</h2>
+<article aria-labelledby="html-title-articles">
+  <header>
+    <h2 class="mt-6 text-3xl font-bold" id="html-title-articles">
+      Articles
+    </h2>
+  </header>
 
-<div class="grid grid-cols-1 gap-6 lg:grid-cols-2 mt-4">
-  {%- for dossier in collections.dossier -%}
-    {%- set card = {
-      type: 'dossier',
-      url: dossier.url | url,
-      title: dossier.data.title,
-      created_at: dossier.data.created_at,
-      updated_at: dossier.data.updated_at,
-      short_description: dossier.data.short_description
-    } -%}
+  <section class="grid grid-cols-1 gap-6 lg:grid-cols-2 mt-4">
+    {%- for dossier in collections.dossier -%}
+      {%- set card = {
+        type: 'dossier',
+        url: dossier.url | url,
+        title: dossier.data.title,
+        created_at: dossier.data.created_at,
+        updated_at: dossier.data.updated_at,
+        short_description: dossier.data.short_description
+      } -%}
 
-    {%- include './_templates/_partials/card.njk' -%}
-  {%- endfor -%}
-</div>
+      {%- include './_templates/_partials/card.njk' -%}
+    {%- endfor -%}
+  </section>
+</article>

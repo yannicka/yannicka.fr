@@ -35,14 +35,14 @@
 
   <body class="bg-stone-50 text-gray-800 font-source-serif-pro dark:bg-gray-800 dark:text-gray-100">
     <div class="fixed z-50 top-4 left-4">
-      <a href="#content" class="block bg-white text-black border-2 border-black sr-only focus-visible:not-sr-only">
+      <a href="#content" class="block bg-white text-black border-2 border-black sr-only focus-visible:not-sr-only" aria-label="Aller au contenu principal">
         <span class="block px-6 py-4">
           Aller au contenu principal
         </span>
       </a>
     </div>
 
-    <header class="js-header sticky top-0 bg-stone-50/70 dark:bg-gray-800/80 backdrop-blur-lg">
+    <header role="banner" class="js-header sticky top-0 bg-stone-50/70 dark:bg-gray-800/80 backdrop-blur-lg">
       <div class="max-w-3xl mx-auto border-b border-stone-200 dark:border-gray-700 lg:rounded">
         <div class="flex items-center px-2">
           <a href="{{ '/' | url }}" class="relative inline-flex overflow-hidden items-center group w-max px-2 py-0.5 mr-2 text-xl font-bold hover:underline" title="Page d'accueil">
@@ -59,8 +59,11 @@
           </nav>
 
           <div class="hidden ml-auto mr-3 sm:block">
+            <label for="search-desktop" class="sr-only">Rechercher</label>
+
             <input type="text"
                    name="search"
+                   id="search-desktop"
                    class="input-search px-2 py-1 bg-white/70 border border-gray-300/70 dark:bg-gray-700/70 dark:border-gray-500/70"
                    placeholder="Rechercher..."
                    size="16">
@@ -68,7 +71,7 @@
 
           <div class="sm:hidden ml-auto">
             <button class="js-mobile-menu-open-button group inline-block px-5 py-4">
-              <span class="align-middle">☰</span>
+              <span class="align-middle" aria-hidden="true">☰</span>
               <span class="align-middle group-hover:underline">Menu</span>
             </button>
           </div>
@@ -99,15 +102,18 @@
       </nav>
 
       <div class="block px-4 py-2">
+        <label for="search-mobile" class="sr-only">Rechercher</label>
+
         <input type="text"
                name="search"
+               id="search-mobile"
                class="input-search px-2 py-1 bg-white/70 border border-gray-300/70 w-full dark:bg-gray-700/70 dark:border-gray-500/70"
                placeholder="Rechercher...">
       </div>
     </div>
 
     <div class="max-w-3xl mx-auto p-4">
-      <div id="js-search-results"></div>
+      <section id="js-search-results"></section>
     </div>
 
     <main class="max-w-3xl mx-auto p-4" id="content">
@@ -115,12 +121,35 @@
     </main>
 
     <footer class="max-w-3xl mx-auto px-4 py-8 text-center">
-      <p>
-        Yannicka ·
-        2013 - 2023 ·
-        <a href="{{ '/mentions-legales/' | url }}" class="underline">Mentions légales</a> ·
-        <a href="{{ '/a-propos/' | url }}" class="underline">À propos</a>
-      </p>
+      <ul class="flex gap-2 justify-center">
+        <li>
+          Yannicka
+        </li>
+
+        <li aria-hidden="true">
+          ·
+        </li>
+
+        <li>
+          2013 - 2023
+        </li>
+
+        <li aria-hidden="true">
+          ·
+        </li>
+
+        <li>
+          <a href="{{ '/mentions-legales/' | url }}" class="underline">Mentions légales</a>
+        </li>
+
+        <li aria-hidden="true">
+          ·
+        </li>
+
+        <li>
+          <a href="{{ '/a-propos/' | url }}" class="underline">À propos</a>
+        </li>
+      </ul>
     </footer>
 
     <script src="{{ '/assets/main.js' | url }}" async></script>
