@@ -45,6 +45,8 @@ module.exports = function (config) {
       return new Date(b.data.created_at) - new Date(a.data.created_at)
     })
 
+    articles = articles.filter(a => a.data.title !== 'Blog')
+
     return articles
   })
 
