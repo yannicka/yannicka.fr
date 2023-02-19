@@ -1,6 +1,11 @@
 ---
 layout: base.njk
 title: Dessins
+nsfw_images:
+  - /dessins/gartic-phone/img/album_1esr7f42b.png
+  - /dessins/gartic-phone/img/album_1ev35v3nk.png
+  - /dessins/gartic-phone/img/album_1f2cr24va.png
+  - /dessins/drawception/img/3X3nDhmMZy-6.png
 ---
 
 <section class="home-section">
@@ -24,14 +29,23 @@ title: Dessins
     temps peut varier selon les modes de jeu.
   </p>
 
+  <div class="pb-4 text-center sm:text-right">
+    <button class="js-nsfw-button bg-stone-200 dark:bg-gray-700 p-3 rounded group-open:rounded-none group-open:rounded-t transition hover:bg-stone-300 dark:hover:bg-gray-600 focus-visible:outline-none focus-visible:ring"></button>
+
+    <p class="text-xs">
+      Ce bouton affichera les images plus... osées.
+    </p>
+  </div>
+
   <div class="grid gap-4 grid-cols-1 md:grid-cols-2">
     {% for drawing in drawings.gartic_phone %}
-      <div>
+      <div class="overflow-hidden">
         <img src="{{ drawing | url }}"
              alt=""
              loading="lazy"
              width="770"
-             height="525">
+             height="525"
+             {% if drawing in nsfw_images %}data-nsfw="nsfw"{% endif %}>
       </div>
     {% endfor %}
   </div>
@@ -49,12 +63,13 @@ title: Dessins
 
   <div class="grid gap-4 grid-cols-1 justify-items-center sm:grid-cols-2 md:grid-cols-3">
     {% for drawing in drawings.drawception %}
-      <div>
+      <div class="overflow-hidden">
         <img src="{{ drawing | url }}"
              alt=""
              loading="lazy"
              width="300"
-             height="250">
+             height="250"
+             {% if drawing in nsfw_images %}data-nsfw="nsfw"{% endif %}>
       </div>
     {% endfor %}
   </div>
