@@ -24,11 +24,11 @@ full_title: Yannicka — Accueil
 <article aria-labelledby="html-title-articles">
   <header>
     <h2 class="mt-6 text-3xl font-bold" id="html-title-articles">
-      Articles
+      Dossiers
     </h2>
   </header>
 
-  <section class="grid grid-cols-1 gap-6 lg:grid-cols-2 mt-4">
+  <section class="grid grid-cols-1 gap-6 md:grid-cols-2 mt-4">
     {%- for dossier in collections.dossier -%}
       {%- set card = {
         type: 'dossier',
