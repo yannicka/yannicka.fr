@@ -1,0 +1,50 @@
+---
+layout: base.njk
+title: Peinture sur impression 3D
+photos:
+  - name: Tortue
+    path: /peinture-impression-3d/img/IMG_20230308_212146.jpg
+    model_url: https://www.thingiverse.com/thing:4691692
+  - name: Koala
+    path: /peinture-impression-3d/img/IMG_20230308_222714.jpg
+    model_url: https://www.thingiverse.com/thing:4550006
+  - name: Krokmou
+    path: /peinture-impression-3d/img/IMG_20230317_163728.jpg
+    model_url: https://www.thingiverse.com/thing:3258780
+---
+
+<section class="home-section">
+  <h1 class="text-6xl">
+    Peinture sur impression 3D
+  </h1>
+
+  <p class="mt-8 mb-4">
+    En mars 2023, j'ai effectué quelques peintures sur impression 3D. Les
+    modèles proviennent de Thingverse. Les impressions 3D ont été faite par un
+    collègue de travail. La peinture est faite par moi.
+  </p>
+
+  <div class="grid gap-4 grid-cols-1 md:grid-cols-2">
+    {% for photo in photos %}
+      <div class="overflow-hidden">
+        <h2 class="text-3xl mb-1">
+          {{ photo.name }}
+        </h2>
+
+        <img src="{{ photo.path | url }}"
+             alt=""
+             loading="lazy"
+             width="770"
+             height="525">
+
+        <p class="mt-1 text-xs">
+          Modèle :
+
+          <a href="{{ photo.model_url }}" class="underline">
+            {{ photo.model_url }}
+          </a>
+        </p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
