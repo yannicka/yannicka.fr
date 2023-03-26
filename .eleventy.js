@@ -9,7 +9,7 @@ module.exports = function (config) {
   config.addPassthroughCopy('src/projets/age-of-rice/src')
   config.addPassthroughCopy('src/projets/switch-color/src')
   config.addPassthroughCopy('src/**/*.{png,jpg,jpeg,gif,svg}')
-  config.addPassthroughCopy('src/experimentations')
+  config.addPassthroughCopy('experimentations')
 
   /* Plugins */
   config.addPlugin(syntaxHighlight)

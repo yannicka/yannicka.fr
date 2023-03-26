@@ -102,6 +102,13 @@ Une sorte de Twitter.
 """
 
 [[experiments]]
+name = "Mortsure"
+folder = "mortsure"
+short_description = """
+Un jeu flash inspiré de Canabalt : courrez le plus loin possible.
+"""
+
+[[experiments]]
 name = "MVSD"
 folder = "mvsd"
 
