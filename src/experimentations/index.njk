@@ -30,7 +30,7 @@ experiments: [32,4096]
   {%- for experiment in experiments.experiments -%}
     {%- set card = {
       type: 'experiment',
-      url: experiment.folder | url,
+      url: experiment.folder | url ~ '/',
       title: experiment.name,
       short_description: experiment.short_description
     } -%}
