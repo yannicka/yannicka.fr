@@ -264,6 +264,7 @@ Adobe XD, etc.*
 - [hack.chat](https://github.com/hack-chat/main) (bonus : [instance
   officielle](https://hack.chat/))
 - [Chitchatter](https://chitchatter.im/)
+- [ChatCrypt](https://www.chatcrypt.com/)
 
 ### Centré sur les équipes
 
