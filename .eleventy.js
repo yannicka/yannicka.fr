@@ -10,6 +10,7 @@ module.exports = function (config) {
   config.addPassthroughCopy('src/projets/switch-color/src')
   config.addPassthroughCopy('src/**/*.{png,jpg,jpeg,gif,svg}')
   config.addPassthroughCopy('experimentations')
+  config.addPassthroughCopy('src/.well-known')
 
   /* Plugins */
   config.addPlugin(syntaxHighlight)
