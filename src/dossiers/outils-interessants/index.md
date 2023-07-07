@@ -39,6 +39,8 @@ mes outils préférés en haut de liste.
     - [Org mode](https://orgmode.org/)
     - [Magit](https://magit.vc/)
     - [Magit Forge](https://github.com/magit/forge/)
+- [Zed](https://zed.dev/)
+- [Lapce](https://lapce.dev/)
 - [GNOME Text Editor](https://gitlab.gnome.org/GNOME/gnome-text-editor)
 - [Thonny](https://thonny.org/) *(pour Python)*
 - [Textadept](https://orbitalquark.github.io/textadept/)
@@ -46,22 +48,20 @@ mes outils préférés en haut de liste.
 - [elementary Code](https://github.com/elementary/code)
 - [Graviton](https://graviton.netlify.app/)
 - [Howl](https://howl.io/)
-- [Zed](https://zed.dev/) *(à venir)*
-- [Lapce](https://lapce.dev/)
 - [Lite XL](https://lite-xl.com/)
 - [ecode](https://github.com/SpartanJ/ecode)
-- [Notepadqq](https://notepadqq.com/) *(à l'abandon)*
 - [JetBrains Fleet](https://www.jetbrains.com/fleet/) *(propriétaire)*
+- [Notepadqq](https://notepadqq.com/) *(n'est plus maintenu)*
 
 ### Terminal
 
+- [Helix](http://helix-editor.com/)
 - [vim](https://www.vim.org/)
   (bonus : [SpaceVim](https://spacevim.org/),
            [fugitive.vim](https://github.com/tpope/vim-fugitive), et bien d'autres)
 - [Neovim](https://neovim.io/) (mêmes bonus que pour vim +
            [LunarVim](https://www.lunarvim.org/),
            [NvChad](https://nvchad.com/))
-- [Helix](http://helix-editor.com/)
 - [Micro](https://micro-editor.github.io/)
 - [Kakoune](https://kakoune.org/)
 - [nano](https://www.nano-editor.org/)
@@ -116,6 +116,11 @@ moins connus.*
 ## Outils de développeurs
 
 - [Sourcegraph](https://about.sourcegraph.com/)
+- [DevPod](https://devpod.sh/) *(alternative à Codespaces)*
+- [Coder](https://coder.com/) *(alternative à Codespaces)*
+- [Gitpod](https://www.gitpod.io/)
+- [Hocus](https://hocus.dev/)
+- [devenv](https://devenv.sh/)
 
 ## Dessin & graphisme
 
@@ -295,6 +300,7 @@ Adobe XD, etc.*
   [Snikket](https://snikket.org/)
   et [autres clients](https://xmpp.org/software/clients.html))
 - [Wire](https://wire.com/)
+- [Linen](https://www.linen.dev/)
 
 ## Lieu de discussion
 
@@ -479,6 +485,11 @@ Adobe XD, etc.*
 - [Silver Bullet](https://silverbullet.md/)
 - [Athens](https://www.athensresearch.org/)
 - [Tana](https://tana.inc/) *(propriétaire)*
+- [BlockSuite](https://blocksuite.affine.pro/)
+- [BlockNote](https://www.blocknotejs.org/)
+- [Chisel Editor](https://egonschiele.github.io/chisel-docs/)
+- [Block Protocol](https://blockprotocol.org/)
+- [Skiff Pages](https://skiff.com/pages)
 
 ### Bases de connaissances
 
@@ -506,6 +517,7 @@ Adobe XD, etc.*
 - [Baserow](https://baserow.io/)
 - [NocoDB](https://www.nocodb.com/)
 - [APITable](https://apitable.com/)
+- [Undb](https://www.undb.xyz/)
 - [Memento Database](https://mementodatabase.com/) *(propriétaire)*
 
 ### Modélisation
@@ -573,6 +585,7 @@ Adobe XD, etc.*
 - [OmniROM](https://omnirom.org/)
 - [/e/OS](https://e.foundation/)
 - [Copperhead](https://copperhead.co/android/)
+- [GrapheneOS](https://grapheneos.org/)
 
 ### Alternatives
 
@@ -617,10 +630,10 @@ Adobe XD, etc.*
 
 ### Design en direct
 
-- [Webflow](https://webflow.com/) *(propriétaire)*
+- [Webstudio](https://webstudio.is/)
 - [Grapedrop](https://grapedrop.com/) *(propriétaire)*
 - [GrapeJS](https://grapesjs.com/) *(ce sur quoi ce base Grapedrop)*
-- [Webstudio](https://webstudio.is/)
+- [Webflow](https://webflow.com/) *(propriétaire)*
 
 ### Police
 
@@ -901,6 +914,7 @@ Adobe XD, etc.*
 - [Git Cola](https://git-cola.github.io/)
 - [Git Gui](https://git-scm.com/docs/git-gui)
 - [Gittyup](https://murmele.github.io/Gittyup/)
+- [Gitnuro](https://gitnuro.jetpackduba.com/)
 - [GitHub Desktop](https://desktop.github.com/) *(Windows et macOS seulement)*
 - [Magit](https://magit.vc/)
 - [lazygit](https://github.com/jesseduffield/lazygit)
