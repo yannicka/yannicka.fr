@@ -91,6 +91,10 @@ name = "LD29"
 folder = "ld29"
 
 [[experiments]]
+name = "Le Sorcier"
+folder = "le-sorcier"
+
+[[experiments]]
 name = "Life is Attack"
 folder = "life_is_attack"
 
