@@ -47,6 +47,10 @@ plusieurs facteurs :
 5. Mon absence de connaissances dans ce domaine ; je suis développeur web et non
    développeur de jeu vidéo.
 
+À la fin, pour que le jeu soit disponible sur Android, je l'ai empaquetté dans
+une vue web dans une application Android. Ce n'est peut-être pas la meilleure
+des méthodes, mais ça a l'avantage d'être simple et rapide à faire.
+
 ## Histoire
 
 Étant donné que j'ai pour habitude d'abandonner mes projets, soit dès l'idée,
