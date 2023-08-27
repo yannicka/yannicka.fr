@@ -140,15 +140,20 @@ moins connus.*
 
 ### Dessin vectoriel
 
-*Spécialisés dans le vectoriel. Alternatives à Adobe Illustrator, Figma, Sketch,
-Adobe XD, etc.*
+*Spécialisés dans le vectoriel. Alternatives à Adobe Illustrator, etc.*
 
 - [Inkscape](https://inkscape.org/)
-- [Penpot](https://penpot.app/)
-- [Quant-UX](https://quant-ux.com/)
 - [Gravit](https://gravit.io/) *(propriétaire)*
-- [Akira](https://github.com/akiraux/Akira) *(en cours de développement)*
 - [Krita](https://krita.org/)
+- [Graphite](https://graphite.rs/)
+
+### Outil de prototypage
+
+*Alternatives à Figma, Sketch, Adobe XD, etc.*
+
+- [Penpot](https://penpot.app/)
+- [Akira](https://github.com/akiraux/Akira) *(en cours de développement)*
+- [Quant-UX](https://quant-ux.com/)
 
 ### Pixel art
 
@@ -398,6 +403,8 @@ Adobe XD, etc.*
 - [Apostrophe](https://gitlab.gnome.org/World/apostrophe)
 - [PanWriter](https://github.com/mb21/panwriter)
 - [Nota](https://nota.md/) *(propriétaire)*
+- [Notes](https://www.get-notes.com/)
+- [Beaver Notes](https://www.beavernotes.com/)
 
 ### Éditeur en ligne
 
@@ -431,6 +438,7 @@ Adobe XD, etc.*
 
 *Alternatives à OneNote.*
 
+- [Notesnook](https://notesnook.com/)
 - [Joplin](https://joplinapp.org/)
 - [Notes-up](https://github.com/Philip-Scott/Notes-up)
 - [QOwnNotes](https://www.qownnotes.org/)
@@ -439,7 +447,6 @@ Adobe XD, etc.*
 - [VNote](https://github.com/tamlok/vnote)
 - [MindForger](https://www.mindforger.com/)
 - [GitBook](https://www.gitbook.com/) *(propriétaire)*
-- [Notesnook](https://notesnook.com/) *(propriétaire)*
 
 ### Autres éditeurs
 
@@ -1081,6 +1088,7 @@ Adobe XD, etc.*
 - [pass](https://www.passwordstore.org/)
 - [Spectre](https://spectre.app/)
 - [Passman](https://www.passman.cc/)
+- [Proton Pass](https://proton.me/pass)
 
 ## Agrégateur RSS
 
