@@ -1,0 +1,198 @@
+class Sprite : Rect {
+	# Vitesse
+	var velocity Point
+
+	# Vie
+	var health double
+
+	# Vie maximum
+	var maxhealth double
+
+	# Animations
+	var animations AnimationManager
+
+	# Position x normalisée
+	var xnorm double
+
+	# Position y normalisée
+	var ynorm double
+
+	# Angle
+	var angle double
+
+	# Affiche le sprite depuis une position donnée
+	var drawFrom Position
+
+	# Le sprite est-il supprimable ?
+	var removable bool
+
+	# Créer un sprite : x, y, largeur et hauteur
+	def new(x double, y double, width int, height int) {
+		super(x, y, width, height)
+
+		velocity = Point.new(0, 0)
+
+		health = 1
+		maxhealth = 1
+
+		angle = 0
+
+		drawFrom = Position.TOP_LEFT # ou Position.MIDDLE
+
+		animations = null
+
+		removable = true
+	}
+
+	# Met à jour le sprite
+	def update(dt double) {
+		if animations != null {
+			animations.update(dt)
+		}
+	}
+
+	# Affiche le sprite
+	def render(ctx Context) {
+		ctx.save
+
+		if drawFrom == Position.MIDDLE {
+			ctx.translate(center.x as int, center.y as int)
+		} else {
+			ctx.translate(x as int, y as int)
+		}
+
+		if angle != 0 {
+			ctx.rotate(angle)
+		}
+
+		if drawFrom == Position.MIDDLE {
+			ctx.translate(-width / 2, -height / 2)
+		}
+
+		if animations != null {
+			animations.render(ctx)
+		} else {
+			ctx.fillStyle = rgb(0, 0, 0)
+			ctx.fillRect(-width / 2, -height / 2, width, height)
+		}
+
+		ctx.restore
+
+		if !RELEASE {
+			ctx.save
+			ctx.translate(center.x as int, center.y as int)
+
+			ctx.fillStyle = rgb(0, 255, 0)
+			ctx.fillRect(-0.5, -0.5, 1, 1)
+
+			ctx.restore
+		}
+	}
+
+	# Charge une image
+	def loadImage(image Image, width int, height int) {
+		animations = AnimationManager.new(image, width, height)
+	}
+
+	# Ajoute une animation
+	def addAnimation(name string, frames List<int>) {
+		animations.addAnimation(name, frames)
+	}
+
+	# Définir la vitesse
+	def setVelocity(x double, y double) {
+		velocity.x = x
+		velocity.y = y
+	}
+
+	# Met à jour la position normalisée
+	def updateNorm {
+		const vx = velocity.x
+		const vy = velocity.y
+
+		var theta double
+
+		if vy == 0 {
+			theta = (vx >= 0 ? 0 : Math.PI)
+		} else if vx == 0 {
+			theta = (vy >= 0 ? Math.PI / 2 : -Math.PI / 2)
+		} else if vx >= 0 {
+			theta = Math.atan(vx / vy)
+		} else {
+			theta = Math.atan(vx / vy) + Math.PI
+		}
+
+		xnorm = Math.cos(theta)
+		ynorm = Math.sin(theta)
+	}
+
+	# Obtenir l'animation courante
+	def getCurrentAnimation Animation {
+		return animations.currentAnimation
+	}
+
+	# Jouer une animation sans la forcer
+	def play(name string) {
+		play(name, false)
+	}
+
+	# Jouer une animation
+	def play(name string, force bool) {
+		var nextAnimation = animations.getAnimation(name)
+
+		if animations.currentAnimation != nextAnimation || force {
+			animations.currentAnimation = nextAnimation
+		}
+	}
+
+	# Obtenir la position du sprite par rapport à la grille du jeu
+	def getTilePosition List<int> {
+		return [
+			x as int / Game.TILE_SIZE,
+			y as int / Game.TILE_SIZE
+		]
+	}
+
+	# L'objet est-il encore « vivant » ?
+	def isDead bool {
+		return health <= 0
+	}
+
+	# Obtention du pourcentage de vie restant
+	def getHealthPercentage double {
+		return health / maxhealth
+	}
+
+	# Baisser la vie
+	def decreaseHealth(value double) {
+		health -= value
+
+		if health < 0 {
+			health = 0
+		}
+	}
+
+	# Monter la vie
+	def increaseHealth(value double) {
+		health += value
+
+		if health > maxhealth {
+			health = maxhealth
+		}
+	}
+
+	# Réiniatiser la vie
+	def resetHealth {
+		health = maxhealth
+	}
+
+	# Tue le sprite
+	def kill {
+		health = 0
+	}
+
+	# Le sprite peut-il être supprimé ?
+	def canBeRemoved bool {
+		return health <= 0 && removable
+	}
+}

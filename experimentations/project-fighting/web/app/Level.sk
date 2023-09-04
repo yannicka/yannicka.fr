@@ -1,0 +1,328 @@
+namespace Level {
+	# Balles
+	var projectiles = List<weapon.projectile.Projectile>.new
+
+	# Joueurs
+	var players = List<Player>.new
+
+	# Blocs
+	var blocks = List<block.Block>.new
+
+	# Murs
+	var walls = List<List<int>>.new
+
+	# Niveau
+	var level Context
+
+	# Traînées
+	var trails = List<Trail>.new
+
+	def getCellValue(x int, y int) int {
+		var value = -1
+
+		if y >= 0 && y < walls.count && walls[y] != null {
+			if x >= 0 && x < walls[y].count && (walls[y] as dynamic)[x] != null {
+				value = walls[y][x]
+			}
+		}
+
+		return value
+	}
+
+	def getTileIndex(x int, y int) int {
+		const top    = getCellValue(x, y - 1)
+		const right  = getCellValue(x + 1, y)
+		const bottom = getCellValue(x, y + 1)
+		const left   = getCellValue(x - 1, y)
+
+		var count = 0
+
+		if top > 0    { count += 1 }
+		if right > 0  { count += 2 }
+		if bottom > 0 { count += 4 }
+		if left > 0   { count += 8 }
+
+		return count
+	}
+
+	def getTileIndexExtended(x int, y int) int {
+		const topLeft      = getCellValue(x - 1, y - 1)
+		const topMiddle    = getCellValue(x, y - 1)
+		const topRight     = getCellValue(x + 1, y - 1)
+		const rightMiddle  = getCellValue(x + 1, y)
+		const bottomRight  = getCellValue(x + 1, y + 1)
+		const bottomMiddle = getCellValue(x, y + 1)
+		const bottomLeft   = getCellValue(x - 1, y + 1)
+		const leftMiddle   = getCellValue(x - 1, y)
+
+		var count = 0
+
+		if topLeft > 0      { count += 1 }
+		if topMiddle > 0    { count += 2 }
+		if topRight > 0     { count += 4 }
+		if rightMiddle > 0  { count += 8 }
+		if bottomRight > 0  { count += 16 }
+		if bottomMiddle > 0 { count += 32 }
+		if bottomLeft > 0   { count += 64 }
+		if leftMiddle > 0   { count += 128 }
+
+		return count
+	}
+
+	# à faire : prendre en compte le rayon
+	def getBlocksAround(circle Circle) List<block.Block> {
+		# Copie de la liste des blocs mais en gardant les références
+		var rects = blocks.slice(0)
+
+		const pos = circle.position / Game.TILE_SIZE
+
+		for x in (pos.x as int) - 2 .. (pos.x as int) + 2 {
+			for y in (pos.y as int) - 2 .. (pos.y as int) + 2 {
+				if getCellValue(x, y) != -1 {
+					var b = block.Wall.new(
+						x * Game.TILE_SIZE,
+						y * Game.TILE_SIZE)
+
+					rects.append(b)
+				}
+			}
+		}
+
+		return rects
+	}
+
+	# Obtenir les joueurs dans un rayon
+	def getPlayersInRay(ray Circle) List<Player> {
+		var playersInRay = List<Player>.new
+
+		for player in players {
+			if Hit.pointHitCircle(player.center, ray) {
+				playersInRay.append(player)
+			}
+		}
+
+		return playersInRay
+	}
+
+	# Obtenir les joueurs dans un rayon
+	def getBlocksInRay(ray Circle) List<block.Block> {
+		var blocksInRay = List<block.Block>.new
+
+		for b in blocks {
+			if Hit.pointHitCircle(b.center, ray) {
+				blocksInRay.append(b)
+			}
+		}
+
+		return blocksInRay
+	}
+
+	# Génère une explosion
+	# à faire : générer une explosion qui correspond à la taille du rayon
+	def launchExplosion(ray Circle) {
+		for _ in 0 .. (ray.radius as int) {
+			var p = Particle.new
+				.position(ray.position)
+				.speed(80, 100)
+				.life(0.4, 0.6)
+				.radius(6, 12)
+				.angle(0, 360)
+				.color(Particle.colors)
+
+			Particle.particles.append(p)
+		}
+	}
+
+	# Génère la carte
+	# à faire : ajouter des bordures au niveau afin qu'il ne soit pas sans fin
+	def generate {
+		var cells = Uint8Array.new(Game.W * Game.H)
+
+		worm(cells, Game.W, Game.H, 0, 0, 3, 5, 500)
+		worm(cells, Game.W, Game.H, Game.W, 0, 3, 5, 500)
+		worm(cells, Game.W, Game.H, 0, Game.H, 3, 5, 500)
+		worm(cells, Game.W, Game.H, Game.W, Game.H, 3, 5, 500)
+
+		for x in 0 .. Game.W {
+			cells[x] = 0
+			cells[(Game.H - 1) * Game.W + x] = 0
+		}
+
+		for y in 0 .. Game.H {
+			cells[y * Game.W] = 0
+			cells[(y + 1) * Game.W - 1] = 0
+		}
+
+		walls = List<List<int>>.new
+
+		walls.resize(Game.H, List<int>.new)
+
+		for y in 0 .. Game.H {
+			walls[y] = List<int>.new
+			walls[y].resize(Game.W, 0)
+		}
+
+		for i in 0 .. cells.length - 1 {
+			var x = i % Game.W
+			var y = i / Game.W
+
+			var cell = cells[i]
+
+			if cell == 0 {
+				walls[y][x] = 0
+			} else {
+				walls[y][x] = -1
+			}
+		}
+
+		blocks = List<block.Block>.new
+
+		for y in 0 .. Game.H {
+			for x in 0 .. Game.W {
+				if walls[y][x] == -1 {
+					if Math.random > 0.995 {
+						blocks.append(block.Barrel.new(
+							x * Game.TILE_SIZE,
+							y * Game.TILE_SIZE))
+					} else if Math.random > 0.995 {
+						blocks.append(block.bonus.IncreaseHealth.new(
+							x * Game.TILE_SIZE,
+							y * Game.TILE_SIZE))
+					} else if Math.random > 0.995 {
+						blocks.append(block.Mine.new(
+							x * Game.TILE_SIZE,
+							y * Game.TILE_SIZE))
+					} else if Math.random > 0.995 {
+						blocks.append(block.Crate.new(
+							x * Game.TILE_SIZE,
+							y * Game.TILE_SIZE))
+					}
+				}
+			}
+		}
+	}
+
+	def worm(cells Uint8Array, w int, h int, x double, y double, min_r int, base_r int, max_path int) {
+		var noise1 = OSimplexNoise.new
+		var noise2 = OSimplexNoise.new
+
+		noise1.setSeed
+		noise2.setSeed
+
+		var dir_x = 1.0
+		var dir_y = 1.0
+
+		for i in 0 .. max_path {
+			var angle = noise1.noise2D(i / 100.0, i / 100.0) * Math.PI
+			var radius = (min_r + (noise2.noise2D(i / 500.0, i / 500.0) + 1) / 2 * base_r) as int
+
+			for j in 0 .. 2 * radius {
+				for k in 0 .. 2 * radius {
+					if (j - radius) * (j - radius) > radius * radius || (k - radius) * (k - radius) > radius * radius {
+						continue
+					}
+
+					# y * width + x
+					# cf. http://stackoverflow.com/a/2151141/1974228
+					const xpos = (x + j - radius) as int
+					const ypos = (y + k - radius) as int
+					const index = xpos + ypos * w
+
+					cells[index] = 1
+				}
+			}
+
+			x += Math.cos(angle) * dir_x
+			y += Math.sin(angle) * dir_y
+
+			if x < 0 || x >= w {
+				dir_x = -dir_x
+			}
+
+			if y < 0 || y >= h {
+				dir_y = -dir_y
+			}
+
+			x = Math.clamp(x, 0, w - 1)
+			y = Math.clamp(y, 0, h - 1)
+		}
+	}
+
+	# Place le joueur du la carte
+	# Actuellement sur le premier emplacement libre
+	def putPlayer(player Player) {
+		for y in 0 .. Game.H {
+			for x in 0 .. Game.W {
+				if walls[y][x] == -1 {
+					player.x = x * Game.TILE_SIZE
+					player.y = y * Game.TILE_SIZE
+
+					return
+				}
+			}
+		}
+	}
+
+	# Génère le rendu du niveau
+	def generateRender {
+		var tmpCan = document.createElement("canvas") as Canvas
+		tmpCan.width = Game.W * Game.TILE_SIZE
+		tmpCan.height = Game.H * Game.TILE_SIZE
+
+		level = tmpCan.getContext2D as Context
+		# level = webgl.WebGLCanvas.new(tmpCan) as Context
+
+		for y in 0 .. Game.H {
+			for x in 0 .. Game.W {
+				level.drawImageByIndex(
+					Img.get("ground"),
+					x * Game.TILE_SIZE,
+					y * Game.TILE_SIZE,
+					Math.irand(0, 7),
+					Game.TILE_SIZE,
+	                Game.TILE_SIZE)
+
+				# Ajout d'ombres
+				# var tileIndex = getTileIndexExtended(x, y)
+				#
+				# level.fillStyle = rgb(0, 0, 0, 0.2)
+				#
+				# if tileIndex > 128 || tileIndex in [ 3, 6, 7, 15 ] {
+				# 	level.fillRect(x * Game.TILE_SIZE, y * Game.TILE_SIZE, Game.TILE_SIZE, Game.TILE_SIZE)
+				# } else if tileIndex == 1 {
+				# 	level.beginPath
+				# 	level.moveTo(x * Game.TILE_SIZE, y * Game.TILE_SIZE)
+				# 	level.lineTo((x + 1) * Game.TILE_SIZE, y * Game.TILE_SIZE)
+				# 	level.lineTo(x * Game.TILE_SIZE, (y + 1) * Game.TILE_SIZE)
+				# 	level.fill
+				# }
+			}
+		}
+
+		for y in 0 .. Game.H {
+			for x in 0 .. Game.W {
+				if walls[y][x] != -1 {
+					level.fillRect(
+						x * Game.TILE_SIZE,
+						y * Game.TILE_SIZE,
+						Game.TILE_SIZE,
+						Game.TILE_SIZE)
+				}
+			}
+		}
+
+		for y in 0 .. Game.H {
+			for x in 0 .. Game.W {
+				if walls[y][x] != -1 {
+					level.drawImageByIndex(
+						Img.get("wall"),
+						x * Game.TILE_SIZE,
+						y * Game.TILE_SIZE,
+						walls[y][x],
+						Game.TILE_SIZE,
+						Game.TILE_SIZE)
+				}
+			}
+		}
+	}
+}

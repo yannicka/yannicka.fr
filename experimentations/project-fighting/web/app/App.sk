@@ -1,0 +1,36 @@
+# Point d'entrée de l'application
+@entry
+def main {
+	# Images à charger
+	var images = {
+		"player": "player.png",
+		"wall":   "wall.png",
+		"ground": "ground.png",
+
+		"font":  "font.png",
+		"font2": "font2.png",
+
+		"barrel":   "block-barrel.png",
+		"mine":     "block-mine.png",
+		"dynamite": "block-dynamite.png",
+		"crate":    "block-crate.png",
+
+		"bullet":               "bullet-normal.png",
+		"rocketLauncherBullet": "bullet-rocket-launcher.png",
+		"grenade":              "bullet-grenade.png",
+		"miniatures":           "miniatures-weapons.png",
+
+		"bonusIncreaseHealth": "bonus-increase-health.png"
+	}
+
+	# Création de l'application
+	var game = Game.new
+
+	# Évènement : redimensionnement
+	window.addEventListener("resize", => game.resize)
+
+	# Charge les images et lance l'application une fois qu'elles sont chargées
+	Img.setPath("assets/img")
+	Img.setCallback(=> game.init)
+	Img.load(images)
+}

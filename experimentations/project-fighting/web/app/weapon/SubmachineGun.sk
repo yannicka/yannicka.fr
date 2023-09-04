@@ -1,0 +1,32 @@
+namespace weapon {
+	class SubmachineGun : Weapon {
+		def new {
+			super("Mitraillette")
+
+			baseLatency = 0.1
+			bulletSpeed = 400
+		}
+
+		over fire(position Point, direction Point) {
+			# Tir impossible : annulation
+			if !canFire	{
+				return
+			}
+
+			# Diminue le nombre de balles de un
+			decreaseAmmo
+
+			# Remet à zéro la latence
+			resetLatency
+
+			# à faire : avoir des balles différentes de celles du pistolet
+			# Création de la balle
+			const angle = Point.angleBetween(direction, position)
+			weapon.projectile.Bullet.new(position.x, position.y, angle, bulletSpeed)
+		}
+
+		over renderMiniature(ctx Context) {
+			ctx.drawImage(Img.get("miniatures"), 96, 0, 16, 16, 0, 0, 16, 16)
+		}
+	}
+}

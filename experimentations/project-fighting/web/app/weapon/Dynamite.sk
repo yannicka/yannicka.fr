@@ -1,0 +1,25 @@
+namespace weapon {
+	class Dynamite : Weapon {
+		def new {
+			super("Dynamite")
+
+			baseLatency = 0.5
+		}
+
+		over fire(position Point, direction Point) {
+			if !canFire	{
+				return
+			}
+
+			decreaseAmmo
+			resetLatency
+
+			const dynamite = block.Dynamite.new(position.x, position.y)
+			Level.blocks.append(dynamite)
+		}
+
+		over renderMiniature(ctx Context) {
+			ctx.drawImage(Img.get("miniatures"), 0, 0, 16, 16, 0, 0, 16, 16)
+		}
+	}
+}

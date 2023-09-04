@@ -1,0 +1,7 @@
+namespace block {
+	class Wall : Block {
+		def new(x double, y double) {
+			super(x, y, Game.TILE_SIZE, Game.TILE_SIZE)
+		}
+	}
+}

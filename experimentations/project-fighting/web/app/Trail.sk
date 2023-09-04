@@ -1,0 +1,53 @@
+class Trail : Sprite {
+    var projectilePosition Point
+    var endPosition Point
+    var projectile weapon.projectile.Projectile
+
+    def new(projectile weapon.projectile.Projectile) {
+        super(0, 0, 0, 0)
+
+        self.projectile = projectile
+        self.velocity = projectile.velocity.clone
+
+        Level.trails.append(self)
+    }
+
+    over update(dt double) {
+        if !projectile.isDead {
+            projectilePosition = projectile.center
+            endPosition = projectile.basePosition
+        } else {
+            endPosition += velocity * dt
+        }
+
+        # à faire
+        var diff = projectilePosition - endPosition
+
+        if diff.x > -4 && diff.x < 4 &&
+            diff.y > -4 && diff.y < 4
+        {
+            kill
+        }
+    }
+
+    over render(ctx Context) {
+        var gradient = ctx.createLinearGradient(
+            endPosition.x,
+            endPosition.y,
+            projectilePosition.x,
+            projectilePosition.y)
+
+        gradient.addColorStop(0, rgb(255, 255, 255, 0))
+        gradient.addColorStop(0.5, rgb(255, 255, 255, 0))
+        gradient.addColorStop(1, rgb(255, 255, 255, 0.2))
+
+        ctx.strokeStyle = gradient
+        ctx.lineWidth = 3
+
+        ctx.beginPath
+        ctx.moveTo(endPosition.x, endPosition.y)
+        ctx.lineTo(projectilePosition.x, projectilePosition.y)
+
+        ctx.stroke
+    }
+}

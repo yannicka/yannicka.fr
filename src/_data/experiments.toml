@@ -142,6 +142,10 @@ Un jeu de pong.
 """
 
 [[experiments]]
+name = "Project Fighting"
+folder = "project-fighting"
+
+[[experiments]]
 name = "Prototype"
 folder = "prototype"
 

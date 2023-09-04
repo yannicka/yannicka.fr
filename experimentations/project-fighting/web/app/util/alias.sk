@@ -1,0 +1,5 @@
+# Renommage des classes natives
+class Image : HTMLImageElement { }
+class Context : CanvasRenderingContext2D { }
+# class Context : webgl.WebGLCanvas { }
+class Canvas : HTMLCanvasElement { }

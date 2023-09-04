@@ -1,0 +1,15 @@
+namespace block.bonus {
+	class IncreaseHealth : Bonus {
+		def new(x double, y double) {
+			super(x, y, 12, 12)
+
+			loadImage(Img.get("bonusIncreaseHealth"), width, height)
+		}
+
+		over onPlayerOverlaps(player Player) {
+			player.increaseHealth(50)
+
+			kill
+		}
+	}
+}

@@ -1,0 +1,6 @@
+class string {
+	# Détermine si un chaine est vide ou non
+	def isEmpty bool {
+		return self == ""
+	}
+}

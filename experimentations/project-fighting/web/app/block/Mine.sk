@@ -1,0 +1,80 @@
+namespace block {
+	class Mine : Block {
+		var timeBeforeCanExplode double
+		var canExplode bool
+
+		def new(x double, y double) {
+			super(x, y, 10, 10)
+
+			loadImage(Img.get("mine"), width, height)
+
+			timeBeforeCanExplode = 1
+			timeBeforeExplosion = 0.6
+			explosion = Explosion.new(center.x, center.y, 46, 30)
+			solid = false
+			active = false
+			canExplode = false
+		}
+
+		over update(dt double) {
+			super(dt)
+
+			if active && canExplode {
+				timeBeforeExplosion -= dt
+
+				if timeBeforeExplosion <= 0 {
+					explode
+					timeBeforeExplosion = 0.6
+					kill
+				}
+			} else if !canExplode {
+				timeBeforeCanExplode -= dt
+
+				if timeBeforeCanExplode <= 0 {
+					canExplode = true
+				}
+			}
+		}
+
+		over render(ctx Context) {
+			# Dessine le rayon de l'explosion sous la mine
+			ctx.drawImage(
+				explosion.circleSprite.canvas,
+				center.x - explosion.radius,
+				center.y - explosion.radius)
+
+			super(ctx)
+		}
+
+		def explode {
+			explosion.explode(self)
+		}
+
+		over onPlayerOverlaps(player Player) {
+            # Si le bloc n'est pas actif et qu'il est explosible, alors
+            # ceclui-ci est activé et explosera après la latence d'explosion
+			if !active && canExplode {
+				activate
+			}
+		}
+
+		over onFired(projectile weapon.projectile.Projectile) {
+			# Les mines sont insensibles aux grenades
+			if projectile is weapon.projectile.Grenade {
+				return
+			}
+
+			# Explosion de la mine
+			explode
+
+			# Suppression de la mine
+			kill
+		}
+
+		over onExplosion(explosion Explosion) {
+            # Si la mine se trouve dans le rayon d'une explosion, elle est
+            # activée et explosera après le temps de latence d'explosion
+			activate
+		}
+	}
+}

@@ -1,0 +1,89 @@
+namespace weapon {
+	class Weapon {
+		# Nom de l'arme
+		var name string
+
+		# L'arme dispose-t-elle d'un nombre de munitions infini ?
+		var infiniteAmmo bool
+
+		# Nombre de munitions restantes à l'arme
+		var ammo int
+
+		# Temps entre deux tirs (en seconde)
+		var baseLatency double
+		var latency double
+
+		# Vitesse de la balle
+		var bulletSpeed int
+
+		# Créer une arme
+		def new(name string) {
+			self.name = name
+
+			infiniteAmmo = false
+			ammo = 0
+
+			baseLatency = 0
+			latency = 0
+
+			bulletSpeed = 0
+		}
+
+		# Mise à jour de l'arme
+		def update(dt double) {
+			# Mise à jour de la latence de tir
+			if latency > 0 {
+				latency -= dt
+			}
+
+			if latency < 0 {
+				latency = 0
+			}
+		}
+
+		# Est-il possible de tirer ?
+		# Il n'est possible de tirer que si la latence entre deux tirs est terminée
+		# et que le nombre de munitions est illimité ou supérieur à zéro
+		def canFire bool {
+			return latency <= 0 && (hasInfiniteAmmo || hasAmmo)
+		}
+
+		# L'arme dispose-t-elle d'un nombre de munitions infini ?
+		def hasInfiniteAmmo bool {
+			return infiniteAmmo
+		}
+
+		# L'arme dispose-t-elle encore de munitions ?
+		def hasAmmo bool {
+			return ammo > 0
+		}
+
+		# Baisse la quantité de munitions restantes
+		def decreaseAmmo {
+			if !hasInfiniteAmmo {
+				ammo--
+			}
+		}
+
+		# Ajoute des munitions à l'arme
+		def addAmmo(quantity int) {
+			ammo += quantity
+		}
+
+		# Réinitialise le temps de latence entre deux tirs
+		def resetLatency {
+			latency = baseLatency
+		}
+
+		# Pourcentage de latence
+		def getLatencyPercentage double {
+			return latency / baseLatency
+		}
+
+		# Tir du joueur
+		def fire(position Point, direction Point)
+
+		# Affichage de la miniature
+		def renderMiniature(ctx Context)
+	}
+}

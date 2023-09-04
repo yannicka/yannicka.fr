@@ -1,0 +1,116 @@
+namespace input {
+	# à faire : ajouter une action au roulement de la molette
+
+	class Mouse :: Pointer {
+		var el HTMLElement
+		var position Point
+		var click dynamic
+		var mtime int
+		var loose dynamic
+		var wheelValue double
+
+		def new(el HTMLElement) {
+			self.el = el
+
+			position = Point.new(0, 0)
+			click    = null
+			mtime    = 0
+			loose    = null
+
+			document.addEventListener("mousedown",
+				(e HTMLMouseEvent) => onmousedown(e))
+
+			document.addEventListener("mousemove",
+				(e HTMLMouseEvent) => onmousemove(e))
+
+			document.addEventListener("mouseup",
+				(e HTMLMouseEvent) => onmouseup(e))
+
+			document.addEventListener("wheel",
+				(e HTMLWheelEvent) => onwheel(e))
+		}
+
+		# à faire : trouver une méthode pour éviter un appel à une méthode, comme
+		# dans la classe Keyboard
+		def update {
+			mtime++
+
+			wheelValue = 0
+		}
+
+		def onmousedown(e HTMLMouseEvent) {
+			onmousemove(e)
+			click = mtime
+		}
+
+		def onmousemove(e HTMLMouseEvent) {
+			position.x = e.pageX - (el != null ? el.offsetLeft : 0)
+			position.y = e.pageY - (el != null ? el.offsetTop : 0)
+		}
+
+		def onmouseup(e HTMLMouseEvent) {
+			loose = mtime
+			click = null
+		}
+
+		def onwheel(e HTMLWheelEvent) {
+			wheelValue = e.deltaY
+		}
+
+		def getCanvasCoordinates Point {
+			var x = position.x
+			var y = position.y
+
+			x /= Game.scale
+			y /= Game.scale
+
+			x -= Game.camera.x
+			y -= Game.camera.y
+
+			return Point.new(x, y)
+		}
+
+		def getPositionRelativeTo(rect Rect) Point {
+			return position
+		}
+
+		# Tant que le bouton est levé
+		def up bool {
+			return click == null
+		}
+
+		# Tant que le bouton est baissé
+		def down bool {
+			return click != null
+		}
+
+		# Au moment où le bouton est enfoncé
+		def press bool {
+			return click == mtime
+		}
+
+		# Au moment où le bouton est levé
+		def release bool {
+			return loose == mtime
+		}
+
+		# Molette
+		def wheel PointerDirection {
+			if wheelValue < 0 {
+				return PointerDirection.BOTTOM
+			} else if wheelValue > 0 {
+				return PointerDirection.TOP
+			} else {
+				return PointerDirection.NONE
+			}
+		}
+
+		def inRect(rect Rect) bool {
+			return Hit.pointHitRect(position, rect)
+		}
+
+		def inCircle(circle Circle) bool {
+			return Hit.pointHitCircle(position, circle)
+		}
+	}
+}

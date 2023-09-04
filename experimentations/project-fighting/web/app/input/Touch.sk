@@ -1,0 +1,133 @@
+namespace input {
+	class Touch :: Pointer {
+		var el HTMLElement
+		var positions IntMap<Point>
+		var click dynamic
+		var mtime int
+		var loose dynamic
+
+		def new(el HTMLElement) {
+			self.el = el
+
+			positions = {}
+
+			click = null
+			mtime = 0
+			loose = null
+
+			document.addEventListener("touchstart",
+				(e HTMLTouchEvent) => ontouchstart(e))
+
+			document.addEventListener("touchmove",
+				(e HTMLTouchEvent) => ontouchmove(e))
+
+			document.addEventListener("touchend",
+				(e HTMLTouchEvent) => ontouchend(e))
+		}
+
+		# à faire : trouver une méthode pour éviter un appel à une méthode, comme dans la
+		# classe Keyboard
+		def update {
+			mtime++
+		}
+
+		def ontouchstart(e HTMLTouchEvent) {
+			click = mtime
+
+			for ev in e.touches {
+				const x = ev.pageX - (el != null ? el.offsetLeft : 0)
+				const y = ev.pageY - (el != null ? el.offsetTop : 0)
+
+				positions[ev.identifier] = Point.new(x, y)
+			}
+		}
+
+		def ontouchmove(e HTMLTouchEvent) {
+			for ev in e.touches {
+				if ev.identifier in positions {
+					const position = positions[ev.identifier]
+
+					const x = ev.pageX - (el != null ? el.offsetLeft : 0)
+					const y = ev.pageY - (el != null ? el.offsetTop : 0)
+
+					position.x = x
+					position.y = y
+				}
+			}
+		}
+
+		def ontouchend(e HTMLTouchEvent) {
+			loose = mtime
+			click = null
+
+			for ev in e.touches {
+				positions.remove(ev.identifier)
+			}
+		}
+
+		def getCanvasCoordinates Point {
+			return Point.new(0, 0)
+		}
+
+		def getPositionRelativeTo(rect Rect) Point {
+			var result Point
+
+			positions.each((index int, position Point) => {
+				if Hit.pointHitRect(position, rect) {
+					result = position
+				}
+			})
+
+			return result
+		}
+
+		# Tant que le bouton est levé
+		def up bool {
+			return click == null
+		}
+
+		# Tant que le bouton est baissé
+		def down bool {
+			return click != null
+		}
+
+		# Au moment où le bouton est enfoncé
+		def press bool {
+			return click == mtime
+		}
+
+		# Au moment où le bouton est levé
+		def release bool {
+			return loose == mtime
+		}
+
+		# Pas de molette sur mobile
+		def wheel PointerDirection {
+			return PointerDirection.NONE
+		}
+
+		def inRect(rect Rect) bool {
+			var result = false
+
+			positions.each((index int, position Point) => {
+				if Hit.pointHitRect(position, rect) {
+					result = true
+				}
+			})
+
+			return result
+		}
+
+		def inCircle(circle Circle) bool {
+			var result = false
+
+			positions.each((index int, position Point) => {
+				if Hit.pointHitCircle(position, circle) {
+					result = true
+				}
+			})
+
+			return result
+		}
+	}
+}

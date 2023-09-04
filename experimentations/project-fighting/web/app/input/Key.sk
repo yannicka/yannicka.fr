@@ -1,0 +1,77 @@
+namespace Key {
+	const Tab   = 9
+	const Enter = 13
+	const Shift = 16
+	const Ctrl  = 17
+	const Alt   = 18
+	const Esc   = 27
+	const Space = 32
+
+	const Left  = 37
+	const Up    = 38
+	const Right = 39
+	const Down  = 40
+
+	const A = 65
+	const B = 66
+	const C = 67
+	const D = 68
+	const E = 69
+	const F = 70
+	const G = 71
+	const H = 72
+	const I = 73
+	const J = 74
+	const K = 75
+	const L = 76
+	const M = 77
+	const N = 78
+	const O = 79
+	const P = 80
+	const Q = 81
+	const R = 82
+	const S = 83
+	const T = 84
+	const U = 85
+	const V = 86
+	const W = 87
+	const X = 88
+	const Y = 89
+	const Z = 90
+
+	const Num0 = 48
+	const Num1 = 49
+	const Num2 = 50
+	const Num3 = 51
+	const Num4 = 52
+	const Num5 = 53
+	const Num6 = 54
+	const Num7 = 55
+	const Num8 = 56
+	const Num9 = 57
+
+	const Numpad0 = 96
+	const Numpad1 = 97
+	const Numpad2 = 98
+	const Numpad3 = 99
+	const Numpad4 = 100
+	const Numpad5 = 101
+	const Numpad6 = 102
+	const Numpad7 = 103
+	const Numpad8 = 104
+	const Numpad9 = 105
+
+	const Add = 107
+	const Sub = 109
+	const Mul = 106
+	const Div = 111
+
+	const Capslock = 20
+	const Pageup   = 33
+	const Pagedown = 34
+	const End      = 35
+	const Home     = 36
+	const Insert   = 45
+	const Delete   = 46
+	const Numlock  = 144
+}

@@ -1,0 +1,13 @@
+namespace block {
+	class Crate : Block {
+		def new(x double, y double) {
+			super(x, y, 24, 24)
+
+			loadImage(Img.get("crate"), width, height)
+		}
+
+		over render(ctx Context) {
+			super(ctx)
+		}
+	}
+}

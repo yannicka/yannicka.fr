@@ -1,0 +1,100 @@
+namespace widget {
+	class Stick : Widget {
+		var stickPosition Point # position relative à « position »
+		var pressed bool
+		var radius double
+		var relativeMousePosition Point
+		var pointsTo Point
+
+		def new(x double, y double, radius int, relativeTo Position) {
+			super(x, y, relativeTo)
+
+			self.radius = radius
+
+			stickPosition = Point.new(-radius / 2, 0)
+			pressed = false
+			relativeMousePosition = Point.new(0, 0)
+		}
+
+		def render(ctx Context) {
+			const stickPosition = getStickPosition * (radius / 2)
+
+			ctx.save
+
+			switch relativeTo {
+				case Position.BOTTOM_LEFT {
+					ctx.translate(x, Game.heightScaled - radius - y)
+				}
+
+				case Position.BOTTOM_RIGHT {
+					ctx.translate(
+						Game.widthScaled - radius - x,
+						Game.heightScaled - radius - y)
+				}
+			}
+
+			ctx.fillStyle = rgb(255, 255, 255, 0.6)
+			ctx.beginPath
+			ctx.arc(0, 0, radius, 0, Math.PI * 2)
+			ctx.closePath
+			ctx.fill
+
+			ctx.fillStyle = rgb(0, 0, 0, 0.6)
+			ctx.beginPath
+
+			ctx.arc(stickPosition.x, stickPosition.y, radius / 2, 0, Math.PI * 2)
+
+			ctx.closePath
+			ctx.fill
+
+			ctx.strokeStyle = rgb(0, 0, 0, 0.8)
+			ctx.lineWidth = 1
+
+			ctx.beginPath
+			ctx.arc(stickPosition.x, stickPosition.y, radius / 2.7, 0, Math.PI * 2)
+			ctx.stroke
+
+			ctx.beginPath
+			ctx.arc(stickPosition.x, stickPosition.y, radius / 4, 0, Math.PI * 2)
+			ctx.stroke
+
+			ctx.beginPath
+			ctx.arc(stickPosition.x, stickPosition.y, radius / 8, 0, Math.PI * 2)
+			ctx.stroke
+
+			ctx.restore
+		}
+
+		def setRelativeMousePosition(point Point) {
+			relativeMousePosition = point
+		}
+
+		def getRelativeMousePosition Point {
+			return relativeMousePosition
+		}
+
+		def getStickPosition Point {
+			var touch = getRelativeMousePosition
+
+			touch = touch.normalized
+
+			return touch
+		}
+
+		def getPosition Point {
+			return Point.new(
+				Game.widthScaled - (radius * 2) - x,
+				Game.heightScaled - (radius * 2) - y)
+		}
+
+		over rect Rect {
+			const position = getPosition
+
+			return Rect.new(
+				position.x * Game.scale,
+				position.y * Game.scale,
+				radius as int * 2 * Game.scale,
+				radius as int * 2 * Game.scale)
+		}
+	}
+}

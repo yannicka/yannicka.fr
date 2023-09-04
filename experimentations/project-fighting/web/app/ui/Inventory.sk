@@ -1,0 +1,41 @@
+namespace ui {
+	class Inventory {
+		var player Player
+
+		def new {
+		}
+
+		def bindTo(player Player) {
+			self.player = player
+		}
+
+		def render(ctx Context) {
+			if isMobile {
+				ctx.save
+				ctx.translate(4, 40)
+
+				player.currentWeapon.renderMiniature(ctx)
+
+				ctx.restore
+			} else {
+				ctx.save
+				ctx.translate(4, 30)
+
+				ctx.lineWidth = 1
+				ctx.strokeStyle = rgb(202, 84, 42)
+
+				for weapon in player.weapons {
+					weapon.renderMiniature(ctx)
+
+					if weapon == player.currentWeapon {
+						ctx.strokeRect(0.5, 0.5, 16, 16)
+					}
+
+					ctx.translate(0, 20)
+				}
+
+				ctx.restore
+			}
+		}
+	}
+}

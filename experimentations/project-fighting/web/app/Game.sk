@@ -1,0 +1,609 @@
+namespace Game {
+	var scale = 2
+	const W = 200
+	const H = 200
+	const TILE_SIZE = 16
+	const STEP = 1.0 / 60.0
+
+	const GAME_WIDTH = 30 * TILE_SIZE
+	const GAME_HEIGHT = 22 * TILE_SIZE
+
+	var width = 200
+	var height = 200
+
+	var widthScaled = 200
+	var heightScaled = 200
+
+	var camera = Camera.new
+
+	var isInGame = false
+
+	# à faire : ne pas créer d'objet dans une boucle aussi géante et ne pas tester ce qui
+	# est hors de l'écran.
+	# à appeler seulement au déplacement
+	def collide(dt double, p Sprite) {
+		const blocks = Level.getBlocksAround(p.circle)
+
+		var vx = p.xnorm * Player.maxspeed * dt
+		var vy = p.ynorm * Player.maxspeed * dt
+
+		const c = Rect.new(p.x + vx, p.y + vy, p.width, p.height)
+		const cx = Rect.new(p.x + vx, p.y, p.width, p.height)
+		const cy = Rect.new(p.x, p.y + vy, p.width, p.height)
+
+		for b in blocks {
+			if Hit.rectHitRect(c, b) {
+				if b.isSolid {
+					if Hit.rectHitRect(cx, b) {
+						if vx < 0 {
+							vx = b.x + b.width - p.x
+						} else if vx > 0 {
+							vx = b.x - p.x - p.width
+						}
+					}
+
+					if Hit.rectHitRect(cy, b) {
+						if vy < 0 {
+							vy = b.y + b.height - p.y
+						} else if vy > 0 {
+							vy = b.y - p.y - p.height
+						}
+					}
+				} else {
+					b.onPlayerOverlaps(p as Player)
+				}
+			}
+		}
+
+		p.x = p.x + vx
+		p.y = p.y + vy
+	}
+}
+
+class Game {
+	var can HTMLCanvasElement
+	var ctx Context
+
+	var player Player
+
+	var inventory ui.Inventory
+	var playerInfo ui.PlayerInfo
+
+	var now double
+	var dt double
+	var last double
+
+	var kb input.Keyboard
+	var mouse input.Pointer
+	var mousePos Point
+
+	var buttons List<widget.Button>
+	var stick widget.Stick
+
+	def new {
+		can = document.getElementById("app") as HTMLCanvasElement
+	}
+
+	def init {
+		ctx = can.getContext2D as Context
+
+		resize
+
+		# var btnLogin = document.getElementById("btn-login")
+
+		# btnLogin.addEventListener("click", => {
+		# 	launchGame
+		# })
+
+		# Gestion du temps, des durées, ...
+		now  = timestamp
+		dt   = 0
+		last = timestamp
+
+		# Génération du niveau
+		# Placement du joueur sur la première case libre du niveau
+		# Génération du rendu de la carte des éléments fixes
+		Level.generate
+		Level.generateRender
+
+		launchGame
+
+		frame
+	}
+
+	def launchGame {
+		Game.isInGame = true
+
+		# Joueur
+		var name = (document.getElementById("input-name") as dynamic).value
+		player = Player.new(name)
+
+        Player.new("Computer")
+
+		# Cacher la zone de saisie du pseudonyme
+		document.querySelector(".login").style.display = "none"
+
+		# Souris
+		if isMobile {
+			mouse = input.Touch.new(can)
+		} else {
+			mouse = input.Mouse.new(can)
+		}
+
+		# Position de la soursis
+		mousePos = Point.new(0, 0)
+
+		# Clavier
+		kb = input.Keyboard.new
+
+		# Informations sur le joueur
+		playerInfo = ui.PlayerInfo.new
+		playerInfo.bindTo(player)
+
+		# Inventaire
+		inventory = ui.Inventory.new
+		inventory.bindTo(player)
+
+		# ------------------------------
+		# Mise à jour du choix de l'arme
+		# ------------------------------
+		document.addEventListener("wheel", (e HTMLWheelEvent) => {
+			var wheelValue = e.deltaY
+			var direction = PointerDirection.NONE
+
+			if wheelValue < 0 {
+				direction = PointerDirection.BOTTOM
+			} else if wheelValue > 0 {
+				direction = PointerDirection.TOP
+			}
+
+			player.currentWeaponIndex += PointerDirection.toInt(direction)
+
+			if player.currentWeaponIndex > player.weapons.count - 1 {
+				player.currentWeaponIndex = player.weapons.count - 1
+			} else if player.currentWeaponIndex < 0 {
+				player.currentWeaponIndex = 0
+			}
+		})
+
+		# Boutons pour mobile
+		if isMobile {
+			const btnUp = widget.Button.new(30, 30, 20, 20, Position.BOTTOM_LEFT)
+				.on("hover", => player.velocity.y -= 180)
+
+			const btnDown = widget.Button.new(30, 5, 20, 20, Position.BOTTOM_LEFT)
+				.on("hover", => player.velocity.y += 180)
+
+			const btnLeft = widget.Button.new(5, 5, 20, 20, Position.BOTTOM_LEFT)
+				.on("hover", => player.velocity.x -= 180)
+
+			const btnRight = widget.Button.new(55, 5, 20, 20, Position.BOTTOM_LEFT)
+				.on("hover", => player.velocity.x += 180)
+
+			const btnPreviousWeapon = widget.Button.new(4, 24, 16, 16, Position.TOP_LEFT)
+				.on("click", => {
+					if player.currentWeaponIndex == 0 {
+						player.currentWeaponIndex = player.weapons.count - 1
+					} else {
+						player.currentWeaponIndex -= 1
+					}
+				})
+
+			const btnNextWeapon = widget.Button.new(4, 56, 16, 16, Position.TOP_LEFT)
+				.on("click", => {
+					if player.currentWeaponIndex == player.weapons.count - 1 {
+						player.currentWeaponIndex = 0
+					} else {
+						player.currentWeaponIndex += 1
+					}
+				})
+
+			buttons = [
+				btnUp,
+				btnDown,
+				btnLeft,
+				btnRight,
+				btnPreviousWeapon,
+				btnNextWeapon
+			]
+
+			stick = widget.Stick.new(20, 20, 20, Position.BOTTOM_RIGHT)
+		}
+	}
+
+	# Boucle de jeu
+	# Voir http://bit.ly/1PNVNem (http://codeincomplete.com/)
+	def frame {
+		now = timestamp
+		dt = dt + Math.min(1, (now - last) / 1000)
+
+		while dt > Game.STEP {
+			dt = dt - Game.STEP
+			update(Game.STEP)
+		}
+
+		render
+		last = now
+
+		if Game.isInGame {
+			mouse.update
+			mousePos = mouse.getCanvasCoordinates
+		}
+
+		requestAnimationFrame(=> frame)
+	}
+
+	def update(step double) {
+		if !Game.isInGame {
+			return
+		}
+
+		# ---------------------
+		# Déplacement du joueur
+		# ---------------------
+		# Si le support n'est pas un mobile, ou que le curseur est levé :
+		# - Annulation des déplacements du joueur
+		if isNotMobile || !mouse.down {
+			player.velocity.x = 0
+			player.velocity.y = 0
+		}
+
+		# Déplacement à gauche lorsque touche Gauche ou Q enfoncée
+		if kb.down(Key.Left) || kb.down(Key.Q) {
+			player.velocity.x -= 180
+		}
+
+		# Déplacement à droite lorsque touche Droite ou D enfoncée
+		if kb.down(Key.Right) || kb.down(Key.D) {
+			player.velocity.x += 180
+		}
+
+		# Déplacement en haut lorsque touche Haut ou Z enfoncée
+		if kb.down(Key.Up) || kb.down(Key.Z) {
+			player.velocity.y -= 180
+		}
+
+		# Déplacement en bas lorsque touche Bas ou S enfoncée
+		if kb.down(Key.Down) || kb.down(Key.S) {
+			player.velocity.y += 180
+		}
+
+		# Correction des déplacements
+		player.updateNorm
+
+		# ----------
+		# Collisions
+		# ----------
+		# Si le joueur est en déplacement :
+		# - Test des collisions entre le joueur et les murs
+		if player.velocity.x != 0 || player.velocity.y != 0 {
+			Game.collide(step, player)
+		}
+
+		# ------
+		# Joueur
+		# ------
+		# Le joueur pointe vers le curseur
+		player.angleTo(mousePos)
+
+		# Mise à jour des informations du joueur
+		player.update(step)
+
+		# ------
+		# Camera
+		# ------
+		# Met à jour la position de la caméra
+		Game.camera.setPosition(
+			-(player.x + (player.width / 2)) + (Game.width / Game.scale / 2),
+			-(player.y + (player.height / 2)) + (Game.height / Game.scale / 2)
+		)
+
+		# Si n'est pas mobile et curseur enfoncé :
+		# - Tirer
+		# Sinon si est mobile et stick de tir pressé :
+		# - Tirer
+		if isNotMobile && mouse.down  {
+			# Tir vers le curseur
+			player.fire(mousePos)
+		} else if isMobile && stick.pressed {
+			# Tir dans l'angle du stick
+			const pos = player.center + stick.getStickPosition
+			player.fire(pos)
+		}
+
+		# ---------------------
+		# Mise à jour des blocs
+		# ---------------------
+		for b in Level.blocks {
+			b.update(step)
+		}
+		Level.blocks.removeIf(block => block.canBeRemoved)
+
+		# ------
+		# Balles
+		# ------
+		for b in Level.projectiles {
+			b.update(step)
+		}
+		Level.projectiles.removeIf(projectile => projectile.canBeRemoved)
+		Level.blocks.removeIf(block => block.canBeRemoved)
+
+		# ------
+		# Traînées
+		# ------
+		for trail in Level.trails {
+			trail.update(step)
+		}
+		Level.trails.removeIf(trail => trail.canBeRemoved)
+
+		bulletsOverlaps
+
+		# ----------
+		# Particules
+		# ----------
+		Particle.updateAll(step)
+
+		# --------------------
+		# Boutons pour mobile
+		# -------------------
+		# Si touché :
+		# - Annulation des déplacements du joueur
+		# - Si bouton appuyé : exécution de l'action « hover » de celui-ci
+		if isMobile && mouse.down {
+			player.velocity.x = 0
+			player.velocity.y = 0
+
+			for button in buttons {
+				if mouse.inRect(button.rect) {
+					if mouse.down {
+						button.fire("hover")
+					}
+
+					if mouse.press {
+						button.fire("click")
+					}
+				}
+			}
+		}
+
+		# ------------
+		# Stick de tir
+		# ------------
+		# Appui sur le stick de tir :
+		# - Stick de tir pressé
+		# - Vise vers le doigt
+		if isMobile && mouse.press {
+			if mouse.inRect(stick.rect) {
+				stick.pressed = true
+				stick.pointsTo = mouse.getPositionRelativeTo(stick.rect)
+			}
+		}
+
+		# Doigt levé, si stick de tir pressé :
+		# - Stick de tir n'est plus pressé
+		# - Vise vers le centre (= ne vise plus)
+		if mouse.release {
+			if isMobile && stick.pressed {
+				stick.pressed = false
+				stick.setRelativeMousePosition(Point.new(0, 0))
+			}
+		}
+
+		# Si le stick de tir est pressé :
+		# - Récupération de la position relative du touché à l'intérieur du stick de tir
+		# - Vise cette position relative
+		if isMobile && stick.pressed {
+			const position = stick.getPosition
+			const touchPosition = stick.pointsTo
+
+			var relativeTouchPosition = touchPosition - (position * Game.scale)
+
+			relativeTouchPosition -= stick.radius * Game.scale
+
+			stick.setRelativeMousePosition(relativeTouchPosition)
+		}
+	}
+
+	def render {
+		# Fond
+		ctx.fillStyle = rgb(18, 5, 32)
+		ctx.fillRect(0, 0, can.width, can.height)
+
+		# ---------------------------
+		# Éléments suivants la caméra
+		# ---------------------------
+		# Déplacement de la zone de jeu affiché selon la position de la caméra
+		ctx.save
+		ctx.translate(Game.camera.x as int, Game.camera.y as int)
+
+		# Niveau
+		renderLevel
+		renderBullets
+		renderTrails
+		renderPlayers
+		renderParticles
+
+		# Curseur
+		renderCursor
+
+		ctx.restore
+
+		# ---------------------
+		# Interface utilisateur
+		# ---------------------
+		renderUi
+
+		# -----------------------------
+		# Masque pour les non-connectés
+		# -----------------------------
+		renderEffects
+	}
+
+	def renderLevel {
+		ctx.drawImage(Level.level.canvas, 0, 0)
+
+		for block in Level.blocks {
+			block.render(ctx)
+		}
+	}
+
+	def renderUi {
+		if !Game.isInGame {
+			return
+		}
+
+		# Informations du joueur
+		playerInfo.render(ctx)
+
+		# Inventaire
+		inventory.render(ctx)
+
+		# Nombre de balles
+		if player.currentWeapon.hasInfiniteAmmo {
+			ctx.drawPixelatedText("∞", 112, 5)
+		} else {
+			ctx.drawPixelatedText("\(player.currentWeapon.ammo)", 112, 5)
+		}
+
+		# Boutons pour mobile
+		if isMobile {
+			for button in buttons {
+				button.render(ctx)
+			}
+
+			stick.render(ctx)
+		}
+	}
+
+	def renderCursor {
+		if !Game.isInGame || isMobile {
+			return
+		}
+
+		ctx.globalCompositeOperation = "exclusion"
+		# ctx.globalCompositeOperation = webgl.GlobalCompositeOperation.Exclusion
+		ctx.fillStyle = rgb(255, 255, 255)
+		ctx.fillRect(mousePos.x - 3, mousePos.y - 0.5, 6, 1)
+		ctx.fillRect(mousePos.x - 0.5, mousePos.y - 3, 1, 6)
+		ctx.globalCompositeOperation = "source-over"
+		# ctx.globalCompositeOperation = webgl.GlobalCompositeOperation.SourceOver # défaut
+	}
+
+	def renderBullets {
+		for bullet in Level.projectiles {
+			bullet.render(ctx)
+		}
+	}
+
+	def renderTrails {
+		for trail in Level.trails {
+			trail.render(ctx)
+		}
+	}
+
+	def renderPlayers {
+		for player in Level.players {
+			player.render(ctx)
+		}
+	}
+
+	def renderParticles {
+		Particle.renderAll(ctx)
+	}
+
+	def renderEffects {
+		if Game.isInGame {
+			return
+		}
+
+		ctx.fillStyle = rgb(0, 0, 0, 0.5)
+		ctx.fillRect(0, 0, Game.width, Game.height)
+	}
+
+	def bulletsOverlaps {
+		var i = Level.projectiles.count
+		while i > 0 {
+			i -= 1
+
+			var bullet = Level.projectiles[i]
+
+			const blocks = Level.getBlocksAround(bullet.circle)
+
+			for b in blocks {
+				if Hit.pointHitRect(bullet.center, b) {
+					b.onFired(bullet)
+					bullet.onCollision(b)
+				}
+			}
+
+			for player in Level.players {
+				if Hit.pointHitRect(bullet.center, player) {
+					bullet.onPlayerOverlaps(player)
+				}
+			}
+		}
+	}
+
+	def bulletsOverlapsPlayer {
+		var i = Level.projectiles.count
+		while i > 0 {
+			i -= 1
+
+			var bullet = Level.projectiles[i]
+
+			const blocks = Level.getBlocksAround(bullet.circle)
+
+			for b in blocks {
+				if Hit.pointHitRect(bullet.center, b) {
+					b.onFired(bullet)
+					bullet.onCollision(b)
+				}
+			}
+		}
+	}
+
+	def resize {
+		scale = 1
+
+		# Zoom max = 20
+		while scale < 20 {
+			if GAME_WIDTH * scale >= window.innerWidth ||
+				GAME_HEIGHT * scale >= window.innerHeight
+			{
+				scale--
+				break
+			} else {
+				scale++
+			}
+		}
+
+		if Game.scale < 1 {
+			Game.scale = 1
+		}
+
+		can.width = GAME_WIDTH * scale
+		can.height = GAME_HEIGHT * scale
+
+		widthScaled = width / scale
+		heightScaled = height / scale
+
+		Game.width = can.width
+		Game.height = can.height
+
+		ctx.scale(scale, scale)
+
+		if ctx.mozImageSmoothingEnabled {
+			ctx.mozImageSmoothingEnabled = false
+		}
+
+		if ctx.msImageSmoothingEnabled {
+			ctx.msImageSmoothingEnabled = false
+		}
+
+		if ctx.imageSmoothingEnabled {
+			ctx.imageSmoothingEnabled = false
+		}
+
+		Game.camera.setSize(Game.width, Game.height)
+	}
+}

@@ -1,0 +1,129 @@
+namespace Player  {
+	const maxspeed = 180
+}
+
+class Player : Sprite {
+	# Nom du joueur (pseudonyme)
+	var name string
+
+	# Direction vers laquelle se dirige le joueur
+	var dir string
+
+	# Liste des armes dont dispose le joueur
+	var weapons List<weapon.Weapon>
+
+	# Index de l'arme que porte le joueur par rapport au tableau weapons
+	var currentWeaponIndex int
+
+	# Durée où le joueur est invincible
+	# Le joueur n'est plus sensible aux balles et aux explosions et il clignote
+	# (en secondes)
+	var invincibleDelay double
+
+	def new(name string) {
+		super(0, 0, 14, 15)
+
+		self.name = name
+
+		loadImage(Img.get("player"), width, height)
+
+		addAnimation("idle_front",      [ 0 ])
+		addAnimation("idle_back",       [ 8 ])
+		addAnimation("idle_side_right", [ 12 ])
+		addAnimation("idle_side_left",  [ 4 ])
+
+		addAnimation("walk_front",      [ 0, 1, 2, 3 ])
+		addAnimation("walk_back",       [ 8, 9, 10, 11 ])
+		addAnimation("walk_side_right", [ 12, 13, 14, 15 ])
+		addAnimation("walk_side_left",  [ 4, 5, 6, 7 ])
+
+		play("idle_front")
+
+		dir = "front"
+
+		weapons = [
+			weapon.Dynamite.new,
+			weapon.Grenade.new,
+			weapon.Gun.new,
+			weapon.Mine.new,
+			weapon.Shotgun.new,
+			weapon.RocketLauncher.new,
+			weapon.SubmachineGun.new,
+			weapon.Flamethrower.new,
+			weapon.SmokeGrenade.new,
+			weapon.Raygun.new
+		]
+
+		for w in weapons {
+			w.addAmmo(1000)
+		}
+
+		currentWeaponIndex = 0
+
+		maxhealth = 100
+		health = maxhealth
+
+		invincibleDelay = 0
+
+		Level.players.append(self)
+		Level.putPlayer(self)
+	}
+
+	over update(dt double) {
+		super(dt)
+
+		if invincibleDelay > 0 {
+			invincibleDelay -= dt
+		} else {
+			invincibleDelay = 0
+		}
+
+		for weapon in weapons {
+			weapon.update(dt)
+		}
+
+		if velocity.x != 0 || velocity.y != 0 {
+			play("walk_" + dir)
+		} else {
+			play("idle_" + dir)
+		}
+	}
+
+	over render(ctx Context) {
+		if invincibleDelay == 0 {
+			super(ctx)
+		} else if ((invincibleDelay * 2000) as int) % 1000 < 1000 {
+			super(ctx)
+		}
+
+        var width = ctx.computeTextWidth(name)
+
+		ctx.drawPixelatedText(name, center.x as int - width / 2, y as int - 12)
+	}
+
+	def angleTo(p Point) {
+		const angle = Point.angleBetween(p, center) / Math.PI
+
+		if angle >= 0.25 && angle < 0.75 {
+			dir = "front"
+		} else if angle >= -0.75 && angle < -0.25 {
+			dir = "back"
+		} else if angle >= -0.25 && angle < 0.25 {
+			dir = "side_right"
+		} else if (angle >= -1 && angle < -0.75) || (angle > 0.75 && angle < 1) {
+			dir = "side_left"
+		}
+	}
+
+	def fire(mouse Point) {
+		currentWeapon.fire(center, mouse)
+	}
+
+	def setInvicibleDelay(delay double) {
+		invincibleDelay = delay
+	}
+
+	def currentWeapon weapon.Weapon {
+		return weapons[currentWeaponIndex]
+	}
+}

@@ -1,0 +1,25 @@
+namespace weapon {
+	class Mine : Weapon {
+		def new {
+			super("Mine")
+
+			baseLatency = 0.5
+		}
+
+		over fire(position Point, direction Point) {
+			if !canFire	{
+				return
+			}
+
+			decreaseAmmo
+			resetLatency
+
+			const mine = block.Mine.new(position.x, position.y)
+			Level.blocks.append(mine)
+		}
+
+		over renderMiniature(ctx Context) {
+			ctx.drawImage(Img.get("miniatures"), 48, 0, 16, 16, 0, 0, 16, 16)
+		}
+	}
+}

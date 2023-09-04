@@ -1,0 +1,76 @@
+namespace weapon.projectile {
+	class Grenade : Projectile {
+		def new(x double, y double, angle double, speed int) {
+			super(x, y, 8, 9, angle, speed)
+
+			loadImage(Img.get("grenade"), width, height)
+
+			health = 100
+			explosion = Explosion.new(center.x, center.y, 40, 50)
+		}
+
+		over update(dt double) {
+			super(dt)
+
+			# Ralenti la grenade
+			velocity *= 0.98
+
+			# Met à jour la position de l'explosion
+			explosion.position = center
+
+			# Si la grenade va trop lentement, la grenade explose puis est
+			# supprimée
+			if velocity.x > -8 && velocity.x < 8 &&
+			   velocity.y > -8 && velocity.y < 8
+			{
+				explode
+				kill
+			}
+		}
+
+		if !RELEASE {
+			over render(ctx Context) {
+				# Dessine un cercle sous la grenade
+				ctx.fillStyle = rgb(255, 0, 0, 0.1)
+				ctx.strokeStyle = rgb(255, 0, 0, 0.4)
+				ctx.drawPixelatedCircle(center.x, center.y, explosion.radius)
+
+				super(ctx)
+			}
+		}
+
+		def explode {
+			# Déclenche l'explosion
+			explosion.explode(self)
+		}
+
+		# à faire : le rebondissement doit être calculé et non faire comme ici
+		# un simple inversement de direction
+		over onCollision(b block.Block) {
+			# Si le bloc n'est pas solide, la suite est ignorée
+			if !b.isSolid {
+				return
+			}
+
+			# Collision verticale : rebond vertical
+			if hitVerticalBlock(b) {
+				velocity.x = -velocity.x
+			}
+
+			# Collision horizontale : rebond horizontal
+			if hitHorizontalBlock(b) {
+				velocity.y = -velocity.y
+			}
+		}
+
+		# à faire : y a-t-il une collision verticale ?
+		def hitVerticalBlock(b block.Block) bool {
+			return true
+		}
+
+		# à faire : y a-t-il une collision horizontale ?
+		def hitHorizontalBlock(b block.Block) bool {
+			return true
+		}
+	}
+}

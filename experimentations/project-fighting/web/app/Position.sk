@@ -1,0 +1,16 @@
+enum Position {
+	# En haut à gauche
+	TOP_LEFT
+
+	# En haut à droite
+	TOP_RIGHT
+
+	# En bas à droite
+	BOTTOM_RIGHT
+
+	# En bas à gauche
+	BOTTOM_LEFT
+
+	# Au centre
+	MIDDLE
+}

@@ -1,0 +1,102 @@
+class CanvasRenderingContext2D {
+	# Afficher un morceau d'image selon un index
+	def drawImageByIndex(img Image, x double, y double, index int, width int,
+	                     height int) {
+		# Nombre de tiles par ligne
+		const nbTilesByLine = Math.ceil(img.width / width) as int
+
+		# Position x depuis laquelle découper le morceau
+		var basex = index % nbTilesByLine
+		basex = basex * width
+
+		# Position y depuis laquelle découper le morceau
+		var basey = Math.floor(index / nbTilesByLine)
+		basey = basey * height
+
+		# Afficher le morceau d'image
+		drawImage(
+			img,
+			basex,
+			basey,
+			width,
+			height,
+			x,
+			y,
+			width,
+			height)
+	}
+
+	# Affiche un cercle plein
+	def fillCircle(x double, y double, r double) {
+		beginPath
+		arc(x, y, r, 0, Math.PI * 2, false)
+		fill
+	}
+
+	def setPixel(x double, y double) {
+		fillRect(x as int, y as int, 1, 1)
+	}
+
+	# cf. http://members.chello.at/easyfilter/canvas.html
+	def drawPixelatedCircle(xm double, ym double, r double) {
+		var xn = xm as int
+		var yn = ym as int
+
+		# Dessine le fond du cercle
+		beginPath
+		arc(xn, yn, r, 0, Math.PI * 2, false)
+		fill
+
+		# Dessine le contour du cercle
+		var tmp = fillStyle
+		fillStyle = strokeStyle
+
+		var x = -r
+		var y = 0
+		var err = 2 - 2 * r
+
+		while x < 0 {
+			setPixel(xn - x, yn + y)
+			setPixel(xn - y, yn - x)
+			setPixel(xn + x, yn - y)
+			setPixel(xn + y, yn + x)
+
+			r = err
+
+			if r <= y {
+				err += ++y * 2 + 1
+			}
+
+			if r > x || err > y {
+				err += ++x * 2 + 1
+			}
+		}
+
+		fillStyle = tmp
+	}
+
+	def drawPixelatedText(text string, x double, y double) {
+		const charSize = 9
+		const font = Img.get(FontManager.pixelatedFont)
+
+		text = text.toLowerCase
+
+		for i in 0 .. text.count {
+			const char = text[i]
+			const codeUnit = codeUnitToFontTableIndex(char)
+
+			drawImageByIndex(font, x, y, codeUnit, charSize, charSize)
+
+			x += charSize
+		}
+	}
+
+	def computeTextWidth(text string) int {
+		const charSize = 9
+		return charSize * text.count
+	}
+
+	def codeUnitToFontTableIndex(codeUnit int) int {
+		return FontTable[FontManager.pixelatedFont].get(codeUnit, 0)
+	}
+}

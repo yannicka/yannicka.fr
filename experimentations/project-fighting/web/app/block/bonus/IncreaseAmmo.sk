@@ -1,0 +1,17 @@
+namespace block.bonus {
+	class IncreaseAmmo : Bonus {
+		def new(x double, y double) {
+			super(x, y, 16, 16)
+		}
+
+		over onPlayerOverlaps(player Player) {
+			const currentWeapon = player.currentWeapon
+
+			if !currentWeapon.hasInfiniteAmmo {
+				currentWeapon.ammo += 5
+			}
+
+			kill
+		}
+	}
+}

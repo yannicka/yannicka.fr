@@ -1,0 +1,11 @@
+# Couleur RGB
+# à faire : compiler en un entier plutôt qu'en une chaine
+def rgb(r double, g double, b double) string {
+	return "rgb(\(r), \(g), \(b))"
+}
+
+# Couleur RGBA
+# à faire : compiler en un entier plutôt qu'en une chaine ?
+def rgb(r double, g double, b double, a double) string {
+	return "rgba(\(r), \(g), \(b), \(a))"
+}

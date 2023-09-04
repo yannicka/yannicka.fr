@@ -1,0 +1,53 @@
+class AnimationManager {
+	# Image qui servira de sprite aux animations
+	# La taille de chaque frame doit être fixée (par frameWidth et frameHeight)
+	# car elles sont référencées par des index.
+	var image Image
+
+	var frameWidth int
+	var frameHeight int
+
+	var animations StringMap<Animation>
+	var currentAnimation Animation
+
+	def new(image Image, frameWidth int, frameHeight int) {
+		self.image = image
+		self.frameWidth = frameWidth
+		self.frameHeight = frameHeight
+
+		animations = {}
+		currentAnimation = null
+	}
+
+	def update(dt double) {
+		if hasCurrentAnimation {
+			currentAnimation.update(dt)
+		}
+	}
+
+	def render(ctx Context) {
+		if hasCurrentAnimation {
+			currentAnimation.render(ctx)
+		} else if !hasAnimations {
+			ctx.drawImage(image, 0, 0)
+		}
+	}
+
+	def addAnimation(name string, frames List<int>) {
+		const animation = Animation.new(image, frames, frameWidth, frameHeight)
+
+		animations[name] = animation
+	}
+
+	def hasCurrentAnimation bool {
+		return currentAnimation != null
+	}
+
+	def getAnimation(name string) Animation {
+		return animations[name]
+	}
+
+	def hasAnimations bool {
+		return !animations.isEmpty
+	}
+}

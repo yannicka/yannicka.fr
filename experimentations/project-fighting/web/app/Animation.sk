@@ -1,0 +1,85 @@
+class Animation {
+	# Image qui servira de sprite à l'animation
+	# La taille de chaque frame doit être fixée (par frameWidth et frameHeight)
+	# car elles sont référencées par des index.
+	var image Image
+
+	# Liste des index des frames composant l'animation
+	var frames List<int>
+
+	# Vitesse d'animation (en seconde ; temps durant lequel une frame est
+	# affichéée)
+	var frameDuration double
+
+	# L'animation boucle-t-elle ?
+	var looped bool
+
+	var frameWidth int
+	var frameHeight int
+
+	# Compteurs
+	var timer double
+	var currentIndex int
+
+	# Créer une animation
+	def new(image Image, frames List<int>, frameWidth int, frameHeight int) {
+		self.image = image
+		self.frames = frames
+
+		self.frameWidth = frameWidth
+		self.frameHeight = frameHeight
+
+		frameDuration = 0.1
+		looped = true
+
+		timer = 0
+		currentIndex = 0
+	}
+
+	def update(dt double) {
+		# Si l'animation est terminée et qu'elle le boucle pas, la fonction est
+		# stoppée
+		if isCurrentAnimationFinished {
+			return
+		}
+
+		# Met à jour le compteur
+		timer += dt
+
+		# Si le compteur dépasse le temps entre deux frames :
+		# - On passe à la frame suivante ;
+		# - Si la nouvelle frame n'existe pas et que l'animation est bouclée, on
+		#   revient à la première frame ;
+		# - On remet le compteur à zéro.
+		if timer > frameDuration {
+			currentIndex += 1
+
+			if currentIndex >= frames.count && looped {
+				currentIndex = 0
+			}
+
+			timer = 0
+		}
+	}
+
+	# Rendu de l'animation (affiche la frame courante)
+	def render(ctx Context) {
+		ctx.drawImageByIndex(
+			image,
+			0,
+			0,
+			currentFrame,
+			frameWidth,
+			frameHeight)
+	}
+
+	# Retourne l'index de la frame courante
+	def currentFrame int {
+		return frames[currentIndex]
+	}
+
+	# L'animation courante est-elle terminée ?
+	def isCurrentAnimationFinished bool {
+		return currentIndex >= frames.count && !looped
+	}
+}

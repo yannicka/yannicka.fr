@@ -1,0 +1,9 @@
+namespace block.bonus {
+	class Bonus : Block {
+		def new(x double, y double, width int, height int) {
+			super(x, y, width, height)
+
+			solid = false
+		}
+	}
+}

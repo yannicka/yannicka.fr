@@ -1,0 +1,13 @@
+# Expressions régulières
+if TARGET == .JAVASCRIPT {
+	@import {
+		class RegExp {
+			def new(pattern string)
+			def new(pattern string, flags string)
+
+			def test(str string) bool
+
+			def exec(str string) dynamic
+		}
+	}
+}

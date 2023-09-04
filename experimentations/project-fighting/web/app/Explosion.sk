@@ -1,0 +1,60 @@
+class Explosion : Circle {
+	# Dommages provoqués par l'explosion
+	var damages int
+
+	# Image du rayon de l'explosion
+	var circleSprite Context
+
+	def new(x double, y double, radius double, damages int) {
+		super(x, y, radius)
+
+		self.damages = damages
+
+		updateCircleSprite
+	}
+
+	# Mettre à jour l'image du rayon de l'explosion
+	def updateCircleSprite {
+		var can = document.createElement("canvas") as Canvas
+		can.width = (radius * 2 + 1) as int
+		can.height = can.width
+
+		circleSprite = can.getContext2D as Context
+
+		circleSprite.fillStyle = rgb(255, 0, 0, 0.1)
+		circleSprite.strokeStyle = rgb(255, 0, 0, 0.4)
+		circleSprite.drawPixelatedCircle(radius, radius, radius)
+	}
+
+	# Déclenche l'explosion
+	def explode(b Sprite) {
+		if b.canBeRemoved {
+			return
+		}
+
+		Level.launchExplosion(self)
+
+		for player in playersInExplosionRay {
+			player.decreaseHealth(damages)
+			player.setInvicibleDelay(4)
+		}
+
+		for b2 in blocksInExplosionRay {
+			if b == b2 {
+				continue
+			}
+
+			b2.onExplosion(self)
+		}
+	}
+
+	# Joueurs se trouvant dans le rayon de l'explosion
+	def playersInExplosionRay List<Player> {
+		return Level.getPlayersInRay(self)
+	}
+
+	# Blocs se trouvant dans le rayon de l'explosion
+	def blocksInExplosionRay List<block.Block> {
+		return Level.getBlocksInRay(self)
+	}
+}
