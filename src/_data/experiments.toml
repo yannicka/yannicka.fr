@@ -106,6 +106,10 @@ Une sorte de Twitter.
 """
 
 [[experiments]]
+name = "Mava"
+folder = "mava"
+
+[[experiments]]
 name = "Mortsure"
 folder = "mortsure"
 short_description = """
