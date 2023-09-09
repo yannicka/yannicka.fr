@@ -55,7 +55,7 @@ mes outils préférés en haut de liste.
 
 ### Terminal
 
-- [Helix](http://helix-editor.com/)
+- [Helix](https://helix-editor.com/)
 - [vim](https://www.vim.org/)
   (bonus : [SpaceVim](https://spacevim.org/),
            [fugitive.vim](https://github.com/tpope/vim-fugitive), et bien d'autres)
@@ -77,7 +77,7 @@ mes outils préférés en haut de liste.
 - [GNOME Builder](https://wiki.gnome.org/Apps/Builder)
 - [Komodo Edit](https://www.activestate.com/products/komodo-edit/)
 - [UltraEdit](https://www.ultraedit.com/) *(propriétaire)*
-- [Gambas](http://gambas.sourceforge.net/)
+- [Gambas](https://gambas.sourceforge.net/)
 
 ## CSS
 
@@ -132,7 +132,7 @@ moins connus.*
 
 - [Krita](https://krita.org/)
 - [GIMP](https://www.gimp.org/)
-- [MyPaint](http://mypaint.org/)
+- [MyPaint](https://mypaint.org/)
 - [Paint.NET](https://www.getpaint.net/) *(propriétaire)* *(pour Windows seulement)*
 - [Drawing (GNOME)](https://maoschanz.github.io/drawing/)
 - [Drawpile](https://drawpile.net/)
@@ -160,7 +160,7 @@ moins connus.*
 *Spécialisés dans le pixel art.*
 
 - [Aseprite](https://www.aseprite.org/) *(propriétaire mais sources ouvertes)*
-- [PikoPixel](http://twilightedge.com/mac/pikopixel/)
+- [PikoPixel](https://twilightedge.com/mac/pikopixel/)
 - [GrafX2](http://grafx2.chez.com/)
 - [LibreSprite](https://libresprite.github.io/)
 - [Pixelorama](https://orama-interactive.itch.io/pixelorama)
@@ -453,7 +453,7 @@ moins connus.*
 - [FocusWriter](https://gottcode.org/focuswriter/)
 - [Turtl](https://turtlapp.com/)
 - [cherrytree](https://www.giuspen.com/cherrytree/)
-- [Lifeogaph](http://lifeograph.sourceforge.net/wiki/Main_Page)
+- [Lifeogaph](https://lifeograph.sourceforge.net/wiki/Main_Page)
 - [TagSpaces](https://www.tagspaces.org/)
 - [μPad](https://getmicropad.com)
 - [Xournal++](https://github.com/xournalpp/xournalpp)
@@ -711,7 +711,7 @@ moins connus.*
 - [Shynet](https://github.com/milesmcc/shynet)
 - [Simple Analytics](https://simpleanalytics.com/) *(privatif)*
 - [unami](https://umami.is/)
-- [Open Web Analytics](http://www.openwebanalytics.com/)
+- [Open Web Analytics](https://www.openwebanalytics.com/)
 - [Countly](https://count.ly/)
 - [userTrack](https://www.usertrack.net/) *(privatif)*
 - [Panelbear](https://panelbear.com/) *(privatif)*
@@ -793,7 +793,7 @@ moins connus.*
 ### Enregistreur d'écran
 
 - [Peek](https://peek.uploadedlobster.com/)
-- [RecordMyDesktop](http://recordmydesktop.sourceforge.net/)
+- [RecordMyDesktop](https://recordmydesktop.sourceforge.net/)
 - [Kazam](https://doc.ubuntu-fr.org/kazam)
 - [SimpleScreenRecorder](https://www.maartenbaert.be/simplescreenrecorder/)
 - [Open Broadcaster Software](https://obsproject.com/) (OBS Studio)
@@ -869,7 +869,7 @@ moins connus.*
 - [Godot](https://godotengine.org/)
 - [Armory](https://armory3d.org/)
 - [Defold](https://www.defold.com/) *(propriétaire mais sources accessibles)*
-- [Stencyl](http://www.stencyl.com/) *(propriétaire, semble abandonné)*
+- [Stencyl](https://www.stencyl.com/) *(propriétaire, semble abandonné)*
 - [Construct](https://www.scirra.com/) *(propriétaire)*
 - [GameMaker](https://www.yoyogames.com/) *(propriétaire)*
 - [Solarus](https://www.solarus-games.org/)
@@ -980,13 +980,13 @@ moins connus.*
 - [Cinelerra](https://cinelerra.org/)
 - [Cinelerra GG Infinity](https://www.cinelerra-gg.org/)
 - [OpenShot](https://openshot.org/)
-- [Pitivi](http://www.pitivi.org/)
+- [Pitivi](https://www.pitivi.org/)
 - [VLMC](https://www.videolan.org/vlmc/)
 - [Shotcut](https://www.shotcut.org/)
 - [Blender Velvets](http://blendervelvets.org/)
 - [Flowblade](https://fr.wikipedia.org/wiki/Flowblade)
 - [Olive](https://www.olivevideoeditor.org/)
-- [Avidemux](http://avidemux.sourceforge.net/)
+- [Avidemux](https://avidemux.sourceforge.net/)
 
 ### Traitement vidéo
 
@@ -1020,7 +1020,7 @@ moins connus.*
 
 ### Outils photographique
 
-- [Hugin](http://hugin.sourceforge.net/)
+- [Hugin](https://hugin.sourceforge.net/)
 
 ### Site consacré aux logiciels libres de photographie
 
@@ -1035,7 +1035,7 @@ moins connus.*
 - [Videezy](https://www.videezy.com/)
 - [Distill](https://wedistill.io/)
 - [Mazwai](https://mazwai.com/)
-- [splashbase](http://www.splashbase.co/)
+- [splashbase](https://www.splashbase.co/)
 - [Lifeovids](https://www.lifeofvids.com/)
 - [Coverr](https://coverr.co/)
 
@@ -1201,7 +1201,7 @@ moins connus.*
 ## Jetable
 
 - [Inboxen](https://inboxen.org/) - Adresse électronique jetable
-- [YOPmail](http://www.yopmail.com/) - Adresse électronique jetable
+- [YOPmail](https://www.yopmail.com/) - Adresse électronique jetable
 - [SMS Receive Free](https://smsreceivefree.com/) - Numéro de téléphone jetable
 
 ## Diaporama
