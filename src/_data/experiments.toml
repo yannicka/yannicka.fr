@@ -116,6 +116,11 @@ short_description = """
 Un jeu flash inspiré de Canabalt : courrez le plus loin possible.
 """
 
+
+[[experiments]]
+name = "Mortsure 2"
+folder = "mortsure2"
+
 [[experiments]]
 name = "MVSD"
 folder = "mvsd"
