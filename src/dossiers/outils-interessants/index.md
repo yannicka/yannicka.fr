@@ -1,7 +1,7 @@
 ---
 title: Outils intéressants
 created_at: 2015-10-02
-updated_at: 2023-01-14
+updated_at: 2023-11-30
 short_description: >
   Grande liste d'outils (sites web, logiciels, etc.) intéressants pour pleins de
   domaines différents.
@@ -30,7 +30,7 @@ mes outils préférés en haut de liste.
 - [Emacs](https://www.gnu.org/software/emacs/emacs.html)
   - Trousses de démarrage *(Starter Kits)* :
     - [Spacemacs](https://www.spacemacs.org/)
-    - [Prelude](https://github.com/bbatsov/prelude)
+    - [Prelude](https://prelude.emacsredux.com/en/latest/)
     - [Doom Emacs](https://github.com/hlissner/doom-emacs/)
     - [purcell emacs.d](https://github.com/purcell/emacs.d)
     - [Centaur Emacs](https://github.com/seagle0128/.emacs.d)
@@ -41,6 +41,7 @@ mes outils préférés en haut de liste.
     - [Magit Forge](https://github.com/magit/forge/)
 - [Zed](https://zed.dev/)
 - [Lapce](https://lapce.dev/)
+- [JetBrains Fleet](https://www.jetbrains.com/fleet/) *(propriétaire)*
 - [GNOME Text Editor](https://gitlab.gnome.org/GNOME/gnome-text-editor)
 - [Thonny](https://thonny.org/) *(pour Python)*
 - [Textadept](https://orbitalquark.github.io/textadept/)
@@ -50,8 +51,7 @@ mes outils préférés en haut de liste.
 - [Howl](https://howl.io/)
 - [Lite XL](https://lite-xl.com/)
 - [ecode](https://github.com/SpartanJ/ecode)
-- [JetBrains Fleet](https://www.jetbrains.com/fleet/) *(propriétaire)*
-- [Notepadqq](https://notepadqq.com/) *(n'est plus maintenu)*
+- [Komodo Edit](https://www.activestate.com/products/komodo-edit/)
 
 ### Terminal
 
@@ -69,13 +69,12 @@ mes outils préférés en haut de liste.
 
 ## IDE
 
-- [NetBeans](https://netbeans.apache.org/)
 - [Les IDE de JetBrains](https://www.jetbrains.com/) *(principalement
   privatif)* (bonus : [Intellij Rust](https://intellij-rust.github.io/))
+- [NetBeans](https://netbeans.apache.org/)
 - [Eclipse](https://www.eclipse.org/)
 - [KDevelop](https://www.kdevelop.org/)
 - [GNOME Builder](https://wiki.gnome.org/Apps/Builder)
-- [Komodo Edit](https://www.activestate.com/products/komodo-edit/)
 - [UltraEdit](https://www.ultraedit.com/) *(propriétaire)*
 - [Gambas](https://gambas.sourceforge.net/)
 
@@ -101,19 +100,19 @@ moins connus.*
 - [Nim](https://nim-lang.org/)
 - [Zig](https://ziglang.org/)
 - [Racket](https://racket-lang.org/)
-- [Clojure](https://clojure.org/) & [ClojureScript](https://clojurescript.org/)
+- [Clojure](https://clojure.org/) et [ClojureScript](https://clojurescript.org/)
 - [OCaml](https://ocaml.org/)
 - [Haskell](https://www.haskell.org/)
-- [Elm](https://elm-lang.org/) (bonus : [Elm Land](https://elm.land/))
 - [ReScript](https://rescript-lang.org/)
 - [Gleam](https://gleam.run/)
 - [Gren](https://gren-lang.org/)
+- [Elm](https://elm-lang.org/) (bonus : [Elm Land](https://elm.land/))
 
 ### Comment créer un langage de programmation
 
 - [Crafting Interpreters](https://craftinginterpreters.com/)
 
-## Outils de développeurs
+## Outils pour développeurs
 
 - [Sourcegraph](https://about.sourcegraph.com/)
 - [DevPod](https://devpod.sh/) *(alternative à Codespaces)*
@@ -124,7 +123,7 @@ moins connus.*
 
 ## Dessin & graphisme
 
-*Alternatives à PhotoShop, Illustrator et bien d'autres outils.*
+*Alternatives à Adobe PhotoShop, Adobe Illustrator et bien d'autres outils.*
 
 ### Dessin matriciel
 
@@ -132,11 +131,11 @@ moins connus.*
 
 - [Krita](https://krita.org/)
 - [GIMP](https://www.gimp.org/)
-- [MyPaint](https://mypaint.org/)
 - [Paint.NET](https://www.getpaint.net/) *(propriétaire)* *(pour Windows seulement)*
 - [Drawing (GNOME)](https://maoschanz.github.io/drawing/)
-- [Drawpile](https://drawpile.net/)
 - [Pinta](https://www.pinta-project.com/)
+- [MyPaint](https://mypaint.org/)
+- [Drawpile](https://drawpile.net/)
 
 ### Dessin vectoriel
 
@@ -152,8 +151,8 @@ moins connus.*
 *Alternatives à Figma, Sketch, Adobe XD, etc.*
 
 - [Penpot](https://penpot.app/)
-- [Akira](https://github.com/akiraux/Akira) *(en cours de développement)*
 - [Quant-UX](https://quant-ux.com/)
+- [Akira](https://github.com/akiraux/Akira) *(en cours de développement)*
 
 ### Pixel art
 
@@ -173,7 +172,7 @@ moins connus.*
 - [enve](https://maurycyliebner.github.io/)
 - [VGC Software](https://www.vgc.io/) *(pas encore sorti)*
 - [Wick Editor](https://www.wickeditor.com/) *(semble à l'abandon)*
-- [Expressive Suite](https://www.expressivesuite.com/) *(propriétaire)*
+- [Expressive](https://expressive.app/) *(propriétaire)*
 
 ### Diagrammes
 
@@ -186,7 +185,6 @@ moins connus.*
 ### Autres outils
 
 - [G'MIC](https://gmic.eu/)
-- [LayerHub - Design Editor](https://github.com/layerhub-io/react-design-editor) (clone de Canva)
 
 ## 3D
 
@@ -473,30 +471,28 @@ moins connus.*
 
 ### « Avancé »
 
-*Alternatives à [Notion](https://www.notion.so/).*
+*Alternatives à [Notion](https://www.notion.so/) et [Obsidian](https://obsidian.md/).*
 
-- [Focalboard](https://www.focalboard.com/)
-- [Taskade](https://www.taskade.com/) *(propriétaire)*
-- [Milanote](https://www.milanote.com/) *(propriétaire)*
-- [Quip](https://quip.com/) *(propriétaire)*
 - [Logseq](https://logseq.com/)
-- [Anytype](https://anytype.io/)
+- [Anytype](https://anytype.io/) *(propriétaire)*
 - [AFFiNE](https://affine.pro/)
-- [Slite](https://slite.com/)
+- [SiYuan](https://github.com/siyuan-note/siyuan)
+- [SilverBullet](https://silverbullet.md/)
 - [Outline](https://www.getoutline.com/)
 - [Notea](https://cinwell.com/notea/)
 - [AppFlowy.IO](https://www.appflowy.io/)
 - [Bangle.io](https://bangle.io/)
+- [Focalboard](https://www.focalboard.com/)
 - [WorkFlowwy](https://workflowy.com/) *(propriétaire)*
-- [SiYuan](https://github.com/siyuan-note/siyuan)
-- [Silver Bullet](https://silverbullet.md/)
 - [Athens](https://www.athensresearch.org/)
 - [Tana](https://tana.inc/) *(propriétaire)*
 - [BlockSuite](https://blocksuite.affine.pro/)
 - [BlockNote](https://www.blocknotejs.org/)
 - [Chisel Editor](https://egonschiele.github.io/chisel-docs/)
 - [Block Protocol](https://blockprotocol.org/)
-- [Skiff Pages](https://skiff.com/pages)
+- [Skiff Pages](https://skiff.com/pages) *(propriétaire)*
+- [Slite](https://slite.com/) *(propriétaire)*
+- [Quip](https://quip.com/) *(propriétaire)*
 
 ### Bases de connaissances
 
@@ -512,8 +508,8 @@ moins connus.*
 ## Tableau blanc
 
 - [Excalidraw](https://excalidraw.com/)
-- [OpenBoard](https://openboard.ch/)
 - [tldraw](https://www.tldraw.com/)
+- [OpenBoard](https://openboard.ch/)
 
 ## Base de données
 
@@ -560,6 +556,10 @@ moins connus.*
 - [Appsmith](https://www.appsmith.com/)
 - [ILLA Cloud](https://www.illacloud.com/)
 - [PocketBase](https://pocketbase.io/)
+
+### Stockage de données
+
+- [GNU Recutils](https://www.gnu.org/software/recutils/)
 
 ## Formulaires
 
@@ -792,8 +792,7 @@ moins connus.*
 
 ### Enregistreur d'écran
 
-- [Peek](https://peek.uploadedlobster.com/)
-- [RecordMyDesktop](https://recordmydesktop.sourceforge.net/)
+- [Kooha](https://github.com/SeaDve/Kooha)
 - [Kazam](https://doc.ubuntu-fr.org/kazam)
 - [SimpleScreenRecorder](https://www.maartenbaert.be/simplescreenrecorder/)
 - [Open Broadcaster Software](https://obsproject.com/) (OBS Studio)
@@ -869,11 +868,11 @@ moins connus.*
 - [Godot](https://godotengine.org/)
 - [Armory](https://armory3d.org/)
 - [Defold](https://www.defold.com/) *(propriétaire mais sources accessibles)*
-- [Stencyl](https://www.stencyl.com/) *(propriétaire, semble abandonné)*
-- [Construct](https://www.scirra.com/) *(propriétaire)*
-- [GameMaker](https://www.yoyogames.com/) *(propriétaire)*
+- [Construct](https://www.construct.net/) *(propriétaire)*
+- [GameMaker](https://gamemaker.io/) *(propriétaire)*
 - [Solarus](https://www.solarus-games.org/)
 - [microStudio](https://microstudio.dev/)
+- [Stencyl](https://www.stencyl.com/) *(propriétaire, semble abandonné)*
 
 ### Boutique de jeux
 
@@ -1081,12 +1080,10 @@ moins connus.*
 - [KeePassXC](https://keepassxc.org/)
 - [Bitwarden](https://bitwarden.com/)
 - [KeePass](https://keepass.info/)
-- [KeeWeb](https://keeweb.info/)
 - [Buttercup](https://buttercup.pw/)
 - [Secrets](https://gitlab.gnome.org/World/secrets)
 - [Passbolt](https://www.passbolt.com/)
 - [pass](https://www.passwordstore.org/)
-- [Spectre](https://spectre.app/)
 - [Passman](https://www.passman.cc/)
 - [Proton Pass](https://proton.me/pass)
 
@@ -1098,6 +1095,7 @@ moins connus.*
 - [GNOME Feeds](https://gabmus.gitlab.io/gnome-feeds/)
 - [Akregator](https://kde.org/applications/internet/org.kde.akregator)
 - [Fluent Reader](https://hyliu.me/fluent-reader/)
+- [Thunderbird](https://www.thunderbird.net/)
 
 ## Marque-pages
 
@@ -1190,13 +1188,8 @@ moins connus.*
 
 ## Sauvegarde
 
-- [Cronopete](https://www.rastersoft.com/programas/cronopete.html)
 - [Borg](https://www.borgbackup.org/)
-
-## Terminal Windows
-
-- [cmder](https://cmder.app/)
-- [Windows Terminal](https://github.com/microsoft/terminal)
+- [Cronopete](https://www.rastersoft.com/programas/cronopete.html)
 
 ## Jetable
 
@@ -1218,6 +1211,7 @@ moins connus.*
 - [Elukerio](https://www.elukerio.org/)
 - [Hostux.net](https://hostux.net/)
 - [LinuxPizza](https://linux.pizza/)
+- Bonus : [CHATONS](https://www.chatons.org/)
 
 ## VPN
 
@@ -1264,17 +1258,16 @@ moins connus.*
 
 ## Transfert de fichiers
 
+*Alternatives à WeTransfer.*
+
 - [Swiss Transfer](https://www.swisstransfer.com/)
 - [ShareDrop](https://www.sharedrop.io/)
-- [Bitwarden Send](https://bitwarden.com/products/send/) *(privatif)*
 
 ## Calculatrices
 
-- [NaSC](https://github.com/parnold-x/nasc)
 - [Qalculate!](https://qalculate.github.io/)
 - [Cantor](https://cantor.kde.org/)
 - [NoteCalc](https://bbodi.github.io/notecalc3/)
-- [Math Notes](https://imaginamundo.github.io/math-notes/)
 
 ## Police
 
@@ -1289,10 +1282,6 @@ moins connus.*
 - [Lotion](https://font.nina.coffee/)
 - [IBM Plex](https://www.ibm.com/plex/)
 - [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
-
-## Stockage de données
-
-- [GNU Recutils](https://www.gnu.org/software/recutils/)
 
 ## Flash
 
@@ -1337,8 +1326,14 @@ moins connus.*
 
 ## API
 
+*Alternatives à Postman.*
+
 - [Insomnia](https://insomnia.rest/)
 - [Hoppscotch](https://hoppscotch.io/)
+- [Bruno](https://www.usebruno.com/)
+- [Restfox](https://restfox.dev/)
+- [Hurl](https://hurl.dev/)
+- [Pororoca](https://pororoca.io/)
 
 ## D'autres listes d'outils intéressants
 
