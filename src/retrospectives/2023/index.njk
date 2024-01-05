@@ -1,0 +1,193 @@
+---
+title: 2023
+imdbIds:
+  - 'tt1327773'
+  - 'tt4699388'
+  - 'tt12823454'
+  - 'tt14208870'
+  - 'tt10505316'
+  - 'tt16428256'
+  - 'tt7534150'
+  - 'tt6718170'
+  - 'tt1798188'
+  - 'tt0096283'
+  - 'tt2463208'
+  - 'tt1798709'
+  - 'tt6264654'
+  - 'tt1465487'
+  - 'tt0347618'
+  - 'tt3700392'
+  - 'tt7401588'
+  - 'tt27510455'
+  - 'tt6791350'
+  - 'tt15789038'
+  - 'tt9362722'
+  - 'tt15398776'
+  - 'tt7458762'
+  - 'tt13079150'
+  - 'tt13399946'
+  - 'tt16987062'
+  - 'tt28236368'
+  - 'tt0362227'
+  - 'tt24068064'
+  - 'tt1517268'
+  - 'tt29078233'
+  - 'tt24070754'
+  - 'tt1355630'
+  - 'tt21638298'
+  - 'tt10545296'
+  - 'tt0477348'
+  - 'tt6166392'
+  - 'tt0367594'
+
+musics: [
+  {
+    "artist": "ascendant vierge",
+    "album": "Vierge",
+    "track": "Influenceur",
+    "uri": "spotify:track:2hL8heHC7OBiLvnpNSllsH"
+  },
+
+  {
+    "artist": "The Rose",
+    "album": "Back To Me / Alive",
+    "track": "Back To Me",
+    "uri": "spotify:track:4eZpe6SMJQIqAU9VJI84oD"
+  },
+
+  {
+    "artist": "Yuston XIII",
+    "album": "Origine",
+    "track": "Dystopia",
+    "uri": "spotify:track:5RHsQ3Wf3aNJ3fMYXkMEvM"
+  },
+
+  {
+    "artist": "Yuston XIII",
+    "album": "Origine",
+    "track": "Au-Dessus des nuages",
+    "uri": "spotify:track:5enPRFnbE3AkTf7JPTKLtv"
+  },
+
+  {
+    "artist": "Yuston XIII",
+    "album": "Origine",
+    "track": "L'âme du phoenix",
+    "uri": "spotify:track:4V1lFBt09vY2Jfx8jiVejx"
+  },
+
+  {
+    "artist": "Yuston XIII",
+    "album": "Fantôme",
+    "track": "Fantôme",
+    "uri": "spotify:track:2nuHKb1JoHokJ3NZWYtkzP"
+  },
+
+  {
+    "artist": "Suzane",
+    "album": "Toï Toï",
+    "track": "L'insatisfait",
+    "uri": "spotify:track:6f9HzvbQiqqxpv5kCSv4vz"
+  },
+
+  {
+    "artist": "Suzane",
+    "album": "Caméo",
+    "track": "Road Movie",
+    "uri": "spotify:track:5LB1NQWS4umoOfSnWeRv2L"
+  },
+
+  {
+    "artist": "Suzane",
+    "album": "Toï Toï",
+    "track": "L'appart vide",
+    "uri": "spotify:track:1HKeeQoCxkCGARQOFOcN3F"
+  },
+
+  {
+    "artist": "Adèle Castillon",
+    "album": "Alabama",
+    "track": "Alabama",
+    "uri": "spotify:track:06Z0L1RlAkbcjL0IWKYLNQ"
+  },
+
+  {
+    "artist": "Corbyn",
+    "album": "Our Static Seatbelt",
+    "track": "Cold",
+    "uri": "spotify:track:7CiQxWPF1t3rkhBa7lNBaR"
+  },
+
+  {
+    "artist": "Ice Mc",
+    "album": "Ice 'n' Green",
+    "track": "Think About the Way",
+    "uri": "spotify:track:2foOeJLKSvepjHEkb4NR8N"
+  },
+
+  {
+    "artist": "Eiffel 65",
+    "album": "Europop",
+    "track": "Blue (Da Ba Dee) - Gabry Ponte Ice Pop Radio",
+    "uri": "spotify:track:2yAVzRiEQooPEJ9SYx11L3"
+  },
+
+  {
+    "artist": "Somnea",
+    "album": "Même chose",
+    "track": "Même chose",
+    "uri": "spotify:track:0MKtviaReMkP85YXnkauYb"
+  },
+
+  {
+    "artist": "Hubert-Félix Thiéfaine",
+    "album": "Homo plebis ultimae tour",
+    "track": "Annihilation - Live",
+    "uri": "spotify:track:0lxhZ15CR3PdKqq8y1E14X"
+  },
+
+  {
+    "artist": "Skeler",
+    "album": "Tel Aviv",
+    "track": "Tel Aviv",
+    "uri": "spotify:track:45KsTd0ZqKlgw0fNc8oyC5"
+  },
+]
+---
+
+<h2 class="text-3xl mt-8 mb-4">
+  Films vus
+</h2>
+
+<p class="mb-4">
+  <em>Sans ordre particulier. Aussi, tous les films ne sont pas listés car parfois j'oublie d'en noter ou simplement j'ai trop dormi devant (par fatigue, pas par ennui).</em>
+</p>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+  {%- for imdbId in imdbIds -%}
+    <div class="p-3 bg-stone-100 rounded-lg">
+      {% set movie = movies[imdbId] %}
+
+      <a href="https://www.imdb.com/title/{{ movie.imdbId }}/" title="{{ movie.originalTitle }}" class="underline">
+        {{ movie.title }} ({{ movie.releaseYear }})
+      </a>
+    </div>
+  {%- endfor -%}
+</div>
+
+<h2 class="text-3xl mt-8 mb-4">
+  Découvertes musicales
+</h2>
+
+<p class="mb-4">
+  <em>Sans ordre particulier.</em>
+</p>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+  {%- for music in musics -%}
+    <div class="p-3 bg-stone-100 rounded-lg">
+      <i>{{ music.track }}</i><br>
+      <small>Par {{ music.artist }} dans l'album <i>{{ music.album }}</i></small>
+    </div>
+  {%- endfor -%}
+</div>

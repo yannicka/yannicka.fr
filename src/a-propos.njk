@@ -48,6 +48,10 @@ site : [accéder au dépôt du site](https://gitlab.com/yannicka/yannicka.fr-v2)
 - [Films]({{ '/films/' | url }})
 - [Peinture sur impression 3D]({{ '/peinture-impression-3d/' | url }})
 
+## Rétrospectives
+
+- [2023]({{ '/retrospectives/2023/' | url }})
+
 ## « Dégafamisation »
 
 - J'utilise Reddit et Messenger comme outil propriétaire.
@@ -76,13 +80,3 @@ site : [accéder au dépôt du site](https://gitlab.com/yannicka/yannicka.fr-v2)
 {% endmarkdown %}
 
 </div>
-
-<ul>
-  {% for retrospective in collections.retrospectives %}
-    <li>
-      <a href="{{ retrospective.url | url }}">
-        {{ retrospective.data.title }}
-      </a>
-    </li>
-  {% endfor %}
-</ul>
