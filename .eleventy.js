@@ -48,6 +48,16 @@ module.exports = function (config) {
     return articles
   })
 
+  config.addCollection('retrospectives', function(collection) {
+    let retrospectives = collection.getFilteredByTag('retrospective')
+
+    retrospectives.sort((a, b) => {
+      return b.data.title > a.data.created_at
+    })
+
+    return retrospectives
+  })
+
   config.addCollection('project', function(collection) {
     let projects = collection.getFilteredByTag('project')
 
