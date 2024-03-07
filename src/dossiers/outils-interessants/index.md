@@ -1,7 +1,7 @@
 ---
 title: Outils intéressants
 created_at: 2015-10-02
-updated_at: 2023-11-30
+updated_at: 2023-12-23
 short_description: >
   Grande liste d'outils (sites web, logiciels, etc.) intéressants pour pleins de
   domaines différents.
@@ -70,7 +70,7 @@ mes outils préférés en haut de liste.
 ## IDE
 
 - [Les IDE de JetBrains](https://www.jetbrains.com/) *(principalement
-  privatif)* (bonus : [Intellij Rust](https://intellij-rust.github.io/))
+  privatif)*
 - [NetBeans](https://netbeans.apache.org/)
 - [Eclipse](https://www.eclipse.org/)
 - [KDevelop](https://www.kdevelop.org/)
@@ -493,6 +493,9 @@ moins connus.*
 - [Skiff Pages](https://skiff.com/pages) *(propriétaire)*
 - [Slite](https://slite.com/) *(propriétaire)*
 - [Quip](https://quip.com/) *(propriétaire)*
+- [Pagico](https://www.pagico.com/) *(propriétaire)*
+- [Inko Cat](https://www.inko.cat/) *(propriétaire)*
+- [Capacities](https://capacities.io/) *(propriétaire)*
 
 ### Bases de connaissances
 
@@ -744,7 +747,6 @@ moins connus.*
 ### Scanner son site
 
 - [Wapiti](https://wapiti.sourceforge.io/)
-- [Dareboost](https://www.dareboost.com/)
 - [web.dev](https://web.dev/)
 - [Yellow Lab Tools](https://yellowlab.tools/)
 
@@ -785,6 +787,7 @@ moins connus.*
 
 ## Gestion de projet
 
+- [Plane](https://plane.so/)
 - [OpenProject](https://www.openproject.org/)
 - [Markwhen](https://markwhen.com/)
 
@@ -928,6 +931,7 @@ moins connus.*
 - [Sublime Merge](https://www.sublimemerge.com/) *(propriétaire)*
 - [fugitive.vim](https://github.com/tpope/vim-fugitive)
 - [GitFiend](https://gitfiend.com/)
+- [GitButler](https://gitbutler.com/)
 - [GitKraken](https://www.gitkraken.com/) *(propriétaire)*
 - Bonus : [une liste non exhaustive des clients
   git](https://git-scm.com/downloads/guis)
@@ -1064,6 +1068,7 @@ moins connus.*
 - [Forgejo](https://forgejo.org/)
 - [Codeberg](https://codeberg.org/)
 - [Gitea](https://gitea.io/)
+- [Ayllu](https://ayllu-forge.org/)
 - [Launchpad](https://launchpad.net/)
 - [Fossil](https://www.fossil-scm.org/)
 - [Kallithea](https://kallithea-scm.org/)
@@ -1268,6 +1273,8 @@ moins connus.*
 - [Qalculate!](https://qalculate.github.io/)
 - [Cantor](https://cantor.kde.org/)
 - [NoteCalc](https://bbodi.github.io/notecalc3/)
+- [NumPad](https://numpad.io/)
+- [Heynote](https://heynote.com/)
 
 ## Police
 
@@ -1329,11 +1336,17 @@ moins connus.*
 *Alternatives à Postman.*
 
 - [Insomnia](https://insomnia.rest/)
-- [Hoppscotch](https://hoppscotch.io/)
 - [Bruno](https://www.usebruno.com/)
+- [Hoppscotch](https://hoppscotch.io/)
 - [Restfox](https://restfox.dev/)
 - [Hurl](https://hurl.dev/)
 - [Pororoca](https://pororoca.io/)
+
+## Tunnels HTTPS
+
+Alternatives à ngrok.
+
+- [zrok](https://zrok.io/)
 
 ## D'autres listes d'outils intéressants
 
