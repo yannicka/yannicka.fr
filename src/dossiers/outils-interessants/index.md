@@ -1,7 +1,7 @@
 ---
 title: Outils intéressants
 created_at: 2015-10-02
-updated_at: 2023-12-23
+updated_at: 2024-03-11
 short_description: >
   Grande liste d'outils (sites web, logiciels, etc.) intéressants pour pleins de
   domaines différents.
@@ -21,37 +21,30 @@ mes outils préférés en haut de liste.
 ### Interface graphique
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-  (bonus : [VSCodium](https://vscodium.com/),
-           [Visual Studio Code - OSS](https://flathub.org/apps/details/com.visualstudio.code-oss))
+  (bonus : [VSCodium](https://vscodium.com/))
 - [Kate](https://kate-editor.org/)
+- [Zed](https://zed.dev/)
+- [JetBrains Fleet](https://www.jetbrains.com/fleet/) *(propriétaire)*
+- [Lapce](https://lapce.dv/)
 - [Sublime Text](https://www.sublimetext.com/) *(propriétaire)*
 - [Notepad++](https://notepad-plus-plus.org/) *(Windows seulement)*
 - [Geany](https://www.geany.org/)
 - [Emacs](https://www.gnu.org/software/emacs/emacs.html)
-  - Trousses de démarrage *(Starter Kits)* :
-    - [Spacemacs](https://www.spacemacs.org/)
-    - [Prelude](https://prelude.emacsredux.com/en/latest/)
-    - [Doom Emacs](https://github.com/hlissner/doom-emacs/)
-    - [purcell emacs.d](https://github.com/purcell/emacs.d)
-    - [Centaur Emacs](https://github.com/seagle0128/.emacs.d)
-    - [Liste plus complète](https://www.emacswiki.org/emacs/StarterKits)
+  - [Bonus : des trousses de démarrage *(Starter Kits)*](https://www.emacswiki.org/emacs/StarterKits)
   - Autres bonus :
     - [Org mode](https://orgmode.org/)
     - [Magit](https://magit.vc/)
     - [Magit Forge](https://github.com/magit/forge/)
-- [Zed](https://zed.dev/)
-- [Lapce](https://lapce.dev/)
-- [JetBrains Fleet](https://www.jetbrains.com/fleet/) *(propriétaire)*
 - [GNOME Text Editor](https://gitlab.gnome.org/GNOME/gnome-text-editor)
-- [Thonny](https://thonny.org/) *(pour Python)*
 - [Textadept](https://orbitalquark.github.io/textadept/)
 - [CudaText](https://cudatext.github.io/)
 - [elementary Code](https://github.com/elementary/code)
-- [Graviton](https://graviton.netlify.app/)
-- [Howl](https://howl.io/)
 - [Lite XL](https://lite-xl.com/)
 - [ecode](https://github.com/SpartanJ/ecode)
+- [Thonny](https://thonny.org/) *(pour Python)*
 - [Komodo Edit](https://www.activestate.com/products/komodo-edit/)
+- [Graviton](https://graviton.netlify.app/)
+- [Howl](https://howl.io/)
 
 ### Terminal
 
@@ -64,17 +57,17 @@ mes outils préférés en haut de liste.
            [NvChad](https://nvchad.com/))
 - [Micro](https://micro-editor.github.io/)
 - [Kakoune](https://kakoune.org/)
-- [nano](https://www.nano-editor.org/)
 - [Emacs](https://www.gnu.org/software/emacs/emacs.html)
+- [nano](https://www.nano-editor.org/)
 
 ## IDE
 
 - [Les IDE de JetBrains](https://www.jetbrains.com/) *(principalement
   privatif)*
 - [NetBeans](https://netbeans.apache.org/)
+- [GNOME Builder](https://wiki.gnome.org/Apps/Builder)
 - [Eclipse](https://www.eclipse.org/)
 - [KDevelop](https://www.kdevelop.org/)
-- [GNOME Builder](https://wiki.gnome.org/Apps/Builder)
 - [UltraEdit](https://www.ultraedit.com/) *(propriétaire)*
 - [Gambas](https://gambas.sourceforge.net/)
 
@@ -106,7 +99,7 @@ moins connus.*
 - [ReScript](https://rescript-lang.org/)
 - [Gleam](https://gleam.run/)
 - [Gren](https://gren-lang.org/)
-- [Elm](https://elm-lang.org/) (bonus : [Elm Land](https://elm.land/))
+- [Elm](https://elm-lang.org/) *(abandonné)* (bonus : [Elm Land](https://elm.land/))
 
 ### Comment créer un langage de programmation
 
@@ -123,28 +116,27 @@ moins connus.*
 
 ## Dessin & graphisme
 
-*Alternatives à Adobe PhotoShop, Adobe Illustrator et bien d'autres outils.*
-
 ### Dessin matriciel
 
-*Spécialisés dans le matriciel. Alternatives à Adobe PhotoShop, etc.*
+*Alternatives à Adobe PhotoShop, etc.*
 
 - [Krita](https://krita.org/)
 - [GIMP](https://www.gimp.org/)
 - [Paint.NET](https://www.getpaint.net/) *(propriétaire)* *(pour Windows seulement)*
 - [Drawing (GNOME)](https://maoschanz.github.io/drawing/)
 - [Pinta](https://www.pinta-project.com/)
-- [MyPaint](https://mypaint.org/)
+- [MyPaint](https://mypaint.app/)
 - [Drawpile](https://drawpile.net/)
 
 ### Dessin vectoriel
 
-*Spécialisés dans le vectoriel. Alternatives à Adobe Illustrator, etc.*
+*Alternatives à Adobe Illustrator, etc.*
 
 - [Inkscape](https://inkscape.org/)
-- [Gravit](https://gravit.io/) *(propriétaire)*
+- [Corel Vector](https://www.coreldraw.com/fr/product/vector/) *(propriétaire)*
 - [Krita](https://krita.org/)
 - [Graphite](https://graphite.rs/)
+- [Repath](https://repath.studio/)
 
 ### Outil de prototypage
 
@@ -279,6 +271,7 @@ moins connus.*
 - [Mattermost](https://mattermost.com/)
 - [Rocket.Chat](https://rocket.chat/)
 - [Zulip](https://zulip.com/)
+- [Struct](https://struct.ai/) *(privatif)*
 
 ### Centré sur la vidéo
 
@@ -524,6 +517,8 @@ moins connus.*
 - [NocoDB](https://www.nocodb.com/)
 - [APITable](https://apitable.com/)
 - [Undb](https://www.undb.xyz/)
+- [Teable](https://teable.io/)
+- [Mathesar](https://mathesar.org/)
 - [Memento Database](https://mementodatabase.com/) *(propriétaire)*
 
 ### Modélisation
