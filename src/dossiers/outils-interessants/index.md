@@ -30,8 +30,8 @@ mes outils préférés en haut de liste.
 - [Notepad++](https://notepad-plus-plus.org/) *(Windows seulement)*
 - [Geany](https://www.geany.org/)
 - [Emacs](https://www.gnu.org/software/emacs/emacs.html)
-  - [Bonus : des trousses de démarrage *(Starter Kits)*](https://www.emacswiki.org/emacs/StarterKits)
-  - Autres bonus :
+  - Bonus :
+    - [Des trousses de démarrage *(Starter Kits)*](https://www.emacswiki.org/emacs/StarterKits)
     - [Org mode](https://orgmode.org/)
     - [Magit](https://magit.vc/)
     - [Magit Forge](https://github.com/magit/forge/)
@@ -72,6 +72,9 @@ mes outils préférés en haut de liste.
 - [Gambas](https://gambas.sourceforge.net/)
 
 ## CSS
+
+- Aller sur [State of CSS](https://stateofcss.com/) pour voir l'état de l'art de CSS.
+- Aller sur [State of HTML](https://stateofhtml.com/) pour voir l'état de l'art d'HTML.
 
 ### Préprocesseur
 
@@ -165,6 +168,7 @@ moins connus.*
 - [VGC Software](https://www.vgc.io/) *(pas encore sorti)*
 - [Wick Editor](https://www.wickeditor.com/) *(semble à l'abandon)*
 - [Expressive](https://expressive.app/) *(propriétaire)*
+- [Trangram](https://www.trangram.com/) *(propriétaire)*
 
 ### Diagrammes
 
@@ -280,6 +284,7 @@ moins connus.*
 - [Jitsi Meet](https://jitsi.org/jitsi-meet/)
 - [MiroTalk SFU](https://sfu.mirotalk.org/)
 - [Element Call](https://call.element.io/)
+- [kMeet](https://www.infomaniak.com/fr/kmeet)
 
 ### Centré sur la voix
 
@@ -318,6 +323,8 @@ moins connus.*
 - [Movim](https://movim.eu/)
 - [diaspora\*](https://diasporafoundation.org/)
   (instance : [diaspora-fr\*](https://diaspora-fr.org/))
+- [Firefish](https://joinfirefish.org/)
+- [Bluesky](https://bsky.app/) (implémentation du [Protocole AT](https://atproto.com/))
 - [Les implémentations
   d'ActivityPub](https://fr.wikipedia.org/wiki/ActivityPub#Impl%C3%A9mentations) : Friendica,
   Lemmy, Misskey, PeerTube, Pixelfed, Pleroma, Plume, Write.as, etc.
@@ -506,6 +513,7 @@ moins connus.*
 - [Excalidraw](https://excalidraw.com/)
 - [tldraw](https://www.tldraw.com/)
 - [OpenBoard](https://openboard.ch/)
+- [quiver](https://github.com/varkor/quiver)
 
 ## Base de données
 
@@ -794,6 +802,7 @@ moins connus.*
 - [Kazam](https://doc.ubuntu-fr.org/kazam)
 - [SimpleScreenRecorder](https://www.maartenbaert.be/simplescreenrecorder/)
 - [Open Broadcaster Software](https://obsproject.com/) (OBS Studio)
+- [Spectacle (KDE)](https://apps.kde.org/fr/spectacle/)
 
 ### Capture d'écran en direct
 
@@ -805,10 +814,6 @@ moins connus.*
 - [Apache Guacamole](https://guacamole.apache.org/)
 - [RustDeck](https://rustdesk.com/)
 
-### Partage de terminal
-
-- [tmate](https://tmate.io/)
-
 ## Tutoriels
 
 - [Zeste de Savoir](https://zestedesavoir.com/)
@@ -816,28 +821,7 @@ moins connus.*
 
 ## Univers JavaScript
 
-### Framework
-
-- [Vue.js](https://vuejs.org/)
-- [Mithril.js](https://mithril.js.org/)
-- [Riot.js](https://riot.js.org/)
-- [Choo](https://choo.io/)
-- [Preact](https://preactjs.com/)
-- [Svelte](https://svelte.dev/)
-
-### Automatisation
-
-- [webpack](https://webpack.js.org/)
-- [Parcel](https://parceljs.org/)
-- [Brunch](https://brunch.io/)
-- [Gulp](https://gulpjs.com/)
-- [Grunt](https://gruntjs.com/)
-- [Laravel Mix](https://laravel-mix.com/)
-- [Webpack Encore](https://github.com/symfony/webpack-encore)
-
-### Autres
-
-- [Fresh](https://fresh.deno.dev/)
+- Aller sur [State of JavaScript](https://stateofjs.com/) pour voir l'état de l'art de JavaScript.
 
 ## Bibliothèque de jeu
 
@@ -895,7 +879,7 @@ moins connus.*
 ### Consoles fantaisies
 
 - [PICO-8](https://www.lexaloffle.com/pico-8.php) *(propriétaire)*
-- [TIC-80](https://tic.computer/)
+- [TIC-80](https://tic80.com/)
 
 ### Consoles alternatives
 
@@ -918,7 +902,8 @@ moins connus.*
 - [Git Cola](https://git-cola.github.io/)
 - [Git Gui](https://git-scm.com/docs/git-gui)
 - [Gittyup](https://murmele.github.io/Gittyup/)
-- [Gitnuro](https://gitnuro.jetpackduba.com/)
+- [Gitnuro](https://gitnuro.com/)
+- [GitButler](https://gitbutler.com/)
 - [GitHub Desktop](https://desktop.github.com/) *(Windows et macOS seulement)*
 - [Magit](https://magit.vc/)
 - [lazygit](https://github.com/jesseduffield/lazygit)
@@ -926,7 +911,6 @@ moins connus.*
 - [Sublime Merge](https://www.sublimemerge.com/) *(propriétaire)*
 - [fugitive.vim](https://github.com/tpope/vim-fugitive)
 - [GitFiend](https://gitfiend.com/)
-- [GitButler](https://gitbutler.com/)
 - [GitKraken](https://www.gitkraken.com/) *(propriétaire)*
 - Bonus : [une liste non exhaustive des clients
   git](https://git-scm.com/downloads/guis)
@@ -1019,10 +1003,6 @@ moins connus.*
 ### Outils photographique
 
 - [Hugin](https://hugin.sourceforge.net/)
-
-### Site consacré aux logiciels libres de photographie
-
-- [PIXLS.US](https://pixls.us/)
 
 ### Photos et vidéos libres de droit
 
