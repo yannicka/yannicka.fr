@@ -145,6 +145,7 @@ moins connus.*
 - [Penpot](https://penpot.app/)
 - [Quant-UX](https://quant-ux.com/)
 - [Akira](https://github.com/akiraux/Akira) *(en cours de développement)*
+- [Lunacy](https://icons8.com/lunacy) *(propriétaire)*
 
 ### Pixel art
 
@@ -162,6 +163,7 @@ moins connus.*
 - [Synfig Studio](https://www.synfig.org/)
 - [OpenToonz](https://opentoonz.github.io/e/index.html)
 - [enve](https://maurycyliebner.github.io/)
+- [Friction](https://friction.graphics/)
 - [VGC Software](https://www.vgc.io/) *(pas encore sorti)*
 - [Wick Editor](https://www.wickeditor.com/) *(semble à l'abandon)*
 - [Expressive](https://expressive.app/) *(propriétaire)*
@@ -416,6 +418,7 @@ moins connus.*
 - [BookStack](https://www.bookstackapp.com/)
 - [HackMD](https://hackmd.io/) *(propriétaire)*
 - [Dropbox Paper](https://www.dropbox.com/paper) *(propriétaire)*
+- [Univer](https://univer.ai/)
 
 ### Éditeur LaTeX
 
@@ -779,6 +782,7 @@ moins connus.*
 - [CapRover](https://caprover.com/)
 - [Porter](https://github.com/porter-dev/porter)
 - [piku](https://github.com/piku/piku)
+- [Dokploy](https://dokploy.com/)
 
 ## Gestion de projet
 
