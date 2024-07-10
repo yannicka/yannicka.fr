@@ -137,6 +137,7 @@ moins connus.*
 - [Krita](https://krita.org/)
 - [Graphite](https://graphite.rs/)
 - [Repath](https://repath.studio/)
+- [Glaxnimate](https://glaxnimate.mattbas.org/)
 
 ### Outil de prototypage
 
@@ -474,6 +475,7 @@ moins connus.*
 - [AFFiNE](https://affine.pro/)
 - [SiYuan](https://github.com/siyuan-note/siyuan)
 - [SilverBullet](https://silverbullet.md/)
+- [Eidos](https://eidos.space/)
 - [Outline](https://www.getoutline.com/)
 - [Notea](https://cinwell.com/notea/)
 - [AppFlowy.IO](https://www.appflowy.io/)
@@ -492,6 +494,7 @@ moins connus.*
 - [Pagico](https://www.pagico.com/) *(propriétaire)*
 - [Inko Cat](https://www.inko.cat/) *(propriétaire)*
 - [Capacities](https://capacities.io/) *(propriétaire)*
+- [Docmost](https://docmost.com/)
 
 ### Bases de connaissances
 
@@ -594,6 +597,7 @@ moins connus.*
 - [/e/OS](https://e.foundation/)
 - [Copperhead](https://copperhead.co/android/)
 - [GrapheneOS](https://grapheneos.org/)
+- [DivestOS](https://divestos.org/)
 
 ### Alternatives
 
@@ -630,6 +634,13 @@ moins connus.*
 
 - [MusicBrainz](https://musicbrainz.org/)
 
+### Génération de musique par IA
+
+- [Suno](https://suno.com/)
+- [AIVA](https://www.aiva.ai/)
+- [Udio](https://www.udio.com/)
+- [Stable Audio](https://stableaudio.com/)
+
 ### Gestionnaire de *tags* des fichiers musicaux
 
 - [MusicBrainz Picard](https://picard.musicbrainz.org/)
@@ -641,6 +652,7 @@ moins connus.*
 - [Webstudio](https://webstudio.is/)
 - [Grapedrop](https://grapedrop.com/) *(propriétaire)*
 - [GrapeJS](https://grapesjs.com/) *(ce sur quoi ce base Grapedrop)*
+- [Onlook](https://onlook.dev/)
 - [Webflow](https://webflow.com/) *(propriétaire)*
 
 ### Police
@@ -787,6 +799,7 @@ moins connus.*
 ## Gestion de projet
 
 - [Plane](https://plane.so/)
+- [Tegon](https://tegon.ai/)
 - [OpenProject](https://www.openproject.org/)
 - [Markwhen](https://markwhen.com/)
 
@@ -1307,6 +1320,7 @@ moins connus.*
 
 - [Organic Maps](https://organicmaps.app/)
 - [OsmAnd](https://osmand.net/)
+- [Cartes IGN](https://play.google.com/store/apps/details?id=fr.ign.geoportail)
 - [Magic Earth](https://www.magicearth.com/)
 - [OpenStreetMap](https://www.openstreetmap.org/)
 - [Qwant Maps](https://www.qwant.com/maps/)
