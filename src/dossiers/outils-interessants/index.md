@@ -1,7 +1,7 @@
 ---
 title: Outils intéressants
 created_at: 2015-10-02
-updated_at: 2024-03-11
+updated_at: 2024-07-21
 short_description: >
   Grande liste d'outils (sites web, logiciels, etc.) intéressants pour pleins de
   domaines différents.
@@ -25,7 +25,7 @@ mes outils préférés en haut de liste.
 - [Kate](https://kate-editor.org/)
 - [Zed](https://zed.dev/)
 - [JetBrains Fleet](https://www.jetbrains.com/fleet/) *(propriétaire)*
-- [Lapce](https://lapce.dv/)
+- [Lapce](https://lapce.dev/)
 - [Sublime Text](https://www.sublimetext.com/) *(propriétaire)*
 - [Notepad++](https://notepad-plus-plus.org/) *(Windows seulement)*
 - [Geany](https://www.geany.org/)
@@ -428,6 +428,7 @@ moins connus.*
 - [TeXstudio](https://texstudio.org/)
 - [GNOME LaTeX](https://gitlab.gnome.org/swilmet/gnome-latex)
 - [Setzer](https://www.cvfosammmm.org/setzer/)
+- [Overleaf](https://www.overleaf.com/)
 
 ### Prises de notes
 
@@ -520,10 +521,10 @@ moins connus.*
 *Alternatives à Airtable.*
 
 - [Baserow](https://baserow.io/)
+- [Teable](https://teable.io/)
 - [NocoDB](https://www.nocodb.com/)
 - [APITable](https://apitable.com/)
 - [Undb](https://www.undb.xyz/)
-- [Teable](https://teable.io/)
 - [Mathesar](https://mathesar.org/)
 - [Memento Database](https://mementodatabase.com/) *(propriétaire)*
 
@@ -688,7 +689,7 @@ moins connus.*
 - [Ikoula](https://www.ikoula.com/)
 - [PlanetHoster](https://www.planethoster.com/)
 - [Scaleway](https://www.scaleway.com/)
-- [Deta](https://www.deta.sh/)
+- [Deta](https://deta.space/)
 - [Fly](https://fly.io/)
 
 ### Système de commentaires
@@ -712,13 +713,12 @@ moins connus.*
 - [Chaskiq](https://chaskiq.io/)
 - [Tiledesk](https://tiledesk.com/)
 - [Chatterbox](https://element.io/solutions/chatterbox-embedded-live-chat-for-customer-service)
-- [Papercups](https://papercups.io/)
 
 ### Analytique
 
 *Alternatives à Google Analytics.*
 
-- [Matomo](https://fr.matomo.org/)
+- [Matomo](https://matomo.org/)
 - [GoatCounter](https://www.goatcounter.com/)
 - [Plausible](https://plausible.io/)
 - [Shynet](https://github.com/milesmcc/shynet)
@@ -726,12 +726,10 @@ moins connus.*
 - [unami](https://umami.is/)
 - [Open Web Analytics](https://www.openwebanalytics.com/)
 - [Countly](https://count.ly/)
-- [userTrack](https://www.usertrack.net/) *(privatif)*
-- [Panelbear](https://panelbear.com/) *(privatif)*
+- [UXWizz](https://www.uxwizz.com/) *(privatif)*
+- [Cronitor RUM](https://cronitor.io/real-user-monitoring) *(privatif)*
 - [Splitbee](https://splitbee.io/) *(privatif)*
 - [Counter](https://counter.dev/)
-- [Kindmetrics](https://kindmetrics.io/)
-- [Ackee](https://ackee.electerious.com/)
 - [Offen](https://www.offen.dev/)
 - [Cabin.](https://withcabin.com/) *(privatif)*
 - [Fathom](https://usefathom.com/) *(privatif)*
@@ -775,7 +773,7 @@ moins connus.*
 - [Zola](https://www.getzola.org/)
 - [Hugo](https://gohugo.io/)
 - [Astro](https://astro.build/)
-- *[Liste des générateurs de sites statiques](https://www.staticgen.com/)*
+- *[Liste des générateurs de sites statiques](https://jamstack.org/generators/)*
 
 ### *JAM stack website*
 
@@ -789,7 +787,7 @@ moins connus.*
 
 *Alternatives à Heroku, Netlify, etc.*
 
-- [coolify](https://coolify.io/)
+- [Coolify](https://coolify.io/)
 - [Dokku](https://dokku.com/)
 - [CapRover](https://caprover.com/)
 - [Porter](https://github.com/porter-dev/porter)
@@ -808,7 +806,6 @@ moins connus.*
 ### Enregistreur d'écran
 
 - [Kooha](https://github.com/SeaDve/Kooha)
-- [Kazam](https://doc.ubuntu-fr.org/kazam)
 - [SimpleScreenRecorder](https://www.maartenbaert.be/simplescreenrecorder/)
 - [Open Broadcaster Software](https://obsproject.com/) (OBS Studio)
 
@@ -861,11 +858,9 @@ moins connus.*
 ### Haxe
 
 - [OpenFL](https://www.openfl.org/)
-- [Kha](https://kha.tech/)
-- [HaxeFlixel](https://haxeflixel.com/)
 - [Heaps](https://heaps.io/)
-
-<!-- - [luxe engine](https://luxeengine.com/) -->
+- [HaxeFlixel](https://haxeflixel.com/)
+- [Kha](https://kha.tech/)
 
 ### JavaScript
 
@@ -887,7 +882,7 @@ moins connus.*
 - [GameMaker](https://gamemaker.io/) *(propriétaire)*
 - [Solarus](https://www.solarus-games.org/)
 - [microStudio](https://microstudio.dev/)
-- [Stencyl](https://www.stencyl.com/) *(propriétaire, semble abandonné)*
+- [Stencyl](https://www.stencyl.com/) *(propriétaire)*
 
 ### Boutique de jeux
 
@@ -912,7 +907,6 @@ moins connus.*
 ### Consoles fantaisies
 
 - [PICO-8](https://www.lexaloffle.com/pico-8.php) *(propriétaire)*
-- [TIC-80](https://tic.computer/)
 
 ### Consoles alternatives
 
@@ -934,16 +928,15 @@ moins connus.*
 
 - [Git Cola](https://git-cola.github.io/)
 - [Git Gui](https://git-scm.com/docs/git-gui)
+- [GitButler](https://gitbutler.com/)
 - [Gittyup](https://murmele.github.io/Gittyup/)
-- [Gitnuro](https://gitnuro.jetpackduba.com/)
+- [Gitnuro](https://gitnuro.com/)
 - [GitHub Desktop](https://desktop.github.com/) *(Windows et macOS seulement)*
 - [Magit](https://magit.vc/)
 - [lazygit](https://github.com/jesseduffield/lazygit)
-- [tig](https://jonas.github.io/tig/)
 - [Sublime Merge](https://www.sublimemerge.com/) *(propriétaire)*
 - [fugitive.vim](https://github.com/tpope/vim-fugitive)
-- [GitFiend](https://gitfiend.com/)
-- [GitButler](https://gitbutler.com/)
+- [GitFiend](https://gitfiend.com/) *(propriétaire)*
 - [GitKraken](https://www.gitkraken.com/) *(propriétaire)*
 - Bonus : [une liste non exhaustive des clients
   git](https://git-scm.com/downloads/guis)
@@ -968,7 +961,6 @@ moins connus.*
 - [Gist](https://gist.github.com/) *(propriétaire)*
 - [JS Bin](https://jsbin.com/) *(propriétaire)* *(semble abandonné)*
 - [repl.it](https://repl.it/) *(propriétaire)*
-- [txti](https://txti.es/) *(propriétaire)*
 - [Telegraph](https://telegra.ph/) *(propriétaire)*
 - [PLAYCODE](https://playcode.io/) *(propriétaire)*
 
@@ -1037,10 +1029,6 @@ moins connus.*
 
 - [Hugin](https://hugin.sourceforge.net/)
 
-### Site consacré aux logiciels libres de photographie
-
-- [PIXLS.US](https://pixls.us/)
-
 ### Photos et vidéos libres de droit
 
 - [Unsplash](https://unsplash.com/)
@@ -1058,35 +1046,26 @@ moins connus.*
 
 - [XnView](https://www.xnview.com/) *(propriétaire)*
 
-### GIF
-
-- [Convertio](https://convertio.co/fr/ogv-gif/) *(propriétaire)*
-
-### Films gratuits
-
-- [shortfil.ms](https://shortfil.ms/)
-
 ## Plateforme de don récurrent
 
-- [Liberapay](https://liberapay.com/)
 - [Open Collective](https://opencollective.com/)
+- [Liberapay](https://liberapay.com/)
 
 ## Gestionnaire de version
 
 *Alternatives à GitHub **ou** git.*
 
-- [GitLab](https://about.gitlab.com/)
-- [SourceHut](https://sourcehut.org/)
 - [Forgejo](https://forgejo.org/)
+- [GitLab](https://about.gitlab.com/)
+- [Radicle](https://radicle.xyz/)
 - [Codeberg](https://codeberg.org/)
+- [SourceHut](https://sourcehut.org/)
 - [Gitea](https://gitea.io/)
 - [Ayllu](https://ayllu-forge.org/)
 - [Launchpad](https://launchpad.net/)
 - [Fossil](https://www.fossil-scm.org/)
 - [Kallithea](https://kallithea-scm.org/)
 - [Redmine](https://www.redmine.org/)
-- [Gogs](https://gogs.io/)
-- [Radicle](https://radicle.xyz/)
 - [OneDev](https://code.onedev.io/projects/160)
 - Bonus : [Bugzilla](https://www.bugzilla.org/)
 
@@ -1094,11 +1073,11 @@ moins connus.*
 
 *Alternatives à LastPass, 1Password, DashLane, etc.*
 
-- [KeePassXC](https://keepassxc.org/)
+- [KeePassXC](https://keepassxc.org/) (format KeePass)
 - [Bitwarden](https://bitwarden.com/)
-- [KeePass](https://keepass.info/)
+- [KeePass](https://keepass.info/) (format KeePass)
+- [Secrets](https://gitlab.gnome.org/World/secrets) (format KeePass)
 - [Buttercup](https://buttercup.pw/)
-- [Secrets](https://gitlab.gnome.org/World/secrets)
 - [Passbolt](https://www.passbolt.com/)
 - [pass](https://www.passwordstore.org/)
 - [Passman](https://www.passman.cc/)
@@ -1106,13 +1085,12 @@ moins connus.*
 
 ## Agrégateur RSS
 
-- [QuiteRSS](https://quiterss.org/)
+- [Thunderbird](https://www.thunderbird.net/)
 - [Newsblur](https://newsblur.com/)
 - [FeedReader](https://jangernert.github.io/FeedReader/)
 - [GNOME Feeds](https://gabmus.gitlab.io/gnome-feeds/)
 - [Akregator](https://kde.org/applications/internet/org.kde.akregator)
 - [Fluent Reader](https://hyliu.me/fluent-reader/)
-- [Thunderbird](https://www.thunderbird.net/)
 
 ## Marque-pages
 
@@ -1144,10 +1122,6 @@ moins connus.*
 - [GNOME OS](https://os.gnome.org/)
 - [Vanilla](https://vanillaos.org/)
 - [blendOS](https://blendos.co/)
-
-### Moniteur
-
-- [Stacer](https://oguzhaninan.github.io/Stacer-Web/)
 
 ### Nettoyeur
 
@@ -1193,10 +1167,6 @@ moins connus.*
 - [Just](https://just.systems/)
 - [Task](https://taskfile.dev/)
 
-## Gestionnaire de bibliographie
-
-- [Zotero](https://www.zotero.org/)
-
 ## Recherche de doublons
 
 - [Panaustik](https://www.panaustik.com/)
@@ -1208,18 +1178,10 @@ moins connus.*
 - [Borg](https://www.borgbackup.org/)
 - [Cronopete](https://www.rastersoft.com/programas/cronopete.html)
 
-## Jetable
-
-- [Inboxen](https://inboxen.org/) - Adresse électronique jetable
-- [YOPmail](https://www.yopmail.com/) - Adresse électronique jetable
-- [SMS Receive Free](https://smsreceivefree.com/) - Numéro de téléphone jetable
-
 ## Diaporama
 
-- [Spice-up](https://github.com/Philip-Scott/Spice-up)
 - [Marp](https://marp.app/)
 - [PAMPI](http://pascal.peter.free.fr/pampi.html)
-- [mdx-deck](https://github.com/jxnblk/mdx-deck)
 
 ## Hébergeur d'instances
 
@@ -1234,7 +1196,7 @@ moins connus.*
 
 - [Mullvad](https://mullvad.net/)
 - [ProtonVPN](https://protonvpn.com/)
-- [Mozilla VPN](https://www.mozilla.org/en-US/products/vpn/)
+- [Mozilla VPN](https://www.mozilla.org/products/vpn/)
 
 ## Suivi d'erreurs
 
@@ -1245,10 +1207,6 @@ moins connus.*
 
 - [Docker](https://www.docker.com/)
   (bonus : [lazydocker](https://github.com/jesseduffield/lazydocker))
-
-## Présentation des maquettes
-
-- [Presentator.io](https://presentator.io/) - Alternative à InVision App
 
 ## Tri des documents
 
@@ -1271,7 +1229,6 @@ moins connus.*
 ## Développement collaboratif
 
 - [Glitch](https://glitch.com/) *(propriétaire)*
-- [Chunck](https://chunk.run/) *(propriétaire)*
 
 ## Transfert de fichiers
 
