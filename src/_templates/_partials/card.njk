@@ -5,15 +5,15 @@
         {{- card.title -}}
       </h3>
 
-      {%- if card.type in ['dossier', 'article', 'project'] -%}
+      {%- if card.type in ['article', 'journal', 'project'] -%}
         <p class="text-xs text-gray-700 dark:text-gray-300">
-          {%- if card.type === 'dossier' -%}
+          {%- if card.type === 'article' -%}
             {%- if card.updated_at -%}
               mis à jour le <time datetime="{{ card.updated_at | format_date_iso -}}">{{ card.updated_at | format_date -}}</time>
             {%- elif card.created_at -%}
               mis à jour le <time datetime="{{ card.created_at | format_date_iso -}}">{{ card.created_at | format_date -}}</time>
             {%- endif -%}
-          {%- elif card.type === 'article' -%}
+          {%- elif card.type === 'journal' -%}
             <time datetime="{{ card.created_at | format_date_iso -}}">{{- card.created_at | format_date -}}</time>
           {%- elif card.type === 'project' -%}
             Publié en {{ card.publish_month | format_month -}}

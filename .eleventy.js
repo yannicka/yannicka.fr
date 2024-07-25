@@ -17,10 +17,10 @@ module.exports = function (config) {
   config.addPlugin(pluginRss)
 
   /* Collections */
-  config.addCollection('dossier', function(collection) {
-    let dossiers = collection.getFilteredByTag('dossier')
+  config.addCollection('articles', function(collection) {
+    let articles = collection.getFilteredByTag('article')
 
-    dossiers.sort((a, b) => {
+    articles.sort((a, b) => {
       const aTitle = a.data.title.toLowerCase()
       const bTitle = b.data.title.toLowerCase()
 
@@ -33,7 +33,7 @@ module.exports = function (config) {
       return 0
     })
 
-    return dossiers
+    return articles
   })
 
   config.addCollection('journaux', function(collection) {

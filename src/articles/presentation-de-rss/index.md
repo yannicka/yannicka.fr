@@ -24,7 +24,7 @@ et c'est normal. L'idée derrière le format RSS est d'utiliser un logiciel,
 appelé agrégateur, qui chargera et affichera pour vous les contenus auxquels
 vous êtes abonnés. Nous reviendrons sur cela par la suite.
 
-Dans ce dossier, nous allons nous concentrer sur les avantages de RSS par
+Dans cet article, nous allons nous concentrer sur les avantages de RSS par
 rapport aux réseaux sociaux. Sachez cependant, que les deux usages sont
 différents et peuvent être complémentaires et que RSS convient aussi bien aux
 utilisateurs des réseaux sociaux qu'à ceux qui ne les utilisent pas.

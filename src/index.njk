@@ -24,19 +24,19 @@ full_title: Yannicka — Accueil
 <article aria-labelledby="html-title-articles">
   <header>
     <h2 class="mt-6 text-3xl font-bold" id="html-title-articles">
-      Dossiers
+      Articles
     </h2>
   </header>
 
   <section class="grid grid-cols-1 gap-6 md:grid-cols-2 mt-4">
-    {%- for dossier in collections.dossier -%}
+    {%- for article in collections.articles -%}
       {%- set card = {
-        type: 'dossier',
-        url: dossier.url | url,
-        title: dossier.data.title,
-        created_at: dossier.data.created_at,
-        updated_at: dossier.data.updated_at,
-        short_description: dossier.data.short_description
+        type: 'article',
+        url: article.url | url,
+        title: article.data.title,
+        created_at: article.data.created_at,
+        updated_at: article.data.updated_at,
+        short_description: article.data.short_description
       } -%}
 
       {%- include './_templates/_partials/card.njk' -%}
