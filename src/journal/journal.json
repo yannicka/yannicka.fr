@@ -1,6 +1,6 @@
 {
-  "layout": "article.njk",
-  "tags": "article",
+  "layout": "journal.njk",
+  "tags": "journal",
   "toc": true,
   "author": "Yannick A.",
   "license": "CC BY-SA 4.0",

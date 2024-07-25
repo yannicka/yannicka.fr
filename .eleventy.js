@@ -36,16 +36,16 @@ module.exports = function (config) {
     return dossiers
   })
 
-  config.addCollection('articles', function(collection) {
-    let articles = collection.getFilteredByTag('article')
+  config.addCollection('journaux', function(collection) {
+    let journaux = collection.getFilteredByTag('journal')
 
-    articles.sort((a, b) => {
+    journaux.sort((a, b) => {
       return new Date(b.data.created_at) - new Date(a.data.created_at)
     })
 
-    articles = articles.filter(a => a.data.title !== 'Blog')
+    journaux = journaux.filter(a => a.data.title !== 'Journal')
 
-    return articles
+    return journaux
   })
 
   config.addCollection('retrospectives', function(collection) {

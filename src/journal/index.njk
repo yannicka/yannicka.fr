@@ -1,0 +1,22 @@
+---
+layout: base.njk
+title: Journal
+---
+
+<h1 class="text-6xl">
+  Journal
+</h1>
+
+<div class="grid grid-cols-1 gap-2 mt-6">
+  {%- for journal in collections.journaux -%}
+    {%- set card = {
+      type: 'journal',
+      url: journal.url | url,
+      title: journal.data.title,
+      created_at: journal.data.created_at,
+      short_description: journal.data.short_description
+    } -%}
+
+    {%- include '../_templates/_partials/card.njk' -%}
+  {%- endfor -%}
+</div>

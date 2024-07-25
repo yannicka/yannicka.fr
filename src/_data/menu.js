@@ -1,8 +1,8 @@
 module.exports = () => {
   return [
     {
-      name: 'Blog',
-      path: '/blog/',
+      name: 'Journal',
+      path: '/journal/',
     },
 
     {
