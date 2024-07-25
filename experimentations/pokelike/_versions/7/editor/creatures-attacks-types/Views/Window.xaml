@@ -1,0 +1,25 @@
+﻿<Page x:Class="EditeurPokelike_WPF.Views.Window"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d"
+	Title="Window" Height="480" Width="640" Loaded="Page_Loaded">
+
+    <Grid Margin="0" Width="640" Height="480">
+        <Menu x:Name="menu" Margin="0,0,0,460">
+            <MenuItem x:Name="action_file" Header="Fichier">
+                <MenuItem x:Name="action_quit" Header="_Quitter" InputGestureText="Ctrl+Q" Click="MenuItem_Click">
+                    <MenuItem.InputBindings>
+                        <KeyBinding Key="Q" Modifiers="control" Command="New"/>
+                    </MenuItem.InputBindings>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="action_help" Header="Aide">
+                <MenuItem x:Name="action_about" Header="A propos" Click="MenuItem_Click_1" />
+            </MenuItem>
+        </Menu>
+        <Frame x:Name="frame_main" Content="Frame" Margin="0,20,0,0"/>
+
+    </Grid>
+</Page>

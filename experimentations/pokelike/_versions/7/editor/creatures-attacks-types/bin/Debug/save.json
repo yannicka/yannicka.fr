@@ -1,0 +1,55 @@
+{
+	"creatures":[
+		{
+			"name":"Smilo",
+			"base_life":5,
+			"base_attack":10,
+			"base_defense":15,
+			"attacks":{
+				"1":"0",
+				"3":"0",
+				"4":"3",
+				"5":"1",
+				"6":"1",
+				"15":"2",
+				"24":"1"
+			},
+			"fusions":{
+				"0":"1",
+				"0":"1",
+				"1":"2"
+			}
+		},
+
+		{
+			"name":"Banik",
+			"base_life":20,
+			"base_attack":25,
+			"base_defense":30,
+			"attacks":{
+			},
+			"fusions":{
+				"0":"2"
+			}
+		},
+
+		{
+			"name":"Telophi",
+			"base_life":0,
+			"base_attack":0,
+			"base_defense":0,
+			"attacks":{
+			},
+			"fusions":{
+			}
+		}
+	],
+
+	"attacks":[
+		{"name":"Attack0"},
+		{"name":"Attack1"},
+		{"name":"Attack2"},
+		{"name":"Attack3"},
+		{"name":"Attack4"}
+	]
+}

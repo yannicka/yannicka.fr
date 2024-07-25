@@ -1,0 +1,25 @@
+---
+layout: base.njk
+title: Voyages
+images:
+ - IMG_20230817_122818.jpg
+ - IMG_20230910_190628.jpg
+ - IMG_20221204_140819.jpg
+ - IMG_20221113_230102.jpg
+ - IMG_20220425_180133.jpg
+ - IMG_20220408_075739.jpg
+ - IMG_20220108_173712.jpg
+ - IMG_20211210_132305.jpg
+ - IMG_20211012_203409.jpg
+ - IMG_20210829_144158.jpg
+---
+
+<h1 class="text-6xl">
+  Voyages
+</h1>
+
+<article class="grid grid-cols-3 gap-2 mt-6">
+  {%- for image in images -%}
+    <img src="{{ image }}" alt="" class="w-full h-full rounded object-cover aspect-[4/3] {% if loop.first or loop.index % 4 === 0 or loop.index % 5 === 0 %} col-span-2 {% endif %}">
+  {%- endfor -%}
+</article>

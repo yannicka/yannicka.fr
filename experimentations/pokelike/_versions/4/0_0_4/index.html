@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pokelike</title>
+	</head>
+
+	<body>
+		<canvas id="game">Change browser bro'</canvas>
+
+		<div id="log"></div>
+
+		<div id="touch">
+			<kbd>Fleches directionnelles</kbd> : bouger<br />
+			<kbd>Espace</kbd> : action<br />
+			<kbd>Echap</kbd> : menu (Player et Fermer) ou annuler
+		</div>
+
+		<script src="src/lib.js"></script>
+		<script src="src/game.js"></script>
+		<script src="src/events.js"></script>
+		<script src="src/pnjs.js"></script>
+		<script src="src/maps.js"></script>
+		<script src="src/states/start.js"></script>
+		<script src="src/states/game.js"></script>
+		<script src="src/states/player_infos.js"></script>
+		<script src="src/states/fight.js"></script>
+		<script>G.init();</script>
+	</body>
+</html>

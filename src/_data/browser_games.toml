@@ -270,6 +270,48 @@ category = "other"
 min_players = 6
 max_players = 50
 
+[[other_games]]
+name = "Krunker"
+url = "https://krunker.io/"
+category = "other"
+min_players = "unknown"
+max_players = "unknown"
+
+[[other_games]]
+name = "Spyfall"
+url = "https://spyfall.adrianocola.com/"
+category = "other"
+min_players = "unknown"
+max_players = "unknown"
+
+[[other_games]]
+name = "Geoguessr"
+url = "https://www.geoguessr.com/"
+category = "other"
+min_players = "unknown"
+max_players = "unknown"
+
+[[other_games]]
+name = "Drawasaurus"
+url = "https://www.drawasaurus.org/"
+category = "drawing"
+min_players = 2
+max_players = 16
+
+[[other_games]]
+name = "Board Game Arena"
+url = "https://fr.boardgamearena.com/"
+category = "other"
+min_players = "unknown"
+max_players = "unknown"
+
+[[other_games]]
+name = "Wolfy"
+url = "https://wolfy.net/fr"
+category = "other"
+min_players = "unknown"
+max_players = "unknown"
+
 # # Futur ?
 #
 # - [Sparks.land](https://sparks.land/)
