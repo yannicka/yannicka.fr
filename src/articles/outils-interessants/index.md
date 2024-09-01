@@ -1,7 +1,7 @@
 ---
 title: Outils intéressants
 created_at: 2015-10-02
-updated_at: 2024-07-21
+updated_at: 2024-09-01
 short_description: >
   Grande liste d'outils (sites web, logiciels, etc.) intéressants pour pleins de
   domaines différents.
@@ -20,31 +20,33 @@ mes outils préférés en haut de liste.
 
 ### Interface graphique
 
-- [Visual Studio Code](https://code.visualstudio.com/)
-  (bonus : [VSCodium](https://vscodium.com/))
-- [Kate](https://kate-editor.org/)
+- [VSCodium](https://vscodium.com/)
+- [Visual Studio Code](https://code.visualstudio.com/) *(en partie propriétaire)*
 - [Zed](https://zed.dev/)
+- [Kate](https://kate-editor.org/)
 - [JetBrains Fleet](https://www.jetbrains.com/fleet/) *(propriétaire)*
 - [Lapce](https://lapce.dev/)
 - [Sublime Text](https://www.sublimetext.com/) *(propriétaire)*
+- [Cursor](https://www.cursor.com/) *(propriétaire)*
 - [Notepad++](https://notepad-plus-plus.org/) *(Windows seulement)*
 - [Geany](https://www.geany.org/)
 - [Emacs](https://www.gnu.org/software/emacs/emacs.html)
-  - [Bonus : des trousses de démarrage *(Starter Kits)*](https://www.emacswiki.org/emacs/StarterKits)
-  - Autres bonus :
-    - [Org mode](https://orgmode.org/)
-    - [Magit](https://magit.vc/)
-    - [Magit Forge](https://github.com/magit/forge/)
-- [GNOME Text Editor](https://gitlab.gnome.org/GNOME/gnome-text-editor)
+  (bonus :
+    [des trousses de démarrage *(Starter Kits)*](https://www.emacswiki.org/emacs/StarterKits),
+    [Org mode](https://orgmode.org/),
+    [Magit](https://magit.vc/),
+    [Magit Forge](https://github.com/magit/forge/))
 - [Textadept](https://orbitalquark.github.io/textadept/)
 - [CudaText](https://cudatext.github.io/)
 - [elementary Code](https://github.com/elementary/code)
 - [Lite XL](https://lite-xl.com/)
+- [Pragtical](https://pragtical.dev/)
+- [GNOME Text Editor](https://gitlab.gnome.org/GNOME/gnome-text-editor)
 - [ecode](https://github.com/SpartanJ/ecode)
 - [Thonny](https://thonny.org/) *(pour Python)*
 - [Komodo Edit](https://www.activestate.com/products/komodo-edit/)
 - [Graviton](https://graviton.netlify.app/)
-- [Howl](https://howl.io/)
+- [Howl](https://howl.io/) *(ne semble plus activement maintenu)*
 
 ### Terminal
 
@@ -113,6 +115,7 @@ moins connus.*
 - [Gitpod](https://www.gitpod.io/)
 - [Hocus](https://hocus.dev/)
 - [devenv](https://devenv.sh/)
+- [DDEV](https://ddev.com/)
 
 ## Dessin & graphisme
 
@@ -133,9 +136,9 @@ moins connus.*
 *Alternatives à Adobe Illustrator, etc.*
 
 - [Inkscape](https://inkscape.org/)
+- [Graphite](https://graphite.rs/)
 - [Corel Vector](https://www.coreldraw.com/fr/product/vector/) *(propriétaire)*
 - [Krita](https://krita.org/)
-- [Graphite](https://graphite.rs/)
 - [Repath](https://repath.studio/)
 - [Glaxnimate](https://glaxnimate.mattbas.org/)
 
@@ -281,8 +284,8 @@ moins connus.*
 *Alternatives à Zoom, Microsoft Teams, Google Meet, etc.*
 
 - [Jitsi Meet](https://jitsi.org/jitsi-meet/)
-- [MiroTalk SFU](https://sfu.mirotalk.org/)
 - [Element Call](https://call.element.io/)
+- [MiroTalk SFU](https://p2p.mirotalk.com/)
 
 ### Centré sur la voix
 
@@ -788,11 +791,13 @@ moins connus.*
 *Alternatives à Heroku, Netlify, etc.*
 
 - [Coolify](https://coolify.io/)
+- [Dokploy](https://dokploy.com/)
 - [Dokku](https://dokku.com/)
 - [CapRover](https://caprover.com/)
 - [Porter](https://github.com/porter-dev/porter)
 - [piku](https://github.com/piku/piku)
-- [Dokploy](https://dokploy.com/)
+- [Kamal](https://kamal-deploy.org/)
+- [Lunni](https://lunni.dev/)
 
 ## Gestion de projet
 
