@@ -108,6 +108,11 @@
   font-size: 1.1em;
 }
 
+/* Transitions entre les pages */
+@view-transition {
+  navigation: auto;
+}
+
 /* Ajouts à Tailwind */
 .list-dashed > li {
   list-style-type: none;
