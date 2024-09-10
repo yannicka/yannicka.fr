@@ -3,6 +3,7 @@ title = "Yannicka"
 description = "Le blog d'un développeur"
 default_language = "fr"
 generate_feeds = true
+author = "Yannick A."
 
 [markdown]
 highlight_code = true
