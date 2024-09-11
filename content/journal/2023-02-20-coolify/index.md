@@ -6,13 +6,13 @@ Le déploiement d'un site internet ça n'a jamais été mon truc. J'ai toujours
 trouvé ça trop complexe. Alors je fais au plus simple, sans pour autant
 respecter toutes les bonnes pratiques.
 
-J'ai essayé quelques outils, par exemple [Dokku](https://dokku.com/), mais ça ne
-m'a pas paru beaucoup plus simple...
+J'ai essayé quelques outils, par exemple [Dokku](https://dokku.com/), mais ça
+ne m'a pas paru beaucoup plus simple...
 
 Il y a quelque temps, j'ai découvert [Coolify](https://coolify.io/) qui se
 présentait comme une alternative auto-hébergée à Heroku et Netlify. Cependant,
-puisque l'outil ne fonctionnait que pour Ubuntu et que mon serveur tournait sous
-Debian, je n'avais pas pu l'essayer.
+puisque l'outil ne fonctionnait que pour Ubuntu et que mon serveur tournait
+sous Debian, je n'avais pas pu l'essayer.
 
 Depuis quelque temps, l'outil semble fonctionner sous Debian, je l'ai alors
 installer pour tester ça.
@@ -32,8 +32,8 @@ se créer un compte administrateur sur l'interface web.
 
 Via l'interface, il faut créer une application. Pour cela, il faut fournir le
 dépôt git où se trouve l'application. Ensuite, il faut configurer la façon dont
-doit tourner le site. Pour ma part, ce sont des sites statiques, donc j'ai pu de
-choses à me préoccuper, pas même de base de données.
+doit tourner le site. Pour ma part, ce sont des sites statiques, donc j'ai pu
+de choses à me préoccuper, pas même de base de données.
 
 J'ai alors créé l'application pour mon site principal yannicka.fr.
 
@@ -43,7 +43,7 @@ Avant ça, je faisais déjà tourner mon site dans un conteneur Docker. J'avais
 déjà ma configuration toute prête. J'ai juste eu à changer le port.
 
 J'utilise [Caddy](https://caddyserver.com/) comme serveur web et voici ma
-configuration actuelle :
+configuration actuelle :
 
 ```nginx
 yannicka.fr {
