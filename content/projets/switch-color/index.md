@@ -1,7 +1,9 @@
 +++
 title = "Switch Color"
-short_description = "Jeu mobile de réflexion : décolorez toutes les cases."
 date = 2014-08-31
+
+[extra]
+short_description = "Jeu mobile de réflexion : décolorez toutes les cases."
 publish_month = 2014-08-31
 google_play_url = "https://play.google.com/store/apps/details?id=com.pifyz.switchcolor"
 source_code_url = "https://gitlab.com/yannicka/switch-color"
@@ -9,24 +11,24 @@ source_code_url = "https://gitlab.com/yannicka/switch-color"
 
 Switch Color est mon premier jeu Android.
 
-Le développement a commencé le 10 octobre 2013. Le jeu est sorti le 31 août
-2014.
+Le développement a commencé le 10 octobre 2013. Le jeu est sorti le
+31 août 2014.
 
 ## Description
 
 *Reprise depuis Google Play, écrite par un ami.*
 
-« Réfléchissez pour vous débarrasser des tuiles de couleur !
+« Réfléchissez pour vous débarrasser des tuiles de couleur !
 
 Switch Color est un jeu au concept simple mais terriblement addictif.
 
 Vous devez nettoyer des stages en faisant disparaître les tuiles de couleur qui
-les habitent : appuyez sur une tuile pour la nettoyer, mais les quatre tuiles
-adjacentes se verront également retournées !
+les habitent : appuyez sur une tuile pour la nettoyer, mais les quatre tuiles
+adjacentes se verront également retournées !
 
-- Réfléchissez et venez à bout de près de 80 stages ;
-- Nettoyez un niveau avec le minimum d'actions pour débloquer des étoiles ;
-- Relevez des défis aléatoires pour faire travailler vos méninges. »
+- Réfléchissez et venez à bout de près de 80 stages ;
+- Nettoyez un niveau avec le minimum d'actions pour débloquer des étoiles ;
+- Relevez des défis aléatoires pour faire travailler vos méninges. »
 
 ## Images
 
@@ -47,22 +49,22 @@ L'ancienne version JavaScript du jeu est jouable, alors je l'inclus ici à titre
 historique.
 
 <iframe
-  src="{{ 'src/index.html' | url }}"
-  class="block w-full border-2 border-green-900 box-border max-w-[520px] h-[700px]"
-  loading="lazy"></iframe>
+  src="src/index.html"
+  loading="lazy"
+  style="display: block; border: 2px solid #42c79c; width: 100%; max-width: 520px; height: 700px;></iframe>
 
 ## Anecdote
 
-Pour l'anecdote, il s'agit d'une « copie » d'un jeu physique que j'ai eu dans
+Pour l'anecdote, il s'agit d'une « copie » d'un jeu physique que j'ai eu dans
 mon enfance (au primaire, vers mes 9~10 ans). Le jeu proposait une grille de
-5x5 où il fallait « nettoyer » les grilles, avec différentes difficultés, comme
+5x5 où il fallait « nettoyer » les grilles, avec différentes difficultés, comme
 dans Switch Color.
 
 Après avoir recherché (bien après avoir créé Switch Color), le nom du jeu
 d'origine est [Lights Out](https://fr.wikipedia.org/wiki/Lights_Out_(jeu)). Le
 jeu que je possédais était celui qu'on retrouve qu'on voit sur la page
 <https://www.xarg.org/2018/07/lightsout-solution-using-linear-algebra/> (je
-n'ai plus ce jeu en ma possession depuis un moment ; j'ai recréé le jeu de
-mémoire) :
+n'ai plus ce jeu en ma possession depuis un moment ; j'ai recréé le jeu de
+mémoire) :
 
 ![Photo du jeu « Lights Out »](img/lights-out.png)

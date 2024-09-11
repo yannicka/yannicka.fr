@@ -1,15 +1,17 @@
 +++
 title = "Bobby for Playdate"
-short_description = "Petit jeu de réflexion, adapté pour la Playdate."
 date = 2022-11-06
+
+[extra]
+short_description = "Petit jeu de réflexion, adapté pour la Playdate."
 publish_month = 2022-11-06
 source_code_url = "https://gitlab.com/yannicka/bobby-playdate"
 +++
 
 ## Description du jeu
 
-Bobby for Playdate est une adaptation de mon jeu [Bobby](/projets/bobby) pour la console
-[Playdate](https://play.date/).
+Bobby for Playdate est une adaptation de mon jeu [Bobby](/projets/bobby) pour
+la console [Playdate](https://play.date/).
 
 [Accéder à la fiche du jeu sur itch.io](https://yannicka.itch.io/bobby-playdate)
 
