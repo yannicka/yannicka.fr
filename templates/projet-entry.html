@@ -2,8 +2,36 @@
 
 {% block content %}
     <h1>
-        {{ page.title | safe }}
+        {{ page.title }}
     </h1>
+
+    <section>
+        <ul>
+            <li>
+                Publié en {{ page.extra.publish_month }}
+            </li>
+
+            <li>
+                Licence AGPLv3
+            </li>
+
+            {% if page.extra.google_play_url %}
+                <li>
+                    <a href="{{ page.extra.google_play_url }}">
+                        Voir sur Google Play
+                    </a>
+                </li>
+            {% endif %}
+
+            {% if page.extra.source_code_url %}
+                <li>
+                    <a href="{{ page.extra.source_code_url }}">
+                        Accéder au code source
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+    </section>
 
     <article>
         {{ page.content | safe }}

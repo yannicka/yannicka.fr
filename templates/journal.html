@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1 class="title">
+    <h1>
         {{ section.title }}
     </h1>
 
     <ul>
         {% for page in section.pages %}
             <li>
-                <a href="{{ page.permalink | safe }}">
-                    {{- page.date }} — {{ page.title -}}
+                <a href="{{ page.permalink }}">
+                    {{ page.date }} — {{ page.title }}
                 </a>
             </li>
         {% endfor %}
