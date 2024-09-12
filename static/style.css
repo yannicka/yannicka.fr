@@ -1,8 +1,47 @@
-body {
+html {
     background-color: #fafaf9;
-    padding: 2em;
 }
 
-main {
-    max-width: 640px;
+body {
+    padding: 2em;
+    max-width: 42em;
+    margin: 0 auto;
+
+    & > header {
+        border-bottom: 1px solid #dedede;
+        display: flex;
+        padding: 1em;
+
+        & > nav {
+            & > ul {
+                display: flex;
+                list-style: none;
+                gap: 1em;
+                margin: 0;
+                padding: 0;
+
+                & > li {
+                    padding: 1em;
+                }
+            }
+        }
+    }
+
+    & > main {
+    }
+
+    & > footer {
+        & > ul {
+            display: flex;
+            list-style: none;
+            gap: 1em;
+
+            & > li {
+            }
+        }
+    }
+}
+
+pre {
+    padding: 1em;
 }
