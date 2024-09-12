@@ -1,17 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>
-        {{ section.title }}
-    </h1>
+    <article>
+        <header>
+            <h1>
+                {{ section.title }}
+            </h1>
+        </header>
 
-    <ul>
-        {% for page in section.pages %}
-            <li>
-                <a href="{{ page.permalink }}">
-                    {{ page.date }} — {{ page.title }}
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
+        <ul>
+            {% for page in section.pages %}
+                <li>
+                    <a href="{{ page.permalink }}">
+                        <time datetime="{{ page.date }}">{{ page.date }}</time> — {{ page.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </article>
 {% endblock content %}
