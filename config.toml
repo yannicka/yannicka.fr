@@ -1,4 +1,4 @@
-base_url = "https://yannicka.fr/"
+base_url = "https://beta.yannicka.fr/"
 title = "Yannicka"
 description = "Le blog d'un développeur"
 default_language = "fr"
