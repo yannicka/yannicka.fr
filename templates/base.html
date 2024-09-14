@@ -2,6 +2,14 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
+
+        {% block css %}
+            <link rel="preload" href="{{ get_url(path="css/index.css") }}" as="style">
+            <link rel="preload" href="{{ get_url(path="css/reset.css") }}" as="style">
+
+            <link rel="stylesheet" href="{{ get_url(path="css/index.css") }}">
+        {% endblock css %}
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Yannicka</title>
@@ -16,13 +24,6 @@
             rel="alternate"
             href="{{ get_url(path="atom.xml") }}"
             title="Yannicka">
-
-        {% block css %}
-            <link rel="preload" href="{{ get_url(path="css/index.css") }}" as="style">
-            <link rel="preload" href="{{ get_url(path="css/reset.css") }}" as="style">
-
-            <link rel="stylesheet" href="{{ get_url(path="css/index.css") }}">
-        {% endblock css %}
 
         {% block js %}
             <script type="importmap">
