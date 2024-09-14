@@ -8,9 +8,19 @@
 
         <link rel="stylesheet" href="{{ get_url(path="css/index.css") }}">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preload" href="{{ get_url(path="js/index.js") }}" as="script">
+
+        <script type="importmap">
+            {
+                "imports": {}
+            }
+        </script>
+
+        <script src="{{ get_url(path="script.js") }}" type="module"></script>
 
         <title>Yannicka</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link
             rel="icon"
@@ -22,16 +32,6 @@
             type="application/atom+xml"
             href="{{ get_url(path="atom.xml") }}"
             title="Yannicka">
-
-        {% block js %}
-            <script type="importmap">
-                {
-                    "imports": {}
-                }
-            </script>
-
-            <script src="{{ get_url(path="script.js") }}" type="module"></script>
-        {% endblock js %}
     </head>
 
     <body>
