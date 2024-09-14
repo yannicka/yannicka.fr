@@ -18,7 +18,10 @@
             title="Yannicka">
 
         {% block css %}
-            <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
+            <link rel="preload" href="{{ get_url(path="css/index.css") }}" as="style">
+            <link rel="preload" href="{{ get_url(path="css/reset.css") }}" as="style">
+
+            <link rel="stylesheet" href="{{ get_url(path="css/index.css") }}">
         {% endblock css %}
 
         {% block js %}
