@@ -33,6 +33,7 @@ body {
         border-radius: 2em;
         gap: 1em;
         backdrop-filter: blur(1em);
+        flex-wrap: wrap;
 
         & a {
             display: inline-block;
@@ -52,6 +53,7 @@ body {
                 gap: 1em;
                 margin: 0;
                 padding: 0;
+                flex-wrap: wrap;
 
                 & > li {
                     display: block;
@@ -77,6 +79,7 @@ body {
             list-style: none;
             gap: 1em;
             margin: 0;
+            flex-wrap: wrap;
 
             & > li {
                 display: block;
