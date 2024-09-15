@@ -1,6 +1,6 @@
 +++
 title = "Projets"
 sort_by = "date"
-template = "projet.html"
+template = "projet-list.html"
 page_template = "projet-entry.html"
 +++

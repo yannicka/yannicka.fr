@@ -9,7 +9,7 @@
 
             <ul>
                 <li>
-                    Publié en {{ page.extra.publish_month }}
+                    Publié en {{ page.extra.publish_month | date(format="%B %Y", locale="fr_FR") }}
                 </li>
 
                 <li>

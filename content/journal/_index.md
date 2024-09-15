@@ -1,6 +1,6 @@
 +++
 title = "Journal"
 sort_by = "date"
-template = "journal.html"
+template = "journal-list.html"
 page_template = "journal-entry.html"
 +++

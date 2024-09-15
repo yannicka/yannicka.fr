@@ -7,13 +7,15 @@
                 {{ page.title }}
             </h1>
 
-            Écrit le <time datetime="{{ page.date }}">
-                {{ page.date }}
+            <time datetime="{{ page.date }}">
+                Écrit le {{ page.date | date(format="%-d %B %Y", locale="fr_FR") }}
             </time>
 
-            Mis à jour le <time datetime="{{ page.updated }}">
-                {{ page.updated }}
-            </time>
+            {% if page.updated %}
+                <time datetime="{{ page.updated }}">
+                    et mis à jour le {{ page.updated | date(format="%-d %B %Y", locale="fr_FR") }}
+                </time>
+            {% endif %}
         </header>
 
         <div>

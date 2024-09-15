@@ -8,7 +8,7 @@
             </h1>
 
             <time datetime="{{ page.date }}">
-                {{ page.date }}
+                Publié le {{ page.date | date(format="%-d %B %Y", locale="fr_FR") }}
             </time>
         </header>
 
