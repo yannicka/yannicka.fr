@@ -1,6 +1,6 @@
 +++
 title = "Exercices"
 sort_by = "slug"
-template = "exercice-list.html"
-page_template = "exercice-entry.html"
+template = "exercice_list.html"
+page_template = "exercice_single.html"
 +++
