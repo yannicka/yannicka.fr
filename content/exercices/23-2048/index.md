@@ -24,4 +24,4 @@ Bonus : permettre au joueur d'annuler son coup.
 Bonus 2 : rendre la largeur du plateau configurable (de 4 à comme vous voulez
 tant que votre pc tient).
 
-Exemple ici : https://jeu2048.fr/
+Exemple ici : <https://jeu2048.fr/>.
