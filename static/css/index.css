@@ -9,15 +9,29 @@
 
 :root {
     color-scheme: light dark;
+    --background-color: light-dark(rgb(230 246 255), rgb(30 46 55));
+    --background-highlight-color: light-dark(rgb(210 226 235), rgb(10 26 35));
+    --text-color: light-dark(rgb(22 22 22), rgb(233 233 233));
 }
 
 html {
-    background-color: rgb(230 246 255);
+    background-color: var(--background-color);
+    color: var(--text-color);
     font-size: 1.1em;
+    font-family: "Ubuntu Serif", system-ui, sans-serif;
 }
 
 a {
     color: inherit;
+}
+
+pre,
+code {
+    font-family: "Ubuntu Mono", monospace;
+}
+
+pre {
+    overflow: auto;
 }
 
 body {
@@ -28,8 +42,7 @@ body {
     & > header {
         display: flex;
         padding: 0.6em 2em;
-        background-color: rgb(16 16 16 / 5%);
-        border: 1px solid rgb(0 0 0 / 5%);
+        background-color: var(--background-highlight-color);
         border-radius: 2em;
         gap: 1em;
         backdrop-filter: blur(1em);
