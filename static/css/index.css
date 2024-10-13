@@ -32,46 +32,43 @@ code {
 
 pre {
     overflow: auto;
+    padding: 1em;
 }
 
 body {
-    padding: 2em;
+    padding: 1.4em;
     max-width: 48em;
     margin: 0 auto;
 
     & > header {
-        display: flex;
         padding: 0.6em 2em;
         background-color: var(--background-highlight-color);
         border-radius: 2em;
-        gap: 1em;
-        backdrop-filter: blur(1em);
-        flex-wrap: wrap;
-
-        & a {
-            display: inline-block;
-            padding: 0.6em;
-        }
-
-        & > a {
-            font-weight: bold;
-        }
 
         & > nav {
-            flex: 1;
-
             & > ul {
                 display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
                 list-style: none;
-                gap: 1em;
                 margin: 0;
                 padding: 0;
-                flex-wrap: wrap;
+
+                @media (min-width: 580px) {
+                    flex-direction: row;
+                    gap: min(0.8em, 1vw);
+                }
 
                 & > li {
                     display: block;
 
+                    &:first-child {
+                        font-weight: bold;
+                    }
+
                     a {
+                        display: block;
+                        padding: clamp(0.4em, 1vw, 0.8em);
                     }
                 }
             }
@@ -79,11 +76,11 @@ body {
     }
 
     & > main {
-        padding: 1.6em;
+        padding: 2em 0.5em;
     }
 
     & > footer {
-        border-top: 1px solid rgb(16 16 16 / 5%);
+        border-top: 1px solid var(--background-highlight-color);
         padding: 1em;
         border-radius: 2em;
 
@@ -99,8 +96,4 @@ body {
             }
         }
     }
-}
-
-pre {
-    padding: 1em;
 }
