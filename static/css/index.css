@@ -66,7 +66,7 @@ body {
                         font-weight: bold;
                     }
 
-                    a {
+                    & > a {
                         display: block;
                         padding: clamp(0.4em, 1vw, 0.8em);
                     }
@@ -99,6 +99,12 @@ body {
 }
 
 .prose {
+    header {
+        time {
+            font-size: 0.8em;
+        }
+    }
+
     h1,
     h2,
     h3,
@@ -156,5 +162,9 @@ body {
             content: "–";
             padding-right: 0.4em;
         }
+    }
+
+    img {
+        margin: 1em 0;
     }
 }
