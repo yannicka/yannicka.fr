@@ -12,8 +12,12 @@
             {% for page in section.pages %}
                 <li>
                     <a href="{{ page.permalink }}">
-                        {{ page.title }}
+                        {{- page.title -}}
                     </a>
+
+                    <em>
+                        ({{ page.extra.publish_month|date(format="%Y") }})
+                    </em>
                 </li>
             {% endfor %}
         </ul>

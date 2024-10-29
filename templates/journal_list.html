@@ -12,7 +12,11 @@
             {% for page in section.pages %}
                 <li>
                     <a href="{{ page.permalink }}">
-                        <time datetime="{{ page.date }}">{{ page.date }}</time> — {{ page.title }}
+                        <time datetime="{{ page.date }}">
+                            {{ page.date }}
+                        </time>
+                        —
+                        {{ page.title }}
                     </a>
                 </li>
             {% endfor %}
