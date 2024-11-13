@@ -18,7 +18,13 @@
 
         <script src="{{ get_url(path="js/index.js") }}" type="module"></script>
 
-        <title>Yannicka</title>
+        <title>
+            {%- if page.title -%}
+                {{- page.title }} &ndash; Yannicka
+            {%- else -%}
+                Yannicka
+            {%- endif -%}
+        </title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
