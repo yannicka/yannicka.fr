@@ -1,21 +1,14 @@
 +++
 title = "Bobby"
-date = 2019-12-18
-
-[extra]
-short_description = "Petit jeu web 2D de réflexion."
-publish_month = 2019-12-18
-source_code_url = "https://gitlab.com/yannicka/bobby"
-google_play_url = "https://play.google.com/store/apps/details?id=fr.yannicka.bobby"
 +++
 
-## Description du jeu
+# Bobby
 
-Bobby est un petit jeu 2D de réflexion.
+Bobby est un petit jeu 2D de réflexion publié le 18 décembre 2019 sous licence AGPLv3.
 
-## Accès
-
-- [Accéder au jeu](https://bobby.yannicka.fr/)
+- [Jouer au jeu sur le web (tous les navigateurs)](https://bobby.yannicka.fr/)
+- [Voir la fiche Google Play (Android)](https://play.google.com/store/apps/details?id=fr.yannicka.bobby)
+- [Visionner le code source](https://gitlab.com/yannicka/bobby)
 
 ## Accès direct
 

@@ -1,11 +1,12 @@
 +++
 title = "Age of Rice"
-date = 2013-07-01
-
-[extra]
-short_description = "Mini-jeu web de type RTS."
-publish_month = 2013-07-01
 +++
+
+# Age of Rice
+
+Publié en juillet 2013 sous licence AGPLv3.
+
+## Description
 
 Age of Rice a été développé dans le cadre du concours [MiniLD#44](http://ludumdare.com/compo/minild-44/) (nommé 7dRTS) en juillet 2013 où nous (les participants) avions 7 jours pour créer un jeu de type — plus ou moins — RTS.
 

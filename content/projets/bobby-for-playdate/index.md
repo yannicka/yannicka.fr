@@ -1,18 +1,19 @@
 +++
 title = "Bobby for Playdate"
-date = 2022-11-06
-
-[extra]
-short_description = "Petit jeu de réflexion, adapté pour la Playdate."
-publish_month = 2022-11-06
-source_code_url = "https://gitlab.com/yannicka/bobby-playdate"
 +++
+
+# Bobby for Playdate
+
+Publié le 6 novembre 2022 sous licence AGPLv3.
+
+- [Accéder à la fiche du jeu sur itch.io](https://yannicka.itch.io/bobby-playdate)
+- [Visionner le code source](https://gitlab.com/yannicka/bobby-playdate)
 
 ## Description du jeu
 
 Bobby for Playdate est une adaptation de mon jeu [Bobby](/projets/bobby) pour la console [Playdate](https://play.date/).
 
-[Accéder à la fiche du jeu sur itch.io](https://yannicka.itch.io/bobby-playdate)
+## Images
 
 ![](img/img1.png)
 ![](img/img2.gif)

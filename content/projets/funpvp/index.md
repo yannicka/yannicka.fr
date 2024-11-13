@@ -1,12 +1,8 @@
 +++
 title = "FunPvP"
-date = 2017-03-01
-
-[extra]
-short_description = "Boutique Minecraft."
-publish_month = 2017-03-01
-source_code_url = "https://gitlab.com/yannicka/mc-website-python-skeleton"
 +++
+
+# FunPvP
 
 FunPvP était un serveur Minecraft créé et maintenu par mon frère.
 
@@ -30,8 +26,10 @@ Vous pouvez toujours trouver une [archive du site sur Internet Archive](https://
 
 ## Développement
 
-Le développement a débuté le 29 août 2016.
+- Le développement a débuté le 29 août 2016.
 
-La première version a été publiée le 16 octobre 2016.
+- La première version a été publiée le 16 octobre 2016.
 
-La dernière modification a eu lieu le 18 septembre 2018.
+- La dernière modification a eu lieu le 18 septembre 2018.
+
+- Le code source est sous licence AGPLv3. [Visionner le code source](https://gitlab.com/yannicka/mc-website-python-skeleton).

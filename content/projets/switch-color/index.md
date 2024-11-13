@@ -1,17 +1,15 @@
 +++
 title = "Switch Color"
-date = 2014-08-31
-
-[extra]
-short_description = "Jeu mobile de réflexion : décolorez toutes les cases."
-publish_month = 2014-08-31
-google_play_url = "https://play.google.com/store/apps/details?id=com.pifyz.switchcolor"
-source_code_url = "https://gitlab.com/yannicka/switch-color"
 +++
+
+# Switch Color
 
 Switch Color est mon premier jeu Android.
 
-Le développement a commencé le 10 octobre 2013. Le jeu est sorti le 31 août 2014.
+Le développement a commencé le 10 octobre 2013. Le jeu est sorti le 31 août 2014 sous licence AGPLv3.
+
+- [Voir la fiche Google Play (Android)](https://play.google.com/store/apps/details?id=com.pifyz.switchcolor)
+- [Visionner le code source](https://gitlab.com/yannicka/switch-color)
 
 ## Description
 
