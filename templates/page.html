@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-    {{ page.content | safe }}
+    <div class="prose">
+        {{ page.content | safe }}
+    </div>
 {% endblock content %}
