@@ -2,6 +2,10 @@
 title = "Formulaire AJAX avec htmx"
 +++
 
+# Formulaire AJAX avec htmx
+
+*Publié le 1er octobre 2023.*
+
 Imaginons que vous ayez une structure HTML comme celle-ci :
 
 ```html
@@ -27,9 +31,7 @@ Imaginons que vous ayez une structure HTML comme celle-ci :
 <div class="result"></div>
 ```
 
-Et vous souhaitez que lorsque l'utilisateur sélectionne une valeur, une requête
-s'exécute avec les valeurs renseignées, et que la réponse HTML aille dans
-`.result`.
+Et vous souhaitez que lorsque l'utilisateur sélectionne une valeur, une requête s'exécute avec les valeurs renseignées, et que la réponse HTML aille dans `.result`.
 
 Une façon naïve de faire est la suivante :
 
@@ -74,14 +76,11 @@ async function executeQuery() {
 executeQuery();
 ```
 
-On peut faire plus simple (notamment en utilisant un `form`), mais en finalité
-on se rapprocherait toujours d'un résultat assez similaire.
+On peut faire plus simple (notamment en utilisant un `form`), mais en finalité on se rapprocherait toujours d'un résultat assez similaire.
 
 Une autre manière de faire, c'est d'utiliser [htmx](https://htmx.org/) !
 
-Voici le seul changement à apporter au code HTML pour atteindre le même
-résultat en utilisant htmx, en considérant qu'htmx est installé dans le
-projet :
+Voici le seul changement à apporter au code HTML pour atteindre le même résultat en utilisant htmx, en considérant qu'htmx est installé dans le projet :
 
 ```html
 <div
@@ -94,17 +93,12 @@ projet :
 
 Et c'est tout. Aucun JavaScript (écrit par nous), htmx gère tout pour nous.
 
-- `hx-trigger` indique quand l'évènement doit s'appeler, ici dans deux cas :
-  au chargement de la page (`load`) et au changement d'une valeur (`change`).
+- `hx-trigger` indique quand l'évènement doit s'appeler, ici dans deux cas : au chargement de la page (`load`) et au changement d'une valeur (`change`).
 
 - `hx-post` indique l'URL qui doit être appelée.
 
-- `hx-include` indique les valeurs qui seront dans le `POST`. Le nom du champ
-  (`name`) sera la clé, et sa valeur... la valeur.
+- `hx-include` indique les valeurs qui seront dans le `POST`. Le nom du champ (`name`) sera la clé, et sa valeur... la valeur.
 
 - `hx-target` indique où doit aller le retour HTML.
 
-Dans un cas simple comme le notre, avec un seul formulaire, intégrer htmx n'a
-pas forcément d'intérêt. Néanmoins, sur les plus gros projets, où cette
-structure revient plusieurs fois, htmx permet d'éviter l'écriture de code
-JavaScript, et donc de la maintenance.
+Dans un cas simple comme le notre, avec un seul formulaire, intégrer htmx n'a pas forcément d'intérêt. Néanmoins, sur les plus gros projets, où cette structure revient plusieurs fois, htmx permet d'éviter l'écriture de code JavaScript, et donc de la maintenance.
