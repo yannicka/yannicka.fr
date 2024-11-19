@@ -2,7 +2,7 @@
 title = "Journal"
 +++
 
-# Articles
+# Journal
 
 - [2023-10-01 — Formulaire AJAX avec htmx](/journal/formulaire-ajax-avec-htmx)
 
