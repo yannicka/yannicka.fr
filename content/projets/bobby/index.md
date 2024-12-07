@@ -17,7 +17,7 @@ Le jeu directement jouable depuis ici.
 <iframe
   src="https://bobby.yannicka.fr/"
   loading="lazy"
-  style="display: block; border: 2px solid #177355; box-sizing: border-box; width: 100%; max-width: 600px; height: 647px;"></iframe>
+  style="display: block; border: 2px solid #177355; box-sizing: border-box; width: 100%; max-width: 600px; height: 647px; margin-bottom: 2.5em;"></iframe>
 
 ## Développement
 
