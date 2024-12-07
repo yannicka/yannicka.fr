@@ -1,8 +1,10 @@
 +++
 title = "Régulateur de vitesse"
-date = 2021-09-13
-author = "Aur36"
 +++
+
+# Régulateur de vitesse
+
+Publié le 13 septembre 2021 par Aur36 sous licence CC BY-SA 4.0.
 
 ## Énoncé
 

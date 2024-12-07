@@ -1,7 +1,10 @@
 +++
 title = "Rövarspråket"
-date = 2015-08-30
 +++
+
+# Rövarspråket
+
+Publié le 30 août 2015 par Benoît sous licence CC BY-SA 4.0.
 
 ## Énoncé
 

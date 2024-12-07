@@ -1,10 +1,13 @@
 +++
 title = "Équilibre d'équation chimique"
-date = 2016-11-15
 
 [taxonomies]
 tags = ["hard"]
 +++
+
+# Équilibre d'équation chimique
+
+Publié le 15 novembre 2016 par Benoît sous licence CC BY-SA 4.0.
 
 ## Description de l'équilibrage chimique
 

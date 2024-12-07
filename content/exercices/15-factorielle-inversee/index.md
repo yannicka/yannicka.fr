@@ -1,7 +1,10 @@
 +++
 title = "Factorielle inversée"
-date = 2016-11-21
 +++
+
+# Factorielle inversée
+
+Publié le 21 novembre 2016 par Benoît sous licence CC BY-SA 4.0.
 
 ## Énoncé
 

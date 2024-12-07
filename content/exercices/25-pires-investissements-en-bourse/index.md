@@ -1,8 +1,10 @@
 +++
 title = "Pires investissements en bourse"
-date = 2021-08-30
-author = "Aur36"
 +++
+
+# Pires investissements en bourse
+
+Publié le 30 août 2021 par Aur36 sous licence CC BY-SA 4.0.
 
 ## Énoncé
 

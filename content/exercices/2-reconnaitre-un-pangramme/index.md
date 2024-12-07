@@ -1,7 +1,10 @@
 +++
 title = "Reconnaitre un pangramme"
-date = 2014-06-30
 +++
+
+# Reconnaitre un pangramme
+
+Publié le 30 juin 2014 par Benoît sous licence CC BY-SA 4.0.
 
 ## Enoncé
 

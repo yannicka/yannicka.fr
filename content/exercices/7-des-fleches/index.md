@@ -1,7 +1,10 @@
 +++
 title = "Des flèches"
-date = 2015-01-12
 +++
+
+# Des flèches
+
+Publié le 12 janvier 2015 par Benoît sous licence CC BY-SA 4.0.
 
 ## Enoncé
 

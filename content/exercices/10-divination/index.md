@@ -1,7 +1,10 @@
 +++
 title = "Divination"
-date = 2015-04-27
 +++
+
+# Divination
+
+Publié le 27 avril 2015 par Benoît sous licence CC BY-SA 4.0.
 
 ## Énoncé
 

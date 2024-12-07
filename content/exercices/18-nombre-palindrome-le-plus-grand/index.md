@@ -1,8 +1,10 @@
 +++
 title = "Nombre palindrome le plus grand"
-date = 2021-07-12
-author = "Aur36"
 +++
+
+# Nombre palindrome le plus grand
+
+Publié le 12 juillet 2021 par Aur36 sous licence CC BY-SA 4.0.
 
 ## Énoncé
 

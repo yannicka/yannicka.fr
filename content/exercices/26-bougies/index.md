@@ -1,8 +1,10 @@
 +++
 title = "Bougies"
-date = 2021-09-06
-author = "Aur36"
 +++
+
+# Bougies
+
+Publié le 6 septembre 2021 par Aur36 sous licence CC BY-SA 4.0.
 
 ## Énoncé
 

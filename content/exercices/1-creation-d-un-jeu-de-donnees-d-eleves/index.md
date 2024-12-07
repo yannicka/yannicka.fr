@@ -1,7 +1,10 @@
 +++
 title = "Création d'un jeu de données d'élèves"
-date = "2014-06-23"
 +++
+
+# Création d'un jeu de données d'élèves
+
+Publié le 23 juin 2014 par Benoît sous licence CC BY-SA 4.0.
 
 ## Enoncé
 

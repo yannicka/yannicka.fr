@@ -1,8 +1,10 @@
 +++
 title = "Ferblatin"
-date = 2021-07-26
-author = "Aur36"
 +++
+
+# Ferblatin
+
+Publié le 26 juillet 2021 par Aur36 sous licence CC BY-SA 4.0.
 
 ## Énoncé
 

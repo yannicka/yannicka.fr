@@ -1,7 +1,10 @@
 +++
 title = "Quine"
-date = 2015-01-05
 +++
+
+# Quine
+
+Publié le 5 janvier 2015 par Benoît sous licence CC BY-SA 4.0.
 
 ## Enoncé
 

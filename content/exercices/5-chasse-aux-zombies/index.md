@@ -1,7 +1,10 @@
 +++
 title = "Chasse aux zombies"
-date = 2014-11-03
 +++
+
+# Chasse aux zombies
+
+Publié le 3 novembre 2014 par Benoît sous licence CC BY-SA 4.0.
 
 ## Enoncé
 

@@ -1,7 +1,10 @@
 +++
 title = "Des mots carrés"
-date = 2016-11-28
 +++
+
+# Des mots carrés
+
+Publié le 28 novembre 2016 par Benoît sous licence CC BY-SA 4.0.
 
 ## Énoncé
 

@@ -1,7 +1,10 @@
 +++
 title = "Dessiner en hexa"
-date = 2014-07-14
 +++
+
+# Dessiner en hexa
+
+Publié le 14 juillet 2014 par Benoît sous licence CC BY-SA 4.0.
 
 ## Enoncé
 

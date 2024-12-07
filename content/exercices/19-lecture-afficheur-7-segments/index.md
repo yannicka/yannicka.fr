@@ -1,8 +1,10 @@
 +++
 title = "Lecture d'un afficheur à 7 segments"
-date = 2021-07-19
-author = "Aur36"
 +++
+
+# Lecture d'un afficheur à 7 segments
+
+Publié le 19 juillet 2021 par Aur36 sous licence CC BY-SA 4.0.
 
 ## Énoncé
 

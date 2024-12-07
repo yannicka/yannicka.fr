@@ -1,7 +1,10 @@
 +++
 title = "Un peu de maths"
-date = 2015-01-19
 +++
+
+# Un peu de maths
+
+Publié le 19 janvier 2015 par Benoît sous licence CC BY-SA 4.0.
 
 ## Enoncé
 

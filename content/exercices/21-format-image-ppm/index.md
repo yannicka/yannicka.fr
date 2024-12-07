@@ -1,8 +1,10 @@
 +++
 title = "Format d'image PPM"
-date = 2021-08-02
-author = "Aur36"
 +++
+
+# Format d'image PPM
+
+Publié le 2 août 2021 par Aur36 sous licence CC BY-SA 4.0.
 
 ## Énoncé
 

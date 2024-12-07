@@ -1,7 +1,10 @@
 +++
 title = "Porte de garage"
-date = 2016-12-05
 +++
+
+# Porte de garage
+
+Publié le 5 décembre 2016 par Benoît sous licence CC BY-SA 4.0.
 
 ## Description
 

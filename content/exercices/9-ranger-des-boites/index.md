@@ -1,7 +1,10 @@
 +++
 title = "Ranger des boites"
-date = 2015-02-09
 +++
+
+# Ranger des boites
+
+Publié le 9 février 2015 par Benoît sous licence CC BY-SA 4.0.
 
 Bonjour à toutes et à tous !
 

@@ -1,7 +1,10 @@
 +++
 title = "Checkeur de Blackjack"
-date = 2014-07-07
 +++
+
+# Checkeur de Blackjack
+
+Publié le 7 juillet 2014 par Benoît sous licence CC BY-SA 4.0.
 
 ## Enoncé
 

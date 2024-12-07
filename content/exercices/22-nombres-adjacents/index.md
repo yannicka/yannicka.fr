@@ -1,8 +1,10 @@
 +++
 title = "Nombres adjacents"
-date = 2021-08-09
-author = "Aur36"
 +++
+
+# Nombres adjacents
+
+Publié le 9 août 2021 par Aur36 sous licence CC BY-SA 4.0.
 
 ## Énoncé
 

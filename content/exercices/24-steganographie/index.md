@@ -1,8 +1,10 @@
 +++
 title = "Stéganographie"
-date = 2021-08-23
-author = "Aur36"
 +++
+
+# Stéganographie
+
+Publié le 23 août 2021 par Aur36 sous licence CC BY-SA 4.0.
 
 ## Énoncé
 
