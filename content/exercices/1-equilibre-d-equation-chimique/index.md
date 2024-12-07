@@ -1,8 +1,5 @@
 +++
 title = "Équilibre d'équation chimique"
-
-[taxonomies]
-tags = ["hard"]
 +++
 
 # Équilibre d'équation chimique
