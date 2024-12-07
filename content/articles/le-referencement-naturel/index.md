@@ -1,9 +1,10 @@
 +++
 title = "Le référencement naturel"
-date = 2016-07-28
-updated = 2022-10-23
-short_description = "Quelques bonnes pratiques sur le référencement naturel."
 +++
+
+# Le référencement naturel
+
+Publié le 28 juillet 2016 et mis à jour le 23 octobre 2022.
 
 ## Qu'est-ce que le référencement naturel ?
 

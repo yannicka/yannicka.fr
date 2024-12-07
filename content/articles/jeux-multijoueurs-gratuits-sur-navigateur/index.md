@@ -1,9 +1,10 @@
 +++
 title = "Jeux multijoueurs gratuits sur navigateur"
-date = 2020-11-21
-updated = 2022-07-10
-short_description = "Jeux par navigateur."
 +++
+
+# Jeux multijoueurs gratuits sur navigateur
+
+Publié le 21 novembre 2020 et mis à jour le 10 juillet 2022.
 
 {% macro show_games(games) %}
   <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

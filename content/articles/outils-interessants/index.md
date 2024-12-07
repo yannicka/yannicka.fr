@@ -1,11 +1,10 @@
 +++
 title = "Outils intéressants"
-date = 2015-10-02
-updated = 2024-09-01
-short_description = """
-  Grande liste d'outils (sites web, logiciels, etc.) intéressants pour pleins de
-  domaines différents."""
 +++
+
+# Outils intéressants
+
+Publié le 2 octobre 2015 et mis à jour le 1 septembre 2024.
 
 Voici une liste d'outils, souvent gratuits, que j'apprécie particulièrement ou
 que je considère intéressant. La plupart fonctionnent sous GNU/Linux et

@@ -1,9 +1,10 @@
 +++
 title = "Présentation de RSS"
-date = 2018-05-15
-updated = 2018-09-21
-short_description = "Pourquoi préférer RSS aux réseaux sociaux."
 +++
+
+# Présentation de RSS
+
+Publié le 15 mai 2018 et mis à jour le 21 septembre 2018.
 
 Intéressons-nous à RSS, une technologie du tout début des années 2000 qui n'a
 rien à envier aux réseaux sociaux pour suivre l'actualité (et même pour
