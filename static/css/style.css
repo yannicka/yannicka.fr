@@ -1,0 +1,97 @@
+/* Style */
+@media not (prefers-reduced-motion: reduce) {
+    @view-transition {
+        navigation: auto;
+    }
+}
+
+:root {
+    color-scheme: light dark;
+    --background-color: light-dark(rgb(230 246 255), rgb(30 46 55));
+    --background-highlight-color: light-dark(rgb(210 226 235), rgb(10 26 35));
+    --text-color: light-dark(rgb(22 22 22), rgb(233 233 233));
+}
+
+html {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 1.1em;
+    font-family: "Ubuntu Serif", system-ui, sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+pre,
+code {
+    font-family: "Ubuntu Mono", monospace;
+}
+
+pre {
+    overflow: auto;
+    padding: 1em;
+}
+
+body {
+    padding: 1.4em;
+    max-width: 48em;
+    margin: 0 auto;
+
+    & > header {
+        padding: 0.6em 2em;
+        background-color: var(--background-highlight-color);
+        border-radius: 2em;
+
+        & > nav {
+            & > ul {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                @media (min-width: 580px) {
+                    flex-direction: row;
+                    gap: min(0.8em, 1vw);
+                }
+
+                & > li {
+                    display: block;
+
+                    &:first-child {
+                        font-weight: bold;
+                    }
+
+                    & > a {
+                        display: block;
+                        padding: clamp(0.4em, 1vw, 0.8em);
+                    }
+                }
+            }
+        }
+    }
+
+    & > main {
+        padding: 2em 0.5em;
+    }
+
+    & > footer {
+        border-top: 1px solid var(--background-highlight-color);
+        padding: 1em;
+        border-radius: 2em;
+
+        & > ul {
+            display: flex;
+            list-style: none;
+            gap: 1em;
+            margin: 0;
+            flex-wrap: wrap;
+
+            & > li {
+                display: block;
+            }
+        }
+    }
+}
