@@ -16,7 +16,8 @@
         margin-bottom: 0.6em;
 
         p + &,
-        ul + & {
+        ul + &,
+        blockquote + & {
             margin-top: 1.6em;
         }
     }
@@ -66,5 +67,23 @@
 
     img {
         margin: 1em 0;
+    }
+
+    blockquote {
+        border-left: 1px solid var(--background-highlight-color);
+        margin-left: 1em;
+        padding-left: 1em;
+    }
+
+    details {
+        background-color: var(--background-highlight-color);
+        padding: 1em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        border-radius: 1em;
+
+        summary {
+            cursor: pointer;
+        }
     }
 }
