@@ -15,7 +15,7 @@ Téléphone : 1007
 
 ## Informations personnelles
 
-Aucune donnée personnelle vous concernant n'est stockée sur le site (excepté votre adresse IP qui se trouve dans les journaux d'accès au site).
+Aucune donnée personnelle vous concernant n'est stockée sur le site, excepté votre adresse IP qui se trouve dans les journaux d'accès au site, qui sont purgés régulièrement.
 
 ## Données du site
 
