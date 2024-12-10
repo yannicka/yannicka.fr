@@ -10,7 +10,7 @@ Vous trouverez ici divers articles traitants de divers sujets concernant notamme
 
 Afin de peut-être mieux comprendre mes explications, voici un peu qui je suis :
 
-- Je travaille depuis 2014 dans une agence web en tant que développeur web PHP et JavaScript/TypeScript ;
+- Je travaille depuis 2014 dans une société de service en tant que développeur web PHP et JavaScript/TypeScript ;
 
 - Je suis mené à travailler régulièrement sur des projets Symfony, React et PrestaShop ;
 
