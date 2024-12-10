@@ -1,0 +1,40 @@
+namespace ui {
+	class PlayerInfo {
+		var lifebar Lifebar
+		var weaponLatency WeaponLatency
+
+		def new {
+			lifebar = Lifebar.new
+			weaponLatency = WeaponLatency.new
+		}
+
+		def bindTo(player Player) {
+			lifebar.bindTo(player)
+			weaponLatency.bindTo(player)
+		}
+
+		def render(ctx Context) {
+			const offset = 23
+
+			# Barre de vie et latence de tir
+			ctx.save
+			ctx.translate(5, 5)
+
+			# Fond noir transparent
+			ctx.fillStyle = rgb(0, 0, 0, 0.8)
+			ctx.beginPath
+			ctx.moveTo(0, 0)
+			ctx.lineTo(66, 0)
+			ctx.lineTo(66 + offset, 20)
+			ctx.lineTo(offset, 20)
+			ctx.fill
+
+			lifebar.render(ctx)
+			weaponLatency.render(ctx)
+
+			ctx.restore
+
+			ctx.restore
+		}
+	}
+}

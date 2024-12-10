@@ -1,0 +1,91 @@
+h2#conditions Conditions
+
+h3 Condition if
+
+p La condition <code>if</code> se compose ainsi : <code>if ... { } else if ... { } else { }</code>.
+
+pre.
+	if ma_func(3, 2) == 5 {
+		Func ma_func = (Num a, Num b) { a - b }
+	} else if ma_func(55, 100) == 100 {
+		# ...
+	} else {
+		# ...
+	}
+
+p Le <code>if</code> fonctionne comme une expression et peut être assignée à une variable, c'est la dernière expression qui est retournée à la variable. Si aucune des conditions ne correspond, la variable prend la valeur du else s'il y en a un ou garde sa valeur s'il n'y en a pas.
+
+pre.
+	Num a = if ma_func(3, 2) == 5 {
+		5
+	} else if ma_func(55, 100) == 100 {
+		0
+	} else {
+		1
+	}
+
+p Le <code>if</code> profite de l'écriture raccourcie suivante :
+
+pre.
+	Str a = if condition ? "ok" : "nop"
+
+h3 Opérateurs
+
+pre.
+	&lt;, &lt;=, &gt;, &gt;=, ==, &lt;&gt;, and, or, not, in
+
+p Exemple de l'opérateur <code>in</code> qui retourne le nombre d'occurences :
+
+pre.
+	List&lt;Str&gt; names = [ "Aymeric", "Guillaume", "Yannick" ]
+	Bool has_yannick = "Yannick" in names # 1
+
+	Bool o_in_helloworld = "o" in "Hello World!" # 2
+
+	Dict&lt;Num&gt; scores = { "Aymerick" = 200, "Guillaume" = 180, "Yannick" = 20 }
+	Bool has_guillaume = "Guillaume" in scores # 1
+
+h3 Switch
+
+p Le <code>switch</code> permet de tester plusieurs valeurs d'une variable ou expression.
+
+pre.
+	switch ma_var {
+		when "a" {
+			# ...
+		}
+
+		when "c", "d" {
+			# ...
+		}
+
+		else {
+			# ...
+		}
+	}
+
+p Le <code>switch</code> permet de tester des plages de valeurs.
+
+pre.
+	switch ma_var {
+		when 0 ... 5 {
+			# ...
+		}
+
+		when 6 ... 10, 50 ... 120 {
+			# ...
+		}
+	}
+
+p Le <code>switch</code> fonctionne comme une expression et peut être assignée à une variable. Si aucune des valeurs n'est possédée par l'expression passée, la variable gardera sa valeur :
+
+pre.
+	card = "as"
+
+	card_value = switch card { # 14
+		when "valet" { 11 }
+		when "dame"  { 12 }
+		when "roi"   { 13 }
+		when "as"    { 14 }
+		else         { card }
+	}

@@ -1,0 +1,21 @@
+# Collisions
+namespace Hit {
+	# Point <-> Rect
+	def pointHitRect(p Point, r Rect) bool {
+		return (r.x <= p.x && p.x <= r.x + r.width) &&
+			(r.y <= p.y && p.y <= r.y + r.width)
+	}
+
+	# Point <-> Circle
+	def pointHitCircle(p Point, c Circle) bool {
+		return (p.x - c.x) ** 2 + (p.y - c.y) ** 2 < c.radius ** 2
+	}
+
+	# Rect <-> Rect
+	def rectHitRect(r1 Rect, r2 Rect) bool {
+		return r1.x < r2.x + r2.width &&
+			r1.x + r1.width > r2.x &&
+			r1.y < r2.y + r2.height &&
+			r1.y + r1.height > r2.y
+	}
+}

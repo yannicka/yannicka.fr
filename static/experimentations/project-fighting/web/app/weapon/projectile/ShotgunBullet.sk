@@ -1,0 +1,10 @@
+namespace weapon.projectile {
+	class ShotgunBullet : Bullet {
+		def new(x double, y double, angle double, speed int) {
+			super(x, y, angle, speed)
+
+			damages = 12
+			health = 0.5
+		}
+	}
+}

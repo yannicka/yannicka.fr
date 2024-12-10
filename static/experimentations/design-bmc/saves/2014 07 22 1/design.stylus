@@ -1,0 +1,51 @@
+flex-display()
+	display -webkit-flex
+	display flex
+
+flex-size(size = 1)
+	-webkit-flex size
+	flex size
+
+flex-direction(dir)
+	-webkit-flex-direction dir
+	flex-direction dir
+
+a
+	color rgb(0, 156, 255)
+	font-weight bold
+	text-decoration none
+
+.list-topics
+	margin 0
+
+.topic-all
+	flex-display()
+	margin 0
+	padding 12px 6px
+	border-top 2px solid rgb(224, 224, 224)
+
+.topic-avatar
+	padding 0 12px
+	width 36px
+
+	img
+		width 36px
+		height 36px
+		border-radius 50%
+
+.topic-title
+	flex-size(3)
+
+.topic-title-title
+	font-weight bold
+
+.topic-infos
+	flex-size(2)
+	color rgb(102, 102, 102)
+
+.topic-more
+	width 32px
+
+.topic-more-button
+	&:before
+		content ">"

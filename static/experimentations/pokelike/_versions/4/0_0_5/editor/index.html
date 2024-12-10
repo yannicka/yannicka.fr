@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pokelike - Editeur de map</title>
+	</head>
+
+	<body>
+		<canvas id="editor">Change browser bro'</canvas>
+		<canvas id="choice_block"></canvas>
+
+		<div id="log"></div>
+
+		<p>
+			<kbd>Fleches directionnelles ou ZQSD</kbd> : d&eacute;placer la cam&eacute;ra
+		</p>
+
+		<p>
+			Pas d&eacute;faut, toutes les tuiles avec un objet son solide, sinon non. Pour contrer cela, mettez "Objet non solide" sur la tuile contenant un objet que vous voulez non solide.
+		</p>
+
+		<input type="radio" checked="checked" name="type" value="ground" id="choice_ground" /> Sol<br />
+		<input type="radio" name="type" value="item" id="choice_item" /> Objet <button id="reset">Gomme</button><br /> 
+		<input type="radio" name="type" value="onenter" /> OnEnter (rouge)<br />
+		<input type="radio" name="type" value="onaction" /> OnAction (bleu)<br />
+		<input type="radio" name="type" value="solid" /> Solide <input type="radio" name="type" value="nosolid" /> Non solide<br />
+
+		Code de l'evenement : <select id="choice">
+			<option value="-1">Gomme</option>
+		</select><br />
+
+		<button id="download">Voir le code de la carte</button>
+		<div id="code"></div>
+
+		<script src="src/lib.js"></script>
+		<script src="src/editor.js"></script>
+		<script>E.init();</script>
+	</body>
+</html>

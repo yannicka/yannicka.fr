@@ -1,0 +1,71 @@
+h2#classes Classes
+
+p La création de classe fonctionne simplement. Comme la plupart des langages mais de manière simplifiée, sans visibilité ni futilités.
+
+p Le <code>this.</code> devient <code>@</code> et est obligatoire pour accéder à un attribut de la classe.
+
+pre.
+	class Point {
+		public new(Num x, Num y) {
+			@x = x
+			@y = y
+		}
+
+		public Void add(Num x, Num y) {
+			@x += x
+			@y += y
+		}
+
+		public Void add(Point2D p) {
+			@add(p.x, p.y)
+		}
+	}
+
+	class Point3D &lt; Point {
+		public new(Num x, Num y, Num z) {
+			@super(x, y)
+			@z = z
+		}
+
+		public Void add(Num x, Num y, Num z) {
+			@add(p.x, p.y)
+			@z += z
+		}
+
+		public Void add(Point3D p) {
+			@add(p.x, p.y, p.z)
+		}
+	}
+
+h3 "Prototyper" une classe existante
+
+p Il est possible d'ajouter des méthodes à une classe native (Str, Int, etc.) ou à une classe que vous avez créé ou que vous utilisez.
+
+p <code>@</code> dans une classe native représente la valeur de l'objet (vous n'avez pas accès aux valeurs internes). <code>@</code> dans une classe que vous avez créé ou que vous utilisez représente l'objet et avez donc accès aux attributs.
+
+pre.
+	# Prototyper une classe native
+	Num::negative_abs() {
+		-@abs() # "@" représente ici la valeur du nombre
+	}
+
+	# Prototyper votre propre classe
+	# Les sous-classes hérite des méthodes que vous créez ici
+	Point::sub(Point p) {
+		@x -= p.x
+		@y -= p.y
+	}
+
+h3 Fonctions et attributs de classe
+
+pre.
+	class Math {
+		public const PI = 3.14159265359
+
+		public static get_pi() { @PI }
+	}
+
+	Num PI
+
+	pi = Math.PI
+	pi = Math.get_pi()

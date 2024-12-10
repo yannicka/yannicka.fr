@@ -1,0 +1,57 @@
+namespace input {
+	class Keyboard {
+	  var keys IntMap<bool>
+	  var lasts List<int>
+
+		def new {
+			keys  = {}
+			lasts = []
+
+			document.addEventListener("keyup",
+				(e HTMLKeyboardEvent) => onkeyup(e))
+
+			document.addEventListener("keydown",
+				(e HTMLKeyboardEvent) => onkeydown(e))
+		}
+
+		def onkeyup(e HTMLKeyboardEvent) {
+			lasts.append(e.keyCode)
+			keys[e.keyCode] = false
+		}
+
+		def onkeydown(e HTMLKeyboardEvent) {
+			keys[e.keyCode] = true
+		}
+
+		# Tant que la touche est levée
+		def up(k int) bool {
+			return k in keys && !keys[k]
+		}
+
+		# Tant que la touche est appuyée
+		def down(k int) bool {
+			return k in keys && keys[k]
+		}
+
+		# Dès que la touche est enfoncée
+		# à faire : problème : si on laisse la touche enfoncée, l'évènement se
+		# répète
+		def press(k int) bool {
+			const v = keys[k]
+			keys[k] = false
+
+			return v
+		}
+
+		# Une fois que la touche est relâchée
+		def release(k int) bool {
+			const last = lasts[lasts.indexOf(k)]
+
+			if last != -1 {
+				lasts.removeOne(k)
+			}
+
+			return last == k
+		}
+	}
+}

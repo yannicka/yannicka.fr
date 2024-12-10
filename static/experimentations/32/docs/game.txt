@@ -1,0 +1,8 @@
+*****************************************************************
+anim-jeuNewsPepper
+
+To-Do :
+	- Ramassage et plaçage dans l'inventaire
+	- Pose
+	- Affichage du nombre de l'objet dans l'inventaire
+	- Etc.

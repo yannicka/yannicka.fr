@@ -1,0 +1,16 @@
+namespace weapon.projectile {
+	class Ray : Sprite {
+		def new(x double, y double, angle double, speed int) {
+			super(x, y, 0, 0)
+		}
+
+		over update(dt double) {
+		}
+
+		over render(ctx Context) {
+			ctx.lineWidth = 2
+			ctx.moveTo(x, y)
+			ctx.lineTo(x + 20, y + 20)
+		}
+	}
+}

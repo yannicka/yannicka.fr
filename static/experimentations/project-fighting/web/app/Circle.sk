@@ -1,0 +1,44 @@
+class Circle {
+    # Position du cercle
+	var position Point
+    
+    # Rayon du cercle
+	var radius double
+
+	def new(x double, y double, radius double) {
+		position = Point.new(x, y)
+
+		self.radius = radius
+	}
+
+    # Modifier la position
+	def setPosition(x double, y double) {
+		position.x = x
+		position.y = y
+	}
+
+    # Modifier le rayon
+	def setRadius(radius double) {
+		self.radius = radius
+	}
+
+    # Récupérer la position x du cercle
+	def x double {
+		return position.x
+	}
+
+    # Récupérer la position y du cercle
+	def y double {
+		return position.y
+	}
+
+    # Définir la position x du cercle
+	def x=(x double) {
+		position.x = x
+	}
+
+    # Définir la position y du cercle
+	def y=(y double) {
+		position.y = y
+	}
+}

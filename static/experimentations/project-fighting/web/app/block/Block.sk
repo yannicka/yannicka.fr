@@ -1,0 +1,51 @@
+namespace block {
+	class Block : Sprite {
+		# Le bloc est-il solide ?
+		var solid bool
+
+		# Explosion générée
+		var explosion Explosion
+
+		# Temps de latence entre l'activation du bloc et son explosion
+		var timeBeforeExplosion double
+
+		# Le bloc est-il activé ? (activé = prêt à exploser)
+		var active bool
+
+		def new(x double, y double, width int, height int) {
+			super(x, y, width, height)
+
+			solid = true
+		}
+
+		over update(dt double) {
+			super(dt)
+		}
+
+		# Le bloc est-il solide ?
+		def isSolid bool {
+			return solid
+		}
+
+		def activate {
+			if !active {
+				active = true
+			}
+		}
+
+		def unactivate {
+			if active {
+				active = false
+			}
+		}
+
+		# Évènement : lorsque le bloc se fait toucher par une balle
+		def onFired(projectile weapon.projectile.Projectile) { }
+
+		# Évènement : lorsque le bloc se fait survolé par le joueur
+		def onPlayerOverlaps(player Player) { }
+
+		# Évènement : lorsque le bloc se trouve dans une explosion
+		def onExplosion(explosion Explosion) { }
+	}
+}

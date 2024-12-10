@@ -1,0 +1,168 @@
+/* ------------------------------------------------------------------------------- */
+/* Ce fichier est bordélique, il serait nécessaire de le décliner en sous-fichiers */
+/* ------------------------------------------------------------------------------- */
+/* Fonctions flex
+	---------------- */
+/* */
+/* integer */
+/* row | column */
+/* integer */
+/* nowrap | wrap | wrap-reverse */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url("fonts/Lato-Regular.woff") format('woff');
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
+  background-color: #f8f3f0;
+}
+.main-nav {
+  display: -webkit-flex;
+  display: flex;
+}
+.main-nav .logo {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  color: #fff;
+  border-bottom: 2px solid #d95830;
+  background: #ed6c44;
+  width: 56px;
+  text-align: center;
+  cursor: pointer;
+}
+.main-nav .logo img {
+  margin-top: 14px;
+  transition: all 0.3s linear;
+  width: 20px;
+  height: 16px;
+}
+.main-nav .logo:hover img {
+  transform: scale(1.6);
+}
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  background-color: #fff;
+  border-bottom: 2px solid #e5e4e3;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.main-nav li {
+  display: inline;
+}
+.main-nav a {
+  margin: 0;
+  padding: 10px;
+  display: inline-block;
+  color: #8a93a5;
+  text-decoration: none;
+}
+.main-nav a:hover {
+  background-color: #eee;
+}
+/* Pagination
+------------- */
+.pagination {
+  margin: 6px 0;
+  padding: 0 0 0 5px;
+  border-bottom: 2px solid #e5e4e3;
+}
+.pagination .pagination-right {
+  float: right;
+}
+.pagination a {
+  margin: 0;
+  padding: 6px 12px;
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+}
+.pagination a.active,
+.pagination a:hover,
+.pagination a:focus {
+  background-color: #ed6c44;
+  color: #fff;
+}
+/* Fil d'ariane
+--------------- */
+.breadcrumbs {
+  margin: 6px 0;
+  padding: 2px 0 2px 5px;
+  border-bottom: 2px solid #e5e4e3;
+}
+.breadcrumbs a,
+.breadcrumbs h1 {
+  display: inline;
+}
+.breadcrumbs a:after,
+.breadcrumbs h1:after {
+  margin: 0 6px;
+  padding: 0;
+  content: "\02C3";
+  font-weight: 900;
+  color: #969696;
+}
+.breadcrumbs a:last-child:after,
+.breadcrumbs h1:last-child:after {
+  content: "";
+}
+.breadcrumbs h1 {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 900;
+  border: none;
+  text-shadow: none;
+}
+.breadcrumbs a {
+  text-decoration: none;
+  color: #2c6478;
+}
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+/* Onglets
+---------- */
+.tabs {
+  margin: 6px 0;
+  padding: 0 0 0 5px;
+  border-bottom: 2px solid #e5e4e3;
+}
+.tabs .tabs-right {
+  float: right;
+}
+.tabs h1 {
+  margin: 0 12px;
+  padding: 0;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 900;
+  border: none;
+  text-shadow: none;
+}
+.tabs a {
+  margin: 0;
+  padding: 6px 12px;
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+}
+.tabs a.active,
+.tabs a:hover,
+.tabs a:focus {
+  background-color: #ed6c44;
+  color: #fff;
+}
+

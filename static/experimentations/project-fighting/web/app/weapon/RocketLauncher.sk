@@ -1,0 +1,27 @@
+namespace weapon {
+	class RocketLauncher : Weapon {
+		def new {
+			super("Lance-roquettes")
+
+			baseLatency = 2
+			bulletSpeed = 460
+		}
+
+		over fire(position Point, direction Point) {
+			if !canFire	{
+				return
+			}
+
+			decreaseAmmo
+			resetLatency
+
+			const angle = Point.angleBetween(direction, position)
+
+			weapon.projectile.Rocket.new(position.x, position.y, angle, bulletSpeed)
+		}
+
+		over renderMiniature(ctx Context) {
+			ctx.drawImage(Img.get("miniatures"), 64, 0, 16, 16, 0, 0, 16, 16)
+		}
+	}
+}

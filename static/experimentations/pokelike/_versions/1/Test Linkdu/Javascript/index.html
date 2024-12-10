@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+	<body>
+		<img src="img2.png">
+		<input type = "button" value="Lancer" id="bouton"/>
+		<canvas id="game" height = "500px" width = "500px" style = "border:1px solid black">Vas t'acheter un ordi</canvas>
+		<canvas id="cache" height = "500px" width = "500px" style = "border:1px solid black, display:none">Vas t'acheter un ordi</canvas>
+		<script type="text/javascript">
+	
+			var bouton = document.getElementById('bouton')
+			var reference = [
+				[0,162,0,0,0,16,16],//Herbe
+				[173,130,0,32,16,16,16],//Herbe-chemin haut
+				[153,115,0,16,16,16,16],//Herbe-chemin bas
+				[171,132,11,48,16,16,16],//Herbe-chemin gauche
+				[157,121,10,64,16,16,16],//Herbe-chemin droit
+				[162,122,0,0,16,16,16],//Chemin
+				[54,176,0,16,0,16,16],//herbe fleuri
+				[0,211,149,32,0,16,16],//herbe mouillé
+				]
+
+
+			bouton.onclick = function(){
+				var canvas = document.getElementById('game')
+				var ctx = canvas.getContext('2d');
+
+
+				var image = new Image()
+				image.src = "img2.png" 
+					image.onload = function(){
+
+						var tiles = new Image()
+						tiles.src = "tiles.png" 
+
+
+						tiles.onload = function(){
+							ctx.drawImage(image, 0,0)
+							ctx.drawImage(tiles,0,0)
+							var map = mapping(image, 'cache')
+							ctx.clearRect(0,0, 100,100)
+							generator_img(map, reference, ctx, tiles)
+							alert('ok')
+							
+							ctx.drawImage(tiles,0, 0,16, 16, 0,0,16, 16)
+						}
+					
+				}
+			}
+			//Ressors un tableau contenant le rgb de chaque pixel
+			//image = Image a analyser
+			function mapping(image, canvas_id){
+
+				var cvs = document.getElementById(canvas_id);
+				var cntxt = cvs.getContext('2d');
+				cntxt.drawImage(image, 0,0);
+
+
+				var hauteur = image.height;
+				var largeur = image.width;
+
+				var result = [];
+
+				result[1] = [hauteur, largeur];
+				var id_px = 0
+				var data = [];
+				var rgba = cntxt.getImageData(0,0,image.width,image.height).data;
+
+				for(var u = 0; u < rgba.length; u += 4){
+					data[id_px] = [rgba[u],rgba[u+1],rgba[u+2],rgba[u+3]];
+					id_px ++
+				}
+				result[2] = data;
+				return result;
+			}
+			//Genere une image a l'écran
+			//Data: Tableau de la fonction mapping()
+			//Reference: Tableau liant un tile a son équivalent rvb 
+			//Canvas: Contexte du Canvas ou l'image s'affiche
+			//Image: Image avec les tiles
+			function generator_img(data, reference, canvas, image){
+				var x = 0;
+				var y = 0;
+				var tx = 0;
+				for (var i = 0; i < data[2].length; i++) {
+
+					for(var o = 0; o< reference.length; o ++){
+						//alert(data[2][i][0]+'-'+data[2][i][1]+'-'+data[2][i][2])
+
+						if(data[2][i][0] == reference[o][0] && data[2][i][1] == reference[o][1] && data[2][i][2] == reference[o][2]){
+							canvas.drawImage(image,reference[o][3], reference[o][4],reference[o][5], reference[o][6], x,y,reference[o][5], reference[o][6])
+							//alert('dessin')
+							break;
+						}
+						
+						}
+					x += 16
+					tx ++;
+					if(tx >= data[1][1]){
+						tx = 0
+						y+= 16
+						x=0
+					}
+				};
+			}
+
+			
+		</script>
+	</body>
+</html>

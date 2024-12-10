@@ -1,0 +1,68 @@
+namespace widget {
+	class Button : Widget {
+		var width int
+		var height int
+
+		def new(x double, y double, width int, height int, relativeTo Position) {
+			super(x, y, relativeTo)
+
+			self.width  = width
+			self.height = height
+		}
+
+		def render(ctx Context) {
+			ctx.save
+
+			switch relativeTo {
+				case Position.TOP_LEFT {
+					ctx.translate(x, y)
+				}
+
+				case Position.BOTTOM_LEFT {
+					ctx.translate(x, Game.heightScaled - height - y)
+				}
+
+				case Position.BOTTOM_RIGHT {
+					ctx.translate(
+						Game.widthScaled - width - x,
+						Game.heightScaled - height - y)
+				}
+			}
+
+			ctx.fillStyle = rgb(255, 255, 255, 0.6)
+			ctx.fillRect(0, 0, width, height)
+
+			ctx.restore
+		}
+
+		def getPosition Point {
+			switch relativeTo {
+				case Position.TOP_LEFT {
+					return Point.new(x, y)
+				}
+
+				case Position.BOTTOM_LEFT {
+					return Point.new(x, Game.heightScaled - height - y)
+				}
+
+				case Position.BOTTOM_RIGHT {
+					return Point.new(
+						Game.widthScaled - width - x,
+						Game.heightScaled - height - y)
+				}
+			}
+
+			return null
+		}
+
+		over rect Rect {
+			const position = getPosition
+
+			return Rect.new(
+				position.x * Game.scale,
+				position.y * Game.scale,
+				width * Game.scale,
+				height * Game.scale)
+		}
+	}
+}

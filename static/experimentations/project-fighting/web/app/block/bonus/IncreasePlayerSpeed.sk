@@ -1,0 +1,12 @@
+# à faire
+namespace block.bonus {
+	class IncreasePlayerSpeed : Bonus {
+		def new(x double, y double) {
+			super(x, y, 16, 16)
+		}
+
+		over onPlayerOverlaps(player Player) {
+			# à faire
+		}
+	}
+}

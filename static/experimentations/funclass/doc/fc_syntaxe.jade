@@ -1,0 +1,512 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Funclass
+
+		style.
+			html, body {
+				margin: 0;
+				padding: 0;
+				counter-reset: niv_deux;
+				counter-reset: niv_trois;
+				font-family: Arial;
+				font-size: 17px;
+			}
+
+			pre {
+				margin: 0;
+				padding: 16px;
+				background-color: rgb(230, 230, 230);
+				border: 2px solid rgb(180, 180, 180);
+				border-left: none;
+				border-right: nold;
+			}
+
+			code {
+				background-color: rgb(230, 230, 230);
+			}
+
+			h1, h2, h3, h4, h5, h6, p {
+				margin: 12px 6px 8px 6px;
+				padding: 0;
+			}
+
+			h2 {
+				counter-increment: niv_deux 1;
+				counter-reset: niv_trois;
+			}
+
+			h2:before {
+				content: counter(niv_deux) ". ";
+			}
+
+			h3 {
+				counter-increment: niv_trois 1;
+			}
+
+			h3:before {
+				content: counter(niv_deux) "." counter(niv_trois) ". ";
+			}
+
+			.red {
+				color: red;
+			}
+
+	body
+		h1 Spécifications de Funclass - Brouillon
+
+		p.red CE QUI EST D&Eacute;CRIT CI-DESSOUS EST SUSCEPTIBLE DE CHANGER. LE NOM DU LANGAGE AUSSI.
+
+		p Tout n'est sûrement pas exhaustif. Ne pas hésiter à poser des questions. Cependant les grandes lignes du langages ne changeront pas.
+
+		ul
+			li: a(href="#introduction")           1. Introduction
+			li: a(href="#types")                  2. Types
+			li: a(href="#fonctions")              3. Fonctions
+			li: a(href="#conditions")             4. Conditions
+			li: a(href="#boucles")                5. Boucles
+			li: a(href="#classes")                6. Classes
+			li: a(href="#liste-et-dictionnaires") 7. Listes et dictionnaires
+			li: a(href="#reflexions")             8. Réflexions
+			li: a(href="#exemples")               9. Exemples
+
+		h2#introduction Introduction
+
+		p Une variable qui n'a pas été initialisée, si elle est utilisée, renverra <code>nil</code> (l'équivalent du null). Elle n'est pas différenciable des variables initialisée ayant la valeur <code>nil</code>.
+
+		p Les points virgules servent uniquement à placer plusieurs expressions sur un même ligne, sinon les saut des lignes ont la même valeur.
+
+		p Les variables ont une portée locale dans le bloc où elles sont définies. Si elle sont définies à la racine du programme, elle seront donc globales.
+
+		p Les structures de contrôles sont des expressions. C'est-à-dire qu'elles retournent la dernière valeur de leur bloc et qu'il est possible de la récupérer dans une variable.
+
+		p Tout est objet. C'est à dire que ce code est correct :
+
+		pre.
+			a = 5
+			b = 5.to_string()
+
+		h2#types Types
+
+		pre.
+			Bool
+			Num
+			Str
+			List&lt;T&gt;
+			Dict&lt;V&gt;
+			Var
+
+			# Partie pas claire, à rectifier
+			Func&lt;(T n)*&gt;:T
+			Obj
+
+		p <code>nil</code> est la valeur d'une variable non initialisée ou sans valeur.
+
+		ul
+			li Le type Bool prend pour valeur yes (true) et no (false).
+			li Num correspond au type numérique.
+			li Str correspond au chaînes de caractères.
+			li List&lt;T&gt; correspond à une liste (un ensemble) de valeurs du type T.
+			li Dict&lt;T&gt; correspond à un ensemble de clés (de type Str) auxquels sont associées une valeur de type T.
+			li Var correspond au type dynamique, utile quand on ne sait pas quel type on veut recevoir dans une fonction.
+			li (todo) Func&lt;(T n)*&gt;:T
+			li (todo) Obj
+
+		h3 &Eacute;valuations booléennes
+
+		pre.
+			Evaluer à no  : no, 0, 0.0, "", "0", [], {}, nil
+			Evaluer à yes : le reste
+
+		h2#fonctions Fonctions
+
+		h3 Créer une fonction
+
+		p Les fonctions retournent par défaut la dernière expression. Le mot-clé return peut être utilisé seul pour ne rien retourner ou être utilisé avec une expression pour expliciter de manière précise la valeur retournée.
+
+		pre.
+			add(Num a, Num b) { a + b }
+
+		p Les fonctions peuvent être surchargées. L'exemple précédent peut ainsi être surchargé ainsi afin de concaténer deux chaînes de caractères :
+
+		pre.
+			add(Str a, Str b) { a + b }
+
+		p La fonction appelée dépend ainsi des types des paramètres qui y sont passés.
+
+		p Les fonctions retournent la dernière expression
+
+		p Les arguments de fonctions peuvent avoir des valeurs par défaut.
+
+		pre.
+			ma_fonction(Num a, Num b = 5) {
+				# ...
+			}
+
+		h3 Appels de fonctions
+
+		p L'appel d'une fonction demande obligatoirement des parenthèses, même si elle ne possède aucun paramètre.
+
+		pre.
+			mon_num = add(2, 5) # 7
+			mon_str = add("Hello", " World!") # "Hello World!"
+
+		h3 Fonctions variadiques
+
+		p Les fonctions peuvent être à nombre de paramètres variables.
+
+		pre.
+			somme(Num nb, Num args...) {
+				# args sera un tableau (de nombres ici) contenant les valeurs passées lors de l'appel
+				# ...
+			}
+
+		p Les fonctions à nombre de paramètres variables peuvent s'appeler de différentes manières.
+
+		pre.
+			nb = somme(2) # args vaudra [] (un tableau vide)
+			nb = somme(2, 3, 4, 5) # args vaudra [ 3, 4, 5 ]
+
+			# il est aussi possible de faire passer plusieurs valeurs via une liste
+			# le ...[] sert à préciser qu'on fait passer plusieurs valeurs et non une liste
+			nb = sommes(2, ...[ 3, 4, 5 ]) # args vaudra [ 3, 4, 5 ]
+
+		h3 Fonctions anonymes
+
+		p Il est possible de créer des fonctions anonymes. Elles servent généralement à faire des callbacks ou des fonctions qui changent durant l'exécution du programme.
+
+		pre.
+			# Fonction anonyme dans une variable
+			# La fonction dans une variable peut être changée durant l'exécution mais pas surchargée
+			ma_func = (Num a, Num b) { a + b }
+
+			# Fonction anonyme dans une fonction
+			une_fonction_avec_callback((Num a, Num b) {
+				# ...
+			})
+
+			# Fonction anonyme auto-appelée
+			(Num a, Num b) {
+				# ...
+			} (3, 6)
+
+
+		//
+			h3 Surcharge des opérateurs
+			pre.
+				:+(T1 a, T2 b) { }
+
+		h2#conditions Conditions
+
+		h3 Condition if
+
+		p La condition <code>if</code> se compose ainsi : <code>if ... { } else if ... { } else { }</code>.
+
+		pre.
+			if (ma_func(3, 2) == 5) {
+				ma_func = (Num a, Num b) { a - b }
+			} else if (ma_func(55, 100) == 100) {
+				# ...
+			} else {
+				# ...
+			}
+
+		p Le <code>if</code> fonctionne comme une expression et peut être assignée à une variable, c'est la dernière expression qui est retournée à la variable. Si aucune des conditions ne correspond, la variable prend la valeur du else s'il y en a un ou garde sa valeur s'il n'y en a pas.
+
+		pre.
+			a = if (ma_func(3, 2) == 5) {
+				5
+			} else if (ma_func(55, 100) == 100) {
+				0
+			} else {
+				1
+			}
+
+		p Le <code>if</code> profite de l'écriture raccourcie suivante :
+
+		pre.
+			a = if (condition) "ok" else if (condition) "hum" else "nop"
+
+		h3 Opérateurs
+
+		pre.
+			&lt;, &lt;=, &gt;, &gt;=, ==, &lt;&gt;, and, or, not, in
+
+		h3 Switch
+
+		p Le <code>switch</code> permet de tester plusieurs valeurs d'une variable ou expression.
+
+		pre.
+			switch (ma_var) {
+				when "a" {
+					# ...
+				}
+
+				when "c", "d" {
+					# ...
+				}
+
+				else { # else ou default ? à définir
+					# ...
+				}
+			}
+
+		p Le <code>switch</code> permet de tester des plages de valeurs.
+
+		pre.
+			switch (ma_var) {
+				when 0 ... 5 {
+					# ...
+				}
+
+				when 6 ... 10, 50 ... 120 {
+					# ...
+				}
+			}
+
+		p Le <code>switch</code> fonctionne comme une expression et peut être assignée à une variable. Si aucune des valeurs n'est possédée par l'expression passée, la variable gardera sa valeur :
+
+		pre.
+			a = switch (ma_var) {
+				when "a" {
+					0
+				}
+
+				when "c", "d" {
+					1
+				}
+
+				else {
+					2
+				}
+			}
+
+		h2#boucles Boucles
+
+		h3 Boucle simple
+
+		p La boucle simple est une boucle où aucune fin n'est décrite. Pour la stopper, il faut effectuer un break.
+
+		pre.
+			loop {
+				# ...
+			}
+
+		p Il est cependant possible de définir le nombre d'itérations.
+
+		pre.
+			mon_num = 5
+			loop (mon_num) {
+				# ...
+			}
+
+		h3 Boucle while
+
+		p La boucle <code>while</code> itère dans la condition est respectée.
+
+		pre.
+			i = 5
+			while (i--) {
+				# i = 4
+				# i = 3
+				# ...
+			}
+
+		h3 Boucle do-while
+
+		p La boucle <code>do-while</code> fonctionne de la même manière que la boucle <code>while</code> sauf qu'il y a une itération au minumum et que l'expression est évaluée à la fin de l'itération.
+
+		pre.
+			i = 5
+			do {
+				# i = 5
+				# i = 4
+				# ...
+			} while (i--)
+
+		h3 Boucle itérative
+
+		p La boucle itérative demande une valeur initiale, une valeur finale et un pas facultatif.
+
+		pre.
+			for (i from 0 to 5 by 1) {
+				# i = 0
+				# i = 1
+				# ...
+			}
+
+		h3 Boucle sur une liste
+
+		p Parcours tous les éléments de la liste.
+
+		pre.
+			ma_list = [ 2, 3, 5, 7, 11, 13 ]
+			for (k, v in ma_list) {
+				# k = 0, v = 2
+				# k = 1, v = 3
+				# ...
+			}
+
+		h3 Boucle sur un dictionnaire
+
+		p Parcours tous les éléments du dictionnaire.
+
+		pre.
+			mon_dict = { "a" = "b", "b" = "c", "c" = "d" }
+			for (k, v in mon_dict) {
+				# k = "a", v = "b"
+				# k = "b", v = "c"
+				# ...
+			}
+
+		h3 Boucle sur une chaîne
+
+		p Parcours chaque caractères d'une chaîne.
+
+		pre.
+			mon_str = "Hello"
+			for (k, v in mon_str) {
+				# k = 0, v = "H"
+				# k = 1, v = "e"
+				# ...
+			}
+
+		h2#classes Classes
+
+		p La création de classe fonctionne simplement. Comme la plupart des langages mais de manière simplifiée, sans visibilité ni futilités.
+
+		p Le <code>this.</code> devient <code>@</code> et est obligatoire pour accéder à un attribut de la classe.
+
+		pre.
+			class Point {
+				new(Num x, Num y) {
+					@x = x
+					@y = y
+				}
+
+				add(Point2D p) {
+					@x += p.x
+					@y += p.y
+				}
+
+				add(Num x, Num y) {
+					@x += x
+					@y += y
+				}
+			}
+
+			class Point3D {
+				new(Num x, Num y, Num z) {
+					super(x, y)
+					@z = z
+				}
+
+				add(Point3D p) {
+					@x += p.x
+					@y += p.y
+					@z += p.z
+				}
+
+				add(Num x, Num y, Num z) {
+					@x += x
+					@y += y
+					@z += z
+				}
+			}
+
+		h3 "Prototyper" une classe existante
+
+		p Il est possible d'ajouter des méthodes à une classe native (Str, Int, etc.) ou à une classe que vous avez créé ou que vous utilisez.
+
+		p <code>@</code> dans une classe native représente la valeur de l'objet (vous n'avez pas accès aux valeurs internes). <code>@</code> dans une classe que vous avez créé ou que vous utilisez représente l'objet et avez donc accès aux attributs.
+
+		pre.
+			# Prototyper une classe native
+			Num::negative_abs() {
+				-@abs() # "@" représente ici la valeur du nombre
+			}
+
+			# Prototyper votre propre classe
+			# Les sous-classes hérite des méthodes que vous créez ici
+			Point::sub(Point p) {
+				@x -= p.x
+				@y -= p.y
+			}
+
+		h3 Fonctions et attributs de classe
+
+		pre.
+			class Math {
+				@PI = 3.14159265359
+
+				@get_pi() { @PI }
+			}
+
+			pi = Math.PI
+			pi = Math.get_pi()
+
+		h2#liste-et-dictionnaires Listes et dictionnaires
+
+		h3 Listes
+
+		p Il y a deux méthodes pour accéder à une valeur dans une liste :
+
+		ul
+			li <code>ma_list[0]</code> ou <code>i = 0 ; ma_list[i]</code>
+			li <code>ma_list.get(0)</code> ou <code>ma_list.get(i)</code>
+
+		p L'accès à la valeur permet bien sûr de la redéfinir avec un "="
+
+		h3 Dictionnaires
+
+		p Il y a trois méthodes pour accéder à une valeur dans un dictionnaire :
+
+		ul
+			li <code>mon_dict.val</code>
+			li <code>mon_dict["val"]</code> ou <code>val = "val" ; mon_dict[val]</code>
+			li <code>mon_dict.get("val")</code> ou <code>mon_dict.get(val)</code>
+
+		p L'accès à la valeur permet bien sûr de la redéfinir avec un "="
+
+		h2#reflexions Réflexions
+
+		ul
+			li 1. Peut-être serait-il nécessaire d'écrire explicitement le type qu'une fonction retourne ?
+			li 2. Typer les variables explicitement (comme les fonctions du point 1) ?
+			li 3. Rendre l'écriture du this. ou @ facultative ?
+			li 4. Ajouter le mot-clé as pour faire du transtypage ? (ma_peugeot as Voiture).une_methode()
+			li 5. Prévoir du inline pour faire des constantes ou méthodes inlines ? Via des metadata ?
+			li 6. Des retour multiples ? ma_fonction() { 2, 3, 4 } ; a, b, c = ma_fonction()
+			li 7. Appel de fonctions avec des arguments nommés ? ma_fonction(Num a, Num b, Num c) { } ; ma_fonction(c: 5, b: 6, a: 7)
+			li 8. Réflechir au fonctionnement du code multi-fichiers
+			li 9. Réfléchir à un meilleur fonctionnement pour les attributs et méthodes de classe
+			li 10. Autoriser le <code>this.</code>
+			li 11. Typage fixe ou dynamique ?
+			li 12. Réfléchir au fonctionnement des références.
+
+		h2#exemples Exemples
+
+		h3 Cas fictif de plus ou moins
+
+		pre.
+			pack fc.examples.plus_ou_moins
+
+			import stdio
+			import math
+
+			nb       = math.rand(1, 100)
+			cpt      = 0
+			val_test = 0
+
+			do {
+				val_test = stdio.ask("Saisissez un nombre entre 1 et 100 : ")
+				cpt++
+
+				if (val_test &gt; nb)
+					stdio.writeln("C'est moins")
+				else if (val_test &lt; nb)
+					stdio.writeln("C'est plus")
+			} while (val_test != nb)
+
+			alert("Bravo, tu as gagné en " + cpt + " coups !")

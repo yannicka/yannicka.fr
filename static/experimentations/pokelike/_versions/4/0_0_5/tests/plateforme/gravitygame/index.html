@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jeu</title>
+
+		<meta charset="utf-8" />
+
+		<style>
+			#help, #jeu {
+				display: inline-block;
+				vertical-align: top;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="jeu">Change brower bro'</canvas>
+		<div id="help">
+			<strong>Touches</strong>
+			<ul>
+				<li><kbd>Flèche haut</kbd> OU <kbd>D</kbd> OU <kbd>Espace</kbd> : sauter</li>
+				<li><kbd>Flèche gauche</kbd> OU <kbd>Q</kbd> : aller &agrave; gauche</li>
+				<li><kbd>Flèche droite</kbd> OU <kbd>D</kbd> : aller &agrave; droite</li>
+				<li><kbd>Entrée</kbd> : Valider le niveau une fois sur la porte avec la clé</li>
+				<li><kbd>Echap</kbd> : retour au menu</li>
+			</ul>
+
+			<strong>But</strong><br />
+			Terminer tous les niveaux. Pour cela il faut prendre la clé dans chaque niveau puis aller à l'endroit où se situe la porte et appuyer sur entrée pour valider le niveau courant.
+		</div>
+
+		<div id="log"></div>
+
+		<script src="js/lib.js"></script>
+		<script src="js/vars.js"></script>
+		<script src="js/load.js"></script>
+		<script src="js/init.js"></script>
+		<script src="js/create.js"></script>
+		<script src="js/update.js"></script>
+		<script src="js/draw.js"></script>
+	</body>
+</html>

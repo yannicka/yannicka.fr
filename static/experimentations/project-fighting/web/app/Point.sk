@@ -1,0 +1,86 @@
+namespace Point {
+	def angleBetween(p1 Point, p2 Point) double {
+		return Math.atan2(p1.y - p2.y, p1.x - p2.x)
+	}
+}
+
+class Point {
+	# Position x
+	var x double
+
+	# Position y
+	var y double
+
+	# Créer un point : x et y
+	def new(x double, y double) {
+		self.x = x
+		self.y = y
+	}
+
+	# Définir la position du point
+	def setLocation(x double, y double) {
+		self.x = x
+		self.y = y
+	}
+
+	# Cloner le point
+	def clone Point {
+		return Point.new(x, y)
+	}
+
+	# « Taille » du point
+	def magnitude double {
+		return Math.sqrt(x * x + y * y)
+	}
+
+	# Normalise les valeurs du point (vecteur) entre 0 et 1
+	def normalized Point {
+		const magnitude = self.magnitude
+
+		if magnitude == 0 {
+			return clone
+		} else {
+			return clone / magnitude
+		}
+	}
+
+	# Addition Point + Point
+	def +(p Point) Point {
+		return Point.new(x + p.x, y + p.y)
+	}
+
+	# Addition Point + nombre
+	def +(d double) Point {
+		return Point.new(x + d, y + d)
+	}
+
+	# Soustrait Point + Point
+	def -(p Point) Point {
+		return Point.new(x - p.x, y - p.y)
+	}
+
+	# Soustrait Point + nombre
+	def -(d double) Point {
+		return Point.new(x - d, y - d)
+	}
+
+	# Multiplie Point + Point
+	def *(p Point) Point {
+		return Point.new(x * p.x, y * p.y)
+	}
+
+	# Multiplie Point + nombre
+	def *(d double) Point {
+		return Point.new(x * d, y * d)
+	}
+
+	# Divise Point + Point
+	def /(p Point) Point {
+		return Point.new(x / p.x, y / p.y)
+	}
+
+	# Divise Point + nombre
+	def /(d double) Point {
+		return Point.new(x / d, y / d)
+	}
+}

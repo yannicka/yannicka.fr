@@ -1,0 +1,35 @@
+namespace widget {
+	class Widget {
+		var position Point
+		var events dynamic
+		var relativeTo Position
+
+		def new(x double, y double, relativeTo Position) {
+			self.relativeTo = relativeTo
+
+			position = Point.new(x, y)
+			events = {}
+		}
+
+		def x double {
+			return position.x
+		}
+
+		def y double {
+			return position.y
+		}
+
+		def on(name string, callback fn()) Button {
+			events[name] = callback
+			return self as Button
+		}
+
+		def fire(name string) {
+			if name in events {
+				events[name]()
+			}
+		}
+
+		def rect Rect
+	}
+}

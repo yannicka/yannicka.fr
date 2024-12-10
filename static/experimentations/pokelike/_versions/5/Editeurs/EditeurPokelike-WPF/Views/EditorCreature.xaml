@@ -1,0 +1,118 @@
+﻿<Page x:Name="page_editor_creatures" x:Class="EditeurPokelike_WPF.EditorCreature"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+	  Title="EditorCreature" Width="600" Height="344.929" Loaded="page_editor_creatures_Loaded">
+
+    <Grid x:Name="main_grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="101*"/>
+            <RowDefinition Height="14*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="88*"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox x:Name="grb_select_creature" Header="Sélection de la créature" Margin="10">
+            <Grid x:Name="grid_select_creature">
+                <Button x:Name="btn_create_creature" Content="Créer" Margin="10,68,10,0" VerticalAlignment="Top" Height="20" Click="btn_create_creature_Click"/>
+                <Label x:Name="lbl_select_name_creature" Content="Nom" Margin="10,10,10,0" VerticalAlignment="Top" RenderTransformOrigin="-0.419,-1.706" Height="26"/>
+                <ComboBox x:Name="cmb_select_creature" ItemsSource="{Binding Path=., Mode=TwoWay}" IsSynchronizedWithCurrentItem="True" DisplayMemberPath="name" Margin="10,41,10,0" VerticalAlignment="Top" IsEditable="True" SelectionChanged="cmb_select_creature_SelectionChanged" />
+                <Button x:Name="btn_delete_creature" Content="Supprimer" Margin="10,93,10,0" VerticalAlignment="Top" Click="btn_delete_creature_Click"/>
+            </Grid>
+        </GroupBox>
+        <TabControl x:Name="tabs" Margin="10" Grid.Column="1">
+            <TabItem x:Name="tab_infos" Header="Informations">
+                <Grid x:Name="grid_tab_infos" Background="White" Margin="0">
+                    <Label x:Name="lbl_edit_name_creature" Content="Nom" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="10,0,0,0"/>
+                    <TextBox x:Name="txt_edit_name_creature" Text="{Binding Path=name}" HorizontalAlignment="Left" Height="23" Margin="10,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+                    <Button x:Name="btn_valid_edition" Content="Valider les modifications" Margin="10,0,10,10" Height="20" VerticalAlignment="Bottom" Click="btn_valid_edition_Click"/>
+                    <GroupBox x:Name="grb_base_stats" Header="Statistiques de base" HorizontalAlignment="Left" Margin="10,54,0,0" VerticalAlignment="Top" Height="120" Width="150">
+                        <Grid x:Name="grid_base_stats" Margin="0,0,-2,-2">
+                            <Label x:Name="lbl_base_life" Content="Vie" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="57"/>
+                            <TextBox x:Name="txt_base_life" Text="{Binding base_life}" HorizontalAlignment="Left" Height="23" Margin="82,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" KeyDown="verify_input_txt_base"/>
+                            <Label x:Name="lbl_base_attack_creature" Content="Attaque" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.868,-0.385" Width="57" Height="28"/>
+                            <TextBox x:Name="txt_base_attack" Text="{Binding base_attack}" HorizontalAlignment="Left" Height="23" Margin="82,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" KeyDown="verify_input_txt_base"/>
+                            <Label x:Name="lbl_base_defense_creature" Content="Défense" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.868,-0.385" Width="57" Height="28"/>
+                            <TextBox x:Name="txt_base_defense" Text="{Binding base_defense}" HorizontalAlignment="Left" Height="23" Margin="82,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" RenderTransformOrigin="-0.109,1.304" KeyDown="verify_input_txt_base"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Types" HorizontalAlignment="Left" Margin="165,10,0,0" VerticalAlignment="Top" Width="221" Height="96">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="7*"/>
+                                <ColumnDefinition Width="12*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Type 1" Margin="10,10,10,0" VerticalAlignment="Top" Height="26"/>
+                            <Label Content="Type 2" Margin="10,41,10,0" VerticalAlignment="Top" Height="26"/>
+                            <ComboBox x:Name="cmb_type1" Margin="10,14,10,0" SelectedItem="{Binding type1}" DisplayMemberPath="name" VerticalAlignment="Top" Grid.Column="1" Height="22" Loaded="cmb_type1_Loaded"/>
+                            <ComboBox x:Name="cmb_type2" Margin="10,45,10,0" SelectedItem="{Binding Path=type2}" DisplayMemberPath="name" VerticalAlignment="Top" Grid.Column="1" Height="22" Loaded="cmb_type2_Loaded"/>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tab_fusions" Header="Fusions">
+                <Grid x:Name="grid_tab_fusions" Background="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="7*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <ListBox x:Name="list_fusions" ItemsSource="{Binding Path=fusions}" Margin="10">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                    <TextBlock.Text>
+                                        <MultiBinding StringFormat="Avec {0} => {1}">
+                                            <Binding Path="with_creature.name"/>
+                                            <Binding Path="next_creature.name"/>
+                                        </MultiBinding>
+                                    </TextBlock.Text>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <Button x:Name="btn_add_fusion" Content="Ajouter" Margin="244,0,10,7" VerticalAlignment="Bottom" Height="49" Click="btn_add_fusion_Click" Grid.Row="1"/>
+                    <Button x:Name="btn_delete_fusion" Content="Supprimer" Margin="10,10,10,0" VerticalAlignment="Top" Click="btn_delete_fusion_Click" Grid.Column="1" Height="20"/>
+                    <ComboBox x:Name="cmb_select_next_creature" ItemsSource="{Binding Path=.}" DisplayMemberPath="name" HorizontalAlignment="Left" Margin="49,0,0,7" Width="190" Grid.Row="1" Height="22" VerticalAlignment="Bottom"/>
+                    <ComboBox x:Name="cmb_select_with_creature" ItemsSource="{Binding Path=.}" DisplayMemberPath="name" HorizontalAlignment="Left" Margin="49,0,0,34" VerticalAlignment="Bottom" Width="190" Grid.Row="1" Height="22"/>
+                    <TextBlock x:Name="txt_with" HorizontalAlignment="Left" Margin="10,0,0,34" TextWrapping="Wrap" Text="Avec" VerticalAlignment="Bottom" Width="34" Grid.Row="1" Height="16"/>
+                    <TextBlock x:Name="txt_next" HorizontalAlignment="Left" Margin="10,0,0,13" TextWrapping="Wrap" Text="=&gt;" Width="34" Grid.Row="1" Height="16" VerticalAlignment="Bottom"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tab_attacks" Header="Attaques">
+                <Grid x:Name="grid_tab_attacks" Background="White" Margin="0">
+                    <ListBox x:Name="list_attacks" ItemsSource="{Binding Path=attacks}" Margin="10,10,0,10" HorizontalAlignment="Left" Width="165" SelectionChanged="list_attacks_SelectionChanged">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                    <TextBlock.Text>
+                                        <MultiBinding StringFormat="Nv{0} - {1}">
+                                            <Binding Path="level"/>
+                                            <Binding Path="attack.name"/>
+                                        </MultiBinding>
+                                    </TextBlock.Text>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <GroupBox x:Name="grb_lvl_attack" Header="{}{Niveau}" Margin="180,10,10,10">
+                        <Grid x:Name="grid_edit_attack" Margin="0">
+                            <Slider x:Name="sld_lvl_new_attack" Minimum="1" Maximum="100" Value="1" IsSnapToTickEnabled="True" TickFrequency="1" AutoToolTipPlacement="BottomRight" Margin="10,10,10,0" ValueChanged="sld_lvl_new_attack_ValueChanged" Height="18" VerticalAlignment="Top" />
+                            <ComboBox x:Name="cmb_select_attack" Margin="10,33,10,0" VerticalAlignment="Top" DisplayMemberPath="name" />
+                            <Button x:Name="btn_add_attack" Content="Ajouter" Margin="10,60,10,0" VerticalAlignment="Top" Click="btn_add_attack_Click"/>
+                            <Button x:Name="btn_edit_attack" Content="Modifier" Margin="10,85,10,0" VerticalAlignment="Top" Click="btn_edit_attack_Click"/>
+                            <Button x:Name="btn_delete_attack" Content="Supprimer" Margin="10,110,10,0" VerticalAlignment="Top" Click="btn_delete_attack_Click"/>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Button x:Name="btn_save_all" Content="Sauvegarder toutes les modifications" Margin="10,0,10,10" Grid.Row="1" Grid.ColumnSpan="2" Height="22" VerticalAlignment="Bottom" Click="btn_save_all_Click"/>
+    </Grid>
+</Page>

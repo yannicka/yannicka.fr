@@ -1,0 +1,48 @@
+﻿<Page x:Name="page_editor_types" x:Class="EditeurPokelike_WPF.Views.EditorTypes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d"
+	Title="EditorTypes" Height="420" Width="380" Loaded="page_editor_types_Loaded">
+
+    <Grid x:Name="grid_editor_types">
+
+        <Grid x:Name="grid_weaknesses_types" Margin="10,0,10,10" Height="360" VerticalAlignment="Bottom">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label Content="Neutre" Grid.Column="1" Margin="0" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center" Background="White">
+            </Label>
+            <Label Content="Feu" Grid.Column="2" Margin="0" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Red">
+            </Label>
+            <Label Content="Eau" Grid.Column="3" Margin="0" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FF00DCFF">
+            </Label>
+            <Label Content="Air" Grid.Column="4" Margin="0" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FF00FF2E">
+            </Label>
+            <Label Content="Terre" Grid.Column="5" Margin="0" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFAA7400">
+            </Label>
+            <Label Content="Neutre" HorizontalAlignment="Center" Margin="0" Grid.Row="1" VerticalAlignment="Center" Background="White"/>
+            <Label Content="Feu" HorizontalAlignment="Center" Margin="0" Grid.Row="2" VerticalAlignment="Center" Background="Red"/>
+            <Label Content="Eau" HorizontalAlignment="Center" Margin="0" Grid.Row="3" VerticalAlignment="Center" Background="#FF00DCFF"/>
+            <Label Content="Air" HorizontalAlignment="Center" Margin="0" Grid.Row="4" VerticalAlignment="Center" Background="#FF00FF2E"/>
+            <Label Content="Terre" HorizontalAlignment="Center" Margin="0" Grid.Row="5" VerticalAlignment="Center" Background="#FFAA7400"/>
+        </Grid>
+        <Label Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Width="64"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="204,17,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <TextBox x:Name="txt_name_type" HorizontalAlignment="Left" Height="23" Margin="79,14,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+    </Grid>
+</Page>

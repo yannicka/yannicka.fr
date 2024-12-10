@@ -1,0 +1,9 @@
+{
+  "name": "project-fighting",
+  "version": "0.0.0",
+  "licence": "BY-NC-SA",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-stylus": "^2.1.0"
+  }
+}

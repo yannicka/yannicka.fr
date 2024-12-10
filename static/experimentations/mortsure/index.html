@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+	<head>
+		<meta charset=utf-8 />
+		<title>Mortsure</title>
+
+		<script type="application/x-javascript">
+			var ancien = 1;
+			function supAffiche(id)
+			{
+				document.getElementById('ongaff' + ancien).style.display = 'none';
+				document.getElementById('onglet' + ancien).className = 'onglet close';
+
+				document.getElementById('ongaff' + id).style.display = 'block';
+				document.getElementById('onglet' + id).className = 'onglet open';
+
+				ancien = id;
+			}
+		</script>
+
+		<style>
+			body {
+				background-color: rgb(255, 255, 255);
+			}
+
+			article {
+				width: 650px;
+				background-color: rgb(0, 0, 0);
+				color: rgb(255, 255, 255);
+				margin: auto;
+				padding: 5px;
+			}
+
+			article p {
+				margin: 2px;
+				padding: 3px;
+			}
+
+			article p.justify {
+				text-align: justify;
+			}
+
+			article a, acticle a:hover {
+				text-decoration: none;
+				font-weight: bold;
+			}
+
+			article a {
+				color: rgb(200, 100, 100);
+			}
+
+			article a:hover {
+				color: rgb(100, 100, 200);
+			}
+
+			#liste_onglet {
+				text-align: center;
+				margin: auto;
+				padding: 2px;
+			}
+
+			#onglet {
+				background-color: rgb(255, 255, 255);
+				color: rgb(0, 0, 0);
+				margin: auto;
+				padding: 5px;
+			}
+
+			.onglet {
+				display: inline;
+				margin: 2px;
+				padding: 2px;
+			}
+
+			.open {
+				background-color: rgb(255, 255, 255);
+				color: rgb(0, 0, 0);
+			}
+
+			.close {
+				background-color: rgb(0, 0, 0);
+				color: rgb(255, 255, 255);
+				cursor: pointer;
+			}
+		</style>
+
+		<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+	</head>
+	<body>
+		<article>
+			<div id="liste_onglet">
+				<div id="onglet1" class="onglet open" onclick="supAffiche('1');">Jouer</div>
+				<div id="onglet2" class="onglet close" onclick="supAffiche('2');">R&egrave;gles</div>
+				<div id="onglet3" class="onglet close" onclick="supAffiche('3');">Touches</div>
+				<div id="onglet4" class="onglet close" onclick="supAffiche('4');">&Agrave; propos</div>
+				<div id="onglet5" class="onglet close" onclick="supAffiche('5');">Changelog</div>
+			</div>
+
+			<div id="onglet">
+				<div id="ongaff1" style="display: block;">
+					<div style="text-align: center;">
+						<div id="animation_7896" style="display:inline-block;">
+							<a href="http://www.macromedia.com/go/getflashplayer">Vous devez installer le Plugin FlashPlayer</a>
+						</div>
+						<script type="text/javascript">
+						function flashObject(url, id, width, height, version, bg, flashvars, params, att)
+							{
+								var pr = '';
+								var attpr = '';
+								var fv = '';
+								var nofv = 0;
+								for(i in params)
+								{
+									pr += '<param name="'+i+'" value="'+params[i]+'" />';
+									attpr += i+'="'+params[i]+'" ';
+									if(i.match(/flashvars/ig))
+									{
+										nofv = 1;
+									}
+								}
+								if(nofv==0)
+								{
+									fv = '<param name="flashvars" value="';
+									for(i in flashvars)
+									{
+										fv += i+'='+escape(flashvars[i])+'&';
+									}
+									fv += '" />';
+								}
+								htmlcode = '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"  codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="'+width+'" height="'+height+'">'
+							+'	<param name="movie" value="'+url+'" />'+pr+fv
+							+'	<embed src="'+url+'" width="'+width+'" height="'+height+'" '+attpr+'type="application/x-shockwave-flash" pluginspage="https://www.adobe.com/go/getflashplayer"></embed>'
+							+'</object>';
+								document.getElementById(id).innerHTML=htmlcode;
+						}
+
+							var flashvars_7896 = {};
+							var params_7896 = {
+									quality: "best",
+									bgcolor: "#ffffff",
+									allowScriptAccess: "always",
+									wmode: "transparent",
+									allowFullScreen: "true"
+								};
+							var attributes_7896 = {};
+							flashObject("/experimentations/mortsure/Mortsure.swf", "animation_7896", "600px", "480px", "8", false, flashvars_7896, params_7896, attributes_7896);
+
+						</script>
+					</div>
+				</div>
+
+				<div id="ongaff2" style="display: none;">
+					Aller le plus loin possible.
+				</div>
+
+				<div id="ongaff3" style="display: none;" class="justify">
+					<p>La fl&egrave;che gauche du clavier permet de bouger votre personnage vers la gauche.</p>
+					<p>La fl&egrave;che droite du clavier permet de bouger votre personnage vers la droite.</p>
+					<p><strong>La fl&egrave;che haut du clavier permet de sauter, il existe 4 sauts</strong>: Le saut simple, le double saut, le saut contre le mur et le saut "dans le vide".</p>
+				</div>
+
+				<div id="ongaff4" style="display: none;" class="justify">
+					<p>Le jeu a &eacute;t&eacute; cr&eacute;&eacute; par Pif gr&acirc;ce &agrave; la librairie <a href="http://flixel.org/">Flixel</a>.</p>
+					<p>Merci &agrave; Ticman, milos & Naws pour leurs aides graphiques et de leurs id&eacute;es.</p>
+					<p>Merci aux testeurs (liste non exhaustive): elguigo, Elevast, Benn26, olivierhould, thorg, Babachedu62, sodimel, boubouet12, alex99511, antoine4444, BrutalArmor, donfeuxvideo, Yoannlink, tom110 et autros.</p>
+				</div>
+
+				<div id="ongaff5" style="display: none;">
+					<p>
+						<strong>Pr&eacute;vus</strong><br />
+							- Un personnage plus anim&eacute;.<br />
+							- Deux modes de jeux : Run! et Aventure.<br />
+							- Des sons d'ambiances.<br />
+							- Enregistrement des scores pour la comp&eacute;tition.<br />
+							- Plusieurs types de sols diff&eacute;rents.<br />
+							- Une mini histoire (Pourquoi court-il ?).<br />
+							- Un meilleur site.
+					</p>
+
+					<p>
+						<strong>0.5.0 > 0.5.5</strong> (23 ao&ucirc;t 2011)<br />
+							- Le personnage est maintenant "humain".<br />
+							- Premier son d'ambiance pour un essai, sur le "Saut basique".<br />
+							- Premier essai pour l'enregistrement des scores.<br />
+							- Un fond matin / jour / soir / nuit.
+					</p>
+
+					<p>
+						<strong>0.4.0 > 0.5.0</strong><br />
+							- L&eacute;g&egrave;re animation du personnage.<br />
+							- Musique de fond (Appuyez sur "S" pour couper ou allumer le son).<br />
+							- &Eacute;cran game over.<br />
+							- Boutons "Jouer"; "Rejouer" et "Menu".<br />
+							- Lorsque vous tombez d'un sol, vous pouvez sauter une fois.<br />
+							- La vitesse des sols a &eacute;t&eacute; l&eacute;g&egrave;rement augment&eacute;e.<br />
+							- Modification du curseur de jeu.<br />
+							- Ajout d'un "curseur" qui montre o&ugrave; vous &ecirc;tes lorsques votre personnage sort de l'&eacute;cran.
+					</p>
+
+					<p>
+						<strong>0.3.0 > 0.4.0</strong><br />
+							- La lave est maintenant d&eacute;ri&egrave;re les sols.<br />
+							- Il y a plus de trous.<br />
+							- Les sols apparaissent mieux.<br />
+							- Vous ne pouvez plus mourir par la droite et la gauche (vous &ecirc;tes bloqu&eacute;).<br />
+							- Changement de la couleur du fond.
+					</p>
+
+					<p>
+						<strong>0.2.0 > 0.3.0</strong><br />
+							- Ajout de la "lave".<br />
+							- Ajout du "Meilleur score local".<br />
+							- Mort par le bord droit du jeu.<br />
+							- Augmentation de la difficult&eacute;e.
+					</p>
+
+					<p>
+						<strong>0.2.0</strong><br />
+							- Premi&egrave;re version du jeu.
+					</p>
+				</div>
+			</div>
+		</article>
+	</body>
+</html>

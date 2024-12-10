@@ -1,0 +1,35 @@
+namespace weapon.projectile {
+	class Bullet : Projectile {
+		def new(x double, y double, angle double, speed int) {
+			super(x, y, 5, 3, angle, speed)
+
+			loadImage(Img.get("bullet"), width, height)
+
+			damages = 10
+			health = 3
+
+            Trail.new(self)
+
+			position += velocity * 0.032
+		}
+
+		over render(ctx Context) {
+			super(ctx)
+		}
+
+		over onCollision(b block.Block) {
+			# Supprime la balle si le bloc est solide
+			if b.isSolid {
+				kill
+			}
+		}
+
+		over onPlayerOverlaps(player Player) {
+            # Baisse la vie du joueur
+            player.decreaseHealth(damages)
+
+            # Supprime la balle
+            kill
+		}
+	}
+}

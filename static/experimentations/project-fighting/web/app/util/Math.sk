@@ -1,0 +1,21 @@
+namespace Math {
+	# Aléatoire entre min et max inclus (entier)
+	def irand(min double, max double) int {
+		return (Math.floor(Math.random * (max - min + 1)) + min) as int
+	}
+
+	# Aléatoire entre min et max inclus (flottant)
+	def rand(min double, max double) double {
+		return Math.random * (max - min) + min
+	}
+
+	# Converti des degrés en radians
+	def degreesToRadians(degrees double) double {
+		return degrees * (Math.PI / 180)
+	}
+
+	# Converti des radians en degrés
+	def radiansToDegrees(radians double) double {
+		return radians * (180 / Math.PI)
+	}
+}

@@ -1,0 +1,78 @@
+namespace weapon.projectile {
+	class SmokeGrenade : Projectile {
+		var colors List<string>
+
+		def new(x double, y double, angle double, speed int) {
+			super(x, y, 8, 9, angle, speed)
+
+			loadImage(Img.get("grenade"), width, height)
+
+			# Durée de vie : 10 secondes
+			health = 10
+
+			const rand = Math.irand(0, 3)
+
+			const colors = [
+				[ rgb(255, 255, 255), rgb(233, 233, 233), rgb(211, 211, 211) ],
+				[ rgb(255, 255, 0), rgb(233, 233, 0), rgb(211, 211, 0) ],
+				[ rgb(0, 255, 255), rgb(0, 233, 233), rgb(0, 211, 211) ],
+				[ rgb(255, 0, 255), rgb(233, 0, 233), rgb(211, 0, 211) ]
+			][rand]
+
+			self.colors = colors
+		}
+
+		over update(dt double) {
+			super(dt)
+
+			health -= 1 * dt
+
+			# 3 premières secondes : ralentit le fumigène
+			# 7 dernières secondes : libère de la fumée
+			if health >= 7 {
+				velocity *= 0.97
+			} else {
+				velocity = Point.new(0, 0)
+
+				var p = Particle.new
+					.position(position)
+					.speed(120, 240)
+					.life(0.6, 2)
+					.radius(20, 60)
+					.angle(0, 360)
+					.color(colors)
+
+				Particle.particles.append(p)
+			}
+		}
+
+		# à faire : le rebondissement doit être calculé et non faire comme ici
+		# un simple inversement de direction
+		over onCollision(b block.Block) {
+			# Si le bloc n'est pas solide, la suite est ignorée
+			if !b.isSolid {
+				return
+			}
+
+			# Collision verticale : rebond vertical
+			if hitVerticalBlock(b) {
+				velocity.x = -velocity.x
+			}
+
+			# Collision horizontale : rebond horizontal
+			if hitHorizontalBlock(b) {
+				velocity.y = -velocity.y
+			}
+		}
+
+		# à faire : y a-t-il une collision verticale ?
+		def hitVerticalBlock(b block.Block) bool {
+			return true
+		}
+
+		# à faire : y a-t-il une collision horizontale ?
+		def hitHorizontalBlock(b block.Block) bool {
+			return true
+		}
+	}
+}

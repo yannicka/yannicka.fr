@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Draw Fun</title>
+
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+
+	<body>
+		<canvas id="drawzone">Change browser bro'</canvas>
+
+		<ul id="tool_colors">
+			<li title="Blanc" style="background: #FFF;" data-color="#FFF"></li>
+			<li title="Noir" style="background: #000;" data-color="#000" class="active"></li>
+			<li title="Gris fonc&eacute;" style="background: #444;" data-color="#444"></li>
+			<li title="Gris" style="background: #999;" data-color="#999"></li>
+			<li title="Marron" style="background: #603913;" data-color="#603913"></li>
+			<li title="Marron clair" style="background: #c69c6d;" data-color="#c69c6d"></li>
+			<li title="P&ecirc;che" style="background: #FFDAB9;" data-color="#FFDAB9"></li>
+			<li title="Rouge" style="background: #FF0000;" data-color="#FF0000"></li>
+			<li title="Orange" style="background: #FF6600;" data-color="#FF6600"></li>
+			<li title="Jaune" style="background: #FFD700;" data-color="#FFD700"></li>
+			<li title="Vert" style="background: #0fad00;" data-color="#0fad00"></li>
+			<li title="Vert clair" style="background: #16ff00;" data-color="#16ff00"></li>
+			<li title="Bleu" style="background: #0247fe;" data-color="#0247fe"></li>
+			<li title="Bleu clair" style="background: #00FFFF;" data-color="#00FFFF"></li>
+			<li title="Violet" style="background: #8601af;" data-color="#8601af"></li>
+			<li title="Rose" style="background: #ec008c;" data-color="#ec008c"></li>
+		</ul>
+
+		<div id="tool">
+			<a href="#" class="btn" id="btn_undo"><span class="icon-undo"></span></a>
+			<a href="#" class="btn" id="btn_redo"><span class="icon-redo"></span></a>
+			<a href="#" class="btn" id="btn_clear"><span class="icon-clear"></span></a>
+		</div>
+
+		<div id="tool_sizes">
+			<a href="#" class="btn" data-size="2"><span class="icon-verysmall"></span></a>
+			<a href="#" class="btn" data-size="5"><span class="icon-small"></span></a>
+			<a href="#" class="btn active" data-size="13"><span class="icon-medium"></span></a>
+			<a href="#" class="btn" data-size="35"><span class="icon-big"></span></a>
+		</div>
+
+		<script src="drawfun.js"></script>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+guy:
+	normal:
+		# part           x, y, pivot x, pivot y, angle
+		body           = 0, 0, 26, 0, 0
+		upLeftArm      = -15, 6, 15, 0, 0
+		bottomLeftArm  = -10, 32, 17, 0, 0
+		leftHand       = 11, 20, 8, 3, 0
+		upRightArm     = 26, 0, 9, 1, 0
+		bottomRightArm = 8, 28, 9, 0, 0
+		rightHand      = -10, 17, 17, 3, 0
+		upLeftLeg      = -1, 48, 14, 0, 0
+		bottomLeftLeg  = -12, 35, 21, 2, 0
+		leftFoot       = 0, 34, 14, 0, 0
+		upRightLeg     = 19, 48, 15, 0, 0
+		bottomRightLeg = 0, 25, 15, 0, 0
+		rightFoot      = 0, 22, 15, 6, 0
+		head           = -28, -88, 47, 88, 0
+
+	run:
+		# définir pour la première "frame", la position de chaque membre (comme pour "normal")
+		# puis pour chaque autre "frame", les éléments qui ont changés (ex : head.x += 5)
+
+		# note : ne pas faire frame par frame, essayer d'interpoler (calculer la différence
+		  entre chaque frame)

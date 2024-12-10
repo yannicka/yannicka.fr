@@ -1,0 +1,26 @@
+namespace weapon {
+	class Grenade : Weapon {
+		def new {
+			super("Grenade")
+
+			baseLatency = 0.5
+			bulletSpeed = 400
+		}
+
+		over fire(position Point, direction Point) {
+			if !canFire	{
+				return
+			}
+
+			decreaseAmmo
+			resetLatency
+
+			const angle = Point.angleBetween(direction, position)
+			weapon.projectile.Grenade.new(position.x, position.y, angle, bulletSpeed)
+		}
+
+		over renderMiniature(ctx Context) {
+			ctx.drawImage(Img.get("miniatures"), 16, 0, 16, 16, 0, 0, 16, 16)
+		}
+	}
+}

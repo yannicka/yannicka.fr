@@ -1,0 +1,26 @@
+namespace ui {
+	class WeaponLatency : Rect {
+		# Joueur lié à la barre de vue
+		var player Player
+
+		# Créer une barre de vie
+		def new {
+			super(8, 19, 62, 1)
+		}
+
+		# Lie la barre de vie au joueur, ainsi lorsque la vie du joueur change, la
+		# barre de vie est automatiquement mise à jour
+		def bindTo(player Player) {
+			self.player = player
+		}
+
+		# Affiche la barre de vie
+		def render(ctx Context) {
+			var latency = player.currentWeapon.getLatencyPercentage
+
+			# Barre de latence blanche
+			ctx.fillStyle = rgb(255, 255, 255, 0.3)
+			ctx.fillRect(x + 1, y + 1, width - (latency * width), height)
+		}
+	}
+}

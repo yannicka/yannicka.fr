@@ -1,0 +1,19 @@
+h2#introduction Introduction
+
+p Une variable qui n'a pas été initialisée, si elle est utilisée, renverra <code>null</code>. Elle n'est pas différenciable des variables initialisée ayant la valeur <code>null</code>.
+
+p Le séparateur d'instructions est le saut de ligne. Cependant, le <code>;</code> peut remplacer ce rôle, permettant ainsi de placer plusieurs instructions sur la même ligne.
+
+p Les variables ont une portée locale dans le bloc où elles sont définies. Si elle sont définies à la racine du programme, elle seront donc globales.
+
+p Les structures de contrôles sont des expressions. C'est-à-dire qu'elles retournent la dernière valeur de leur bloc et donc qu'il est possible de la récupérer dans une variable.
+
+p Les variables sont typées statiquement. Le typage est donc fixe et ne peut pas changer durant l'exécution excepté avec le type <code>Var</code> qui permet de typer une variable dynamiquement.
+
+p <code>_</code> est un caractère spécial qui indique le vide, il permet notamment d'indiquer à une valeur qu'elle ne doit pas être capturée.
+
+p Tout est objet. C'est à dire que ce code est correct :
+
+pre.
+	Num a = 5
+	Str b = 120.to_str() # = "120"

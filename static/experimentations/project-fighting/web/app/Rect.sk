@@ -1,0 +1,52 @@
+class Rect {
+	var position Point
+	var width int
+	var height int
+
+	# Création d'un rectangle : x, y, largeur et hauteur
+	def new(x double, y double, width int, height int) {
+		position = Point.new(x, y)
+
+		self.width = width
+		self.height = height
+	}
+
+	def setPosition(x double, y double) {
+		position.x = x
+		position.y = y
+	}
+
+	def setSize(width int, height int) {
+		self.width  = width
+		self.height = height
+	}
+
+	def x double {
+		return position.x
+	}
+
+	def y double {
+		return position.y
+	}
+
+	def x=(value double) {
+		position.x = value
+	}
+
+	def y=(value double) {
+		position.y = value
+	}
+
+	# Récupérer la position du centre du rectangle
+	def center Point {
+		return Point.new(x + width / 2, y + height / 2)
+	}
+
+	# Récupère le cercle correspondant
+	def circle Circle {
+		const position = center
+		const radius = (width + height) / 2
+
+		return Circle.new(position.x, position.y, radius)
+	}
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Tests</title>
+
+		<style>
+			#title_tabs {
+				margin: 0; padding: 0;
+				list-style: none;
+			}
+
+			#title_tabs li {
+				margin: 0; padding: 6px 10px;
+				display: inline-block;
+				background-color: rgb(255, 200, 200);
+			}
+
+			#title_tabs li:hover {
+				cursor: pointer;
+			}
+
+			#title_tabs li.selected {
+				background-color: rgb(200, 200, 255);
+			}
+
+			#tabs {
+				margin: 0; padding: 6px 10px;
+				background-color: rgb(200, 200, 255);
+			}
+		</style>
+	</head>
+
+	<body>
+		<ul id="title_tabs">
+			<li data-tab="#tab-1">Tab 1</li>
+			<li data-tab="#tab-2">Tab 2</li>
+			<li data-tab="#tab-3">Tab 3</li>
+		</ul>
+
+		<div id="tabs">
+			<div id="tab-1">A</div>
+			<div id="tab-2">B</div>
+			<div id="tab-3">C</div>
+		</div>
+
+		<script>
+			(function() {
+				var element = (function() {
+					return function(el) {
+						var is_uniq = !(el instanceof NodeList);
+
+						// contient-il la classe ?
+						var has_class = function(an_element, classname) {
+							return an_element.className.match(new RegExp('(\\s|^)' + classname + '(\\s|$)'));
+						};
+
+						return {
+							// récupérer un attribut
+							get_attribute: function(attr) {
+								return is_uniq ? (el.getAttribute(attr) || el[attr]) : undefined;
+							},
+
+							// modifie un attribut
+							set_attribute: function(attr, value) {
+								var els = is_uniq ? [el] : el;
+
+								for (var i = 0 ; i < els.length ; i++) {
+									els[i][attr] = value;
+								}
+
+								return this;
+							},
+
+							// ajoute un évènement
+							on: function(type, fn, capture) {
+								var els = is_uniq ? [el] : el;
+
+								for (var i = 0 ; i < els.length ; i++) {
+									els[i].addEventListener(type, fn, capture || false);
+								}
+
+								return this;
+							},
+
+							// supprime un évènement
+							off: function(type, fn, capture) {
+								var els = is_uniq ? [el] : el;
+
+								for (var i = 0 ; i < els.length ; i++) {
+									els[i].removeEventListener(type, fn, capture || false);
+								}
+
+								return this;
+							},
+
+							// affiche les éléments
+							show: function() {
+								var els = is_uniq ? [el] : el;
+
+								for (var i = 0 ; i < els.length ; i++) {
+									els[i].style.display = 'block';
+								}
+
+								return this;
+							},
+
+							// cache les éléments
+							hide: function() {
+								var els = is_uniq ? [el] : el;
+
+								for (var i = 0 ; i < els.length ; i++) {
+									els[i].style.display = 'none';
+								}
+
+								return this;
+							},
+
+							// obtenir le texte de l'élément
+							text: function(new_text) {
+								if (!is_uniq)
+									return undefined;
+
+								if (new_text) {
+									el.innerHTML = new_text;
+
+									return this;
+								} else {
+									return el.innerHTML;
+								}
+							},
+
+							// obtenir un élément data
+							data: function(data) {
+								return is_uniq ? el.getAttribute('data-' + data) : undefined;
+							},
+
+							// contient-il la classe ?
+							has_class: (function() {
+								return function(classname) {
+									return has_class(el, classname);
+								}
+							})(),
+
+							// ajouter une classe
+							add_class: function(classname) {
+								var els = is_uniq ? [el] : el;
+
+								for (var i = 0 ; i < els.length ; i++) {
+									if (!has_class(els[i], classname))
+										els[i].className += ' ' + classname;
+								}
+
+								return this;
+							},
+
+							// ajouter une classe
+							remove_class: function(classname) {
+								var els = is_uniq ? [el] : el;
+
+								for (var i = 0 ; i < els.length ; i++) {
+									if (has_class(els[i], classname))
+										els[i].className = els[i].className.replace(new RegExp('(\\s|^)' + classname + '(\\s|$)'),' ');
+								}
+
+								return this;
+							},
+
+							// ajouter une classe
+							clear_class: function() {
+								var els = is_uniq ? [el] : el;
+
+								for (var i = 0 ; i < els.length ; i++) {
+									els[i].className = '';
+								}
+
+								return this;
+							},
+
+							// ajouter une classe
+							replace_class: function(classname) {
+								var els = is_uniq ? [el] : el;
+
+								for (var i = 0 ; i < els.length ; i++) {
+									els[i].className = classname;
+								}
+
+								return this;
+							},
+
+							// retourne l'élément du DOM
+							dom: function() {
+								return el;
+							}
+						}
+					}
+				})();
+
+				var $ = function(el) {
+					// L'élément est-il déjà identifié ?
+					if (el instanceof HTMLElement || el === document || el === window) {
+						return element(el);
+					} else {
+						return element(document.querySelectorAll(el));
+					}
+				};
+
+				$.fn = {}; // todo
+
+				$.ajax = function() {
+					return 'todo';
+				};
+
+				window.$ = $;
+			})();
+
+			function sprite_text(text) {
+				var r = '';
+
+				for (var i = 0 ; i < text.length ; i++) {
+					r += text.charCodeAt(i) + '(' + text[i] + ') - ';
+				}
+
+				return r;
+			}
+
+			console.log(sprite_text('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'));
+
+			var aa = '';
+
+			for (var i = 0 ; i < 266 ; i++) {
+				aa += String.fromCharCode(i) + '(' + i + ') - ';
+			}
+
+			console.log(aa);
+			alert(aa);
+
+			$('#tabs div').hide();
+			$('#title_tabs li:first-child').add_class('selected');
+			$('#tabs div:first-child').show();
+
+			$('#title_tabs li').on('click', function() {
+				$('#tabs div').hide();
+
+				$('#title_tabs li').remove_class('selected');
+
+				$($(this).add_class('selected').data('tab')).show();
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+a {
+  color: #009cff;
+  font-weight: bold;
+  text-decoration: none;
+}
+.list-topics {
+  margin: 0;
+}
+.topic-all {
+  display: -webkit-flex;
+  display: flex;
+  margin: 0;
+  padding: 12px 6px;
+  border-top: 2px solid #e0e0e0;
+}
+.topic-avatar {
+  padding: 0 12px;
+  width: 36px;
+}
+.topic-avatar img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+.topic-title {
+  -webkit-flex: 3;
+  flex: 3;
+}
+.topic-title-title {
+  font-weight: bold;
+}
+.topic-infos {
+  -webkit-flex: 2;
+  flex: 2;
+  color: #666;
+}
+.topic-more {
+  width: 32px;
+}
+.topic-more-button:before {
+  content: ">";
+}
+

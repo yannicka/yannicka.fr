@@ -1,0 +1,12 @@
+/* CSS crunched with Crunch - http://crunchapp.net/ */
+html,body{margin:0;padding:0}
+body{background-color:#f4f4f4}
+canvas{margin:5px;box-shadow:0 0 2px 1px #000;display:block;border:1px solid #646464;box-shadow:0 0 0 1px #fff}
+#pokelike{margin:0 auto;padding:0;display:block;box-shadow:0 0 0 1px #000,0 0 0 2px #fff}
+nav{margin:0;padding:0;background-color:#c8c8c8;border-bottom:1px solid #646464;box-shadow:0 0 0 1px #fff}nav ul{margin:0;padding:0;list-style:none}nav ul li{margin:0;padding:0;display:inline-block}nav ul li button{margin:0 5px;padding:5px 10px;display:inline-block;background:#f0f0f0;border:none;color:#2c2c2c}nav ul li button:hover{cursor:pointer;color:#003c64;background-color:#c8e6ff}
+nav ul li button.selected{background-color:#ff8264}
+#edit{display:inline-block;vertical-align:top}
+#tiles{display:inline-block;vertical-align:top}
+label{margin:5px 0 0 0;display:block}
+input[type="text"]{margin:2px 0 0 0;padding:3px;display:block;background-color:#fff;border:1px solid #c8c8c8}input[type="text"]:hover,input[type="text"]:focus{border:1px solid #ff8264}
+input[type="submit"],.submit{margin:5px 0 0 0;padding:4px 10px;display:block;background-color:#fff;border:1px solid #c8c8c8}input[type="submit"]:hover,.submit:hover,input[type="submit"]:focus,.submit:focus{cursor:pointer;border:1px solid #ff8264}

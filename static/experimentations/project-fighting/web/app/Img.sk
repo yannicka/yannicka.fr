@@ -1,0 +1,73 @@
+# Gestion du chargement des images
+#
+# Fonctionnement :
+#	  Img.setPath('assets/img')
+#	  Img.setCallback(run)
+#	  Img.load(images)
+namespace Img {
+	# Images chargées
+	var images = StringMap<Image>.new
+
+	# Chemin où sont recupérées les images
+	var path = "img/"
+
+	# Fonction appelée une fois les images chargées
+	var callback fn()
+
+	# Obtenir une image par son nom
+	def get(name string) Image {
+		return Img.images[name]
+	}
+
+	# Définir le chemin dans lequel les images sont chargées (sans la barre
+	# oblique (slash) finale).
+	def setPath(path string) {
+		Img.path = path + "/"
+	}
+
+	# Définir la fonction appelée une fois les images chargées.
+	def setCallback(callback fn()) {
+		Img.callback = callback
+	}
+
+	# Obtenir le chemin dans lequel les images sont chargées
+	def getPath string {
+		return Img.path
+	}
+
+	# Exécute le chargement des images et lance la fonction callback une fois le
+	# chargement terminé.
+	# Note : si toutes les images ne sont pas chargées (par exemple une URL
+	# incorrecte), la fonction callback n'est pas appelée.
+	def load(images StringMap<string>) {
+		var nbImagesToLoad = images.count
+
+		# Évènement lorsqu'une image est chargée :
+		# - décrémenter le compteur
+		# - lancer le callback si le nombre d'images à charger est descendu à zéro
+		const imageLoaded = => {
+			nbImagesToLoad -= 1
+
+			if nbImagesToLoad == 0 {
+				Img.callback()
+			}
+		}
+
+		# L'image n'a pas pu charger
+		const imageError = (e HTMLEvent) => {
+			const srcImageError = (e.target as Image).src
+			throw Error.new("Impossible de charger l'image « \(srcImageError) »")
+		}
+
+		# Chargement des images
+		images.each((name, url) => {
+			var img = document.createElement("img") as Image
+			img.addEventListener("load", imageLoaded)
+			img.addEventListener("error", imageError)
+			img.src = Img.getPath + url
+			(img as dynamic).name = name
+
+			Img.images[name] = img
+		})
+	}
+}

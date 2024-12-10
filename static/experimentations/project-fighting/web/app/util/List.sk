@@ -1,0 +1,6 @@
+class List {
+	# Retourne un élément en le sélectionnant aléatoirement dans la liste
+	def randomElement T {
+		return self[Math.irand(0, self.count - 1)]
+	}
+}

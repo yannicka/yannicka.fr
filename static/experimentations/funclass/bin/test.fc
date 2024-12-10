@@ -1,0 +1,8 @@
+def ntimes = 0;
+
+for x = 0 to ntimes do
+	def a = 22;
+	def b = 55;
+
+	print a;
+end;

@@ -1,0 +1,173 @@
+h2#exemples Exemples
+
+h3 Cas fictif du jeu "Plus ou moins"
+
+pre.
+	pack fc.examples.plus_ou_moins
+
+	use stdio as io
+	use math
+
+	Num nb  = math.rand(1, 100)
+	Num cpt = 0
+
+	Num val_test
+
+	do {
+		val_test = io.ask("Saisissez un nombre entre 1 et 100 : ").to_num()
+		cpt++
+
+		if val_test &gt; nb {
+			io.writeln("C'est moins")
+		} else if val_test &lt; nb {
+			io.writeln("C'est plus")
+		}
+	} while val_test &lt;&gt; nb
+
+	io.writeln("Bravo, tu as gagné en ${cpt} coups !")
+
+h3 Exemple qui présente un peu tout
+
+pre.
+	Num me = 38
+
+	Dict&lt;Num&gt; friends = {
+		"Robert"  = 32,
+		"Paul"    = 54,
+		"Jean"    = 29,
+		"Jacques" = 42
+	}
+
+	List&lt;Num&gt; ages = [ age for _, age in friends ]
+	# [ 32, 54, 29, 42 ]
+
+	ages.sort((Num a, Num b) { a - b })
+	# [ 29, 32, 42, 54 ]
+
+h3 Bazar
+
+pre.
+	# Syntaxe de Bootmonkey (BM)
+	# Par Pif, booti386, Gorgio et SuperMonkey
+	# Dernière mise à jour : 31/07/2014
+
+	enum Volume {
+			LOW    = 20
+			MEDIUM = 50
+			HIGH   = 100
+	}
+
+	interface Animal {
+			Void
+	}
+
+	# S'inspirer de :
+	# - http://haxe.org/manual/lf-pattern-matching.html
+	# - http://fr.wikibooks.org/wiki/OCaml/Structures#Filtrage_par_motifs
+	switch value { when &lt; 0 { } when &lt; 5 { } when &gt;= 5 { } }
+	when ::= &lt; 0 (inférieur) | &lt;&gt; 20 (différent) | 0 or 5 (ou) | 0 to 5 (entre (bornes includes))
+
+	# Déclarer un type
+	"type" nom_type = type
+
+	exemple :
+
+	type Player = {
+			Str name,
+			{ Num x, Num y } position
+	}
+
+	# Déclarer une variable
+	type nom_variable = valeur
+
+	# Déclarer une constante
+	"const" [type] nom_variable [ = valeur ]
+
+	# Déclarer une fonction
+	type nom_fonction(arguments) { }
+
+	# Déclarer une classe
+	[final] class NomClasse [ &lt; NomClasseParente ] { }
+
+	# Déclarer un attribut
+	[public|protected|private] [static|const] type nom_attribut [ = valeur ]
+
+	# Déclarer une méthode
+	[public|protected|private] [static] [final] type nom_methode(arguments) { }
+
+	# Suite de fibonacci
+	Num fibo(Num n) {
+			if n &lt;= 1 {
+					n
+			} else {
+					fibo(n - 1) + fibo(n - 2)
+			}
+	}
+
+pre.
+	class Player {
+		String name
+		List&lt;Card&gt; cards
+
+		new (String name) {
+			this.name = name
+			cards = []
+		}
+
+		Void add_card(Card c) {
+			cards.push(c)
+		}
+	}
+
+	class Card {
+		Int value
+		String type
+		String name
+
+		new(Int value, String type) {
+			this.value = value
+			this.type = type
+
+			name = "$value de $type"
+		}
+
+		Num get_value() {
+			match value {
+				"valet" { 11 }
+				"dame"  { 12 }
+				"roi"   { 13 }
+				"as"    { 14 }
+				else    { value.to_num() }
+			}
+		}
+	}
+
+	class Game {
+		List&lt;Card&gt; cards
+		List&lt;Player&gt; players
+
+		new() {
+			List&lt;Var&gt; value_cards = [ 2, 3, 4, 5, 6, 7, 8, 9, 10, "valet", "dame", "roi", "as" ]
+			List&lt;String&gt; types_cards = [ "coeur", "pique", "trèfle", "carreau" ]
+
+			for _, value in value_cards {
+				for _, type in type_cards {
+					add_card(value, type)
+				}
+			}
+
+			players = []
+		}
+
+		Void add_card(Var value, String type) {
+			cards.push(new Card(value, type))
+		}
+
+		Void add_player(String player_name) {
+			players.push(new Player(player_name))
+		}
+	}
+
+	Game game = new Game()
+	game.add_player("Yannick")
+	game.add_player("Guillaume")

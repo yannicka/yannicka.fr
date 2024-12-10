@@ -1,0 +1,33 @@
+h2#types Types
+
+pre.
+	Bool
+	Num
+	Char
+	Str
+	List&lt;T&gt;
+	Dict&lt;V&gt;
+	Var
+
+	# Partie pas claire, à rectifier
+	Func&lt;(T n)*&gt;:T
+	Obj
+
+p <code>null</code> est la valeur d'une variable non initialisée ou sans valeur.
+
+ul
+	li Le type Bool prend pour valeur yes (true) et no (false).
+	li Num correspond au type numérique.
+	li Char correspond à un caractère.
+	li Str correspond au chaînes de caractères.
+	li List&lt;T&gt; correspond à une liste (un ensemble) de valeurs du type T.
+	li Dict&lt;T&gt; correspond à un ensemble de clés (de type Str) auxquels sont associées une valeur de type T.
+	li Var correspond au type dynamique, utile quand on ne sait pas quel type on veut recevoir dans une fonction.
+	li (todo) Func&lt;(T n)*&gt;:T
+	li (todo) Obj
+
+h3 &Eacute;valuations booléennes
+
+ul
+	li Evalués à <code>false</code>  : <code>false, 0, 0.0, "", "0", [], {}, null</code>
+	li Evalués à <code>true</code> : le reste

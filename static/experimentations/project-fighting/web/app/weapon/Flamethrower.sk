@@ -1,0 +1,32 @@
+namespace weapon {
+	class Flamethrower : Weapon {
+		def new {
+			super("Lance-flammes")
+		}
+
+		over fire(position Point, direction Point) {
+			var angle = Point.angleBetween(direction, position)
+			angle = -Math.radiansToDegrees(angle)
+
+			for i in 0 .. 3 {
+				var p = Particle.new
+					.position(position)
+					.speed(180, 220)
+					.life(0.3, 0.7)
+					.radius(3, 6)
+					.angle(angle - 30, angle + 30)
+					.color([
+						rgb(255, 0, 0),
+						rgb(255, 140, 0),
+						rgb(255, 215, 0)
+					])
+
+				Particle.particles.append(p)
+			}
+		}
+
+		over renderMiniature(ctx Context) {
+			ctx.drawImage(Img.get("miniatures"), 112, 0, 16, 16, 0, 0, 16, 16)
+		}
+	}
+}

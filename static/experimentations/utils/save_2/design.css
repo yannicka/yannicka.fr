@@ -1,0 +1,6 @@
+/* CSS crunched with Crunch - http://crunchapp.net/ */
+html,body{margin:0;padding:0;width:100%;height:100%}
+body{background:linear-gradient(to right, #e2ae75, #bec098)}
+.window{margin:0;padding:0;background-color:#f4f4f4;color:#000;box-shadow:0 0 14px -2px rgba(0,0,0,0.4);display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column}.window .title{margin:0;padding:3px;background-color:#dcdcdc;color:#404040;font:bold 16px Consolas;-webkit-user-select:none;cursor:default;height:25px;-moz-box-sizing:border-box;box-sizing:border-box}.window .title:hover{cursor:move}
+.window .content{margin:0;padding:0;font:normal 16px Consolas;width:100%;height:120px;display:-webkit-flex;display:flex;-webkit-flex:1;flex:1}.window .content textarea{margin:0;padding:3px;width:100%;height:100%;border:none;resize:none;font-family:"Arial",sans-serif;-moz-box-sizing:border-box;box-sizing:border-box}
+.window .infos{height:16px}.window .infos .resizer{width:16px;height:16px;background:url('resizer.png');float:right}.window .infos .resizer:hover{cursor:nw-resize}

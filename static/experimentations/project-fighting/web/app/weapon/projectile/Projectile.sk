@@ -1,0 +1,48 @@
+namespace weapon.projectile {
+	class Projectile : Sprite {
+		# Dégâts effectués par le projectile
+		var damages int
+
+		# Rayon de l'explosion
+		var explosion Explosion
+
+		# Position initiale du projectile (de là où il est parti)
+		var basePosition Point
+
+		# Créer une balle
+		def new(x double, y double, width double, height double, angle double,
+			    speed int)
+		{
+			super(x, y, 5, 3)
+
+			basePosition = position.clone
+
+			self.angle = angle
+
+			damages = 2
+			health = 3
+			drawFrom = Position.MIDDLE
+
+			velocity = Point.new(Math.cos(angle), Math.sin(angle)) * speed
+
+			Level.projectiles.append(self)
+		}
+
+		# Mettre à jour la balle
+		over update(dt double) {
+			super(dt)
+
+			# Réduit la vie de la balle
+			health -= dt
+
+			# Déplace la balle
+			position += velocity * dt
+		}
+
+		# Évènement : lorsque le projectile touche un bloc
+		def onCollision(b block.Block) { }
+
+		# Évènement : lorsque le projectile touche un joueur
+		def onPlayerOverlaps(player Player) { }
+	}
+}

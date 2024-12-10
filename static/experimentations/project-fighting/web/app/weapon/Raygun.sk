@@ -1,0 +1,19 @@
+namespace weapon {
+	class Raygun : Weapon {
+		var ray projectile.Ray
+
+		def new {
+			super("Pistolet laser")
+		}
+
+		over fire(position Point, direction Point) {
+			if ray == null {
+				ray = projectile.Ray.new(position.x, position.y, 5, 5)
+			}
+		}
+
+		over renderMiniature(ctx Context) {
+			ctx.drawImage(Img.get("miniatures"), 144, 0, 16, 16, 0, 0, 16, 16)
+		}
+	}
+}

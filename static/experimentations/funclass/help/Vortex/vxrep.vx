@@ -1,0 +1,254 @@
+/* vxrepl.vx - a Vortex interpreter and REPL
+ * Provides interactive console, script running and offline compilation
+ *
+ * Copyright (C) 2013 Daniel "q66" Kolesa <quaker66@gmail.com>
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a
+ * copy of this software and associated documentation files (the "Software"),
+ * to deal in the Software without restriction, including without limitation
+ * the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+ * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+ * OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ * OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+let cutil = require("vxutil")
+let util  = require("src.util")
+
+fn checkc(tbl, v) -> if tbl != v -> v else -> tostr(v)
+
+// a tiny table serializer :)
+fn rec serialize(tbl) -> match type(tbl) ->
+    | "table" -> with ret = (map(fn v -> serialize(checkc(tbl, v)), tbl)
+        ++ map(fn v -> "$(" ~ serialize(checkc(tbl, v[1])) ~ "): "
+            ~ serialize(checkc(tbl, v[2])), filter(fn v ->
+                not inarray(tbl, v[1]), items(tbl))))
+        -> (#ret > 0) and ("{ " ~ tconc(ret, ", ") ~ " }") or "{}"
+    | "string" -> '"' ~ tostr(tbl) ~ '"'
+    | _ -> tostr(tbl)
+
+let progname = "vortex"
+
+// the SIGINT hook - called when SIGINT is raised
+// makes sure to reset the hook and error appropriately
+fn hook_interrupt() do
+    debug.sethook()
+    error("interrupted!", 3)
+end
+
+// the SIGINT handler - sets the signal back to defaults
+// and activates hook_interrupt above
+// used to handle ctrl-c on infinite loops etc.
+fn sig_interrupt(sig) do
+    cutil.signal(sig)
+    debug.sethook(hook_interrupt, "crl", 1)
+end
+
+fn print_results(stat, ...) do
+    if not ... -> return stat
+    let msg = tconc(map(fn v -> serialize(v), { ... }), ", ")
+    if not stat do
+        io.stderr:write(msg, "\n\n")
+        io.stderr:flush()
+    else do
+        io.write(msg, "\n\n")
+        io.flush()
+    end
+    return stat
+end
+
+// strip away the REPL debug lines
+fn repl_traceback(msg) do
+    msg = debug.traceback(msg, 2)
+    return (string["match"](msg, "^(.*stdin:%d: in main chunk).*$")
+        or msg or "(no error message)")
+end
+
+// SIGINTed xpcall
+fn docall(f, ...) do
+    cutil.signal(cutil.SIGINT, sig_interrupt)
+    let rets = { xpcall(f, repl_traceback, ...) }
+    cutil.signal(cutil.SIGINT)
+    return unpack(rets)
+end
+
+// runs a file
+fn dofile(fname, ...) do
+    let (f, err) = loadfile(fname)
+    if f -> return print_results(docall(f, ...))
+    else -> return print_results(f, err)
+end
+
+// runs a string
+fn dostring(str, source, ...) do
+    let (f, err) = load(str, source)
+    if f -> return print_results(docall(f, ...))
+    else -> return print_results(f, err)
+end
+
+// requires a library
+fn dolibrary(name) do
+    let (stat, ret) = xpcall(require, repl_traceback, name)
+    if stat -> _G[name] = ret
+    else -> return print_results(stat, ret)
+    return stat
+end
+
+fn repl_header() -> print(_VERSION ~ " self-hosted REPL by q66")
+fn get_prompt(n) -> ">":rep(n) ~ " "
+
+// takes an error message, if it ends with <eos>' it means our input is
+// incomplete - used to allow the user to split the input into multiple lines
+fn input_incomplete(msg) -> msg and string["match"](msg, "^.*<eos>'") != nil
+
+// gets a new line from stdin, uses readline if available
+// if the line starts with =, it interprets it as a return
+fn input_get_line(n) -> with line = cutil.readline(get_prompt(n)) do
+    if not line -> return nil
+    let ln = #line
+
+    if line:sub(ln) == "\n" -> line = line:sub(1, ln - 1)
+    return (if n == 1 and line:sub(1, 1) == "=" ->
+        ("return " ~ line:sub(2)) else line)
+end
+
+// stores "saved" locals (handled in each loaded chunk)
+let locals = {}
+
+// has to be global - accessible from REPL lines
+fn glob repl_save_var(n, v) do
+    locals[n] = v
+end
+
+// the REPL environment - tries to look up unknown variables from locals
+let repl_env = set_mt({}, {
+    __index: fn self, n -> locals[n] or _G[n],
+    __newindex: fn self, n, v -> _G[n] = v
+})
+
+// appended to each REPL line; saves the local variables into locals
+// unless they begin with __ (so that temporaries are not saved)
+let localsave_str = """
+
+let __end_idx = 2
+let __get_local = debug.getlocal
+loop while true do
+    let (n, v) = __get_local(1, __end_idx)
+    if not n or n == "__end_idx" -> break
+    if n:sub(1, 2) != "__" -> repl_save_var(n, v)
+    __end_idx += 1
+end
+"""
+
+fn make_input_line(str) -> if (not str or str == "") -> str
+    else (str ~ localsave_str)
+
+// loads a line, returning a function on success
+// and a nil + an error message on failure
+fn input_load_line() do
+    if not let line = input_get_line(1) -> return nil
+    let (f, err) = nil
+    loop while true do
+        with (stat, ret) = pcall(parser.parse, "stdin", line) do
+            if not stat do
+                let bs = line:sub(#line) == "\\"
+                if not input_incomplete(ret) and not bs do
+                    set (f, err) = (nil, ret)
+                    break
+                else if bs do
+                    line = line:sub(1, #line - 1)
+                end
+            else do
+                set (f, err) = load(make_input_line(line),
+                    "=stdin", nil, repl_env)
+                break
+            end
+        end
+        if not let ln = input_get_line(2) -> return (f, err)
+        line = line ~ "\n" ~ ln
+    end
+    if #line > 0 -> cutil.add_history(line)
+    return (f, err)
+end
+
+// the interactive REPL loop - loads a line and either reports
+// the error or calls the function and reports the status.
+fn interactive_repl() do
+    cutil.signal(cutil.SIGINT) // so that we don't have to press ctrl-c twice
+    loop while true -> with (stat, msg) = input_load_line() ->
+        if stat -> print_results(docall(stat)) else print_results(stat, msg)
+    io.write("\n")
+    io.flush()
+end
+
+fn print_help(msg) -> error(e"""
+$progname: $msg
+usage: $progname [options] [script [args]]
+-e str  run the string 'str'
+-i      enter interactive mode after the options are handled
+-l lib  require library 'lib'
+-v      show version information
+--      stop handling options
+-       stop handling options and run stdin
+""", 0)
+
+fn doargs(opts) do
+    for i, v in ipairs(opts) -> match v[1] ->
+        | "e" -> if not dostring(v[2], "=(command line)") -> return false
+        | "l" -> if not dolibrary(v[2]) -> return false
+    return true
+end
+
+fn doscript(args) do
+    if args[1] == "-" -> args[1] = nil
+    return dofile(unpack(args))
+end
+
+fn dotty(print_ver) do
+    if print_ver -> repl_header()
+    interactive_repl()
+end
+
+// main entry - has to be protected
+let (stat, err) = pcall(fn argv do
+    let (stat, opts, args) = pcall(util.getopt, argv, "e:il:vE")
+    if not stat do
+        print_help(opts)
+        return nil
+    end
+
+    let (has_l, has_e, has_i, has_v) = (false, false, false, false)
+    for i, v in ipairs(opts) -> match v ->
+        | { "l", _ } -> has_l = true
+        | { "e", _ } -> has_e = true
+        | { "i", _ } -> has_i = true
+        | { "v", _ } -> has_v = true
+
+    if has_v -> repl_header()
+    if has_e or has_l do
+        if not doargs(opts) -> return nil
+    end
+
+    let script = args[1]
+    if script and not doscript(args) -> return nil
+    if has_i do
+        dotty(not has_v)
+    else if not script and not has_e and not has_v do
+        if cutil.isatty() -> dotty(not has_v)
+        else -> dofile(nil)
+    end
+end, arg)
+if not stat do
+    io.stderr:write(err, "\n")
+    io.stderr:flush()
+end

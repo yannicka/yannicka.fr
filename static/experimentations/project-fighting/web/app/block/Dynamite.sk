@@ -1,0 +1,17 @@
+namespace block {
+	class Dynamite : Mine {
+		def new(x double, y double) {
+			super(x, y)
+
+			width = 5
+			height = 12
+
+			loadImage(Img.get("dynamite"), width, height)
+			drawFrom = Position.MIDDLE
+
+			timeBeforeExplosion = 4
+			explosion = Explosion.new(center.x, center.y, 58, 30)
+			active = true
+		}
+	}
+}

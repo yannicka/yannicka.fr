@@ -1,0 +1,78 @@
+namespace block {
+	class Barrel : Block {
+		def new(x double, y double) {
+			super(x, y, 24, 24)
+
+			loadImage(Img.get("barrel"), width, height)
+
+			health = 100
+			maxhealth = 100
+
+			explosion = Explosion.new(center.x, center.y, 0, 30)
+
+			timeBeforeExplosion = 0.6
+
+			removable = false
+		}
+
+		over update(dt double) {
+			super(dt)
+
+			if active {
+				timeBeforeExplosion -= dt
+
+				if timeBeforeExplosion <= 0 {
+					explode
+					timeBeforeExplosion = 0.6
+					unactivate
+
+					if health <= 0 {
+						removable = true
+					}
+				}
+			}
+		}
+
+		over render(ctx Context) {
+			# Dessine le rayon de l'explosion sous le baril
+			ctx.drawImage(
+				explosion.circleSprite.canvas,
+				center.x - explosion.radius,
+				center.y - explosion.radius)
+
+			super(ctx)
+		}
+
+		def explode {
+			# Met à jour le rayon de l'explosion
+			explosion.radius = (maxhealth - health) / maxhealth * 100
+			explosion.updateCircleSprite
+
+			# Explosion du baril
+			explosion.explode(self)
+		}
+
+		over onFired(projectile weapon.projectile.Projectile) {
+			# Les barils sont insensibles aux grenades et aux roquettes (pour la
+			# roquette, c'est l'explosion qui fait les dégâts)
+			if projectile is weapon.projectile.Grenade ||
+				projectile is weapon.projectile.Rocket {
+				return
+			}
+
+			# Baisse la vie à cause des dégâts du projectile
+			decreaseHealth(projectile.damages)
+
+			# Déclenche l'explosion
+			activate
+		}
+
+		over onExplosion(explosion Explosion) {
+			# Baisse la vie à cause des dégâts de l'explosion
+			decreaseHealth(explosion.damages)
+
+			# Déclenche l'explosion
+			activate
+		}
+	}
+}

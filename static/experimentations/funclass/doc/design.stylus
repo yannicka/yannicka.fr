@@ -1,0 +1,83 @@
+html
+body
+	margin       0
+	padding      0
+	font-family  Arial
+	font-size    17px
+
+html
+	counter-reset niv_deux
+	counter-reset niv_trois
+
+h1
+h2
+h3
+h4
+h5
+h6
+p
+	margin  12px 6px 8px 6px
+	padding 0
+
+h2
+	counter-increment niv_deux 1
+	counter-reset     niv_trois
+
+	&:before
+		content counter(niv_deux) ". "
+
+h3
+	counter-increment niv_trois 1
+
+	&:before
+		content counter(niv_deux) "." counter(niv_trois) ". "
+
+.red
+	color rgb(255, 0, 0)
+
+
+
+
+
+
+
+/* Colorateur syntaxique
+------------------------ */
+pre
+	margin           0
+	padding          16px
+	background-color rgb(242, 242, 242)
+	border           2px solid rgb(180, 180, 180)
+	border-left      none
+	border-right     none
+
+code
+	background-color rgb(230, 230, 230)
+
+.sc-keyword
+	// color rgb(123, 0, 231)
+	color #186895
+
+.sc-op
+	// color rgb(0, 0, 0)
+	color #6BB810
+
+.sc-identifier
+	// color rgb(221, 32, 32)
+	color #FF3C00
+
+.sc-identifier-class
+	// color rgb(0, 142, 183)
+	color #45B3E6
+
+.sc-number
+	//color rgb(0, 82, 146)
+	color #FF9600
+
+.sc-string
+	// color rgb(0, 161, 0)
+	color #FF7800
+
+.sc-comment
+	// color rgb(128, 128, 128)
+	color #666

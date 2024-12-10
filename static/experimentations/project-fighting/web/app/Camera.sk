@@ -1,0 +1,6 @@
+# à faire : cette classe est-elle utile ?
+class Camera : Rect {
+	def new {
+		super(0, 0, 0, 0)
+	}
+}

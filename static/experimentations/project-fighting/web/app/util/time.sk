@@ -1,0 +1,4 @@
+# Récupération du timestamp
+def timestamp double {
+	return window.performance.now
+}

@@ -1,0 +1,8 @@
+class StringMap {
+	# Combine une liste avec une autre
+	def merge(map StringMap<T>) {
+		map.each((k, v) => {
+			self[k] = v
+		})
+	}
+}

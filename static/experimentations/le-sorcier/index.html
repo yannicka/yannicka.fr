@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Le Sorcier</title>
+
+		<style>
+			html,
+			body {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+			body {
+				display: flex;
+				align-items: center;
+				background-color: rgb(255, 255, 255);
+			}
+
+			#game {
+				margin: 0 auto;
+			}
+
+			/* Police utilisée sur le jeu */
+			@font-face {
+				font-family: 'Grobold';
+				src: url('assets/fonts/grobold.woff');
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="game" width="500" height="300"></canvas>
+
+		<script src="le-sorcier.js"></script>
+	</body>
+</html>

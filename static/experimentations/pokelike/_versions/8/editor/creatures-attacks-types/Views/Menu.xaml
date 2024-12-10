@@ -1,0 +1,22 @@
+﻿<Page x:Name="page_editor" x:Class="EditeurPokelike_WPF.Menu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="312.941" d:DesignWidth="322.353"
+	Title="Menu" Width="640" Height="480">
+
+    <Grid x:Name="main_grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="txt_editor_creatures" FontWeight="Bold" FontSize="18" Margin="0,213,0,243" Width="192" Height="24" ToolTip="Edition des créatures du jeu (informations générales, attaques et fusions)" TextAlignment="Center" ><Hyperlink NavigateUri="EditorCreature.xaml" TextDecorations="Underline" Foreground="#FFB61A1A">Éditeur de créatures</Hyperlink></TextBlock>
+        <TextBlock x:Name="txt_editor_attacks" FontWeight="Bold" FontSize="18" Margin="0,242,0,214" Width="192" Height="24" ToolTip="Edition des attaques du jeu" TextAlignment="Center" ><Hyperlink NavigateUri="EditorAttacks.xaml" TextDecorations="Underline" Foreground="#FFB61A1A">Éditeur d'attaques</Hyperlink></TextBlock>
+        <TextBlock x:Name="txt_editor_maps" FontWeight="Bold" FontSize="18" Margin="224,300,224,156" Width="192" Height="24" ToolTip="Edition des cartes du jeu" TextAlignment="Center" >Éditeur de cartes</TextBlock>
+        <TextBlock x:Name="txt_editor_types" FontWeight="Bold" FontSize="18" Margin="224,271,224,185" Width="192" Height="24" ToolTip="Edition des types du jeu" TextAlignment="Center" ><Hyperlink NavigateUri="EditorTypes.xaml" TextDecorations="Underline" Foreground="#FFB61A1A">Éditeur de types</Hyperlink></TextBlock>
+    </Grid>
+</Page>

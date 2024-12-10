@@ -1,0 +1,45 @@
+namespace weapon {
+	class Shotgun : Weapon {
+		def new {
+			super("Fusil à pompe")
+
+			baseLatency = 1
+			bulletSpeed = 420
+		}
+
+		over fire(position Point, direction Point) {
+			if !canFire	{
+				return
+			}
+
+			decreaseAmmo
+			resetLatency
+
+			const angleRandom1 = 0.2
+			const angleRandom2 = 0.1
+			const angleRandom3 = 0.1
+			const angleRandom4 = 0.2
+
+			const angle = Point.angleBetween(direction, position)
+
+			weapon.projectile.ShotgunBullet.new(
+				position.x, position.y, angle - angleRandom1, bulletSpeed)
+
+			weapon.projectile.ShotgunBullet.new(
+				position.x, position.y, angle - angleRandom2, bulletSpeed)
+
+			weapon.projectile.ShotgunBullet.new(
+				position.x, position.y, angle, bulletSpeed)
+
+			weapon.projectile.ShotgunBullet.new(
+				position.x, position.y, angle + angleRandom3, bulletSpeed)
+
+			weapon.projectile.ShotgunBullet.new(
+				position.x, position.y, angle + angleRandom4, bulletSpeed)
+		}
+
+		over renderMiniature(ctx Context) {
+			ctx.drawImage(Img.get("miniatures"), 80, 0, 16, 16, 0, 0, 16, 16)
+		}
+	}
+}

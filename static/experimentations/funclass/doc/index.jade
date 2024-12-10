@@ -1,0 +1,38 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Funclass
+		link(rel="stylesheet" type="text/css" href="design.css")
+
+	body
+		h1 Spécifications de Funclass - Brouillon obsolète
+
+		p.red CE QUI EST D&Eacute;CRIT CI-DESSOUS EST SUSCEPTIBLE DE CHANGER. LE NOM DU LANGAGE AUSSI.
+
+		p Tout n'est sûrement pas exhaustif. Ne pas hésiter à poser des questions. Cependant les grandes lignes du langages ne changeront pas.
+
+		ul
+			li: a(href="#introduction")            1. Introduction
+			li: a(href="#types")                   2. Types
+			li: a(href="#fonctions")               3. Fonctions
+			li: a(href="#conditions")              4. Conditions
+			li: a(href="#boucles")                 5. Boucles
+			li: a(href="#classes")                 6. Classes
+			li: a(href="#listes-et-dictionnaires") 7. Listes et dictionnaires
+			li: a(href="#reflexions")              8. Réflexions
+			li: a(href="#idees")                   9. Idées
+			li: a(href="#exemples")                10. Exemples
+
+		include sections/introduction
+		include sections/types
+		include sections/fonctions
+		include sections/conditions
+		include sections/boucles
+		include sections/classes
+		include sections/listes-et-dictionnaires
+		include sections/reflexions
+		include sections/idees
+		include sections/exemples
+
+		script(src="js/color_highlighter.js")

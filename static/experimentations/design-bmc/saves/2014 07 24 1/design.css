@@ -1,0 +1,223 @@
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url("fonts/Lato-Regular.woff") format('woff');
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
+}
+body {
+  background-color: #fff;
+}
+#global {
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+nav {
+  width: 250px;
+  background-color: #e7e7e7;
+}
+.logo {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+.logo-icon {
+  -webkit-flex: 1;
+  flex: 1;
+  margin: 8px;
+  text-align: center;
+}
+.logo-infos {
+  margin: 0;
+  text-align: right;
+  width: 61px;
+}
+.logo-infos img {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #a4a4a4;
+  border-right: none;
+}
+.choose_category {
+  margin: 0 8px 8px 8px;
+  background-color: #fff;
+}
+.choose_category ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.choose_category li {
+  position: relative;
+}
+.choose_category li:not(:first-child) {
+  display: none;
+}
+.choose_category a {
+  padding: 4px;
+  text-decoration: none;
+  color: #727272;
+  display: block;
+}
+.choose_category a:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  border-top: 8px solid #727272;
+  position: absolute;
+  right: 8px;
+  top: 12px;
+}
+.list-topics {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.list-topics li {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.list-topics li:nth-child(odd) {
+  background-color: #f3f3f3;
+}
+.list-topics li.active {
+  background-color: #009aff;
+}
+.list-topics li.active .topic-title {
+  color: #fff;
+}
+.list-topics li.active .topic-indicator span {
+  background-color: #ff0;
+}
+.list-topics a {
+  margin: 0;
+}
+.topic-title {
+  -webkit-flex: 1;
+  flex: 1;
+  padding: 8px;
+  color: #727272;
+}
+.topic-indicator {
+  width: 5px;
+  height: 5px;
+  margin: 8px;
+  text-align: center;
+}
+.topic-indicator span {
+  display: block;
+  background-color: #009aff;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+}
+.topic-answers {
+  margin: 0;
+  width: 48px;
+}
+.topic-answers span {
+  padding: 2px;
+  display: inline-block;
+  background-color: #fff;
+  width: 40px;
+  color: #009aff;
+  text-align: center;
+}
+section {
+  -webkit-flex: 1;
+  flex: 1;
+  padding: 16px 24px;
+  box-shadow: 0 0 2px 0 #a4a4a4;
+}
+.topic-titre {
+  font-size: 26px;
+  color: #727272;
+}
+.topic-subtitle {
+  color: #9f9f9f;
+  font-size: 14px;
+}
+.topic-subtitle a {
+  color: #009aff;
+  text-decoration: none;
+}
+.topic-pagination {
+  margin: 0;
+}
+.topic-pagination ul {
+  margin: 32px 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+.topic-pagination li {
+  margin: 0;
+  display: inline-block;
+}
+.topic-pagination li.active a {
+  background-color: #009aff;
+  color: #fff;
+  border: 1px solid #009aff;
+}
+.topic-pagination a {
+  margin: 0;
+  padding: 6px 12px;
+  display: block;
+  background-color: #f3f3f3;
+  border: 1px solid #e7e7e7;
+  text-decoration: none;
+  color: #727272;
+}
+.messages-list {
+  margin-top: 32px;
+}
+.message {
+  display: -webkit-flex;
+  display: flex;
+  margin: 32px 0;
+}
+.message-profile {
+  margin: 0;
+  width: 110px;
+  text-align: center;
+}
+.message-avatar img {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #a4a4a4;
+}
+.message-username a {
+  color: #009aff;
+  text-decoration: none;
+  font-size: 14px;
+}
+.message-username a:hover {
+  text-decoration: underline;
+}
+.message-content {
+  -webkit-flex: 1;
+  flex: 1;
+}
+.message-message {
+  margin: 0;
+}
+.message-date {
+  margin-top: 8px;
+  color: #727272;
+  font-size: 12px;
+  text-align: right;
+}
+

@@ -1,0 +1,127 @@
+h2#boucles Boucles
+
+h3 Boucle simple
+
+p La boucle simple est une boucle infinie. Pour la stopper, il faut effectuer un <code>break</code>.
+
+pre.
+	loop {
+		# ...
+	}
+
+p Il est cependant possible de définir le nombre d'itérations ;
+
+pre.
+	loop 5 {
+		# 1
+		# 2
+	}
+
+p Il est aussi possible de définir un pas :
+
+pre.
+	loop 8 by 2 {
+		# 0
+		# 2
+		# ...
+	}
+
+h3 Boucle while
+
+p La boucle <code>while</code> itère dans la condition est respectée.
+
+pre.
+	Num i = 5
+	while i-- {
+		# i = 4
+		# i = 3
+		# ...
+	}
+
+h3 Boucle do-while
+
+p La boucle <code>do-while</code> fonctionne de la même manière que la boucle <code>while</code> sauf qu'il y a une itération au minumum et que l'expression est évaluée à la fin de l'itération.
+
+pre.
+	Num i = 5
+	do {
+		# i = 5
+		# i = 4
+		# ...
+	} while i--
+
+h3 Boucle itérative
+
+p La boucle itérative demande une valeur initiale et une valeur finale.
+
+pre.
+	for i = 0 to 5 {
+		# i = 0
+		# i = 1
+		# ...
+	}
+
+p Vous pouvez aussi spécifier un pas :
+
+pre.
+	for i = 0 to 12 by 2 {
+		# i = 0
+		# i = 2
+		# ...
+	}
+
+h3 Boucle sur une liste
+
+p Parcours tous les éléments de la liste.
+
+pre.
+	List&lt;Num&gt; ma_list = [ 2, 3, 5, 7, 11, 13 ]
+	for k, v in ma_list {
+		# k = 0, v = 2
+		# k = 1, v = 3
+		# ...
+	}
+
+h3 Boucle sur un dictionnaire
+
+p Parcours tous les éléments du dictionnaire.
+
+pre.
+	Dict&lt;Str&gt; mon_dict = { "a" = "b", "b" = "c", "c" = "d" }
+	for k, v in mon_dict {
+		# k = "a", v = "b"
+		# k = "b", v = "c"
+		# ...
+	}
+
+h3 Boucle sur une chaîne
+
+p Parcours chaque caractères d'une chaîne.
+
+pre.
+	Str mon_str = "Hello"
+	for k, v in mon_str {
+		# k = 0, v = "H"
+		# k = 1, v = "e"
+		# ...
+	}
+
+h3 Le cas du for
+
+p Lors des boucles <code>for</code>, il arrive que parfois vous ne souhaitiez pas nommer de variable itérative. Cela est possible grâce au mot-clé <code>_</code> qui indique de ne pas capturer la valeur dans une variable :
+
+pre.
+	for _ = 0 to 20 { }
+
+p Ainsi, la boucle aura 20 itérations mais aucune variable.
+
+p Cela fonctionne aussi pour les boucles <code>for ... in</code>. Vous pouvez capturer, au choix, rien, la valeur, la clé ou les deux. Voici les différentes syntaxes utilisables :
+
+pre.
+	# for      in my_val { } # syntaxe à réfléchir
+	# for _    in my_val { } # syntaxe à réfléchir
+	# for _, _ in my_val { } # syntaxe à réfléchir
+	# for v    in my_val { } # syntaxe à réfléchir
+	for _, v in my_val { }
+	for k, _ in my_val { }
+	for k, v in my_val { }

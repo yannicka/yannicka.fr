@@ -1,0 +1,45 @@
+*****************************************************************
+
+|----------|
+| POKELIKE |
+|----------|------------------------------|
+| Créateur :                Aylab         |
+| Date de début du projet : 25 avril 2013 |
+| Drnière mise à jour :     26 avril 2013 |
+|-----------------------------------------|
+
+Histoire :
+  -
+
+Graphismes
+  5 couleurs :
+    1. #FFFFFF : blanc 100%
+    2. #21206A : bleu foncé
+    3. #908FB4 : bleu pâle
+    4. #D3D3E1 : bleu très pâle
+    5. #E9E9F0 : bleu très très pâle
+
+Deux types de tiles :
+  1. Les solides (collision) :
+       * Murs
+       * Meubles
+       * Batîments
+       * Barrières
+       * Arbres
+       * Rochers
+
+  2. Les non solides (pas de collision) :
+       * Sols
+       * NE PAS OUBLIER LES PAVES AU SOL ET SURTOUT LES "HAUTES HERBES"
+
+
+2 couches d'affichage + 3 couches spéciales :
+  * grounds   (sols)       (g)
+  * items     (objets)     (i)
+  * no solid  (pas solide) (n)
+  * on enter  (à l'entrée) (onenter)
+  * on action (à l'action) (onaction)
+
+Gameplay :
+  Le joueur se trouve dans un univers 2D style Pokémon. Il a la possibilité de se déplacer vers la gauche, le haut, la droite et le bas.
+  Cet univers est peuplé de PNJs qui, par difficulté croissante, propose de joueur à un jeu 2D de plateforme, comme Mario.

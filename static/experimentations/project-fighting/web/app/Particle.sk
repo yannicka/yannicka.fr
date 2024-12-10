@@ -1,0 +1,122 @@
+class Particle {
+	var m_position Point
+	var m_velocity Point
+
+	var m_life double
+	var m_maxLife double
+
+	var m_radius double
+	var m_maxRadius double
+
+	var m_speed double
+
+	var m_color string
+
+	# Créer une particule
+	def new {
+		m_position = Point.new(0, 0)
+		m_velocity = Point.new(0, 0)
+
+		m_life = 0
+		m_maxLife = 0
+
+		m_radius = 0
+		m_maxRadius = 0
+
+		m_speed = 0
+
+		m_color = rgb(255, 255, 255)
+	}
+
+	# Mise à jour d'une particule
+	def update(dt double) {
+		m_life -= dt
+
+		if m_life > 0 {
+			const ageRatio = m_life / m_maxLife
+
+			m_radius = m_maxRadius * ageRatio
+
+			m_position += m_velocity * dt
+		}
+	}
+
+	# Affichage d'une particule
+	def render(ctx Context) {
+		ctx.fillStyle = m_color
+		ctx.strokeStyle = m_color
+		ctx.drawPixelatedCircle(m_position.x, m_position.y, m_radius)
+	}
+
+	def position(p Point) Particle {
+		m_position = p
+		return self
+	}
+
+	def speed(min double, max double) Particle {
+		m_speed = Math.rand(min, max)
+		return self
+	}
+
+	def life(min double, max double) Particle {
+		m_maxLife = Math.rand(min, max)
+		m_life = m_maxLife
+		return self
+	}
+
+	def radius(min double, max double) Particle {
+		m_maxRadius = Math.rand(min, max)
+		m_radius = m_maxRadius
+		return self
+	}
+
+	def angle(min double, max double) Particle {
+		const angle = Math.rand(min, max)
+		const angleInRadians = Math.degreesToRadians(angle)
+
+		m_velocity = Point.new(
+			m_speed * Math.cos(angleInRadians),
+			-m_speed * Math.sin(angleInRadians)
+		)
+
+		return self
+	}
+
+	def color(colors List<string>) Particle {
+		m_color = colors.randomElement
+		return self
+	}
+}
+
+namespace Particle {
+	const colors = [
+		rgb(255, 50, 8),
+		rgb(232, 98, 14),
+		rgb(240, 188, 37),
+		rgb(35, 117, 179)
+	]
+
+	var particles = List<Particle>.new
+
+	# Mettre à jour les particules
+	def updateAll(dt double) {
+		var i = particles.count
+
+		while i-- > 0 {
+			var particle = particles[i]
+
+			particle.update(dt)
+
+			if particle.m_life <= 0 {
+				particles.removeAt(i)
+			}
+		}
+	}
+
+	# Dessiner les particules
+	def renderAll(ctx Context) {
+		for particle in particles {
+			particle.render(ctx)
+		}
+	}
+}

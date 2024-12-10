@@ -1,0 +1,39 @@
+namespace input {
+	interface Pointer {
+		def update
+		def getCanvasCoordinates Point
+		def inRect(rect Rect) bool
+		def inCircle(circle Circle) bool
+		def getPositionRelativeTo(rect Rect) Point
+
+		def up bool
+		def down bool
+		def press bool
+		def release bool
+		def wheel PointerDirection
+	}
+}
+
+enum PointerDirection {
+	NONE
+	TOP
+	BOTTOM
+}
+
+namespace PointerDirection {
+	def toInt(dir PointerDirection) int {
+		switch dir {
+			case .TOP {
+				return 1
+			}
+
+			case .BOTTOM {
+				return -1
+			}
+
+			default {
+				return 0
+			}
+		}
+	}
+}

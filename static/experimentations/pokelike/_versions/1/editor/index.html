@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Pok&eacute;like</title>
+
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+
+	<body>
+		<div id="global">
+			<nav>
+				<ul>
+					<li><button id="select_infos" data-tab="tab_infos" class="selected">Informations</button></li><!--
+					--><li><button id="select_back" data-tab="tab_back">Couche basse</button></li><!--
+					--><li><button id="select_top" data-tab="tab_top">Couche haute</button></li><!--
+					--><li><button id="select_onenter" data-tab="tab_onenter">Ev. onenter</button></li><!--
+					--><li><button id="select_onaction" data-tab="tab_onaction">Ev. onaction</button></li><!--
+					--><li><button id="select_save" data-tab="tab_save">Sauvegarder</button></li>
+				</ul>
+			</nav>
+
+			<div id="the_editor">
+				<div id="edit">
+					<canvas id="editor"></canvas>
+				</div><!--
+
+				--><div id="tiles">
+					<div id="tab_infos" style="display: block;">
+						<label>Nom</label>
+							<input type="text" id="map_name" />
+
+						<label><abbr title="Nom de sauvegarde de la carte (a-z A-Z 0-9 - et _)">Nom de sauvegarde</abbr></label>
+							<input type="text" id="map_save_name" />
+
+						<label>Largeur</label>
+							<input type="text" id="map_width" />
+
+						<label>Hauteur</label>
+							<input type="text" id="map_height" />
+
+						<input type="submit" value="Valider" id="btn_map_valid" />
+					</div>
+
+					<div id="tab_back" style="display: none;">
+						<canvas id="tiles_back"></canvas>
+					</div>
+
+					<div id="tab_top" style="display: none;">
+						<canvas id="tiles_top"></canvas>
+					</div>
+
+					<div id="tab_onenter" style="display: none;">
+						<ul>
+							<li><button id="btn_add_onenter">Ajouter un &eacute;v&egrave;nement onenter</button></li>
+							<li><button id="btn_delete_onenter">Gommer un &eacute;v&egrave;nement onenter (bient&ocirc;t)</button></li>
+						</ul>
+
+						<ul id="list_evs_onenter">
+						</ul>
+					</div>
+
+					<div id="tab_onaction" style="display: none;">
+						<ul>
+							<li><button id="btn_add_onaction">Ajouter un &eacute;v&egrave;nement onaction</button></li>
+							<li><button id="btn_delete_onaction">Gommer un &eacute;v&egrave;nement onaction (bient&ocirc;t)</button></li>
+						</ul>
+
+						<ul id="list_evs_onaction">
+						</ul>
+					</div>
+
+					<div id="tab_save" style="display: none;">
+						<button class="submit" id="btn_map_save">Enregistrer la carte</button>
+
+						back.png :
+						<canvas id="save_map_back"></canvas>
+
+						top.png :
+						<canvas id="save_map_top"></canvas>
+
+						map.js : todo
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../game/lib/pxjs/px.js"></script>
+		<script src="src/pokelike.js"></script>
+		<script>G.init();</script>
+	</body>
+</html>

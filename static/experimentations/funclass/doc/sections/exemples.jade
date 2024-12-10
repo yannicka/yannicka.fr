@@ -1,0 +1,200 @@
+h2#exemples Exemples
+
+h3 Cas fictif du jeu "Plus ou moins"
+
+pre.
+	pack fc.examples.plus_ou_moins
+
+	use stdio as io
+	use math
+
+	Num nb  = math.rand(1, 100)
+	Num cpt = 0
+
+	Num val_test
+
+	do {
+		val_test = io.ask("Saisissez un nombre entre 1 et 100 : ").toNum()
+		cpt++
+
+		if val_test &gt; nb {
+			io.writeln("C'est moins")
+		} else if val_test &lt; nb {
+			io.writeln("C'est plus")
+		}
+	} while val_test &lt;&gt; nb
+
+	io.writeln("Bravo, tu as gagné en ${cpt} coups !")
+
+h3 Exemple qui présente un peu tout
+
+pre.
+	Num me = 38
+
+	Dict&lt;Num&gt; friends = {
+		"Robert"  = 32,
+		"Paul"    = 54,
+		"Jean"    = 29,
+		"Jacques" = 42
+	}
+
+	List&lt;Num&gt; ages = [ age for name, age in friends ]
+	# [ 32, 54, 29, 42 ]
+
+	ages.sort((Num a, Num b) { a - b })
+	# [ 29, 32, 42, 54 ]
+
+pre.
+	# Syntaxe de Bootmonkey (BM)
+	# Par Pif, booti386, Gorgio et SuperMonkey
+	# Dernière mise à jour : 30/07/2014
+
+	enum Volume {
+			LOW    = 20
+			MEDIUM = 50
+			HIGH   = 100
+	}
+
+	interface Animal {
+			Void
+	}
+
+	class Point2D {
+			Num x, y
+
+			new(Num x, Num y) {
+					@x = x
+					@y = y
+			}
+
+			Void add(Num x, Num y) {
+					@x += x
+					@y += y
+			}
+
+			Void add(Point2D p) {
+					@add(p.x, p.y)
+			}
+	}
+
+	class Point3D &lt; Point2D {
+			Num z
+
+			new(Num x, Num y, Num z) {
+					@(x, y)
+					@z = z
+			}
+
+			Void add(Num x, Num y, Num z) {
+					@x += x
+					@y += y
+					@z += z
+			}
+
+			Void add(Point3D p) {
+					@add(p.x, p.y, p.z)
+			}
+	}
+
+	if condition { } else if condition { } else { }
+
+	# S'inspirer de :
+	# - http://haxe.org/manual/lf-pattern-matching.html
+	# - http://fr.wikibooks.org/wiki/OCaml/Structures#Filtrage_par_motifs
+	switch value { when &lt; 0 { } when &lt; 5 { } when &gt;= 5 { } }
+	when ::= &lt; 0 (inférieur) | &lt;&gt; 20 (différent) | 0 or 5 (ou) | 0 to 5 (entre (bornes includes))
+
+	# Boucles
+	loop { }
+	loop 8 { }
+	loop 8 by 2 { }
+
+	while condition { }
+	do { } while condition
+
+	for i = 0 to 8 { }
+	for i = 0 to 8 by 2 { }
+	for _ = 0 to 8 by 2 { }
+
+	for      in a_list { }
+	for _    in a_list { }
+	for _, _ in a_list { }
+	for v    in a_list { }
+	for _, v in a_list { }
+	for k, _ in a_list { }
+	for k, v in a_list { }
+
+	for      in a_dict { }
+	for _    in a_dict { }
+	for _, _ in a_dict { }
+	for v    in a_dict { }
+	for _, v in a_dict { }
+	for k, _ in a_dict { }
+	for k, v in a_dict { }
+
+	for      in a_str { }
+	for _    in a_str { }
+	for _, _ in a_str { }
+	for v    in a_str { }
+	for _, v in a_str { }
+	for k, _ in a_str { }
+	for k, v in a_str { }
+
+	_ est un mot-clé spécial qui permet de ne pas capturer une valeur ou de ne pas en envoyer
+
+	# Déclarer un type
+	"type" nom_type = type
+
+	exemple :
+
+	type Player = {
+			Str name,
+			{ Num x, Num y } position
+	}
+
+	# Déclarer une variable
+	[const] type nom_variable [ = valeur ]
+
+	# Déclarer une fonction
+	type nom_fonction(arguments) { }
+
+	# Déclarer une classe
+	[final] class NomClasse [ &lt; NomClasseParente ] { }
+
+	# Déclarer un attribut
+	[public|protected|private] [static|const] type nom_attribut [ = valeur ]
+
+	# Déclarer une méthode
+	[public|protected|private] [static] [final] type nom_methode(arguments) { }
+
+	# Suite de fibonacci
+	Num fibo(Num n) {
+			if n &lt;= 1 {
+					n
+			} else {
+					fibo(n - 1) + fibo(n - 2)
+			}
+	}
+
+	# Types
+	Bool
+	Num
+	Chr
+	Str
+	List&lt;T&gt;
+	Dict&lt;V&gt;
+	Func&lt;(T n)*&gt;:T
+	Obj
+	Var
+	(Null)
+
+	Bool vaut true ou false
+	Num est un nombre (int ou float confondus)
+	Chr est un caractère : 'a', 'z'
+	Str est une chaîne de caractère : "Hello World!", """Pour les textes comportant de nombreux guillemets"""
+	List&lt;T&gt; est une liste de valeur : [ "Aymeric", "Guillaume", "Aurélie" ]
+	Dict&lt;V&gt; est un dictionnaire clé-valeur : { "Aymeric": 18, "Guillaume": 15, "Aurélie": 21 }
+	Func&lt;(T n)*&gt;:T est une fonction : 
+	Obj est un objet :
+	Var est un type dynamique non défini :
+	Null est la valeur renvoyée quand la variable n'existe pas ou vaut Null

@@ -1,0 +1,26 @@
+namespace weapon {
+	class SmokeGrenade : Weapon {
+		def new {
+			super("Fumigène")
+
+			baseLatency = 2
+			bulletSpeed = 400
+		}
+
+		over fire(position Point, direction Point) {
+			if !canFire	{
+				return
+			}
+
+			decreaseAmmo
+			resetLatency
+
+			const angle = Point.angleBetween(direction, position)
+			projectile.SmokeGrenade.new(position.x, position.y, angle, bulletSpeed)
+		}
+
+		over renderMiniature(ctx Context) {
+			ctx.drawImage(Img.get("miniatures"), 128, 0, 16, 16, 0, 0, 16, 16)
+		}
+	}
+}

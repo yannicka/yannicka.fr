@@ -1,0 +1,220 @@
+// Inspiration : http://www.theverge.com/2012/2/24/2822891/windows-desktop-ui-concept
+
+.flex-display() {
+	display: -webkit-flex;
+	display: flex;
+}
+
+/* integer */
+.flex-size(@size: 1) {
+	-webkit-flex: @size;
+	flex:         @size;
+}
+
+/* row | column */
+.flex-direction(@dir) {
+	-webkit-flex-direction: @dir;
+	flex-direction:         @dir;
+}
+
+/* integer */
+.flex-order(@order) {
+	order: @order;
+}
+
+.box-sizing(@size) {
+	-webkit-box-sizing: @size;
+	-moz-box-sizing: @size;
+	-ms-box-sizing: @size;
+	-o-box-sizing: @size;
+	box-sizing: @size;
+}
+
+.user-select(@select) {
+	-webkit-user-select: @select;
+	-moz-user-select: @select;
+	-ms-user-select: @select;
+	-o-user-select: @select;
+	user-select: @select;
+}
+
+html, body {
+	margin: 0; padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background: linear-gradient(to right, rgb(226, 174, 117), rgb(190, 192, 152));
+}
+
+.window {
+	margin: 0; padding: 0;
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, .2), 0 0 14px -2px rgba(0, 0, 0, .4);
+	.flex-display();
+	.flex-direction(column);
+	position: absolute;
+	.box-sizing(border-box);
+
+	.title {
+		margin: 0; padding: 3px;
+		//background-color: rgb(240, 240, 240);
+		color: rgb(54, 54, 54);
+		font: bold 16px Consolas;
+		cursor: default;
+		height: 25px;
+		.box-sizing(border-box);
+		word-wrap: break-word;
+		.user-select(none);
+		outline: none;
+		border-bottom: 1px dotted rgb(128, 128, 128);
+
+		&:hover {
+			cursor: move;
+		}
+	}
+
+	.content {
+		margin: 0; padding: 0;
+		font: normal 16px Consolas;
+		width: 100%;
+		height: 120px;
+		.flex-display();
+		.flex-size(1);
+		overflow: auto;
+
+		textarea {
+			margin: 0; padding: 3px;
+			width: 100%;
+			height: 100%;
+			border: none;
+			resize: none;
+			font-family: Consolas, sans-serif;
+			font-size: 16px;
+			.box-sizing(border-box);
+
+			&:hover, &:focus {
+			}
+		}
+
+		ul.calendar {
+			margin: 0; padding: 0;
+			list-style-type: none;
+
+			li {
+				margin: 0; padding: 2px 4px;
+			}
+		}
+	}
+
+	.infos {
+		margin: 0; padding: 2px;
+		height: 16px;
+
+		.configs {
+			width: 16px;
+			height: 16px;
+			background: url('../img/configs.svg');
+			float: left;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		.resizer {
+			width: 16px;
+			height: 16px;
+			background: url('../img/resizer.svg');
+			float: right;
+			position: relative;
+			top: 2px;
+			left: 2px;
+
+			&:hover {
+				cursor: nw-resize;
+			}
+		}
+	}
+}
+
+.date {
+	font-size: 12px;
+	color: rgb(55, 55, 55);
+}
+
+input[type="text"], textarea {
+
+}
+
+input[type="text"] {
+	
+}
+
+textarea {
+	
+}
+
+input[type="checkbox"] {
+
+}
+
+input[type="submit"] {
+	
+}
+
+// Calculatrices
+.calculator {
+	.flex-display();
+	.flex-direction(column);
+	width: 100%;
+
+	input {
+		margin: 0; padding: 4px;
+		border: none;
+		background-color: rgb(255, 255, 255);
+		width: 100%;
+		height: 28px;
+		.box-sizing(border-box);
+	}
+
+	span {
+		margin: 0; padding: 4px;
+		.flex-size(1);
+		.box-sizing(border-box);
+		width: 100%;
+	}
+}
+
+.notelist {
+	.flex-display();
+	.flex-direction(row);
+	width: 100%;
+
+	ul {
+		margin: 0; padding: 0;
+		list-style-type: none;
+		list-style-position: outside;
+		font-family: "Arial", serif;
+		font-size: 12px;
+		width: 100px;
+		.box-sizing(border-box);
+	}
+
+	li {
+		margin: 0; padding: 0;
+		cursor: pointer;
+
+		&.active {
+			color: red;
+		}
+	}
+
+	textarea {
+		margin: 0; padding: 4px;
+		.flex-size(1);
+		.box-sizing(border-box);
+	}
+}

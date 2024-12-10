@@ -1,0 +1,63 @@
+h2#types Types
+
+pre.
+	Bool
+	Num
+	Char
+	Str
+	List&lt;T&gt;
+	Dict&lt;V&gt;
+	Var
+
+	# Partie pas claire, à rectifier
+	Func&lt;(T n)*&gt;:T
+	Obj
+	Void
+	Null
+
+p <code>null</code> est la valeur d'une variable non initialisée ou sans valeur.
+
+ul
+	li <code>Bool</code> prend pour valeur true (vrai) et false (faux).
+	li <code>Num</code> correspond au type numérique.
+	li <code>Char</code> correspond à un caractère.
+	li <code>Str</code> correspond au chaînes de caractères.
+	li <code>List&lt;T&gt;</code> correspond à une liste (un ensemble) de valeurs du type T.
+	li <code>Dict&lt;T&gt;</code> correspond à un ensemble de clés (de type Str) auxquels sont associées une valeur de type T.
+	li <code>Var</code> correspond au type dynamique, utile quand on ne sait pas quel type on veut recevoir dans une fonction.
+	li (todo) <code>Func&lt;(T n)*&gt;:T</code>
+	li (todo) <code>Obj</code>
+	li (todo) <code>Void</code>
+	li (todo) <code>Null</code>
+
+h3 &Eacute;valuations booléennes
+
+ul
+	li Evalués à <code>false</code> : <code>false, 0, 0.0, "", [], {}, null</code>
+	li Evalués à <code>true</code> : le reste
+
+h3 Créez vos types
+
+p Pour évitez de multiples mots-clés pour définir des types, un seul mot-clé permet de créer des alias, des structures et des énumérations : <code>type</code>
+
+pre.
+	# Alias
+	type int = Num
+	type ListOf&lt;T&gt; = List&lt;T&gt;
+	type ListOfNum = ListOf&lt;Num&gt;
+	type Add = (Num, Num -&gt; Num)
+	type EmptyFunc = (-&gt; Void)
+
+	# Structures
+	type Person = { String name, Num age = 18 }
+
+	# Enumérations
+	type Dir = { Up, Down, Left, Right }
+	type Color = { Red, Green, Blue, Rgb(Num, Num, Num) }
+	type Volume = {
+		No     = 0
+		Low    = 20
+		Medium = 50
+		High   = 80
+		Max    = 100
+	}

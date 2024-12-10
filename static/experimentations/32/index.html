@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>anim-jeuNewsPepper</title>
+
+		<style>
+			html, body {
+				margin: 0; padding: 0;
+				height: 100%;
+			}
+
+			body {
+				background: radial-gradient(circle at center, rgb(255, 255, 255), rgb(220, 255, 255));
+			}
+
+			table {
+				border-spacing: 0;
+				border: 2px solid rgb(140, 220, 255);
+				border-radius: 4px;
+				width: 100%;
+				box-shadow: 0 0 3px 0 rgb(0, 0, 0);
+			}
+
+			table tr {
+			}
+
+			table tr th, table tr td {
+				padding: 2px;
+				vertical-align: middle;
+			}
+
+			table tr th {
+				background-color: rgb(140, 220, 255);
+				text-align: center;
+				width: 50%;
+			}
+
+			table tr td {
+				background-color: rgb(255, 255, 255);
+			}
+
+			table tr td:first-child {
+				background-color: rgb(140, 220, 255);
+			}
+
+			table tr:not(:nth-child(2)) td {
+				border-top: 2px solid rgb(140, 220, 255);
+			}
+
+			#page {
+				margin: 0 auto; padding: 0;
+				display: table;
+				width: 500px;
+				text-align: center;
+				height: 100%;
+			}
+
+			#centize {
+				margin: 0; padding: 0;
+				display: table-cell;
+				vertical-align: middle;
+				text-align: left;
+			}
+
+			#game {
+				margin: 0 auto 20px auto; padding: 0;
+				display: block;
+				border: 2px solid rgb(140, 220, 255);
+				box-shadow: 0 0 3px 0 rgb(0, 0, 0);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="page">
+			<div id="centize">
+				<canvas id="game">Votre navigateur est obsol&egrave;te. Veuillez le changer afin de profiter du contenu (= jeu).</canvas>
+
+				<div id="log"></div>
+
+				<div id="touch">
+					<table>
+						<tr>
+							<th>Action</th>
+							<th>Touches</th>
+						</tr>
+
+						<tr>
+							<td>Se d&eacute;placer</td>
+							<td><img src="docs/touch/all.png" alt="Fl&egrave;ches directionnelles" /></td>
+						</tr>
+
+						<tr>
+							<td>Ramasser</td>
+							<td><img src="docs/touch/x.png" alt="X" /></td>
+						</tr>
+
+						<tr>
+							<td>Poser</td>
+							<td><img src="docs/touch/c.png" alt="C" /></td>
+						</tr>
+
+						<tr>
+							<td>Menu pause</td>
+							<td><img src="docs/touch/i.png" alt="I" /> ou <img src="docs/touch/esc.png" alt="Echap" /></td>
+						</tr>
+
+						<tr>
+							<td>Choix dans le menu</td>
+							<td><img src="docs/touch/top-down.png" alt="Haut et Bas" /></td>
+						</tr>
+
+						<tr>
+							<td>Valider un choix dans le menu</td>
+							<td><img src="docs/touch/enter.png" alt="Entrer" /> ou <img src="docs/touch/x.png" alt="X" /></td>
+						</tr>
+
+						<tr>
+							<td>Fermer le menu</td>
+							<td><img src="docs/touch/c.png" alt="C" /></td>
+						</tr>
+
+						<tr>
+							<td>Choix d'un objet dans l'inventaire</td>
+							<td><img src="docs/touch/1.png" alt="1" /> &agrave; <img src="docs/touch/9.png" alt="9" /></td>
+						</tr>
+
+						<tr>
+							<td>Lancer le jeu</td>
+							<td><img src="docs/touch/x.png" alt="X" /></td>
+						</tr>
+
+						<tr>
+							<td>Max. stockage/cellule</td>
+							<td>32 (si si, c'est une touche, :calim:)</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<script src="src/lib.js"></script>
+		<script src="src/game.js"></script>
+		<script src="src/states/start.js"></script>
+		<script src="src/states/game.js"></script>
+		<script>G.init();</script>
+	</body>
+</html>

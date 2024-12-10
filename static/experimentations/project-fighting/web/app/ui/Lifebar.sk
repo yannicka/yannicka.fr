@@ -1,0 +1,45 @@
+namespace ui {
+	class Lifebar : Rect {
+		# Joueur lié à la barre de vue
+		var player Player
+
+		# Créer une barre de vie
+		def new {
+			super(19, 14, 60, 4)
+		}
+
+		# Lie la barre de vie au joueur, ainsi lorsque la vie du joueur change, la
+		# barre de vie est automatiquement mise à jour
+		def bindTo(player Player) {
+			self.player = player
+		}
+
+		# Affiche la barre de vie
+		def render(ctx Context) {
+			const offset = 5
+
+			var lifebarWidth = (player.getHealthPercentage * width) as int
+
+			# Fond vert transparent
+			ctx.fillStyle = rgb(255, 255, 255, 0.3)
+			ctx.beginPath
+			ctx.moveTo(x, y)
+			ctx.lineTo(x + width, y)
+			ctx.lineTo(x + width + offset, y + height)
+			ctx.lineTo(x + offset, y + height)
+			ctx.fill
+
+			# Fond vert
+			ctx.fillStyle = rgb(51, 182, 0)
+			ctx.beginPath
+			ctx.moveTo(x, y)
+			ctx.lineTo(x + lifebarWidth, y)
+			ctx.lineTo(x + lifebarWidth + offset, y + height)
+			ctx.lineTo(x + offset, y + height)
+			ctx.fill
+
+			# Texte
+			ctx.drawPixelatedText("\(player.health)", x + 20, y - 10)
+		}
+	}
+}
