@@ -42,7 +42,7 @@ L'ancienne version JavaScript du jeu est jouable, alors je l'inclus ici à titre
 <iframe
   src="src/index.html"
   loading="lazy"
-  style="display: block; border: 2px solid #42c79c; width: 100%; max-width: 520px; height: 700px; margin-bottom: 2.5em;"></iframe>
+  style="display: block; border: 2px solid #42c79c; width: 100%; max-width: 520px; height: 700px;"></iframe>
 
 ## Anecdote
 

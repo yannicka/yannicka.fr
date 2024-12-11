@@ -14,24 +14,24 @@
         margin-top: 0;
         line-height: 1.1;
         margin-bottom: 0.6em;
+        text-wrap: balance;
+        text-wrap: pretty;
 
-        p + &,
-        ul + &,
-        blockquote + & {
+        * + & {
             margin-top: 1.6em;
         }
     }
 
     h1 {
-        font-size: 2.4em;
+        font-size: 3em;
     }
 
     h2 {
-        font-size: 1.9em;
+        font-size: 2em;
     }
 
     h3 {
-        font-size: 1.4em;
+        font-size: 1.5em;
     }
 
     h4 {

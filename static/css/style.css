@@ -21,7 +21,7 @@ html {
     background-color: var(--background-color);
     color: var(--text-color);
     font-size: 1.1em;
-    font-family: "Ubuntu Serif", system-ui, sans-serif;
+    font-family: "Ubuntu", system-ui, sans-serif;
 }
 
 a {
@@ -79,7 +79,7 @@ body {
     }
 
     & > main {
-        padding: 2em 0.5em;
+        padding: 2.5em 0.5em;
     }
 
     & > footer {
