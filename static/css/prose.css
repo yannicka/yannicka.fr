@@ -70,7 +70,7 @@
     }
 
     blockquote {
-        border-left: 1px solid var(--highlight-color);
+        border-left: 2px solid var(--highlight-color);
         margin-left: 1em;
         padding-left: 1em;
     }
