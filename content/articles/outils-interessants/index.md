@@ -26,6 +26,7 @@ mes outils préférés en haut de liste.
 - [JetBrains Fleet](https://www.jetbrains.com/fleet/) *(propriétaire)*
 - [Lapce](https://lapce.dev/)
 - [Sublime Text](https://www.sublimetext.com/) *(propriétaire)*
+- [Void](https://voideditor.com/)
 - [Cursor](https://www.cursor.com/) *(propriétaire)*
 - [Notepad++](https://notepad-plus-plus.org/) *(Windows seulement)*
 - [Geany](https://www.geany.org/)
@@ -498,6 +499,7 @@ moins connus.*
 - [Inko Cat](https://www.inko.cat/) *(propriétaire)*
 - [Capacities](https://capacities.io/) *(propriétaire)*
 - [Docmost](https://docmost.com/)
+- [Briefer](https://briefer.cloud/)
 
 ### Bases de connaissances
 
@@ -801,6 +803,7 @@ moins connus.*
 ## Gestion de projet
 
 - [Plane](https://plane.so/)
+- [Huly](https://huly.io/)
 - [Tegon](https://tegon.ai/)
 - [OpenProject](https://www.openproject.org/)
 - [Markwhen](https://markwhen.com/)
@@ -933,6 +936,8 @@ moins connus.*
 - [Git Cola](https://git-cola.github.io/)
 - [Git Gui](https://git-scm.com/docs/git-gui)
 - [GitButler](https://gitbutler.com/)
+- [GitFourchette](https://gitfourchette.org/)
+- [Stage](https://github.com/aganzha/stage)
 - [Gittyup](https://murmele.github.io/Gittyup/)
 - [Gitnuro](https://gitnuro.com/)
 - [GitHub Desktop](https://desktop.github.com/) *(Windows et macOS seulement)*
@@ -1126,6 +1131,7 @@ moins connus.*
 - [GNOME OS](https://os.gnome.org/)
 - [Vanilla](https://vanillaos.org/)
 - [blendOS](https://blendos.co/)
+- [EndeavourOS](https://endeavouros.com/)
 
 ### Nettoyeur
 
@@ -1184,6 +1190,7 @@ moins connus.*
 
 ## Diaporama
 
+- [Slidev](https://sli.dev/)
 - [Marp](https://marp.app/)
 - [PAMPI](http://pascal.peter.free.fr/pampi.html)
 
@@ -1284,17 +1291,19 @@ moins connus.*
 - [Cartes IGN](https://play.google.com/store/apps/details?id=fr.ign.geoportail)
 - [Magic Earth](https://www.magicearth.com/)
 - [OpenStreetMap](https://www.openstreetmap.org/)
-- [Qwant Maps](https://www.qwant.com/maps/)
 - [Mapy.cz](https://mapy.cz/)
 - [Mappy](https://mappy.com/)
 - [Mapillary](https://www.mapillary.com/) *(alternative à Street View)*
 - [Maps.me](https://maps.me/)
 - [Transportr](https://transportr.app/)
+- [Cartes](https://cartes.app/)
+- [Apple Maps](https://beta.maps.apple.com/)
 
 ## Traduction
 
 *Alternatives à Google Traduction.*
 
+- [Kagi Translate](https://translate.kagi.com/) *(propriétaire)*
 - [DeepL](https://www.deepl.com/translator) *(propriétaire)*
 - [Wiktionnaire](https://fr.wiktionary.org/)
 - [Linguee](https://www.linguee.com/) *(propriétaire)*
