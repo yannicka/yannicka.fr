@@ -7,9 +7,14 @@
 
 :root {
     color-scheme: light dark;
-    --background-color: light-dark(rgb(230 246 255), rgb(30 46 55));
-    --background-highlight-color: light-dark(rgb(210 226 235), rgb(10 26 35));
+    --background-color: light-dark(rgb(252 252 236), rgb(30 46 55));
+    --highlight-color: light-dark(rgb(255 232 165), rgb(10 26 35));
     --text-color: light-dark(rgb(22 22 22), rgb(233 233 233));
+
+    /* Ancien bleu
+    --background-color: light-dark(rgb(235 245 255), rgb(30 46 55));
+    --highlight-color: light-dark(rgb(210 230 255), rgb(10 26 35));
+    */
 }
 
 html {
@@ -40,7 +45,7 @@ body {
 
     & > header {
         padding: 0.6em 2em;
-        background-color: var(--background-highlight-color);
+        background-color: var(--highlight-color);
         border-radius: 2em;
 
         & > nav {
@@ -78,7 +83,7 @@ body {
     }
 
     & > footer {
-        border-top: 1px solid var(--background-highlight-color);
+        border-top: 1px solid var(--highlight-color);
         padding: 1em;
         border-radius: 2em;
 

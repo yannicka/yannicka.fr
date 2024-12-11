@@ -70,20 +70,21 @@
     }
 
     blockquote {
-        border-left: 1px solid var(--background-highlight-color);
+        border-left: 1px solid var(--highlight-color);
         margin-left: 1em;
         padding-left: 1em;
     }
 
     details {
-        background-color: var(--background-highlight-color);
-        padding: 1em;
+        background-color: var(--highlight-color);
+        padding: 0 1em 1em 1em;
         margin-top: 1em;
         margin-bottom: 1em;
         border-radius: 1em;
 
         summary {
             cursor: pointer;
+            padding-top: 1em;
         }
     }
 }
