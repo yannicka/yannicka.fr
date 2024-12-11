@@ -4,7 +4,7 @@ title = "Présentation de RSS"
 
 # Présentation de RSS
 
-Publié le 15 mai 2018 et mis à jour le 21 septembre 2018.
+*Publié le 15 mai 2018 et mis à jour le 21 septembre 2018, sous licence CC BY-SA 4.0, par Yannick A.*
 
 Intéressons-nous à RSS, une technologie du tout début des années 2000 qui n'a
 rien à envier aux réseaux sociaux pour suivre l'actualité (et même pour
@@ -346,7 +346,3 @@ clients de messagerie.
   better](https://davidyat.es/2017/05/18/rss-nothing-better/) *(en)* ;
 - [Suivre madmoiZelle sur Facebook : infos sur notre consommation
   média](http://www.madmoizelle.com/suivre-madmoizelle-facebook-2018-881253).
-
-
-*– Par Yannick A., licence
-[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr).*

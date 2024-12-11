@@ -4,7 +4,7 @@ title = "Le référencement naturel"
 
 # Le référencement naturel
 
-Publié le 28 juillet 2016 et mis à jour le 23 octobre 2022.
+*Publié le 28 juillet 2016 et mis à jour le 23 octobre 2022 sous licence CC BY-SA 4.0, par Yannick A.*
 
 ## Qu'est-ce que le référencement naturel ?
 

@@ -4,7 +4,7 @@ title = "Jeux multijoueurs gratuits sur navigateur"
 
 # Jeux multijoueurs gratuits sur navigateur
 
-Publié le 21 novembre 2020 et mis à jour le 10 juillet 2022.
+*Publié le 21 novembre 2020 et mis à jour le 10 juillet 2022 sous licence CC BY-SA 4.0, par Yannick A.*
 
 <details>
   <summary>

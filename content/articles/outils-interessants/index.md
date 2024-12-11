@@ -4,7 +4,7 @@ title = "Outils intéressants"
 
 # Outils intéressants
 
-Publié le 2 octobre 2015 et mis à jour le 1 septembre 2024.
+*Publié le 2 octobre 2015 et mis à jour le 1<sup>er</sup> septembre 2024 sous licence CC BY-SA 4.0, par Yannick A.*
 
 Voici une liste d'outils, souvent gratuits, que j'apprécie particulièrement ou
 que je considère intéressant. La plupart fonctionnent sous GNU/Linux et
