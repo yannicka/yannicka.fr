@@ -38,19 +38,19 @@ Note : le tri est purement arbitraire, à l'appréciation de l'auteur de cet ar
 
 ### Gartic Phone
 
-<https://garticphone.com/> #drawing, de 2 à 30 joueurs
+<https://garticphone.com/> #dessin, de 2 à 30 joueurs
 
 > Jeu de téléphone arabe : une personne écrit une phrase, une personne la dessine, une autre décrit le dessin, une autre dessine, et ainsi de suite.
 
 ### skribbl
 
-<https://skribbl.io/> #drawing, de 2 à 12 joueurs
+<https://skribbl.io/> #dessin, de 2 à 12 joueurs
 
 > Jeu de dessin. Un joueur a un mot à dessiner et les autres doivent le deviner.
 
 ### Gartic.io
 
-<https://gartic.io/> #drawing, de 2 à 50 joueurs
+<https://gartic.io/> #dessin, de 2 à 50 joueurs
 
 > Jeu de dessin. Un joueur a un mot à dessiner et les autres doivent le deviner.
 
@@ -80,19 +80,19 @@ Note : le tri est purement arbitraire, à l'appréciation de l'auteur de cet ar
 
 ### SongTrivia - Guess the song!
 
-<https://songtrivia2.io/> #music, de 2 à ? joueurs
+<https://songtrivia2.io/> #musique, de 2 à ? joueurs
 
 > Devinez quelle est la chanson que vous écoutez.
 
 ### What the Tune?!
 
-<https://whatthetune.com/> #music, de 1 à ? joueurs
+<https://whatthetune.com/> #musique, de 1 à ? joueurs
 
 > Deviner le titre et l'artiste d'une chanson.
 
 ### Codenames
 
-<https://codenames.game/> *#reflexion, de 2 à 8*
+<https://codenames.game/> *#réflexion, de 2 à 8 joueurs*
 
 > Faites devinez les bons mots à votre partenaire de jeu en lui donnant des indices.
 
@@ -104,19 +104,19 @@ Note : le tri est purement arbitraire, à l'appréciation de l'auteur de cet ar
 
 ### Lichess
 
-<https://lichess.org/> #reflexion, de 1 à 2 joueurs
+<https://lichess.org/> #réflexion, de 1 à 2 joueurs
 
 > Jeu d'échecs.
 
 ### Touché-Coulé
 
-<http://fr.battleship-game.org/> #reflexion, de 2 à 2 joueurs
+<http://fr.battleship-game.org/> #réflexion, 2 joueurs
 
 > Jeu de bataille navale.
 
 ### Trivabble
 
-<https://trivabble.1s.fr/> #reflexion, de 2 à ? joueurs
+<https://trivabble.1s.fr/> #réflexion, de 2 à ? joueurs
 
 > Vous avez des lettres. Vous devez poser ces lettres sur une grille. Le jeu n'a pas de règle en lui-même, vous devez gérer vous-mêmes les calculs et autres, mais il sert généralement à jouer au Scrabble.
 
@@ -124,47 +124,47 @@ Note : le tri est purement arbitraire, à l'appréciation de l'auteur de cet ar
 
 <https://www.haxball.com/> #action, de 2 à 12 joueurs
 
-> Jeu de « foot » ultra-minimaliste de 2 à 12 joueurs.
+> Jeu de « foot » ultra-minimaliste de 2 à 12 joueurs.
 
 ### Onmuga
 
-<https://onmuga.com/> #various, de 1 à ? joueurs
+<https://onmuga.com/> #divers, de 1 à ? joueurs
 
 > *Pas de description.*
 
 ### PlayingCards.io
 
-<https://playingcards.io/> #card, de 2 à ? joueurs
+<https://playingcards.io/> #cartes, de 2 à ? joueurs
 
 > *Pas de description.*
 
 ### Set with Friends
 
-<https://setwithfriends.com/> #card, de 2 à ? joueurs
+<https://setwithfriends.com/> #cartes, de 2 à ? joueurs
 
 > *Pas de description.*
 
 ### Mattle
 
-<https://mattle.online/> #various, de 2 à ? joueurs
+<https://mattle.online/> #divers, de 2 à ? joueurs
 
 > Jeux : Go, Azee, Sevenee, Spendee, Spicee et Blokee.
 
 ### Air board game
 
-<https://airboardgame.net/games/> #various, de 2 à ? joueurs
+<https://airboardgame.net/games/> #divers, de 2 à ? joueurs
 
 > De nombreux jeux de société.
 
 ### Colonist
 
-<https://colonist.io/> #reflexion, de 2 à 8 joueurs
+<https://colonist.io/> #réflexion, de 2 à 8 joueurs
 
 > *Pas de description.*
 
 ### tix.tax
 
-<https://tix.tax/> #reflexion, de 2 à 2 joueurs
+<https://tix.tax/> #réflexion, de 2 à 2 joueurs
 
 > *Pas de description.*
 
@@ -222,7 +222,7 @@ Voici quelques autres jeux qui ne respectent pas strictement les critères, mais
 
 ### Drawasaurus
 
-<https://www.drawasaurus.org/> #drawing, de 2 à 16 joueurs
+<https://www.drawasaurus.org/> #dessin, de 2 à 16 joueurs
 
 > *Pas de description.*
 
