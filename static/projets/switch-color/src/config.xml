@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<widget id="fr.yannicka.switchcolor" version="1.0.0">
+    <name>Switch Color</name>
+    <description>Appuyez sur les différents carré afin d'éliminer tous les carrés de couleurs dans chacun des niveaux.</description>
+    <author email="yannick.a@censored.fr" href="https://yannicka.fr/">Yannick A.</author>
+    <!--<access origin="*"/>-->
+    <preference name="webviewbounce" value="true"/>
+    <content src="menu.html"/>
+</widget>

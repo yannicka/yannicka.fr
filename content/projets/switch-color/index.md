@@ -40,7 +40,7 @@ Initialement, Switch Color a été écrit en JavaScript et aurait dû être emba
 L'ancienne version JavaScript du jeu est jouable, alors je l'inclus ici à titre historique.
 
 <iframe
-  src="src/index.html"
+  src="/projets/switch-color/src/index.html"
   loading="lazy"
   style="display: block; border: 2px solid #42c79c; width: 100%; max-width: 520px; height: 700px;"></iframe>
 

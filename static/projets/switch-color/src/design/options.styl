@@ -1,0 +1,38 @@
+/* Remettre le jeu a zéro
+------------------------- */
+@keyframes confirm-reset
+	to
+		background     rgb(165, 42, 42)
+		border-bottom  4px solid rgb(123, 12, 12)
+
+#game-reset
+	margin            20px 5px 0 5px
+	padding           10px
+	display           block
+	background-color  rgb(236, 32, 32)
+	text-align        center
+	vertical-align    middle
+	color             rgb(255, 255, 255)
+	border-radius     4px
+	background-color  rgb(44, 44, 44)
+	border-bottom     4px solid rgb(0, 0, 0)
+	font-size         20px
+	cursor            pointer
+
+	&.confirmed
+		animation  confirm-reset .4s forwards
+
+#game-reset-confirm
+	margin            0
+	padding           0
+	font-size         20px
+	margin            5px
+	padding           8px
+	display           block
+	text-align        center
+	vertical-align    middle
+	color             rgb(255, 255, 255)
+	border-radius     4px
+	background-color  rgb(0, 196, 0)
+	border-bottom     4px solid rgb(0, 149, 0)
+	cursor            pointer

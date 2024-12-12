@@ -1,0 +1,27 @@
+- var title        = 'S&eacute;lectionner un niveau'
+- var difficulties = [ 'D&eacute;butant', 'Facile', 'Moyen', 'Difficile', 'Expert' ]
+
+doctype html
+html
+	include head.jade
+
+	body
+		div#logo
+			img(src="data/img/logo.png" alt="Switch Color")
+
+		span.go_back(data-href="menu.html")
+			| &lt; Retour
+
+		div#random_level
+			| Al&eacute;atoire
+
+		ul#tab_random_level
+			- each difficulty, i in difficulties
+				li(class="random" data-level=(-(i + 1)))
+					!= difficulty
+
+		ul#choice
+
+		script(src="js/common.js")
+		script(src="js/select_level.js")
+		script(src="js/page.js")

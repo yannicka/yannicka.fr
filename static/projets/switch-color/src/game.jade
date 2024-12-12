@@ -1,0 +1,36 @@
+- var title = 'Jeu'
+
+doctype html
+html
+	include head.jade
+
+	body
+		div#high-bar
+			span#btn_menu.btn(href="select_level.html")
+				img(src="data/img/back_big.png" alt="Menu")
+
+			div#info_level
+				Niveau inconnu
+
+		canvas#game
+			| Phone incompatible with the application.
+
+		div#game-menu
+			span#btn_cancel.icon-cancel
+				| Annuler <span class="little">ma derni&egrave;re action</span>
+
+			span#btn_skip.icon-skip
+				| Passer <span class="little">au niveau suivant</span>
+
+			span#btn_restart.icon-restart
+				| Recommencer <span class="little">le niveau</span>
+
+			span#btn_regenerate.icon-regenerate
+				| Reg&eacute;n&eacute;rer <span class="little">un niveau</span>
+
+			span#btn_back.icon-back
+				| Retourner <span class="little">au menu</span>
+
+		script(src="cordova.js")
+		script(src="js/common.js")
+		script(src="js/game.js")

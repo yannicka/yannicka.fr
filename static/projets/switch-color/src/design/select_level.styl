@@ -1,0 +1,84 @@
+/* Niveau aléatoire
+------------------- */
+#random_level
+	margin            20px 6px 0 6px
+	padding           10px
+	background-color  rgb(236, 32, 32)
+	text-align        center
+	color             rgb(255, 255, 255)
+	border-radius     4px
+	background-color  rgb(44, 44, 44)
+	border-bottom     4px solid rgb(0, 0, 0)
+	font-size         22px
+	cursor            pointer
+
+#tab_random_level
+	margin      0
+	padding     0
+	list-style  none
+	font-size   22px
+
+	li
+		margin            5px
+		padding           10px
+		display           block
+		text-align        center
+		color             rgb(255, 255, 255)
+		border-radius     4px
+		background-color  rgb(0, 142, 212)
+		border-bottom     4px solid rgb(0, 94, 162)
+		cursor            pointer
+
+
+/* Choix du niveau
+------------------ */
+#choice
+	margin      20px 0 6px 0
+	padding     0
+	font-size   24px
+	text-align  center
+
+	li
+		margin            5px
+		display           inline-block
+		width             68px
+		height            64px
+		text-align        center
+		vertical-align    middle
+		color             rgb(255, 255, 255)
+		line-height       68px
+		border-radius     4px
+		background-color  rgb(221, 16, 16)
+		border-bottom     4px solid rgb(154, 0, 0)
+		cursor            pointer
+
+		&.current
+			background-color  rgb(0, 142, 212)
+			border-bottom     4px solid rgb(0, 94, 162)
+
+		&.finished
+			background-color  rgb(0, 182, 0)
+			border-bottom     4px solid rgb(0, 121, 0)
+
+		&.random
+			background-color  rgb(33, 33, 33)
+
+	[class^="medal-"]
+		margin         0 auto
+		padding        0
+		display        block
+		width          18px
+		height         18px
+		border-radius  100px
+		position       relative
+		top            -16px
+		border         2px solid rgba(0, 0, 0, .2)
+
+	.medal-bronze
+		background-color  rgb(190, 99, 42)
+
+	.medal-silver
+		background-color  rgb(198, 198, 198)
+
+	.medal-gold
+		background-color  rgb(255, 212, 0)

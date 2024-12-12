@@ -1,0 +1,85 @@
+/* Bouton
+--------- */
+.btn
+	margin   0
+	padding  0
+	display  inline-block
+	float    left
+	cursor   pointer
+
+	img
+		display  block
+
+/* Zone de jeu
+-------------- */
+#game
+	margin    6px auto 0 auto
+	padding   0
+	display   block
+	position  relative
+	top       0
+
+#high-bar
+	height            48px
+	text-align        center
+	background-color  rgb(226, 226, 226)
+	font-size         22px
+	line-height       48px
+
+#info_level
+	display      inline-block
+	height       48px
+
+/* Menu du jeu
+-------------- */
+#game-menu
+	margin              0
+	padding             0
+	position            absolute
+	bottom              0
+	left                0
+	right               0
+	width               100%
+	background-color    rgb(255, 255, 255)
+	-webkit-box-shadow  0 0 4px 0 rgb(0, 0, 0)
+	box-shadow          0 0 4px 0 rgb(0, 0, 0)
+	display             none
+	overflow            hidden
+
+[class^="icon-"]
+	margin           0
+	padding          14px 0 14px 40px
+	display          block
+	text-decoration  none
+	color            rgb(0, 0, 0)
+	border           none
+	font-size        24px
+	font-family      inherit
+	width            100%
+	text-align       left
+	background       url('../data/img/menu.png') no-repeat 8px center
+
+	&:focus
+	&:hover
+	&:active
+		background-color  rgb(230, 230, 230)
+		cursor            pointer
+
+	.little
+		font-size  16px
+		color      rgb(70, 70, 70)
+
+.icon-cancel
+	background-image  url('../data/img/cancel.png')
+
+.icon-skip
+	background-image  url('../data/img/skip.png')
+
+.icon-restart
+	background-image  url('../data/img/restart.png')
+
+.icon-regenerate
+	background-image  url('../data/img/regenerate.png')
+
+.icon-back
+	background-image  url('../data/img/back.png')
